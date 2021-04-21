@@ -1,0 +1,15 @@
+include /include/elements/selector/selector
+include /include/elements/price/price
+include /include/elements/buyButton/buyButton
+
+mixin catalogItem
+    +b.catalogItem
+        +e(src="images/catalogItem.png").img
+        +selector.catalogItem__size
+        +e.material Пластик
+        +e(href="/product.html").name Название товара
+        +e.bottom
+            +e.prices
+                +price.catalogItem__price
+                +price._old.catalogItem__oldPrice
+            +buyButton.catalogItem__buyButton

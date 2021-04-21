@@ -1,0 +1,11 @@
+extends /include/layout/layout
+include /include/elements/title/title
+include /include/sections/catalogList/catalogList
+
+block pageVars
+    - var pageTitle = 'Каталог'
+
+block content
+    +title(pageTitle)
+    +catalogList
+

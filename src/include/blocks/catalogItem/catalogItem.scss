@@ -1,0 +1,86 @@
+.catalogItem {
+    @apply
+    rounded-2xl border border-lightGray
+    lg:border-transparent
+    lg:hover:border-lightGray;
+
+    &__img {
+        @apply
+        h-60
+        w-full
+        object-cover
+        rounded-t-2xl;
+    }
+
+    &__size {
+        @apply
+        p-2;
+    }
+
+    &__material {
+        @apply
+        text-lightGray
+        text-xs
+        font-medium
+        flex
+        flex-1
+        items-end
+        p-3;
+    }
+
+    &__name {
+        @apply
+        leading-5
+        max-h-10
+        overflow-hidden
+        p-3;
+    }
+
+    &__bottom {
+        @apply
+        mt-3
+        p-3
+        flex
+        justify-between
+        items-center
+        lg:mt-1;
+    }
+
+    &__prices {
+        @apply
+        flex
+        items-baseline
+        lg:block;
+    }
+
+    &__price {
+        @apply
+        leading-none
+        text-base
+        lg:text-lg
+        lg:leading-none;
+    }
+
+    &__oldPrice {
+        @apply
+        text-sm
+        ml-2
+        lg:text-base
+        lg:ml-0
+        lg:mt-1;
+    }
+
+    &__buyButton {
+        @apply
+        hidden
+        invisible
+        lg:flex;
+    }
+
+    &:hover & {
+        &__buyButton {
+            @apply
+            lg:visible;
+        }
+    }
+}

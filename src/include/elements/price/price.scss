@@ -1,0 +1,9 @@
+.price {
+    @apply
+    font-bold leading-none;
+
+    &_old {
+        @apply
+        font-normal line-through text-lightGray;
+    }
+}
