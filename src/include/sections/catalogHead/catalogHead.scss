@@ -1,0 +1,51 @@
+.catalogHead {
+    @apply
+        my-8;
+
+    &__box {
+        @apply
+            items-center;
+    }
+
+    &__title {
+        @apply
+        text-blue-800
+        text-4xl;
+    }
+
+    &__text {
+        @apply
+        text-600
+        ml-6
+        mt-2;
+    }
+
+    &__sort {
+        @apply
+            w-60
+            mr-6
+            ml-auto;
+    }
+
+    &__views {
+        @apply
+        flex
+        space-x-3;
+
+        &__item {
+            @apply
+            w-8
+            h-8
+            p-1.5
+            bg-white
+            border
+            rounded;
+
+            &_active {
+                @apply
+                    bg-blue-800
+                    text-white;
+            }
+        }
+    }
+}

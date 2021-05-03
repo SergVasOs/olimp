@@ -1,0 +1,42 @@
+.button {
+    @apply
+        h-11
+        rounded-lg
+        bg-orange-200
+        text-blue-900
+        text-600
+        flex
+        justify-center
+        items-center
+        cursor-pointer
+        px-7
+        hover:opacity-90
+        hover:text-blue-900
+        active:ring-1;
+
+    &_sm {
+        @apply
+            rounded-md
+            h-8
+            px-2;
+    }
+
+    &_lg {
+        @apply
+        rounded
+        h-12;
+    }
+
+    &_gray {
+        @apply
+            bg-gradient-to-t
+            from-gray-200
+            to-gray-100
+            text-red-700;
+    }
+
+    &__icon + &__text {
+        @apply
+            ml-2;
+    }
+}

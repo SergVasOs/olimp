@@ -1,0 +1,15 @@
+include /bemto/bemto
+
+- set_bemto_settings({ flat_elements: false })
+
+block pageVars
+    - var view = 'md';
+
+doctype html
+html(lang="en")
+    include head/head
+body
+    include header/header
+    include topBar/topBar
+    include content/content
+    include footer/footer

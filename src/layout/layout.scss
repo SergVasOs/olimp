@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    @apply
+        outline-none;
+}
+
+html {
+    @apply
+        font-sans text-400 text-black;
+}
+
+body {
+    @apply
+        pt-20
+        min-h-screen
+        flex
+        flex-col
+        items-stretch;
+}
+
+a {
+    @apply
+        no-underline
+        text-blue-900
+        border-blue-900
+        hover:text-blue-400
+        hover:border-blue-400;
+}
+
+
+

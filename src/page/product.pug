@@ -1,9 +1,7 @@
-extends /include/layout/layout
-include /include/elements/title/title
+extends /layout/layout
 
-block pageVars
+append pageVars
     - var pageTitle = 'Продукт'
 
 block content
-    +title(pageTitle)
-    a(href="/") На главную
+

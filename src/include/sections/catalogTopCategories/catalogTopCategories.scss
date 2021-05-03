@@ -1,0 +1,44 @@
+.catalogTopCategories {
+    @apply
+    mt-10;
+
+    &__box {
+        @apply
+        flex
+        space-x-2;
+    }
+
+    &__item {
+        @apply
+            flex-1
+            flex
+            items-center
+            h-14
+            px-1
+            border
+            border-gray-500
+            rounded;
+
+        &_active {
+            @apply
+                border-transparent
+                ring-2
+                ring-orange-200
+                hover:border-transparent;
+        }
+
+        &_more {
+            @apply
+                w-32
+                flex-none
+                justify-center;
+        }
+
+        &__name {
+            @apply
+                text-200
+                font-medium
+                ml-1;
+        }
+    }
+}

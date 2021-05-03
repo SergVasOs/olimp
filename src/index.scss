@@ -1,8 +1,24 @@
-@import "include/layout/layout";
-@import "include/layout/content/content";
-@import "include/elements/title/title";
-@import "include/elements/selector/selector";
-@import "include/elements/price/price";
-@import "include/elements/buyButton/buyButton";
+@import "assets/scss/fonts";
+@import "layout/layout";
+@import "assets/scss/box";
+@import "assets/scss/icon";
+@import "assets/scss/input";
+@import "assets/scss/select";
+@import "assets/scss/button";
+
+@import "layout/header/header";
+@import "layout/topBar/topBar";
+@import "layout/content/content";
+@import "layout/footer/footer";
+
+
+@import "include/sections/catalogHead/catalogHead";
+@import "include/sections/catalogContent/catalogContent";
+@import "include/sections/catalogTopCategories/catalogTopCategories";
+
 @import "include/blocks/catalogItem/catalogItem";
-@import "include/sections/catalogList/catalogList";
+
+@import "include/elements/size/size";
+@import "include/elements/price/price";
+@import "include/elements/oldPrice/oldPrice";
+@import "include/elements/buyButton/buyButton";

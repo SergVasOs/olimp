@@ -1,0 +1,56 @@
+include /include/blocks/catalogItem/catalogItem
+
+mixin catalogContent
+    +b.catalogContent
+        +e(class="box").box
+            +e.left
+                +b.__menu
+                    +b.__item
+                        +b(href="#").__link
+                            +e.name Кубки с Российской символикой
+                            +b.icon._sm.__icon
+                                include /assets/images/arrowIcon.svg
+                    +b.__item._active
+                        +b(href="#").__link
+                            +e.name Стеклянные
+                            +b.icon._sm.__icon
+                                include /assets/images/arrowIcon.svg
+                        +b.__submenu
+                            +e(href="#").item Классические
+                            +e(href="#").item._active Спортивные
+                            +e(href="#").item С местом под вкладыш
+                    +b.__item
+                        +b(href="#").__link
+                            +e.name Спорт товары
+                    +b.__item
+                        +b(href="#").__link
+                            +e Кубки с Российской символикой
+                    +b.__title Аксессуары
+                    +b.__item
+                        +b(href="#").__link
+                            +e.name Крышки для кубков
+                    +b.__item
+                        +b(href="#").__link
+                            +e.name Эмблемы
+                    +b.__item
+                        +b(href="#").__link
+                            +e.name Таблички
+            +e.right
+                +b.__items
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                    +catalogItem
+                +b.__pagination
+                    +b.button._white.__more Загрузить ещё
+                    +b.__pages
+                        +e(href="#").item 1
+                        +e(href="#").item 2
+                        +e(href="#").item 3
+                        +e(href="#").item ...
+                        +e(href="#").item 9
+                        +e(href="#").item 10

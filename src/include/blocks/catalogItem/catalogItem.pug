@@ -1,15 +1,30 @@
-include /include/elements/selector/selector
+include /include/elements/size/size
 include /include/elements/price/price
+include /include/elements/oldPrice/oldPrice
 include /include/elements/buyButton/buyButton
 
 mixin catalogItem
     +b.catalogItem
-        +e(src="images/catalogItem.png").img
-        +selector.catalogItem__size
+        +b.__labels
+            +e.item._views
+                +b.icon._sm
+                    include /assets/images/cameraIcon.svg
+                +e 4
+            +e.item._new Новый
+            +e.item._discount -15%
+        +b.icon._fill.__favoriteIcon
+            include /assets/images/heartIcon.svg
+        +b.__imgBlock
+            +e(src="images/catalogItem.png").img
+            +b.__dots
+                +e.item._active
+                +e.item
+                +e.item
+        +size
         +e.material Пластик
-        +e(href="/product.html").name Название товара
+        +e(href="/product.html").name Название товара Название товара Название товара Название товара Название товара
         +e.bottom
             +e.prices
-                +price.catalogItem__price
-                +price._old.catalogItem__oldPrice
-            +buyButton.catalogItem__buyButton
+                +price
+                +oldPrice
+            +buyButton.__buyButton

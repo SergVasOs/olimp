@@ -1,11 +1,13 @@
-extends /include/layout/layout
-include /include/elements/title/title
-include /include/sections/catalogList/catalogList
+extends /layout/layout
+include /include/sections/catalogHead/catalogHead
+include /include/sections/catalogContent/catalogContent
+include /include/sections/catalogTopCategories/catalogTopCategories
 
-block pageVars
-    - var pageTitle = 'Каталог'
+append pageVars
+    - var pageTitle = 'Кубки пластиковые'
 
 block content
-    +title(pageTitle)
-    +catalogList
+    +catalogTopCategories
+    +catalogHead
+    +catalogContent
 

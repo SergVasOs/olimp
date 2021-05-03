@@ -1,86 +1,170 @@
 .catalogItem {
     @apply
-    rounded-2xl border border-lightGray
-    lg:border-transparent
-    lg:hover:border-lightGray;
+        relative
+        flex
+        flex-col
+        rounded-2xl border border-gray-500
+        lg:border-transparent
+        lg:hover:border-gray-500;
 
-    &__img {
+    &__favoriteIcon {
         @apply
-        h-60
-        w-full
-        object-cover
-        rounded-t-2xl;
+            absolute
+            top-4
+            right-4
+            cursor-pointer
+            fill-white
+            hover:text-red-500
+            hover:fill-red;
+
+        &_active {
+            @apply
+            text-red-500
+            fill-red;
+        }
+    }
+
+    &__labels {
+        @apply
+            absolute
+            top-4
+            left-4
+            flex
+            flex-col
+            items-start
+            space-y-2;
+
+        &__item {
+            @apply
+                flex
+                items-center
+                space-x-2
+                text-white
+                text-300
+                py-1.5
+                px-3
+                bg-gray-500
+                rounded-xl;
+
+            &_new {
+                @apply
+                    bg-green-300;
+            }
+
+
+            &_discount {
+                @apply
+                bg-red-300;
+            }
+        }
+    }
+
+    &__imgBlock {
+        &__img {
+            @apply
+            h-60
+            w-full
+            object-cover
+            rounded-t-2xl;
+        }
+
+        &__dots {
+            @apply
+                flex
+                items-center
+                justify-center
+                space-x-2
+                h-10;
+
+            &__item {
+                @apply
+                    w-2
+                    h-2
+                    bg-gray-400
+                    rounded-full
+                    cursor-pointer
+                    hover:bg-gray-700;
+
+                &_active {
+                    @apply
+                    bg-gray-700;
+                }
+            }
+        }
     }
 
     &__size {
         @apply
-        p-2;
+            px-2
+            py-1;
     }
 
     &__material {
         @apply
-        text-lightGray
-        text-xs
-        font-medium
-        flex
-        flex-1
-        items-end
-        p-3;
+            text-gray-500
+            text-300
+            font-medium
+            flex
+            flex-1
+            items-end
+            px-3
+            py-1;
     }
 
     &__name {
         @apply
-        leading-5
-        max-h-10
-        overflow-hidden
-        p-3;
+            leading-5
+            h-11
+            overflow-hidden
+            px-3
+            py-1;
     }
 
     &__bottom {
         @apply
-        mt-3
-        p-3
-        flex
-        justify-between
-        items-center
-        lg:mt-1;
+            mt-3
+            p-3
+            flex
+            justify-between
+            items-center
+            lg:mt-1;
     }
 
     &__prices {
         @apply
-        flex
-        items-baseline
-        lg:block;
+            flex
+            items-baseline
+            lg:block;
     }
 
     &__price {
         @apply
-        leading-none
-        text-base
-        lg:text-lg
-        lg:leading-none;
+            leading-none
+            text-400
+            lg:text-800
+            lg:leading-none;
     }
 
     &__oldPrice {
         @apply
-        text-sm
-        ml-2
-        lg:text-base
-        lg:ml-0
-        lg:mt-1;
+            text-200
+            ml-2
+            lg:text-400
+            lg:ml-0
+            lg:mt-1;
     }
 
     &__buyButton {
         @apply
-        hidden
-        invisible
-        lg:flex;
+            hidden
+            invisible
+            lg:flex;
     }
 
     &:hover & {
         &__buyButton {
             @apply
-            lg:visible;
+                lg:visible;
         }
     }
 }

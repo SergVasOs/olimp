@@ -1,0 +1,120 @@
+.footer {
+    @apply
+        text-white
+        bg-blue-800
+        pt-24
+        pb-20;
+
+    &__contacts {
+        &__logo {
+            @apply
+            -mt-4
+            mb-4;
+        }
+
+        &__text {
+            @apply
+            font-bold
+            mb-6;
+        }
+
+        &__phone {
+            @apply
+                flex
+                items-center
+                space-x-3
+                mb-6;
+
+            &__items {
+                @apply
+                    flex
+                    space-x-5;
+
+                &__item {
+                    @apply
+                    text-700
+                    font-bold
+                    text-white;
+                }
+            }
+        }
+
+        &__address {
+            @apply
+            flex
+            space-x-3
+            mb-6;
+
+            &__items {
+                @apply
+                space-y-3;
+            }
+        }
+
+        &__email {
+            @apply
+            inline-flex
+            space-x-3
+            text-white;
+        }
+    }
+
+    &__menus {
+        @apply
+            flex;
+
+        &__menu {
+            @apply
+            flex
+            flex-col
+            space-y-6;
+
+            &_first {
+                @apply
+                    mr-24;
+            }
+
+            &_second {
+                @apply
+                mr-10;
+            }
+
+            &_third {
+                @apply
+                mr-12;
+            }
+
+            &__item {
+                @apply
+                text-white;
+            }
+        }
+    }
+
+    &__social {
+        &__links {
+            @apply
+                flex
+                justify-end
+                space-x-3
+                mb-4;
+
+            &__item {
+                @apply
+                    w-10
+                    h-10
+                    p-2.5
+                    bg-white
+                    rounded-full;
+            }
+        }
+
+        &__text {
+            @apply
+            text-right
+            text-300
+            text-gray-600
+            mt-2;
+        }
+    }
+}

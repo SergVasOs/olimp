@@ -30,6 +30,14 @@ const config = {
         ]
       },
       {
+        test: /.(jpg|jpeg|png|svg|ttf)$/,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ]
+      },
+      {
         test: /\.scss$/,
         use: [
           {
@@ -38,23 +46,6 @@ const config = {
           {loader: "css-loader"},
           {loader: "postcss-loader"},
           {loader: "sass-loader"},
-        ]
-      },
-      {
-        test: /.(jpg|jpeg|png|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: Infinity,
-            }
-          },
-          {
-            loader: "file-loader",
-            options: {
-              root: path.resolve(__dirname, 'src')
-            }
-          },
         ]
       },
     ]
