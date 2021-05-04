@@ -1,0 +1,13 @@
+.form {
+    &__row {
+        @apply mb-2;
+    }
+
+    &__footer {
+        @apply flex;
+
+        & > * {
+            @apply flex-1;
+        }
+    }
+}

@@ -18,17 +18,30 @@
     }
 
     &__box {
-        @apply inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full;
+        @apply inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-modal;
     }
 
     &__body {
-        @apply bg-white p-11;
+        @apply bg-white p-12;
     }
 
     &__title {
-        @apply text-800 font-bold pb-4;
+        @apply text-800 font-bold pb-7;
     }
 
     &__content {
+    }
+
+    &__links {
+        @apply mt-4
+            flex
+            justify-between;
+
+        &__item {
+            @apply flex-1
+            text-center
+            text-gray-900
+            font-medium;
+        }
     }
 }

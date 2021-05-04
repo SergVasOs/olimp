@@ -30,7 +30,7 @@
         @apply
         text-600
         font-medium
-        rounded-xl
+        rounded
         h-16;
     }
 
@@ -48,6 +48,16 @@
         bg-white
         hover:bg-blue-900
         hover:text-white;
+    }
+
+    &_blue {
+        @apply
+        border
+        border-blue-900
+        bg-blue-900
+        text-white
+        hover:text-blue-900
+        hover:bg-white;
     }
 
     &__icon + &__text {

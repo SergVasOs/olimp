@@ -64,6 +64,9 @@ module.exports = {
         800: ['20px', '28px'],
         900: ['24px', '32px'],
       },
+			width: {
+				modal: '435px',
+			},
       maxWidth: {
         'word': '15ch',
       },
