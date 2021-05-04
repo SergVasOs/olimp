@@ -9,15 +9,28 @@
 
     &__title {
         @apply
+        flex-1
         text-blue-800
-        text-4xl;
+        text-4xl
+        truncate;
     }
 
-    &__text {
+    &__count {
         @apply
+        hidden
         text-600
-        ml-6
-        mt-2;
+        mx-6
+        mt-2
+        lg:block;
+    }
+
+    &__countTab {
+        @apply
+        text-700
+        ml-2
+        mr-6
+        mt-1
+        lg:hidden;
     }
 
     &__sort {

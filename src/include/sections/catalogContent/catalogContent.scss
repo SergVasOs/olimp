@@ -80,7 +80,9 @@
         space-x-5;
 
 		&__more {
-			@apply w-full;
+			@apply
+			w-full
+			sm:w-auto;
 		}
 
 		&__pages {
@@ -115,7 +117,8 @@
 			@apply mt-4
                 grid
                 gap-3
-                grid-cols-5;
+				grid-cols-4
+                lg:grid-cols-5;
 
 			&__item {
 				@apply border

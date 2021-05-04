@@ -36,8 +36,9 @@
 
     &__breadcrumbs {
         @apply
-        flex
-        items-center;
+        hidden
+        items-center
+        lg:flex;
 
         &__shevron {
             @apply

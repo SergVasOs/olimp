@@ -1,6 +1,5 @@
 .header {
-    @apply
-        fixed
+	@apply fixed
         z-30
         top-0
         -inset-x-0
@@ -9,79 +8,58 @@
         border-gray-200
         h-20;
 
-    &__box {
-        @apply
-            items-center;
-    }
+	&__box {
+		@apply items-center;
+	}
 
-    &__logo {
-        @apply
-        w-44
-        mr-6
-        xl:mr-8;
-    }
+	&__logo {
+		@apply w-44
+        mr-8;
+	}
 
-    &__catalogButton {
-        @apply
-            text-500
-            lg:mr-6
-            xl:mr-8;
-    }
+	&__catalogButton {
+		@apply text-500
+        mr-8;
+	}
 
-    &__searchInput {
-        @apply
-        pl-4
+	&__searchInput {
+		@apply pl-4
         flex-1
-        lg:mr-6
-        xl:mr-8;
-    }
+        mr-8;
+	}
 
-    &__searchIcon {
-        @apply
-        mr-5;
-    }
-
-    &__regionChoice {
-        @apply
-            flex
+	&__regionChoice {
+		@apply flex
             items-center
             lg:mr-6
             xl:mr-8;
 
-        &__label {
-            @apply
-                text-inherit
+		&__label {
+			@apply text-inherit
                 text-600
                 border-b-2
                 border-dotted
                 border-inherit
                 ml-2;
-        }
-    }
+		}
+	}
 
-    &__phone {
-        @apply
-        flex
+	&__phone {
+		@apply flex
         items-center
-        lg:mr-6
-        xl:mr-8;
+        mr-8;
 
-        &__label {
-                @apply
-                text-600
+		&__label {
+			@apply text-600
                 ml-2;
-        }
-    }
+		}
+	}
 
-    &__userIcon {
-        @apply
-        lg:mr-4
-        xl:mr-5;
-    }
+	&__userIcon {
+		@apply mr-5;
+	}
 
-    &__favoriteIcon {
-        @apply
-        lg:mr-4
-        xl:mr-5;
-    }
+	&__favoriteIcon {
+		@apply mr-5;
+	}
 }

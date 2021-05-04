@@ -1,44 +1,73 @@
 .catalogTopCategories {
     @apply
+    text-200
+    font-medium
     mt-10;
 
     &__box {
         @apply
+        h-14
         flex
+        items-stretch
         space-x-2;
     }
 
-    &__item {
+    &__items {
         @apply
+        flex-1
+        flex
+        space-x-2;
+
+        &__item {
+            @apply
             flex
             flex-1
             items-center
-            h-14
             px-1
             border
             border-gray-500
             rounded;
 
-        &_active {
-            @apply
+            &_cat5,
+            &_cat6 {
+                @apply
+                hidden
+                lg:flex;
+            }
+
+            &_cat7,
+            &_cat8 {
+                @apply
+                    hidden
+                xl:flex;
+            }
+
+            &_active {
+                @apply
                 border-transparent
                 ring-2
                 ring-orange-200
                 hover:border-transparent;
-        }
+            }
 
-        &_more {
-            @apply
-                w-32
-                flex-none
-                justify-center;
-        }
-
-        &__name {
-            @apply
+            &__name {
+                @apply
                 text-200
                 font-medium
                 ml-1;
+            }
         }
+    }
+
+    &__more {
+        @apply
+        flex
+        items-center
+        justify-center
+        w-32
+        px-1
+        border
+        border-gray-500
+        rounded;
     }
 }

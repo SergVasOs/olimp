@@ -49,13 +49,13 @@ mixin catalogContent
 				+b.__pagination
 					if (view !== 'mobile')
 						+b.button._white.__more Загрузить ещё
-							+b.__pages
-								+e.item(href='#') 1
-								+e.item._active(href='#') 2
-								+e.item(href='#') 3
-								+e.item(href='#') ...
-								+e.item(href='#') 9
-								+e.item(href='#') 10
+						+b.__pages
+							+e.item(href='#') 1
+							+e.item._active(href='#') 2
+							+e.item(href='#') 3
+							+e.item(href='#') ...
+							+e.item(href='#') 9
+							+e.item(href='#') 10
 					else
 						+b.button._gray._xl.__more Загрузить ещё
 				if (view !== 'mobile')

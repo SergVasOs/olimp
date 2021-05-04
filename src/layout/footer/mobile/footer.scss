@@ -1,6 +1,85 @@
 .footerMob {
-	@apply text-white
+    &__menus {
+        @apply
+        bg-gray-100
+        py-4;
+    }
+
+    &__contacts {
+        @apply text-white
         bg-blue-800
-        pt-24
-        pb-20;
+        py-12;
+    }
+
+    &__box {
+        &_menus {
+            @apply
+            flex-col
+            space-y-5;
+        }
+
+        &_contacts {
+            @apply
+            flex-col
+            items-center;
+        }
+    }
+
+    &__menu {
+        &__title {
+            @apply
+            text-600
+            flex
+            justify-between
+            items-center
+            bg-white
+            rounded-lg
+            p-4
+            h-20;
+
+            &__arrow {
+                @apply
+                    text-blue-800;
+            }
+        }
+
+        &__items {
+            @apply
+            hidden;
+
+            &__item {
+                @apply
+                    text-black
+                    flex
+                    items-center
+                    justify-between
+                    mx-4
+                    py-4
+                    border-b
+                    border-gray-200;
+            }
+        }
+
+        &_active & {
+            &__title {
+                &__arrow {
+                    @apply
+                    transform
+                    rotate-180;
+                }
+            }
+
+            &__items {
+                @apply
+                flex
+                flex-col;
+            }
+        }
+    }
+
+    &__logo {
+        @apply
+            text-white
+            w-60;
+    }
 }
