@@ -4,7 +4,6 @@
         rounded-lg
         bg-orange-200
         text-blue-900
-        text-600
         flex
         justify-center
         items-center
@@ -27,12 +26,28 @@
         h-12;
     }
 
+    &_xl {
+        @apply
+        text-600
+        font-medium
+        rounded-xl
+        h-16;
+    }
+
     &_gray {
         @apply
             bg-gradient-to-t
             from-gray-200
-            to-gray-100
-            text-red-700;
+            to-gray-100;
+    }
+
+    &_white {
+        @apply
+        border
+        border-blue-900
+        bg-white
+        hover:bg-blue-900
+        hover:text-white;
     }
 
     &__icon + &__text {

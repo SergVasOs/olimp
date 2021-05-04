@@ -3,11 +3,11 @@ include /include/sections/catalogHead/catalogHead
 include /include/sections/catalogContent/catalogContent
 include /include/sections/catalogTopCategories/catalogTopCategories
 
-append pageVars
-    - var pageTitle = 'Кубки пластиковые'
+block append pageVars
+	- var pageTitle = "Кубки пластиковые";
 
 block content
-    +catalogTopCategories
-    +catalogHead
-    +catalogContent
-
+	if (view !== 'mobile')
+		+catalogTopCategories
+		+catalogHead
+	+catalogContent

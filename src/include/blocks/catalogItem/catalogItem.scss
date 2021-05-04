@@ -62,7 +62,7 @@
     &__imgBlock {
         &__img {
             @apply
-            h-60
+            h-64
             w-full
             object-cover
             rounded-t-2xl;
@@ -124,6 +124,7 @@
         @apply
             mt-3
             p-3
+            pb-5
             flex
             justify-between
             items-center

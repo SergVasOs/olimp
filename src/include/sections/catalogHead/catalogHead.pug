@@ -1,16 +1,16 @@
 mixin catalogHead
-    +b.catalogHead
-        +e(class="box").box
-            +e.title Кубки пластиковые
-            +e.text Найдено 98 товаров
-            +b.SELECT.select._sm.__sort
-                +e Сортировка
-                +e По цене
-                +e По рейтингу
-            +b.__views
-                +e(href="#").item._active
-                    include /assets/images/viewGridIcon.svg
-                +e(href="#").item
-                    include /assets/images/viewListIcon.svg
-                +e(href="#").item
-                    include /assets/images/viewTableIcon.svg
+	+b.catalogHead
+		+e.box.box
+			+e.title Кубки пластиковые
+			+e.text Найдено 98 товаров
+			+b.SELECT.select._sm.__sort
+				+e Сортировка
+				+e По цене
+				+e По рейтингу
+			+b.__views
+				+e.item._active(href='#')
+					include /assets/images/viewGridIcon.svg
+				+e.item(href='#')
+					include /assets/images/viewListIcon.svg
+				+e.item(href='#')
+					include /assets/images/viewTableIcon.svg

@@ -1,35 +1,31 @@
 .catalogContent {
-    &__box {
-        @apply
-            space-x-8;
-    }
-    &__left {
-        @apply
-            w-1/4;
-    }
+	@apply pt-8;
 
-    &__right {
-        @apply
-        flex-1;
-    }
+	&__box {
+		@apply space-x-8;
+	}
+	&__left {
+		@apply w-1/4;
+	}
 
-    &__menu {
-        @apply
-            space-y-1;
+	&__right {
+		@apply flex-1;
+	}
 
-        &__title {
-            @apply
-                p-3
+	&__menu {
+		@apply space-y-1;
+
+		&__title {
+			@apply p-3
                 text-500
                 font-bold
                 border
                 border-transparent;
-        }
+		}
 
-        &__item {
-            &__link {
-                @apply
-                    p-3
+		&__item {
+			&__link {
+				@apply p-3
                     flex
                     items-center
                     justify-between
@@ -37,58 +33,101 @@
                     border
                     border-gray-200
                     rounded;
-            }
+			}
 
-            &__submenu {
-                @apply
-                flex
+			&__submenu {
+				@apply flex
                 flex-col
                 space-y-3
                 ml-6
                 my-3;
 
-                &__item {
-                    @apply
-                        hover:underline;
+				&__item {
+					@apply hover:underline;
 
-                    &_active {
-                        @apply
-                        text-blue-400
+					&_active {
+						@apply text-blue-400
                         font-bold
                         underline;
-                    }
-                }
-            }
+					}
+				}
+			}
 
-            &_active & {
-                &__link {
-                    &__name {
-                        @apply
-                        text-500
+			&_active & {
+				&__link {
+					&__name {
+						@apply text-500
                         font-bold;
-                    }
+					}
 
-                    &__icon {
-                        @apply
-                        transform
+					&__icon {
+						@apply transform
                         rotate-90;
-                    }
-                }
-            }
-        }
-    }
+					}
+				}
+			}
+		}
+	}
 
-    &__items {
-        @apply
-        grid gap-3 grid-cols-2
-        md:grid-cols-3 lg:grid-cols-4;
-    }
+	&__items {
+		@apply grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+	}
 
-    &__pagination {
-        @apply
-        mt-10
+	&__pagination {
+		@apply mt-10
         flex
         items-center
         space-x-5;
-    }
+
+		&__more {
+			@apply w-full;
+		}
+
+		&__pages {
+			@apply flex
+                items-center
+                space-x-1;
+
+			&__item {
+				@apply flex
+                items-center
+                justify-center
+                rounded
+                w-8
+                h-8;
+
+				&_active {
+					@apply bg-gray-200;
+				}
+			}
+		}
+	}
+
+	&__popularKeywords {
+		@apply mt-9;
+
+		&__title {
+			@apply text-800
+                font-bold;
+		}
+
+		&__items {
+			@apply mt-4
+                grid
+                gap-3
+                grid-cols-5;
+
+			&__item {
+				@apply border
+                    border-gray-200
+                    rounded
+                    text-black
+                    text-200
+                    text-center
+                    px-1
+                    py-4
+                    font-medium;
+			}
+		}
+	}
 }

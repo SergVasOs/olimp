@@ -1,42 +1,4 @@
-block pageVars
-
-+b.header
-    +e(class="box").box
-        if view === 'xs'
-            +e(href="/catalog.html").catalogIcon
-                include /assets/images/sandwitchIcon.svg
-            +e(href="#").pointIcon
-                include /assets/images/pointIcon.svg
-            +e(href="/").logo
-                include /assets/images/logo.svg
-            +e(href="#").searchIcon
-                include /assets/images/searchIcon.svg
-            +e(href="#").cartIcon
-                include /assets/images/basketIcon.svg
-        else
-            +e(href="/").logo
-                include /assets/images/logo.svg
-            +b(href="/catalog.html").button.__catalogButton
-                +b.icon.__icon
-                    include /assets/images/listIcon.svg
-                +e.text Каталог
-            +b.input.__searchInput
-                +b.icon
-                    include /assets/images/searchIcon.svg
-                +e.INPUT(placeholder="Поиск по сайту").field
-                +b.button._sm.__button
-                    +b.icon._sm
-                        include /assets/images/filterIcon.svg
-            +b(href="#").__regionChoice
-                include /assets/images/regionChoiceIcon.svg
-                +e.label Москва
-            +b(href="#").__phone
-                +b.icon
-                    include /assets/images/phoneIcon.svg
-                +e.label 8 (495) 775-5952
-            +b(href="#").icon._lg.__userIcon
-                include /assets/images/userIcon.svg
-            +b(href="#").icon._lg.__favoriteIcon
-                include /assets/images/heartIcon.svg
-            +b(href="#").icon._lg.__cartIcon
-                include /assets/images/basketIcon.svg
+if (view === 'mobile')
+	include mobile/header
+else
+	include desktop/header

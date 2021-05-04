@@ -1,29 +1,30 @@
 mixin catalogTopCategories
-    +b.catalogTopCategories
-        +e(class="box").box
-            +b(href="#").__item._active
-                +e(src="images/categoryIcon1.png").img
-                +e.name Кубки
-            +b(href="#").__item
-                +e(src="images/categoryIcon2.png").img
-                +e.name Медали
-            +b(href="#").__item
-                +e(src="images/categoryIcon3.png").img
-                +e.name Медали из акрила
-            +b(href="#").__item
-                +e(src="images/categoryIcon4.png").img
-                +e.name Литые статуэтки
-            +b(href="#").__item
-                +e(src="images/categoryIcon5.png").img
-                +e.name Пластиковые фигурки
-            +b(href="#").__item
-                +e(src="images/categoryIcon6.png").img
-                +e.name Призы из акрила
-            +b(href="#").__item
-                +e(src="images/categoryIcon7.png").img
-                +e.name Деревянные награды
-            +b(href="#").__item
-                +e(src="images/categoryIcon8.png").img
-                +e.name Стеклянные награды
-            +b(href="#").__item._more
-                include /assets/images/moreIcon.svg
+	+b.catalogTopCategories
+		+e.box.box
+			+b.__item._active(href='#')
+				+e.img(src='images/categoryIcon1.png')
+				+e.name Кубки
+			+b.__item(href='#')
+				+e.img(src='images/categoryIcon2.png')
+				+e.name Медали
+			+b.__item(href='#')
+				+e.img(src='images/categoryIcon3.png')
+				+e.name Медали из акрила
+			+b.__item(href='#')
+				+e.img(src='images/categoryIcon4.png')
+				+e.name Литые статуэтки
+			+b.__item(href='#')
+				+e.img(src='images/categoryIcon5.png')
+				+e.name Пластиковые фигурки
+			+b.__item(href='#')
+				+e.img(src='images/categoryIcon6.png')
+				+e.name Призы из акрила
+			if (view !== 'tablet')
+				+b.__item(href='#')
+					+e.img(src='images/categoryIcon7.png')
+					+e.name Деревянные награды
+				+b.__item(href='#')
+					+e.img(src='images/categoryIcon8.png')
+					+e.name Стеклянные награды
+			+b.__item._more(href='#')
+				include /assets/images/moreIcon.svg

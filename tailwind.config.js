@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 const colors = {
   inherit: 'inherit',
   blue: {
@@ -38,7 +40,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xl': '1175px',
+        'xl': '1200px',
+      },
+      container: {
+        padding: '1rem',
       },
       color: colors,
       backgroundColor: colors,
@@ -87,5 +92,4 @@ module.exports = {
       fill: ['hover'],
     }
   },
-  plugins: [],
 };

@@ -1,0 +1,32 @@
+.headerMob {
+    @apply
+        fixed
+        z-30
+        top-0
+        -inset-x-0
+        bg-gray-100
+        border-b
+        border-gray-200
+        h-20;
+
+    &__box {
+        @apply
+            items-center;
+    }
+
+    &__logo {
+        @apply
+            w-40
+            mx-auto;
+    }
+
+    &__catalogIcon {
+        @apply
+        mr-5;
+    }
+
+    &__searchIcon {
+        @apply
+        mr-5;
+    }
+}

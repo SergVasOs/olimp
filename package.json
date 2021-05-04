@@ -5,11 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "build": "rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production",
-    "start": "webpack serve --mode=development"
+    "start": "webpack serve --mode=development",
+    "pretty": "prettier --write '**/*.pug'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.14.0",
     "autoprefixer": "^10.2.5",
     "css-loader": "^5.2.1",
     "file-loader": "^6.2.0",
@@ -19,6 +21,7 @@
     "postcss": "^8.2.10",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "pug": "^3.0.2",
     "pug-loader": "github:antpaw/pug-loader#master",
     "sass-loader": "^11.0.1",
@@ -26,8 +29,5 @@
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "pug-html-loader": "^1.1.5"
   }
 }

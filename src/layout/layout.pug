@@ -1,15 +1,16 @@
 include /bemto/bemto
 
-- set_bemto_settings({ flat_elements: false })
+- set_bemto_settings({ flat_elements: false });
 
 block pageVars
-    - var view = 'md';
+	- var view = "mobile";
 
 doctype html
-html(lang="en")
-    include head/head
+html(lang='en')
+	include head/head
 body
-    include header/header
-    include topBar/topBar
-    include content/content
-    include footer/footer
+	include header/header
+	if (view !== 'mobile')
+		include topBar/topBar
+	include content/content
+	include footer/footer

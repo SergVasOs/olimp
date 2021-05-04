@@ -36,24 +36,24 @@
 
     &__breadcrumbs {
         @apply
-            flex
-            items-center;
+        flex
+        items-center;
 
         &__shevron {
             @apply
-                text-gray-500
-                ml-4
-                w-2
-                h-4;
+            text-gray-500
+            ml-4
+            w-2
+            h-4;
         }
 
         &__item {
             @apply
-                text-gray-500
-                truncate
-                max-w-word
-                ml-4
-                last:text-gray-900;
+            text-gray-500
+            truncate
+            max-w-word
+            ml-4
+            last:text-gray-900;
         }
     }
 }
