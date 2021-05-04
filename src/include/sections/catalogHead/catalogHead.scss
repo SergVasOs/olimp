@@ -10,6 +10,7 @@
     &__title {
         @apply
         flex-1
+        max-w-max
         text-blue-800
         text-4xl
         truncate;
@@ -19,7 +20,8 @@
         @apply
         hidden
         text-600
-        mx-6
+        ml-2
+        mr-6
         mt-2
         lg:block;
     }
