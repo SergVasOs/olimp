@@ -1,0 +1,10 @@
+.quantity {
+    @apply
+        flex
+        items-center
+        space-x-2;
+
+    &__input {
+        @apply w-8 line-clamp-1 text-center;
+    }
+}

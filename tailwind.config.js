@@ -32,10 +32,10 @@ const colors = {
 };
 
 module.exports = {
-  purge: [
-    './dist/*.html',
-    './dist/*.js',
-  ],
+/*  purge: [
+    './dist/!*.html',
+    './dist/!*.js',
+  ],*/
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -65,6 +65,8 @@ module.exports = {
         900: ['24px', '32px'],
       },
 			width: {
+				22: '5.5rem',
+				34: '8.5rem',
 				modal: '435px',
 				sidebar: '275px',
 			},
@@ -84,7 +86,8 @@ module.exports = {
       },
 			spacing: {
 				'4/3': '116.667%',
-				'10/7': '142.857%'
+				'10/7': '142.857%',
+				'4/5': '80%'
 			}
     },
   },
@@ -95,6 +98,7 @@ module.exports = {
       ringOffsetWidth: ['active'],
       ringOpacity: ['active'],
       ringWidth: ['active'],
+      padding: ['first'],
       margin: ['last'],
       textColor: ['last'],
       fill: ['hover'],

@@ -1,26 +1,4 @@
-include /include/elements/size/size
-include /include/elements/price/price
-include /include/elements/oldPrice/oldPrice
-include /include/elements/buyButton/buyButton
-include /include/elements/labels/labels
-include /include/elements/favoriteIcon/favoriteIcon
-include /include/elements/image/image
-include /include/elements/dots/dots
-
-+b.catalogTableItem
-	+e.header
-		+e.colImg.__colImg Фото
-	+e.variant
-		+e.img
-			+image
-			+dots
-		+e.info
-			+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
-			+size
-		+e.prices
-			+price
-			+oldPrice
-			+b.__stock
-				+e.label В наличии:
-				+e.value 133 шт.
-		+buyButton
+if (view === 'mobile')
+	include mobile/catalogItem
+else
+	include desktop/catalogItem

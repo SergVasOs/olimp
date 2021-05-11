@@ -1,41 +1,4 @@
-include /include/elements/size/size
-include /include/elements/price/price
-include /include/elements/oldPrice/oldPrice
-include /include/elements/buyButton/buyButton
-include /include/elements/labels/labels
-include /include/elements/favoriteIcon/favoriteIcon
-include /include/elements/image/image
-include /include/elements/dots/dots
-
-+b.catalogListItem
-	+e.img
-		+labels
-		+favoriteIcon._active
-		+image
-		+dots
-	+e.info
-		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
-		+size
-		+b.__props
-			+b.__item
-				+e.name Материал:
-				+e.value Пластиковый
-			+b.__item
-				+e.name Тип:
-				+e.value таблички: 90*40
-			+b.__item
-				+e.name Высота:
-				+e.value 36 см
-			+b.__item
-				+e.name Диаметр чаши кубка:
-				+e.value 14 см
-			+b.__item
-				+e.name Вес:
-				+e.value 1665 гр
-	+e.prices
-		+price
-		+oldPrice
-		+b.__stock
-			+e.label В наличии:
-			+e.value 133 шт.
-	+buyButton
+if (view === 'mobile')
+	include mobile/catalogItem
+else
+	include desktop/catalogItem

@@ -3,10 +3,10 @@
 		sm:pt-8;
 
 	&__box {
-		@apply space-x-6;
+		@apply space-x-4 xl:space-x-6;
 	}
 	&__left {
-		@apply w-sidebar;
+		@apply w-1/4 xl:w-sidebar;
 	}
 
 	&__right {
@@ -71,7 +71,13 @@
 	}
 
 	&__items {
-		@apply grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+		@apply
+		grid
+		gap-2
+		grid-cols-2
+		md:grid-cols-3
+		xl:gap-8
+		lg:grid-cols-4;
 
 		&_list,
 		&_table {

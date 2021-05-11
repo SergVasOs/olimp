@@ -1,0 +1,113 @@
+.catalogTableItem {
+	@apply flex
+        flex-col
+        space-y-2;
+
+	&__header {
+		@apply flex
+        items-center
+        space-x-10
+        bg-gradient-to-t
+        from-gray-200
+        to-gray-100
+        h-12
+        rounded-lg;
+
+        &__col {
+            @apply font-medium;
+
+            &_img {
+                @apply w-22 pl-3;
+            }
+
+            &_info {
+                @apply w-40;
+            }
+
+            &_size {
+                @apply w-20;
+            }
+
+            &_material {
+                @apply w-24;
+            }
+
+            &_prices {
+                @apply flex-1;
+            }
+        }
+	}
+
+	&__variant {
+		@apply relative
+        flex
+        items-center
+        space-x-10
+        rounded-2xl border border-gray-500
+        pr-10;
+	}
+
+    &__img {
+        @apply w-22 relative;
+    }
+
+	&__image {
+		@apply
+        rounded-l-2xl
+        pb-10/7;
+	}
+
+    &__info {
+        @apply w-40;
+    }
+
+	&__name {
+		@apply text-black
+        line-clamp-2;
+	}
+
+    &__sku {
+        @apply text-200 text-gray-500 font-medium mt-2;
+    }
+
+    &__size {
+        @apply w-20 text-gray-700;
+    }
+
+    &__material {
+        @apply w-24  text-gray-700;
+    }
+
+	&__prices {
+		@apply
+        flex
+        w-34
+        items-baseline
+        lg:block;
+	}
+
+	&__oldPrice {
+		@apply ml-2
+        text-600
+        lg:ml-0;
+	}
+
+	&__stock {
+		@apply mt-2 text-200 flex;
+
+		&__label {
+			@apply text-gray-700 mr-1;
+		}
+	}
+
+    &__buyButton {
+        @apply ml-auto;
+    }
+
+
+	&:hover & {
+		&__buyButton {
+			@apply lg:visible;
+		}
+	}
+}
