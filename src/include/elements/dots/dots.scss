@@ -1,0 +1,22 @@
+.dots {
+    @apply
+    flex
+    items-center
+    justify-center
+    space-x-2;
+
+    &__item {
+        @apply
+        w-2
+        h-2
+        bg-gray-500
+        rounded-full
+        cursor-pointer
+        hover:bg-gray-700;
+
+        &_active {
+            @apply
+            bg-gray-700;
+        }
+    }
+}

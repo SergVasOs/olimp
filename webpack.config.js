@@ -1,6 +1,23 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const fs = require('fs');
+
+const generateHtmlPlugins = (templateDir) => {
+	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+	return templateFiles.map(item => {
+		const parts = item.split('.');
+		const name = parts[0];
+		const extension = parts[1];
+
+		return new HtmlWebpackPlugin({
+			filename: `${name}.html`,
+			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+		})
+	})
+};
+
+const htmlPlugins = generateHtmlPlugins('./src/page');
 
 const config = {
   entry: {
@@ -51,18 +68,7 @@ const config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/page/index.pug',
-      filename: 'index.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page/catalog.pug',
-      filename: 'catalog.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page/product.pug',
-      filename: 'product.html'
-    }),
+    ...htmlPlugins,
     new MiniCssExtractPlugin({
       filename: 'style.css',
     })

@@ -1,0 +1,31 @@
+.labels {
+    @apply
+    flex
+    flex-col
+    items-start
+    space-y-2;
+
+    &__item {
+        @apply
+        flex
+        items-center
+        space-x-2
+        text-white
+        text-300
+        py-1.5
+        px-3
+        bg-gray-500
+        rounded-xl;
+
+        &_new {
+            @apply
+            bg-green-300;
+        }
+
+
+        &_discount {
+            @apply
+            bg-red-300;
+        }
+    }
+}

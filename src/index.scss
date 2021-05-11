@@ -13,14 +13,17 @@
 @import "layout/content/content";
 @import "layout/footer/footer";
 
-
-@import "include/sections/catalogHead/catalogHead";
-@import "include/sections/catalogContent/catalogContent";
-@import "include/sections/catalogTopCategories/catalogTopCategories";
-
-@import "include/blocks/catalogItem/catalogItem";
-
 @import "include/elements/size/size";
 @import "include/elements/price/price";
 @import "include/elements/oldPrice/oldPrice";
 @import "include/elements/buyButton/buyButton";
+@import "include/elements/labels/labels";
+@import "include/elements/favoriteIcon/favoriteIcon";
+@import "include/elements/image/image";
+@import "include/elements/dots/dots";
+
+@import "include/blocks/catalogItem/catalogItem";
+
+@import "include/sections/catalogHead/catalogHead";
+@import "include/sections/catalogContent/catalogContent";
+@import "include/sections/catalogTopCategories/catalogTopCategories";

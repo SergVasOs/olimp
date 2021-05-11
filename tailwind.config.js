@@ -66,6 +66,7 @@ module.exports = {
       },
 			width: {
 				modal: '435px',
+				sidebar: '275px',
 			},
       maxWidth: {
         'word': '15ch',
@@ -81,6 +82,10 @@ module.exports = {
         'red': '#F44336',
         'inherit': 'inherit',
       },
+			spacing: {
+				'4/3': '116.667%',
+				'10/7': '142.857%'
+			}
     },
   },
   variants: {
@@ -95,4 +100,7 @@ module.exports = {
       fill: ['hover'],
     }
   },
+	plugins: [
+		require('@tailwindcss/line-clamp'),
+	]
 };

@@ -1,6 +1,7 @@
 .size {
     @apply
-        w-full;
+        flex
+        space-x-2;
 
     &__item {
         @apply
@@ -14,8 +15,7 @@
             rounded
             cursor-pointer
             whitespace-nowrap
-            p-1
-            m-1;
+            p-1;
 
         &_active {
             @apply

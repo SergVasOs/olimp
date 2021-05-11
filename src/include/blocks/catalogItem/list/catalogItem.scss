@@ -1,0 +1,106 @@
+.catalogListItem {
+	@apply relative
+    flex
+    space-x-14
+    rounded-2xl border border-gray-500
+    pr-10
+    lg:border-transparent
+    lg:hover:border-gray-500;
+
+	&__img {
+		@apply w-44 relative;
+	}
+
+	&__favoriteIcon {
+		@apply absolute
+        z-10
+        top-4
+        right-2.5;
+	}
+
+	&__labels {
+		@apply absolute
+        z-10
+        top-4
+        left-2.5;
+	}
+
+	&__image {
+		@apply rounded-l-2xl
+        pb-10/7;
+	}
+
+	&__dots {
+		@apply absolute
+        z-10
+        left-1/2
+        bottom-3
+        transform
+        -translate-x-1/2;
+	}
+
+	&__info {
+		@apply mt-10 flex-1;
+	}
+
+	&__name {
+		@apply text-black
+        text-600
+        line-clamp-1;
+	}
+
+	&__size {
+		@apply mt-4;
+	}
+
+	&__props {
+		@apply mt-4
+        flex
+        flex-col
+        space-y-1;
+
+		&__item {
+			@apply text-200
+                font-medium
+                flex;
+
+			&__name {
+				@apply text-gray-500 mr-1;
+			}
+		}
+	}
+
+	&__prices {
+		@apply mt-10
+        flex
+        items-baseline
+        lg:block;
+	}
+
+	&__oldPrice {
+		@apply ml-2
+        lg:ml-0
+        lg:mt-1;
+	}
+
+	&__buyButton {
+		@apply mt-10
+        hidden
+        invisible
+        lg:flex;
+	}
+
+    &__stock {
+        @apply mt-5 text-200 flex;
+
+        &__label {
+            @apply text-gray-700 mr-1;
+        }
+    }
+
+	&:hover & {
+		&__buyButton {
+			@apply lg:visible;
+		}
+	}
+}

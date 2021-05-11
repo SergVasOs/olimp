@@ -1,4 +1,7 @@
 .oldPrice {
     @apply
-        line-through text-gray-500;
+    whitespace-nowrap
+        line-through text-gray-500
+    text-200
+    lg:text-400;
 }

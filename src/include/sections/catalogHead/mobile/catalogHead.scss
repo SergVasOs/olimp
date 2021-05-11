@@ -1,0 +1,19 @@
+.catalogHeadMob {
+    @apply
+        mt-6;
+
+    &__box {
+        @apply
+            items-center
+            space-x-3;
+    }
+
+    &__title {
+        @apply
+        flex-1
+        max-w-max
+        text-blue-800
+        text-800
+        truncate;
+    }
+}

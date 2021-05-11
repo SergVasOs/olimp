@@ -1,0 +1,100 @@
+.catalogGridItem {
+    @apply
+        relative
+        flex
+        flex-col
+        rounded-2xl border border-gray-500
+        lg:border-transparent
+        lg:hover:border-gray-500;
+
+    &__favoriteIcon {
+        @apply
+            absolute
+            z-10
+            top-4
+            right-4;
+    }
+
+    &__labels {
+        @apply
+            absolute
+            z-10
+            top-4
+            left-4;
+    }
+
+    &__image {
+        @apply
+        rounded-t-2xl;
+    }
+
+    &__dots {
+        @apply
+        h-10;
+    }
+
+    &__size {
+        @apply
+            px-3;
+    }
+
+    &__material {
+        @apply
+            text-gray-500
+            text-300
+            font-medium
+            flex
+            flex-1
+            items-end
+            px-3
+            pt-3
+            pb-2;
+    }
+
+    &__name {
+        @apply
+        text-black
+            leading-5
+            line-clamp-2
+            px-3;
+    }
+
+    &__bottom {
+        @apply
+            mt-3
+            p-3
+            pb-5
+            flex
+            justify-between
+            items-center
+            lg:mt-1;
+    }
+
+    &__prices {
+        @apply
+            flex
+            items-baseline
+            lg:block;
+    }
+
+    &__oldPrice {
+        @apply
+            ml-2
+            lg:ml-0
+            lg:mt-1;
+    }
+
+    &__buyButton {
+        @apply
+            hidden
+            invisible
+            lg:flex;
+    }
+
+    &:hover & {
+        &__buyButton {
+            @apply
+                lg:visible;
+        }
+    }
+}

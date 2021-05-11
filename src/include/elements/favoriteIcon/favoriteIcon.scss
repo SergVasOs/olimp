@@ -1,0 +1,13 @@
+.favoriteIcon {
+    @apply
+    cursor-pointer
+    fill-white
+    hover:text-red-500
+    hover:fill-red;
+
+    &_active {
+        @apply
+        text-red-500
+        fill-red;
+    }
+}
