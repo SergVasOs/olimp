@@ -6,6 +6,7 @@
 @import "assets/scss/select";
 @import "assets/scss/button";
 @import "assets/scss/modal";
+@import "assets/scss/layer";
 @import "assets/scss/form";
 
 @import "layout/header/header";
@@ -23,7 +24,9 @@
 @import "include/elements/dots/dots";
 @import "include/elements/quantity/quantity";
 
+@import "include/blocks/catalogMobFilter/catalogMobFilter";
 @import "include/blocks/catalogItem/catalogItem";
+@import "include/blocks/catalogFilters/catalogFilters";
 
 @import "include/sections/catalogHead/catalogHead";
 @import "include/sections/catalogContent/catalogContent";

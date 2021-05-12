@@ -1,0 +1,66 @@
+.catalogMobFilter {
+	@apply space-y-6;
+
+	&__view {
+		&__label {
+			@apply text-600 font-medium mb-3;
+		}
+
+		&__items {
+			@apply flex space-x-1;
+		}
+
+		&__item {
+			@apply flex
+            justify-center
+            items-center
+            px-12
+            text-blue-800
+            h-11
+            rounded-md;
+
+			&_active {
+				@apply bg-blue-800
+                text-white;
+			}
+		}
+	}
+
+	&__sort {
+		&__label {
+			@apply text-600 font-medium mb-3;
+		}
+
+		&__items {
+			@apply flex space-x-4;
+		}
+
+        &__item {
+            @apply flex
+            justify-center
+            items-center
+            px-9
+            text-blue-800
+            h-11
+            rounded-md
+            border
+            border-gray-400;
+
+            &__icon {
+                @apply ml-2;
+            }
+
+            &_active {
+                @apply bg-blue-800
+                border-blue-800
+                text-white;
+            }
+
+            &_desc & {
+                &__icon {
+                    @apply transform rotate-180;
+                }
+            }
+        }
+	}
+}

@@ -73,4 +73,9 @@
         @apply
             ml-2;
     }
+
+    &__text + &__icon {
+        @apply
+        ml-2;
+    }
 }

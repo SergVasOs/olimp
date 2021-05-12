@@ -1,0 +1,32 @@
+.layer {
+    @apply fixed z-30 inset-0 hidden bg-white flex-col items-stretch;
+
+    &_show {
+        @apply flex;
+    }
+
+    &__title {
+        @apply
+        bg-blue-800
+        px-12
+        pt-10
+        pb-5
+        text-700
+        text-center
+        text-white
+        font-medium;
+    }
+
+    &__close {
+        @apply absolute top-10 right-6;
+    }
+
+    &__body {
+        @apply
+        flex-1
+        py-7
+        px-4
+        flex
+        flex-col;
+    }
+}
