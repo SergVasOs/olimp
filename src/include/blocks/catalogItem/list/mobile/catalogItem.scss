@@ -14,7 +14,7 @@
 		w-8
 		h-8
         z-10
-        top-4
+        top-3.5
         right-2.5;
 	}
 
@@ -53,17 +53,17 @@
 	&__prices {
 		@apply
 		px-5
-		mt-3
+		mt-2
         flex
         items-baseline;
 	}
 
 	&__price {
-		@apply text-800 leading-none;
+		@apply text-800;
 	}
 
 	&__oldPrice {
-		@apply text-600 ml-2 leading-none;
+		@apply text-600 ml-2;
 	}
 
 	&__props {
@@ -75,7 +75,7 @@
 		pb-6
 		flex
 		justify-between
-		space-x-3
+		space-x-8
 		border-t
 		border-gray-300;
 

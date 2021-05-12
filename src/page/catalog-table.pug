@@ -2,6 +2,7 @@ extends /layout/layout
 include /include/sections/catalogHead/catalogHead
 include /include/sections/catalogContent/catalogContent
 include /include/sections/catalogTopCategories/catalogTopCategories
+include /include/sections/catalogSubCategories/catalogSubCategories
 
 block append pageVars
 	- var pageTitle = "Кубки пластиковые";
@@ -11,4 +12,6 @@ block content
 	if (view !== 'mobile')
 		+catalogTopCategories
 	+catalogHead
+	if (view === 'mobile')
+		+catalogSubCategories
 	+catalogContent

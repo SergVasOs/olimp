@@ -1,0 +1,35 @@
+.catalogSubCategories {
+    @apply
+    mt-4;
+
+    &__box {
+        @apply
+        h-11
+        items-stretch;
+    }
+
+    &__items {
+        @apply
+        flex-1
+        flex
+        space-x-4;
+
+        &__item {
+            @apply
+            text-500
+            text-blue-900
+            flex
+            items-center
+            px-3
+            border
+            border-gray-400
+            rounded;
+
+            &_active {
+                @apply
+                border-blue-900
+                font-medium;
+            }
+        }
+    }
+}

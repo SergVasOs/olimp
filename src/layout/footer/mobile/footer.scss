@@ -1,4 +1,7 @@
 .footerMob {
+    @apply
+        text-center;
+
     &__menus {
         @apply
         bg-gray-100
@@ -81,5 +84,79 @@
         @apply
             text-white
             w-60;
+    }
+
+    &__divider {
+        @apply
+        w-4/5
+        h-px
+        bg-gray-950
+        my-5;
+    }
+
+    &__phone {
+        @apply
+        mt-12
+        text-700
+        font-bold
+        text-white;
+    }
+
+    &__email {
+        @apply
+        mt-3
+        text-700
+        text-white;
+    }
+
+    &__address {
+        @apply
+        text-700
+        mb-4;
+
+        &__main {
+            @apply font-bold;
+        }
+    }
+
+    &__routeButton {
+        @apply h-9;
+    }
+
+    &__worktime {
+        @apply
+        text-700
+        mt-5;
+
+        &__label {
+            @apply font-bold;
+        }
+    }
+
+    &__socialLinks {
+        @apply
+        flex
+        space-x-3;
+
+        &__item {
+            @apply
+            w-10
+            h-10
+            p-2.5
+            bg-white
+            rounded-full;
+        }
+    }
+
+    &__menu {
+        @apply flex flex-col space-y-5;
+
+        &__item {
+            @apply text-white text-200 underline;
+        }
+    }
+
+    &__copyright {
+        @apply text-200 mt-5;
     }
 }

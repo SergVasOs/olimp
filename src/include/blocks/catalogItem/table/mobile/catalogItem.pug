@@ -11,39 +11,25 @@ include /include/elements/quantity/quantity
 +b.catalogTableItemMob
 	+b.__header
 		+e.col._img Фото
-		+e.col._info Название
+		+e.col._info Название/Цена
 		+e.col._size Размер
-		+e.col._material Материал
-		+e.col._prices Цена
 	+e.variant
 		+e.img
 			+image
 		+e.info
 			+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
-			+e.sku Артикул: 37692
+			+e.prices
+				+price
+				+oldPrice
 		+e.size 20.5 см
-		+e.material Пластик
-		+e.prices
-			+price
-			+oldPrice
-			+b.__stock
-				+e.label В наличии:
-				+e.value 133 шт.
-		+quantity
 		+buyButton
 	+e.variant
 		+e.img
 			+image
 		+e.info
 			+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
-			+e.sku Артикул: 37692
+			+e.prices
+				+price
+				+oldPrice
 		+e.size 20.5 см
-		+e.material Пластик
-		+e.prices
-			+price
-			+oldPrice
-			+b.__stock
-				+e.label В наличии:
-				+e.value 133 шт.
-		+quantity
 		+buyButton

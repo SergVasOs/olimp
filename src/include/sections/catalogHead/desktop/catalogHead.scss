@@ -37,9 +37,10 @@
 
     &__sort {
         @apply
-            w-60
+            w-44
             mr-6
-            ml-auto;
+            ml-auto
+            lg:w-60;
     }
 
     &__views {

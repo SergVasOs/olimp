@@ -2,11 +2,12 @@
     @apply
     text-200
     font-medium
-    mt-10;
+    mt-9;
 
     &__box {
         @apply
-        h-14
+        py-1
+        h-15
         flex
         items-stretch
         space-x-2;
@@ -48,6 +49,10 @@
                 ring-2
                 ring-orange-200
                 hover:border-transparent;
+            }
+
+            &__img {
+                @apply max-h-12;
             }
 
             &__name {

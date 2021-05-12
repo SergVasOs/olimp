@@ -14,12 +14,14 @@ const colors = {
   gray: {
     100: '#F9F9F9',
     200: '#F3F3F3',
+    250: '#F0F0F0',
     300: '#E8E8E8',
     400: '#DEDEDE',
     500: '#B5B5B5',
     600: '#BEBEBE',
     700: '#7C7C7C',
     900: '#333333',
+    950: '#003453',
   },
   green: {
     300: '#539269',
@@ -46,6 +48,7 @@ module.exports = {
         padding: '1rem',
       },
       color: colors,
+			gradientColorStops: colors,
       backgroundColor: colors,
       borderColor: colors,
       textColor: colors,
@@ -55,6 +58,7 @@ module.exports = {
       },
       fontSize: {
         100: ['10px', '12px'],
+        150: ['11px', '13px'],
         200: ['12px', '14px'],
         300: ['13px', '15px'],
         400: ['14px', '18px'],
@@ -65,10 +69,17 @@ module.exports = {
         900: ['24px', '32px'],
       },
 			width: {
+				18: '4.5rem',
 				22: '5.5rem',
+				30: '7.5rem',
 				34: '8.5rem',
+				38: '9.5rem',
+				108: '27rem',
 				modal: '435px',
 				sidebar: '275px',
+			},
+			height: {
+				15: '3.75rem',
 			},
       maxWidth: {
         'word': '15ch',
