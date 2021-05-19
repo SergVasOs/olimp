@@ -3,11 +3,11 @@
     cursor-pointer
     fill-white
     hover:text-red-500
-    hover:fill-red;
+    hover:fill-red-500;
 
     &_active {
         @apply
         text-red-500
-        fill-red;
+        fill-red-500;
     }
 }

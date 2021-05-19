@@ -1,0 +1,12 @@
+@import "/src/assets/scss/index";
+@import "/src/include/layout/topBar/topBar";
+@import "/src/include/layout/footer/footer";
+@import "layout/header/header";
+
+@import "/src/include/blocks/catalog/catalogItem/list/catalogItem";
+@import "/src/include/blocks/catalog/catalogItem/table/catalogItem";
+
+@import "/src/include/sections/catalog/catalogContent/catalogContent";
+@import "/src/include/sections/catalog/catalogHead/catalogHead";
+@import "/src/include/sections/product/productContent/productContent";
+@import "/src/include/sections/product/productHead/productHead";

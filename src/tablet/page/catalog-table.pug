@@ -1,0 +1,11 @@
+extends /tablet/layout/layout
+include /include/sections/catalog/catalogHead/catalogHead
+include /include/sections/catalog/catalogContent/catalogContent
+
+block append pageVars
+	- var pageTitle = "Кубки пластиковые";
+	- var catalogView = "table";
+
+block content
+	+catalogHead
+	+catalogContent

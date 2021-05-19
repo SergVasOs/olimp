@@ -1,0 +1,10 @@
+extends /mobile/layout/layout
+include /include/sections/common/banners/banners
+include /mobile/include/sections/common/mainMenu/mainMenu
+
+block append pageVars
+	- var pageTitle = "Главная";
+
+block content
+	+banners
+	+mainMenu

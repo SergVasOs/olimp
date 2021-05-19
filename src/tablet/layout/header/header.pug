@@ -1,0 +1,21 @@
++b.header
+	+e.box.box
+		include /include/elements/logo/logo
+		+b.input.__searchInput
+			+b.icon
+				include /assets/images/searchIcon.svg
+			+e.INPUT.field(placeholder='Поиск по сайту')
+			+b.button._sm.__button
+				+b.icon._sm
+					include /assets/images/filterIcon.svg
+		+b.__regionChoice(href='#')
+			include /assets/images/regionChoiceIcon.svg
+			+e.label Москва
+		+b.icon._lg.__catalogIcon(href='/catalog.html')
+			include /assets/images/sandwitchIcon.svg
+		+b.icon._lg.__userIcon(href='#')
+			include /assets/images/userIcon.svg
+		+b.icon._lg.__favoriteIcon(href='#')
+			include /assets/images/heartIcon.svg
+		+b.icon._lg.__cartIcon(href='#')
+			include /assets/images/basketIcon.svg

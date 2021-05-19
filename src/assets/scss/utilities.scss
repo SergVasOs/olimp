@@ -1,0 +1,13 @@
+@layer utilities {
+    .content-empty {
+        content: '';
+    }
+
+    .overflow-layer {
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

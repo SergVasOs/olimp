@@ -1,0 +1,14 @@
+include /bemto/bemto
+
+- set_bemto_settings({ flat_elements: false });
+
+doctype html
+html(lang='ru')
+	include /include/layout/head/head
+body
+	include header/header
+	include /include/layout/content/content
+	if (!hideFooter)
+		include footer/footer
+
+	script(src='js/scripts.js')

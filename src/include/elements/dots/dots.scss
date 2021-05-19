@@ -19,4 +19,26 @@
             bg-gray-700;
         }
     }
+
+    &_yellow & {
+        &__item {
+            @apply
+            bg-gray-100;
+
+            &_active {
+                @apply
+                bg-yellow-400;
+            }
+        }
+    }
+
+    &_lg & {
+        &__item {
+            @apply
+            w-2
+            h-2
+            lg:w-3.5
+            lg:h-3.5;
+        }
+    }
 }

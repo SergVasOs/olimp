@@ -1,0 +1,10 @@
+include /include/elements/favoriteIcon/favoriteIcon
+
+mixin productHead
+	+b.productHead
+		+e.box.box
+			+b.icon._sm.__backIcon(href='#')
+				include /assets/images/arrowIcon.svg
+			+b.icon._lg(href='#')
+				include /assets/images/shareIcon.svg
+			+favoriteIcon._active

@@ -7,4 +7,12 @@
     overflow-hidden
     h-full
     mx-auto;
+
+    &_full {
+        @apply w-full p-0 overflow-layer;
+    }
+
+    &_scroll {
+        @apply overflow-layer;
+    }
 }

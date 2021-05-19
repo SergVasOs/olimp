@@ -1,0 +1,37 @@
+include /include/elements/size/size
+include /include/elements/labels/labels
+include /include/elements/dots/dots
+include /include/elements/buyButton/buyButton
+include /include/elements/upgradeButton/upgradeButton
+
+mixin productContent
+	+b.productContent
+		+e.box.box._full
+			+b.__gallery
+				+labels
+				+e.img(src='images/product1.png')
+				+dots
+		+e.box.box._full._scroll
+			+b.__tabs
+				+e.item._active Фотографии
+				+e.item Нанесение и комплект
+				+e.item Готовые решения
+		+e.box.box
+			+size._lg
+		+b.__popup
+			+e.handler
+			+b.__short
+				+e.box.box
+					+e.name Стеклянная награда J42-115 с цветным нанесением, высота 11.5 см
+					+e.info
+						+e.price от 3 249 ₽ / шт
+						+e.material Пластик
+					+e.buttons
+						+upgradeButton._lg
+						+buyButton('В корзину')
+			+b.__full
+				+e.box.box._full
+					+b.__menu
+						+e.item._active Характеристики
+						+e.item Описание
+						+e.item Все свойства

@@ -1,0 +1,26 @@
+.productHead {
+    @apply
+    mt-5
+    lg:mt-8;
+
+    &__box {
+        @apply
+            items-center
+            space-x-4;
+    }
+
+    &__title {
+        @apply
+        flex-1
+        max-w-max
+        text-blue-800
+        text-4xl
+        truncate;
+    }
+
+    &__favoriteIcon {
+        @apply
+        w-8
+        h-8;
+    }
+}

@@ -24,4 +24,13 @@
                 border-blue-800;
         }
     }
+
+    &_lg & {
+        &__item {
+            @apply
+            text-200
+            font-medium
+            p-3;
+        }
+    }
 }

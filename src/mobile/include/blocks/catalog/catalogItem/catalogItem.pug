@@ -1,0 +1,7 @@
+mixin catalogItem
+	if (catalogView === 'grid')
+		include /include/blocks/catalog/catalogItem/grid/catalogItem
+	else if (catalogView === 'list')
+		include list/catalogItem
+	else
+		include table/catalogItem

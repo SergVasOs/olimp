@@ -1,0 +1,32 @@
+.productHead {
+    @apply
+        mt-5
+        relative
+        z-10;
+
+    &__box {
+        @apply
+            h-11
+            items-center
+            space-x-4;
+    }
+
+    &__backIcon {
+        @apply
+        h-full
+        w-11
+        p-3
+        bg-gray-100
+        rounded
+        transform
+        rotate-180
+        mr-auto;
+    }
+
+    &__favoriteIcon {
+        @apply
+        w-8
+        h-8;
+    }
+
+}

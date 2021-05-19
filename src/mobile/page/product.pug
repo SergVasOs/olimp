@@ -1,0 +1,11 @@
+extends /mobile/layout/layout
+include /mobile/include/sections/product/productHead/productHead
+include /mobile/include/sections/product/productContent/productContent
+
+block append pageVars
+	- var pageTitle = "Продукт";
+	- var hideFooter = true;
+
+block content
+	+productHead
+	+productContent

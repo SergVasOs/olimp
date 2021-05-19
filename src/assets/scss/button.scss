@@ -31,8 +31,9 @@
 
     &_lg {
         @apply
-        rounded
-        h-12;
+        rounded-lg
+        font-medium
+        h-13;
     }
 
     &_xl {

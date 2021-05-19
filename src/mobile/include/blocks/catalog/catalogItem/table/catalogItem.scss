@@ -1,0 +1,91 @@
+.catalogTableItem {
+	@apply flex
+        flex-col
+        space-y-3;
+
+	&__header {
+		@apply flex
+        items-center
+        space-x-4
+        bg-gradient-to-t
+        from-gray-250
+        to-gray-100
+        h-10
+        rounded-lg;
+
+        &__col {
+            @apply font-medium text-150;
+
+
+            &_img {
+                @apply w-18 pl-5;
+            }
+
+            &_info {
+                @apply flex-1;
+            }
+
+            &_size {
+                @apply w-36;
+            }
+        }
+	}
+
+	&__variant {
+		@apply relative
+        flex
+        items-center
+        space-x-4
+        rounded-2xl border border-gray-300
+        pr-4;
+	}
+
+    &__img {
+        @apply w-18 relative;
+    }
+
+	&__image {
+		@apply
+        rounded-l-2xl
+        pb-4/3;
+	}
+
+    &__info {
+        @apply flex-1;
+    }
+
+	&__name {
+		@apply text-black
+        line-clamp-2;
+	}
+
+    &__size {
+        @apply
+        w-16
+        text-150
+        text-gray-700
+        border
+        border-gray-500
+        text-center
+        p-2
+        rounded;
+    }
+
+	&__prices {
+		@apply
+        mt-2
+        flex
+        items-baseline;
+	}
+
+    &__price {
+        @apply
+            text-400 leading-none
+    }
+
+	&__oldPrice {
+		@apply ml-2
+        line-clamp-1
+        text-200;
+	}
+}

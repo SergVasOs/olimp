@@ -2,17 +2,22 @@ const plugin = require('tailwindcss/plugin');
 
 const colors = {
   inherit: 'inherit',
+	white: '#ffffff',
   blue: {
+    300: '#1890FF',
     400: '#1D87BB',
     800: '#022F47',
     900: '#10223E',
   },
   black: '#000000',
+	yellow: {
+		400: '#FFC531',
+	},
   orange: {
     200: '#F3D470',
   },
   gray: {
-    100: '#F9F9F9',
+    100: '#F8F8F8',
     200: '#F3F3F3',
     250: '#F0F0F0',
     300: '#E8E8E8',
@@ -53,7 +58,9 @@ module.exports = {
       borderColor: colors,
       textColor: colors,
       ringColor: colors,
-      fontFamily: {
+      stroke: colors,
+			fill: colors,
+			fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
       fontSize: {
@@ -64,6 +71,7 @@ module.exports = {
         400: ['14px', '18px'],
         500: ['15px', '19px'],
         600: ['16px', '18px'],
+        650: ['17px', '19px'],
         700: ['18px', '22px'],
         800: ['20px', '28px'],
         900: ['24px', '32px'],
@@ -78,7 +86,11 @@ module.exports = {
 				modal: '435px',
 				sidebar: '275px',
 			},
+			inset: {
+				22: '5.5rem',
+			},
 			height: {
+				13: '3.25rem',
 				15: '3.75rem',
 			},
       maxWidth: {
@@ -90,15 +102,17 @@ module.exports = {
       backgroundPosition: {
         rightIcon: 'calc(100% - .5rem) center',
       },
-      fill: {
-        'white': '#ffffff',
-        'red': '#F44336',
-        'inherit': 'inherit',
-      },
 			spacing: {
 				'4/3': '116.667%',
 				'10/7': '142.857%',
-				'4/5': '80%'
+				'4/5': '80%',
+				'full': '100%',
+			},
+			boxShadow: {
+      	button: '0px -12px 22px rgba(168, 168, 168, 0.25)'
+			},
+			transitionProperty: {
+				'top': 'top',
 			}
     },
   },

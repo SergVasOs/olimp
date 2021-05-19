@@ -1,0 +1,198 @@
+.productContent {
+	@apply -mt-16;
+
+	&__box {
+		@apply block;
+	}
+
+	&__gallery {
+		@apply relative;
+
+		&__labels {
+			@apply absolute
+			z-10
+			top-22
+			left-4;
+		}
+
+		&__img {
+			@apply w-full;
+		}
+
+		&__dots {
+			@apply absolute
+			flex-col
+			space-x-0
+			space-y-2
+			z-10
+			top-1/2
+			right-4
+			transform -translate-x-1/2;
+		}
+	}
+
+	&__tabs {
+		@apply flex;
+
+		&__item {
+			@apply
+				relative
+				py-5
+				px-7
+				whitespace-nowrap
+				text-300;
+
+			&:before {
+				@apply content-empty
+				absolute
+				inset-x-0
+				bottom-0
+				h-px
+				bg-gray-300;
+			}
+
+			&_active {
+				@apply font-medium;
+
+				&:before {
+					@apply
+						h-0.5
+						bg-black;
+				}
+			}
+		}
+	}
+
+	&__size {
+		@apply
+			pt-6
+			pb-5;
+	}
+
+	&__popup {
+		@apply
+			absolute
+			inset-x-0
+			top-4/5
+			bottom-0
+			pt-6
+			pb-3
+			bg-gray-100
+			shadow-button
+			z-20
+			transition-top;
+
+		&__handler {
+			@apply
+				absolute
+				left-1/2
+				top-2
+				transform -translate-x-1/2
+				h-1
+				w-12
+				bg-gray-400
+				rounded-full;
+		}
+
+		&__short {
+			&__box {
+				@apply
+				flex-col
+				items-stretch
+				space-y-2.5;
+			}
+
+			&__name {
+				@apply
+					text-650
+					font-medium
+					line-clamp-1;
+			}
+
+			&__info {
+				@apply
+					flex
+					justify-between
+					items-baseline;
+			}
+
+			&__price {
+				@apply
+					text-650;
+			}
+
+			&__material {
+				@apply
+				text-300
+				text-gray-600;
+			}
+
+			&__buttons {
+				@apply
+					flex
+					space-x-3;
+			}
+
+			&__upgradeButton,
+			&__buyButton {
+				@apply
+					flex-1
+					font-medium;
+			}
+		}
+
+
+		&__full {
+			@apply hidden;
+
+			&__menu {
+				@apply flex;
+
+				&__item {
+					@apply
+					relative
+					py-5
+					px-7
+					whitespace-nowrap
+					text-300;
+
+					&:before {
+						@apply content-empty
+						absolute
+						inset-x-0
+						bottom-0
+						h-px
+						bg-gray-300;
+					}
+
+					&_active {
+						@apply font-medium;
+
+						&:before {
+							@apply
+							h-0.5
+							bg-black;
+						}
+					}
+				}
+			}
+		}
+
+		&_open {
+			@apply top-20;
+		}
+
+		&_open & {
+			@apply
+			top-20;
+
+			&__short {
+				@apply hidden;
+			}
+
+			&__full {
+				@apply flex;
+			}
+		}
+	}
+}

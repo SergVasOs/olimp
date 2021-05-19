@@ -1,0 +1,52 @@
+.slider {
+    @apply pb-2;
+
+    &__labels {
+        @apply
+            flex
+            justify-between;
+    }
+
+    &__track {
+        @apply
+            relative
+            mt-4
+            h-2
+            bg-gray-300
+            rounded-lg;
+
+        &__bar {
+            @apply
+                absolute
+                inset-y-0
+                left-1/4
+                w-1/2
+                bg-yellow-400
+                rounded-lg;
+        }
+
+        &__handler {
+            @apply
+            absolute
+            z-10
+            w-5
+            h-5
+            rounded-full
+            bg-white
+            border
+            border-yellow-400
+            top-1/2
+            transform
+            -translate-x-1/2
+            -translate-y-1/2;
+
+            &_start {
+                @apply left-1/4;
+            }
+
+            &_end {
+                @apply left-3/4;
+            }
+        }
+    }
+}

@@ -17,68 +17,65 @@ const generateHtmlPlugins = (templateDir) => {
 	})
 };
 
-const htmlPlugins = generateHtmlPlugins('./src/page');
+const config = (env) => {
+	const {view} = env;
+	const htmlPlugins = generateHtmlPlugins(`./src/${view}/page`);
 
-const config = {
-  entry: {
-    app: './src/index.js'
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: "script.js",
-  },
-  devServer: {
-    port: 5000,
-    contentBase: path.join(__dirname, 'public'),
-    inline:true,
-  },
-  target: 'web',
-  module: {
-    rules: [
-      {
-        test: /\.pug$/,
-        use: [
-          {
-            loader: 'pug-loader',
-            options: {
-              root: path.resolve(__dirname, 'src'),
-            }
-          },
-        ]
-      },
-      {
-        test: /.(jpg|jpeg|png|svg|ttf)$/,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {loader: "css-loader"},
-          {loader: "postcss-loader"},
-          {loader: "sass-loader"},
-        ]
-      },
-    ]
-  },
-  plugins: [
-    ...htmlPlugins,
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    })
-  ]
+	return {
+		entry: {
+			app: `./src/${view}/index.js`,
+		},
+		output: {
+			path: path.resolve(__dirname, 'dist'),
+			filename: 'script.js',
+		},
+		devServer: {
+			port: 5000,
+			contentBase: path.join(__dirname, 'public'),
+			inline: true,
+		},
+		target: 'web',
+		module: {
+			rules: [
+				{
+					test: /\.pug$/,
+					use: [
+						{
+							loader: 'pug-loader',
+							options: {
+								root: path.resolve(__dirname, 'src'),
+							},
+						},
+					],
+				},
+				{
+					test: /.(jpg|jpeg|png|svg|ttf)$/,
+					use: [
+						{
+							loader: 'file-loader',
+						},
+					],
+				},
+				{
+					test: /\.scss$/,
+					use: [
+						{
+							loader: MiniCssExtractPlugin.loader,
+						},
+						{ loader: 'css-loader' },
+						{ loader: 'postcss-loader' },
+						{ loader: 'sass-loader' },
+					],
+				},
+			],
+		},
+		plugins: [
+			...htmlPlugins,
+			new MiniCssExtractPlugin({
+				filename: 'style.css',
+			}),
+		],
+	};
 };
 
-module.exports = (env, argv) => {
-  if (argv.mode === 'development') {
-  }
-  if (argv.mode === 'production') {
-  }
-  return config;
-};
+module.exports = config;

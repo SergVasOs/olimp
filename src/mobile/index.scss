@@ -1,0 +1,14 @@
+@import "/src/assets/scss/index";
+@import "layout/footer/footer";
+@import "layout/header/header";
+
+@import "include/blocks/catalog/catalogItem/list/catalogItem";
+@import "include/blocks/catalog/catalogItem/table/catalogItem";
+@import "include/blocks/catalog/catalogLayerFilter/catalogLayerFilter";
+
+@import "include/sections/catalog/catalogContent/catalogContent";
+@import "include/sections/catalog/catalogHead/catalogHead";
+@import "include/sections/catalog/catalogSubCategories/catalogSubCategories";
+@import "include/sections/common/mainMenu/mainMenu";
+@import "include/sections/product/productContent/productContent";
+@import "include/sections/product/productHead/productHead";

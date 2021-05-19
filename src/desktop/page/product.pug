@@ -1,0 +1,10 @@
+extends /desktop/layout/layout
+include /include/sections/product/productHead/productHead
+include /include/sections/product/productContent/productContent
+
+block append pageVars
+	- var pageTitle = "Продукт";
+
+block content
+	+productHead
+	+productContent

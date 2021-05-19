@@ -1,0 +1,123 @@
+.topBar {
+    &__top {
+        @apply bg-gray-200
+        filter drop-shadow;
+
+        &__box {
+            @apply flex
+            justify-between
+            items-center;
+        }
+
+        &__menu {
+            @apply flex
+            h-12;
+
+            &__item {
+                @apply flex
+                items-center
+                text-600
+                text-gray-500
+                mr-9;
+
+                &_active {
+                    @apply text-blue-900
+                    border-b-2
+                    border-blue-900;
+                }
+            }
+        }
+
+        &__breadcrumbs {
+            @apply hidden
+            items-center
+            lg:flex;
+
+            &__shevron {
+                @apply text-gray-500
+                ml-4
+                w-2
+                h-4;
+            }
+
+            &__item {
+                @apply text-gray-500
+                truncate
+                max-w-word
+                ml-4
+                last:text-gray-900;
+            }
+        }
+    }
+
+    &__subMenu {
+        @apply text-200
+        font-medium
+        mt-6
+        lg:mt-8;
+
+        &__box {
+            @apply py-1
+            h-15
+            flex
+            items-stretch
+            space-x-2;
+        }
+
+        &__items {
+            @apply flex-1
+            flex
+            space-x-2;
+
+            &__item {
+                @apply flex
+                flex-1
+                items-center
+                px-1
+                border
+                border-gray-500
+                rounded;
+
+                &_cat5,
+                &_cat6 {
+                    @apply hidden
+                    lg:flex;
+                }
+
+                &_cat7,
+                &_cat8 {
+                    @apply hidden
+                    xl:flex;
+                }
+
+                &_active {
+                    @apply border-transparent
+                    ring-2
+                    ring-orange-200
+                    hover:border-transparent;
+                }
+
+                &__img {
+                    @apply max-h-12;
+                }
+
+                &__name {
+                    @apply text-200
+                    font-medium
+                    ml-1;
+                }
+            }
+        }
+
+        &__more {
+            @apply flex
+            items-center
+            justify-center
+            w-32
+            px-1
+            border
+            border-gray-500
+            rounded;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.catalogFilters {
+    @apply space-y-5;
+
+    &__filter {
+        @apply
+            border-b;
+
+        &__label {
+            @apply
+            text-600
+            font-medium
+            mb-5
+            flex
+            justify-between;
+        }
+
+        &__body {
+            @apply hidden pb-3;
+        }
+
+        &__search {
+            @apply
+                p-4
+                mb-4;
+        }
+
+        &__checkboxes {
+            @apply
+            flex
+            flex-col
+            space-y-3;
+        }
+
+        &__items {
+            @apply
+            flex
+            flex-wrap
+            -m-2;
+
+            &__item {
+                @apply
+                cursor-pointer
+                flex
+                space-x-3
+                m-2
+                p-3
+                font-medium
+                bg-gray-100
+                rounded;
+
+                &__count {
+                    @apply text-gray-700;
+                }
+            }
+        }
+
+        &__more {
+            @apply
+                text-blue-400
+                cursor-pointer
+                mt-6;
+        }
+
+        &:last-child {
+            @apply border-0;
+        }
+
+        &_open & {
+            &__arrow {
+                @apply transform rotate-90;
+            }
+
+            &__body {
+                @apply block;
+            }
+        }
+
+        &_flat {
+            @apply border-0;
+        }
+
+        &_flat & {
+            &__label {
+                @apply mb-3;
+            }
+
+            &__body {
+                @apply block;
+            }
+        }
+    }
+}

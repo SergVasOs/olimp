@@ -1,0 +1,103 @@
+mixin catalogFilters
+	+b.catalogFilters
+		+b.__filter._flat
+			+e.label Цена
+			+e.body
+				+b.slider
+					+b.__labels
+						+e.item._start 100
+						+e.item._end 127600
+					+b.__track
+						+e.handler._start
+						+e.handler._end
+						+e.bar
+		+b.__filter._flat
+			+e.label Высота
+			+e.body
+				+b.slider
+					+b.__labels
+						+e.item._start 100
+						+e.item._end 800
+					+b.__track
+						+e.handler._start
+						+e.handler._end
+						+e.bar
+		+b.__filter._open
+			+e.label Материал
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+			+e.body
+				+b.__checkboxes
+					+b.LABEL.checkbox
+						+b.__icon
+							+e.INPUT.input(type='checkbox', checked='true')
+							include /assets/images/checkboxIcon.svg
+						+e.label Металл + пластиковые эл. (36)
+					+b.LABEL.checkbox
+						+b.__icon
+							+e.INPUT.input(type='checkbox')
+							include /assets/images/checkboxIcon.svg
+						+e.label Металлический (36)
+					+b.LABEL.checkbox._disabled
+						+b.__icon
+							+e.INPUT.input(type='checkbox', checked='true', disabled='true')
+							include /assets/images/checkboxIcon.svg
+						+e.label Пластиковый (0)
+		+b.__filter._open
+			+e.label Форма чаши
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+			+e.body
+				+b.input.__search
+					+b.icon.__icon
+						include /assets/images/searchIcon.svg
+					+e.INPUT.field(type='text', placeholder='Искать форму чаши')
+				+b.__checkboxes
+					+b.LABEL.checkbox
+						+b.__icon
+							+e.INPUT.input(type='checkbox', checked='true')
+							include /assets/images/checkboxIcon.svg
+						+e.label мяч/шар (36)
+					+b.LABEL.checkbox
+						+b.__icon
+							+e.INPUT.input(type='checkbox')
+							include /assets/images/checkboxIcon.svg
+						+e.label полусфера (518)
+		+b.__filter
+			+e.label Размер ручек
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+		+b.__filter
+			+e.label Материал цоколя
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+		+b.__filter
+			+e.label Цвет цоколя
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+		+b.__filter._open
+			+e.label Диаметр вкладыша
+				+b.icon._sm.__arrow
+					include /assets/images/arrowIcon.svg
+			+e.body
+				+b.input.__search
+					+b.icon.__icon
+						include /assets/images/searchIcon.svg
+					+e.INPUT.field(type='text', placeholder='Искать диаметр вкладыша')
+				+b.__items
+					+b.__item
+						+e.label 203 мм
+						+e.count 32
+					+b.__item
+						+e.label 65 мм
+						+e.count 32
+					+b.__item
+						+e.label 203 мм
+						+e.count 32
+					+b.__item
+						+e.label 33 мм
+						+e.count 32
+					+b.__item
+						+e.label 23 мм
+						+e.count 32
+				+e.more Еще 234 варианта
