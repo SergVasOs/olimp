@@ -1,0 +1,35 @@
+.setList {
+	@apply block;
+
+	&__title {
+		@apply
+		text-850
+		font-bold
+		mb-5;
+	}
+
+	&__items {
+		@apply
+			swiper;
+	}
+
+	&__list {
+		@apply
+		swiper__list;
+	}
+
+	&__item {
+		@apply
+			swiper__item;
+	}
+
+	&__prev {
+		@apply
+		swiper__prev;
+	}
+
+	&__next {
+		@apply
+		swiper__next;
+	}
+}

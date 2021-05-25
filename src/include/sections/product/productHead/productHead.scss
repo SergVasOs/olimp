@@ -5,8 +5,7 @@
 
     &__box {
         @apply
-            items-center
-            space-x-4;
+            items-center;
     }
 
     &__title {
@@ -15,12 +14,19 @@
         max-w-max
         text-blue-800
         text-4xl
-        truncate;
+        truncate
+        mr-auto;
+    }
+
+    &__shareIcon {
+        @apply
+        ml-4;
     }
 
     &__favoriteIcon {
         @apply
         w-8
-        h-8;
+        h-8
+        ml-6;
     }
 }

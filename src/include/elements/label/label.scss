@@ -1,0 +1,24 @@
+.label {
+    @apply
+    w-min
+    flex
+    items-center
+    space-x-1.5
+    text-white
+    text-150
+    py-1.5
+    px-2.5
+    bg-gray-500
+    rounded-full;
+
+    &_new {
+        @apply
+        bg-green-300;
+    }
+
+
+    &_discount {
+        @apply
+        bg-red-300;
+    }
+}

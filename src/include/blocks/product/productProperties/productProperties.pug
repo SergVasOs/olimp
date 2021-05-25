@@ -1,0 +1,47 @@
+include /include/elements/quantity/quantity
+
+mixin productProperties
+	+b.productProperties&attributes(attributes)
+		+e.title Свойства
+		+e.content
+			+e.items
+				+b.__item
+					+e.name Материал:
+					+e.value(href='#') Пластиковый
+				+b.__item
+					+e.name Тематика:
+					+e.value(href='#') Универсальные
+				+b.__item
+					+e.name Форма чаши:
+					+e.value(href='#') глубокая
+				+b.__item
+					+e.name Наличие ручек:
+					+e.value(href='#') есть
+				+b.__item
+					+e.name Материал цоколя:
+					+e.value(href='#') мрамор
+				+b.__item
+					+e.name Цвет цоколя:
+					+e.value(href='#') черный
+				+b.__item
+					+e.name Цвет:
+					+e.value(href='#') золотой
+				+b.__item
+					+e.name Вес:
+					+e.value(href='#') 1665 гр
+			+e.items
+				+b.__item
+					+e.name Ширина (X):
+					+e.value(href='#') 140 мм
+				+b.__item
+					+e.name Высота (Y):
+					+e.value(href='#') 360 мм
+				+b.__item
+					+e.name Глубина (Z):
+					+e.value(href='#') 140 мм
+				+b.__item
+					+e.name Диаметр чаши кубка:
+					+e.value(href='#') 14 см
+				+b.__item
+					+e.name Высота:
+					+e.value(href='#') 36 см

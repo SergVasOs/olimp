@@ -1,0 +1,35 @@
+.viewedItem {
+    @apply
+        relative
+        flex
+        flex-col
+        rounded-2xl border border-gray-300;
+
+    &__image {
+        @apply
+        rounded-t-2xl
+        pb-full;
+    }
+
+    &__dots {
+        @apply
+        h-9;
+    }
+
+    &__material {
+        @apply
+            text-150
+            text-gray-500
+            px-4
+            mb-2;
+    }
+
+    &__name {
+        @apply
+            text-black
+            leading-4
+            line-clamp-2
+            px-4
+            mb-6;
+    }
+}

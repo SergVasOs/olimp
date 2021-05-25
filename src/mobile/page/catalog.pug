@@ -6,8 +6,9 @@ include /mobile/include/sections/catalog/catalogSubCategories/catalogSubCategori
 block append pageVars
 	- var pageTitle = "Кубки пластиковые";
 	- var catalogView = "grid";
+	- var pageClass = "catalog";
 
 block content
 	+catalogHead
-	+catalogSubCategories
+	+catalogSubCategories.__subCategories
 	+catalogContent

@@ -1,0 +1,26 @@
+include /include/elements/quantity/quantity
+
+mixin variants
+	+b.variants&attributes(attributes)
+		+e.box.box
+			+e.title Измени комплектацию
+		+e.box.box._scroll
+			+e.items
+				+b.__item._best._active
+					+e.label ЛУЧШИЙ
+					+e.title Кубок + табличка + крышка + фигурка + вкладыш
+					+e.prices
+						+e.price от 3 249 ₽ / шт
+						+e.oldPrice 4 749 ₽ / шт
+				+b.__item._standart
+					+e.label СТАНДАРТНЫЙ
+					+e.title Кубок + табличка + вкладыш
+					+e.prices
+						+e.price от 2 249 ₽ / шт
+						+e.oldPrice 2 749 ₽ / шт
+				+b.__item._econom
+					+e.label ЭКОНОМНЫЙ
+					+e.title Только кубок
+					+e.prices
+						+e.price 1 249 ₽ / шт
+						+e.oldPrice 2 749 ₽ / шт

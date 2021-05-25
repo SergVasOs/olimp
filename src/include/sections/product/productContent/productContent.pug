@@ -1,72 +1,47 @@
-include /include/blocks/catalog/catalogItem/catalogItem
-include /include/blocks/catalog/catalogFilters/catalogFilters
+include /include/blocks/product/productUpgrades/productUpgrades
+include /include/blocks/product/productEdition/productEdition
+include /include/blocks/product/productProperties/productProperties
+include /include/blocks/product/productDeliveryInfo/productDeliveryInfo
+include /include/blocks/product/productMaterials/productMaterials
+include /include/blocks/product/productDescription/productDescription
+include /include/elements/buyButton/buyButton
+include /include/elements/upgradeButton/upgradeButton
+include /include/elements/size/size
+include /include/elements/label/label
 
 mixin productContent
 	+b.productContent
 		+e.box.box
-			if (view !== 'mobile')
-				+e.left
-					+b.__menu
-						+b.__item
-							+b.__link(href='#')
-								+e.name Кубки с Российской символикой
-								+b.icon._sm.__icon
-									include /assets/images/arrowIcon.svg
-						+b.__item._active
-							+b.__link(href='#')
-								+e.name Стеклянные
-								+b.icon._sm.__icon
-									include /assets/images/arrowIcon.svg
-							+b.__submenu
-								+e.item(href='#') Классические
-								+e.item._active(href='#') Спортивные
-								+e.item(href='#') С местом под вкладыш
-						+b.__item
-							+b.__link(href='#')
-								+e.name Спорт товары
-						+b.__item
-							+b.__link(href='#')
-								+e Кубки с Российской символикой
-						+b.__title Аксессуары
-						+b.__item
-							+b.__link(href='#')
-								+e.name Крышки для кубков
-						+b.__item
-							+b.__link(href='#')
-								+e.name Эмблемы
-						+b.__item
-							+b.__link(href='#')
-								+e.name Таблички
-					+catalogFilters
+			+e.left
+				+b.tabs
+					+e.item._active Фотографии
+					+e.item Нанесение и комплект
+					+e.item Готовые решения
+				+b.__gallery
+					+e.img(src='images/product1.png')
+				+productUpgrades.__productUpgrades
+				+productEdition.__productEdition
+				+productProperties.__productProperties
+				+productDeliveryInfo.__productDeliveryInfo
+				+productMaterials.__productMaterials
+				+productDescription.__productDescription
 			+e.right
-				+b.__items(class=`_${catalogView}`)
-					+catalogItem
-					+catalogItem
-					+catalogItem
-					+catalogItem
-					+catalogItem
-					+catalogItem
-					+catalogItem
-					+catalogItem
-				+b.__pagination
-					if (view !== 'mobile')
-						+b.button._white.__more Загрузить ещё
-						+b.__pages
-							+e.item(href='#') 1
-							+e.item._active(href='#') 2
-							+e.item(href='#') 3
-							+e.item(href='#') ...
-							+e.item(href='#') 9
-							+e.item(href='#') 10
-					else
-						+b.button._gray._xl.__more Загрузить ещё
-				if (view !== 'mobile')
-					+b.__popularKeywords
-						+e.title Часто ищут
-						+b.__items
-							+e.item(href='#') Кубки для соревнований
-							+e.item(href='#') Кубки для соревнований
-							+e.item(href='#') Кубки для соревнований
-							+e.item(href='#') Кубки для соревнований
-							+e.item(href='#') Кубки для соревнований
-							+e.item(href='#') Кубки для соревнований
+				+b.__buy
+					+e.info
+						+e.top
+							+label._new.__new Новый
+							+e.sku Артикул: 214007
+						+e.prices
+							+b.__price 365 ₽/
+								+e.piece шт
+							+e.oldPrice 430 руб
+							+e.discount -15%
+						+size._lg
+						+b.__stock
+							+e В наличии:
+							+e.value 264 шт.
+						+e.buttons
+							+upgradeButton._xl.__upgradeButton
+							+buyButton('Добавить в корзину')._xl.__buyButton
+					+e.count
+						+e.editionLink(href='#') Указать колличество

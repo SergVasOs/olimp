@@ -1,0 +1,148 @@
+.productDeliveryInfo {
+    @apply
+    w-full;
+
+    &__title {
+        @apply
+        text-850
+        font-bold
+        mb-5
+        hidden
+        lg:block;
+    }
+
+    &__best {
+        @apply
+            flex
+            items-center
+            space-x-6
+            px-4
+            py-3
+            border
+            rounded-lg
+            mb-7
+        lg:mb-6
+        lg:border-0
+        lg:p-0;
+
+        &__icon {
+            @apply
+                text-blue-900;
+        }
+
+        &__date {
+            @apply
+            flex
+            space-x-2
+            font-bold
+            lg:mb-1
+            lg:font-normal
+            lg:text-gray-700;
+
+            &__value {
+                @apply
+                    lg:font-medium
+                    lg:text-gray-900;
+            }
+        }
+
+        &__item {
+            @apply
+                flex
+                items-center
+            lg:text-gray-700;
+
+            &:before {
+                @apply
+                    content-empty
+                    w-1
+                    h-1
+                    mr-2
+                    bg-orange-200;
+            }
+        }
+    }
+
+    &__blocks {
+        @apply
+        lg:flex
+            lg:flex-row-reverse
+            lg:space-y-0
+        lg:items-stretch;
+    }
+
+    &__info {
+        @apply
+            bg-gray-100
+            rounded-2xl
+            p-8
+            space-y-6
+            mb-7
+            lg:flex-1
+            lg:mb-0
+            lg:ml-8
+            lg:bg-gray-50;
+
+        &__item {
+            @apply
+                flex
+                items-center
+                space-x-6;
+
+            &__icon {
+                @apply text-blue-800;
+            }
+
+            &__name {
+                @apply mt-1 whitespace-nowrap
+                lg:text-200;
+            }
+        }
+
+        &__more {
+            @apply
+                hidden
+                underline
+                text-100
+            lg:block;
+        }
+    }
+
+    &__props {
+        @apply
+        bg-gray-200
+        rounded-2xl
+        px-4
+        py-6
+        lg:bg-gray-50;
+
+        &__row {
+            @apply
+            flex
+            justify-between
+            space-x-4
+            py-5
+            border-b
+            border-gray-300
+            last:border-0;
+        }
+
+        &__item {
+            @apply
+                space-y-3
+                first:flex-1
+                last:w-30;
+
+            &__name {
+                @apply
+                    font-medium;
+            }
+
+            &__value {
+                @apply
+                    text-300
+                    text-gray-650;
+            }
+        }
+    }
+}

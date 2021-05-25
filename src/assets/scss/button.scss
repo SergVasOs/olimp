@@ -51,6 +51,11 @@
             to-gray-100;
     }
 
+    &_lightGray {
+        @apply
+        bg-gray-200;
+    }
+
     &_white {
         @apply
         border
@@ -70,6 +75,13 @@
         hover:bg-white;
     }
 
+    &_green {
+        @apply
+        bg-green-400
+        text-white;
+    }
+
+
     &__icon + &__text {
         @apply
             ml-2;
@@ -77,6 +89,6 @@
 
     &__text + &__icon {
         @apply
-        ml-2;
+        ml-auto;
     }
 }

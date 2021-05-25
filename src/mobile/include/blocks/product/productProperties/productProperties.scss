@@ -1,0 +1,49 @@
+.productProperties {
+    @apply
+        block
+        mb-9;
+
+    &__title {
+        @apply
+        text-850
+        font-bold
+        mb-5;
+    }
+
+    &__items {
+        @apply
+        bg-gradient-to-t
+        from-gray-250
+        to-gray-100
+        border
+        rounded-xl
+        px-5
+        pt-4
+        pb-2;
+    }
+
+    &__item {
+        @apply
+            border-b
+            py-4
+            flex
+            items-center
+            last:border-0;
+
+        &__name {
+            @apply
+                flex-1;
+        }
+
+        &__value {
+            @apply
+            font-bold;
+        }
+
+        &__arrow {
+            @apply
+            ml-6
+            text-blue-800;
+        }
+    }
+}

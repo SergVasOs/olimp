@@ -1,0 +1,47 @@
+.selectionItem {
+    @apply
+        relative
+        flex
+        flex-col
+        rounded-lg border border-gray-300;
+
+    &__image {
+        @apply
+        pb-10/7
+        rounded-t-lg;
+    }
+
+    &__name {
+        @apply
+            text-black
+            leading-5
+            line-clamp-2
+            m-2;
+    }
+
+    &__prices {
+        @apply
+            mt-auto
+            px-2
+            flex
+            items-baseline;
+    }
+
+    &__price {
+        @apply
+        text-600;
+    }
+
+    &__oldPrice {
+        @apply
+            text-400
+            ml-2;
+    }
+
+    &__addButton {
+        @apply
+            font-medium
+            m-2
+            mt-4;
+    }
+}

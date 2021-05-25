@@ -1,0 +1,24 @@
+include /include/elements/size/size
+include /include/elements/price/price
+include /include/elements/oldPrice/oldPrice
+include /include/elements/buyButton/buyButton
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/elements/image/image
+include /include/elements/dots/dots
+
+mixin setItem
+	+b.setItem&attributes(attributes)
+		+labels
+		+favoriteIcon._active
+		+image
+		+dots
+		+e.material Металл
+		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
+		+e.prices
+			+price._lg
+			+oldPrice._lg
+		+b.__moreButton
+			+e.text Подробнее
+			+b.icon._th.__icon
+				include /assets/images/arrowIcon.svg

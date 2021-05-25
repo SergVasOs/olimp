@@ -1,8 +1,10 @@
+include /include/elements/label/label
+
 mixin labels
 	+e.labels.labels__&attributes(attributes)
-		+e.item._views
+		+label._views
 			+b.icon._th
 				include /assets/images/cameraIcon.svg
 			+e 4
-		+e.item._new Новый
-		+e.item._discount -15%
+		+label._new Новый
+		+label._discount -15%

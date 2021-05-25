@@ -1,13 +1,15 @@
-@layer utilities {
-    .content-empty {
-        content: '';
-    }
+.select-center {
+    text-align-last: center;
+}
 
-    .overflow-layer {
-        overflow: scroll;
+.content-empty {
+    content: '';
+}
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+.overflow-layer {
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

@@ -1,0 +1,36 @@
+.productTags {
+    @apply
+        mb-7;
+
+    &__title {
+        @apply
+            text-850
+            font-bold
+            mb-3;
+    }
+
+    &__items {
+        @apply
+        flex
+        space-x-2.5
+        lg:space-x-4;
+    }
+
+    &__item {
+        @apply border
+        border-gray-200
+        rounded
+        text-blue-900
+        text-500
+        text-center
+        px-4
+        py-3
+        whitespace-nowrap
+        lg:px-5
+        hover:text-blue-900
+        hover:border-transparent
+        hover:bg-gradient-to-t
+        hover:from-gray-250
+        hover:to-gray-100;
+    }
+}

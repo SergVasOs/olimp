@@ -1,0 +1,39 @@
+include /include/blocks/catalog/catalogFilters/catalogFilters
+include /include/blocks/catalog/selectionItem/selectionItem
+include /mobile/include/sections/catalog/catalogSubCategories/catalogSubCategories
+
+mixin productUpgradeSelectionLayer
+	+b#layer_upgrade_selection.layer
+		+e.body
+			+e.header Добавить крышку
+				+b.icon.__close
+					include /assets/images/crossIcon.svg
+			+b.productUpgradeSelectionLayer.__content
+				+e.box.box
+					+b.input._lg.__search
+						+b.icon.__icon
+							include /assets/images/searchIcon.svg
+						+e.INPUT.field(type='text', placeholder='Поиск')
+					+b.slider
+						+b.__labels
+							+e.item._start 100
+							+e.item._end 2700
+						+b.__track
+							+e.handler._start
+							+e.handler._end
+							+e.bar
+				+catalogSubCategories.__subCategories
+				+b.__items.box
+					+e.__content
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem
+						+selectionItem

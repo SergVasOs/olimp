@@ -1,0 +1,21 @@
+mixin fileList
+	+b.fileList&attributes(attributes)
+		+e.title Загруженные документы:
+		+e.items
+			+b.__item
+				+b.icon._lg
+					include /assets/images/fileIcon.svg
+				+e.name Название файла
+				+b.icon._sm.__delIcon
+					include /assets/images/crossIcon.svg
+			+b.__item
+				+b.icon._lg
+					include /assets/images/fileIcon.svg
+				+e.name Название файла
+				+b.icon._sm.__delIcon
+					include /assets/images/crossIcon.svg
+		+e.uploadArea
+			+b.icon
+				include /assets/images/cloudIcon.svg
+			+e Загрузить файлы
+		+e.example(href='#') Скачать файл шаблона

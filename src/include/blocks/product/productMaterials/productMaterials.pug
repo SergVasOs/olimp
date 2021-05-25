@@ -1,0 +1,12 @@
+include /include/elements/quantity/quantity
+
+mixin productMaterials
+	+b.productMaterials&attributes(attributes)
+		+e.title Виды нанесения
+		+e.items
+			+e.item(href='#') Шелкография
+			+e.item(href='#') Флекс (1 цвет)
+			+e.item(href='#') Вышивка
+			+e.item(href='#') Шеврон с пришиванием
+			+e.item(href='#') Шеврон с припаиванием
+			+e.item(href='#') Флекс

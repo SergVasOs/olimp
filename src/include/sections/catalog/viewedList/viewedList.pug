@@ -1,0 +1,19 @@
+include /include/blocks/catalog/viewedItem/viewedItem
+
+mixin viewedList(title)
+	+b.viewedList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+			+e.items
+				+e.list
+					+viewedItem.__item
+					+viewedItem.__item
+					+viewedItem.__item
+					+viewedItem.__item
+					+viewedItem.__item
+				+e.prev
+					+b.icon
+						include /assets/images/arrowIcon.svg
+				+e.next
+					+b.icon
+						include /assets/images/arrowIcon.svg

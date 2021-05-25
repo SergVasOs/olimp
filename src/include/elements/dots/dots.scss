@@ -32,6 +32,18 @@
         }
     }
 
+    &_sm {
+        @apply space-x-1;
+    }
+
+    &_sm & {
+        &__item {
+            @apply
+            w-1
+            h-1;
+        }
+    }
+
     &_lg & {
         &__item {
             @apply

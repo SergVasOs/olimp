@@ -1,0 +1,38 @@
+.productUpgradeInfoLayer {
+    &__title {
+        @apply
+            text-650
+            text-blue-900
+            font-bold
+            uppercase
+            mb-7;
+    }
+
+    &__text {
+        @apply
+            text-600
+            space-y-5
+            mb-7;
+    }
+
+    &__media {
+        @apply
+        w-full
+        mb-7;
+    }
+
+    &__examples {
+        @apply space-y-7;
+
+        &__title {
+            @apply
+                font-bold
+                text-850;
+        }
+
+        &__items {
+            @apply
+            space-x-5;
+        }
+    }
+}

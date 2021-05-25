@@ -5,14 +5,13 @@
     justify-between
     container
     overflow-hidden
-    h-full
     mx-auto;
 
     &_full {
-        @apply w-full p-0 overflow-layer;
+        @apply w-full p-0;
     }
 
     &_scroll {
-        @apply overflow-layer;
+        @apply overflow-layer flex-nowrap justify-start;
     }
 }

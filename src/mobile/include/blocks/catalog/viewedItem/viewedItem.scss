@@ -1,0 +1,42 @@
+.viewedItem {
+    @apply
+        relative
+        flex
+        flex-col
+        rounded-2xl border border-gray-500;
+
+    &__image {
+        @apply
+        rounded-t-2xl
+        pb-full;
+    }
+
+    &__dots {
+        @apply
+        h-6;
+    }
+
+    &__name {
+        @apply
+            text-150
+            text-black
+            leading-4
+            line-clamp-2
+            px-4;
+    }
+
+    &__prices {
+        @apply
+            mt-auto
+            px-4
+            pt-2
+            pb-5
+            flex
+            items-baseline;
+    }
+
+    &__oldPrice {
+        @apply
+            ml-2;
+    }
+}

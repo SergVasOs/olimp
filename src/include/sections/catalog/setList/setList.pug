@@ -1,0 +1,18 @@
+include /include/blocks/catalog/setItem/setItem
+
+mixin setList(title)
+	+b.setList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+			+e.items
+				+e.list
+					+setItem.__item
+					+setItem.__item
+					+setItem.__item
+					+setItem.__item
+				+e.prev
+					+b.icon
+						include /assets/images/arrowIcon.svg
+				+e.next
+					+b.icon
+						include /assets/images/arrowIcon.svg

@@ -1,12 +1,8 @@
 .productContent {
 	@apply -mt-16;
 
-	&__box {
-		@apply block;
-	}
-
 	&__gallery {
-		@apply relative;
+		@apply relative h-product-gallery-mob;
 
 		&__labels {
 			@apply absolute
@@ -16,7 +12,7 @@
 		}
 
 		&__img {
-			@apply w-full;
+			@apply w-full h-full object-cover;
 		}
 
 		&__dots {
@@ -32,15 +28,16 @@
 	}
 
 	&__tabs {
-		@apply flex;
+		@apply h-12 items-stretch;
 
 		&__item {
 			@apply
 				relative
-				py-5
 				px-7
 				whitespace-nowrap
-				text-300;
+				text-300
+				flex
+				items-center;
 
 			&:before {
 				@apply content-empty
@@ -66,21 +63,31 @@
 	&__size {
 		@apply
 			pt-6
-			pb-5;
+			items-start
+			h-22;
 	}
 
 	&__popup {
 		@apply
 			absolute
 			inset-x-0
-			top-4/5
+			h-40
 			bottom-0
-			pt-6
-			pb-3
-			bg-gray-100
-			shadow-button
-			z-20
-			transition-top;
+			z-40
+			transition-all
+			bg-black
+			bg-opacity-30;
+
+		&__body {
+			@apply
+				h-full
+				flex-1
+				relative
+				pt-6
+				pb-3
+				bg-gray-100
+				shadow-button;
+		}
 
 		&__handler {
 			@apply
@@ -141,19 +148,33 @@
 			}
 		}
 
-
 		&__full {
-			@apply hidden;
+			@apply
+			hidden
+			h-full
+			overflow-layer;
 
 			&__menu {
-				@apply flex;
+				@apply
+				absolute
+				top-6
+				inset-x-0
+				h-15
+				flex
+				items-stretch
+				bg-white
+				shadow-product-menu;
 
 				&__item {
 					@apply
+					flex
+					justify-center
+					items-center
+					flex-1
 					relative
-					py-5
-					px-7
+					px-2
 					whitespace-nowrap
+					text-center
 					text-300;
 
 					&:before {
@@ -176,23 +197,194 @@
 					}
 				}
 			}
+
+			&__buy {
+				@apply
+				absolute
+				bottom-0
+				inset-x-0
+				h-40
+				bg-white
+				shadow-product-menu
+				flex-col
+				pt-4
+				pb-3;
+
+				&__label {
+					@apply text-600 mb-1;
+				}
+
+				&__price {
+					@apply text-800 font-bold mb-auto;
+				}
+			}
+
+			&__size {
+				@apply mt-6;
+			}
+
+			&__card {
+				@apply
+					w-full
+					border
+					rounded-lg
+					mt-6
+					p-5
+					flex
+					items-stretch
+					space-x-7;
+
+				&__img {
+					@apply
+						w-20
+						h-20
+						object-fill;
+				}
+
+				&__info {
+					@apply
+						flex
+						flex-col;
+				}
+
+				&__sku {
+					@apply
+						text-200
+						text-gray-600
+						mb-1;
+				}
+
+				&__name {
+					@apply
+					font-bold
+					mb-1;
+				}
+
+				&__price {
+					@apply
+						text-650
+						mt-auto;
+				}
+			}
+
+			&__icon {
+				@apply
+				border-t
+				border-b
+				py-3.5
+				my-4
+				justify-center
+				text-blue-800;
+			}
+
+			&__total {
+				@apply block mb-7;
+
+				&__info {
+					@apply
+					w-full
+					border-separate
+					border
+					rounded-t-lg
+					py-10
+					pl-2
+					pr-6;
+
+					&__header {
+						&__col {
+							@apply
+							text-gray-900
+							text-right;
+
+							&_thing {
+								@apply w-24;
+							}
+
+							&_total {
+								@apply w-28;
+							}
+						}
+					}
+
+					&__row {
+						&__col {
+							@apply
+							pt-3;
+
+							&_label {
+								@apply
+								text-gray-900;
+							}
+
+							&_sum {
+								@apply
+								text-700
+								font-medium;
+							}
+
+							&_thing,
+							&_total {
+								@apply
+								text-black
+								font-medium
+								text-right;
+							}
+						}
+					}
+				}
+
+				&__buyButton {
+					@apply -mt-2;
+				}
+			}
+
+			&__productDescription {
+				@apply
+				mb-9;
+			}
+
+			&__setList {
+				@apply
+					mb-28;
+			}
+
+			&__analog {
+				@apply
+				mb-12;
+			}
+
+			&__relative {
+				@apply
+				mb-14;
+			}
+
+			&__viewed {
+				@apply
+				mb-10;
+			}
+
+			&__helpButton {
+				@apply w-full;
+			}
 		}
 
 		&_open {
-			@apply top-20;
+			@apply h-screen pt-20;
 		}
 
 		&_open & {
-			@apply
-			top-20;
+			&__body {
+				@apply pt-21 bg-white rounded-t-lg pb-40;
+			}
 
 			&__short {
 				@apply hidden;
 			}
 
 			&__full {
-				@apply flex;
+				@apply block pb-6;
 			}
 		}
 	}
 }
+

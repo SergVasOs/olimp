@@ -6,7 +6,9 @@
         bg-gray-100
         border-b
         border-gray-200
-        h-20;
+        h-20
+		flex
+		items-center;
 
 	&__box {
 		@apply items-center;

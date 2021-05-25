@@ -1,7 +1,11 @@
+include grid/catalogGridItem
+include list/catalogListItem
+include table/catalogTableItem
+
 mixin catalogItem
 	if (catalogView === 'grid')
-		include grid/catalogItem
+		+catalogGridItem
 	else if (catalogView === 'list')
-		include list/catalogItem
+		+catalogListItem
 	else
-		include table/catalogItem
+		+catalogTableItem

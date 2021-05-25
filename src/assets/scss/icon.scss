@@ -28,6 +28,12 @@
         h-7;
     }
 
+    &_xl {
+        @apply
+        w-9
+        h-9;
+    }
+
     &_fill > * {
         @apply
         fill-inherit;

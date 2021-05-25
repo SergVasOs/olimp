@@ -1,0 +1,79 @@
+include /include/blocks/product/productUpgradeInfoLayer/productUpgradeInfoLayer
+include /include/blocks/product/productUpgradeSelectionLayer/productUpgradeSelectionLayer
+include /include/blocks/product/productUpgradePlaceLayer/productUpgradeCupPlaceLayer
+
+mixin productUpgrades
+	+b.productUpgrades&attributes(attributes)
+		+e.title Улучшить
+		+e.items
+			+b.__item._active
+				+e.step 1
+				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
+					include /assets/images/infoIcon.svg
+				+e.card
+					+e.img(src='images/cap.png')
+					+e.label
+						+e.name Крышка
+						+e.price 249 ₽ / шт
+					+b.button._gray.__editButton(href='#layer_upgrade_selection')
+						+e.text Изменить
+					+b.icon.__deleteIcon
+						include /assets/images/crossIcon.svg
+			+b.__item
+				+e.step 2
+				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
+					include /assets/images/infoIcon.svg
+				+e.card
+					+e.img(src='images/cupLabel.png')
+					+e.label
+						+e.name Эмблема
+					+b.__addButton.button._blue(href='#layer_upgrade_selection')
+						+e.text Добавить
+			+b.__item
+				+e.step 3
+				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
+					include /assets/images/infoIcon.svg
+				+e.card
+					+e.img(src='images/cupFigure.png')
+					+e.label
+						+e.name Фигурка
+					+b.__addButton.button._blue(href='#layer_upgrade_selection')
+						+e.text Добавить
+			+b.__item._active
+				+e.step 4
+				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
+					include /assets/images/infoIcon.svg
+				+e.card
+					+e.img(src='images/cupShield.png')
+					+e.label
+						+e.name Табличка
+						+e.price 249 ₽ / шт
+					+b.button._gray.__editButton(href='#layer_upgrade_cup_place')
+						+e.text Изменить
+					+b.icon.__deleteIcon
+						include /assets/images/crossIcon.svg
+				+b.__config
+					+e.text Лучшему начальнику
+					+b.__files
+						+b.__item
+							+b.icon
+								include /assets/images/fileIcon.svg
+							+e.name Название файла
+							+b.icon.__deleteIcon
+								include /assets/images/crossIcon.svg
+						+b.__item
+							+b.icon
+								include /assets/images/fileIcon.svg
+							+e.name Название файла
+							+b.icon.__deleteIcon
+								include /assets/images/crossIcon.svg
+			+b.__item
+				+e.step 5
+				+e.card
+					+e.label
+						+e.name Особые пожелания
+					+b.__addButton.button._blue(href='#layer_upgrade_cup_place')
+						+e.text Добавить
+	+productUpgradeInfoLayer
+	+productUpgradeSelectionLayer
+	+productUpgradeCupPlaceLayer

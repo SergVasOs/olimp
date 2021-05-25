@@ -1,0 +1,21 @@
+.productList {
+	@apply block;
+
+	&__title {
+		@apply
+		text-850
+		font-bold
+		mb-5;
+	}
+
+	&__items {
+		@apply
+			flex
+			space-x-3;
+	}
+
+	&__item {
+		@apply
+			w-80;
+	}
+}

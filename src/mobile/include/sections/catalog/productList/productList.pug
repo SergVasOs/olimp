@@ -1,0 +1,16 @@
+include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+
+mixin productList(title)
+	+b.productList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+		+e.box.box._scroll
+			+e.items
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item
+				+catalogGridItem.__item

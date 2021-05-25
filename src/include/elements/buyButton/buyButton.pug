@@ -1,6 +1,6 @@
 mixin buyButton(text)
-	+b.button.buyButton.__buyButton(class=text ? "_lg" : "")&attributes(attributes)
-		+b.icon._md.__icon
+	+b.buyButton.button&attributes(attributes)
+		+b.icon._md.button__icon
 			include /assets/images/basketIcon.svg
 		if (text)
-			+e.text #{text}
+			+b.button__text #{text}

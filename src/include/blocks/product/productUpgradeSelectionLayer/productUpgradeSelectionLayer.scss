@@ -1,0 +1,31 @@
+.productUpgradeSelectionLayer {
+    @apply
+        flex
+        flex-col
+        items-stretch;
+
+    &__search {
+        @apply
+            mb-6;
+    }
+
+    &__subCategories {
+        @apply
+        mt-6;
+    }
+
+    &__items {
+        @apply
+        flex-1
+        h-0
+        mt-10
+        overflow-layer;
+
+        &__content {
+            @apply
+            grid
+            gap-2
+            grid-cols-2;
+        }
+    }
+}

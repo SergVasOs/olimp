@@ -1,0 +1,174 @@
+.productUpgrades {
+    @apply
+    w-full;
+
+    &__title {
+        @apply
+            hidden
+            text-900
+            font-bold
+            mb-8
+            md:block;
+    }
+
+    &__items {
+        @apply
+        space-y-4;
+    }
+
+    &__item {
+        @apply
+        border
+        rounded-lg
+        py-4
+        px-5
+        relative
+        overflow-hidden
+        lg:py-2;
+
+        &__step {
+            @apply
+                absolute
+                hidden
+                text-1000
+                text-gray-250
+                -top-2.5
+                left-3
+                lg:block;
+        }
+
+        &__infoIcon {
+            @apply
+            absolute
+            top-1
+            left-1
+            text-gray-700
+            lg:top-2
+            lg:left-38;
+        }
+
+        &__card {
+            @apply
+            flex
+            items-center
+            flex-wrap
+            space-x-6
+            lg:pl-18
+            lg:space-x-8;
+        }
+
+        &__img {
+            @apply
+            w-14
+            h-14
+            object-contain;
+        }
+
+        &__label {
+            @apply
+            flex-1
+            lg:flex
+            lg:items-center
+            lg:justify-between;
+        }
+
+        &__name {
+            @apply
+            font-medium
+            lg:text-gray-900;
+        }
+
+        &__price {
+            @apply mt-1;
+        }
+
+        &__editButton {
+            @apply
+            font-medium
+            px-3
+            lg:bg-gray-50
+            lg:px-6
+            lg:border
+            lg:border-blue-800;
+        }
+
+        &__addButton {
+            @apply font-medium;
+        }
+
+        &__deleteIcon {
+            @apply text-blue-800 cursor-pointer;
+        }
+
+        &__config {
+            @apply
+            pt-3
+            mt-6
+            border-t
+            w-full
+            flex
+            flex-col
+            items-stretch
+            space-y-3
+            lg:border-0
+            lg:pt-1
+            lg:mb-4;
+
+            &__text {
+                @apply
+                px-3
+                bg-gray-100
+                py-5
+                text-300
+                border
+                rounded-lg
+                flex
+                items-center
+                lg:py-3
+                lg:text-gray-900;
+            }
+
+            &__files {
+                @apply
+                space-y-3
+                lg:grid
+                lg:grid-cols-2
+                lg:gap-3
+                lg:space-y-0;
+
+                &__item {
+                    @apply
+                    p-3
+                    text-300
+                    border
+                    rounded-lg
+                    flex
+                    items-center
+                    space-x-2
+                    font-medium
+                    lg:py-3.5;
+
+                    &__name {
+                        @apply flex-1;
+                    }
+
+                    &__deleteIcon {
+                        @apply
+                        hidden
+                        lg:block;
+                    }
+                }
+            }
+        }
+
+        &_active & {
+            &__img {
+                @apply
+                rounded-full
+                border
+                border-gray-600
+                p-2;
+            }
+        }
+    }
+}

@@ -3,14 +3,13 @@
 @import "utilities";
 @import "box";
 @import "icon";
-@import "input";
-@import "select";
 @import "button";
 @import "modal";
 @import "layer";
 @import "form";
 @import "slider";
-@import "checkbox";
+@import "swiper";
+@import "tabs";
 
 @import "/src/include/layout/content/content";
 
@@ -19,13 +18,25 @@
 @import "/src/include/elements/oldPrice/oldPrice";
 @import "/src/include/elements/upgradeButton/upgradeButton";
 @import "/src/include/elements/buyButton/buyButton";
+@import "/src/include/elements/label/label";
 @import "/src/include/elements/labels/labels";
 @import "/src/include/elements/favoriteIcon/favoriteIcon";
 @import "/src/include/elements/image/image";
 @import "/src/include/elements/dots/dots";
 @import "/src/include/elements/quantity/quantity";
 
-@import "/src/include/blocks/catalog/catalogItem/grid/catalogItem";
+@import "/src/include/blocks/catalog/catalogItem/grid/catalogGridItem";
+@import "/src/include/blocks/catalog/selectionItem/selectionItem";
 @import "/src/include/blocks/catalog/catalogFilters/catalogFilters";
+@import "/src/include/blocks/catalog/setItem/setItem";
+@import "/src/include/blocks/product/fileList/fileList";
+@import "/src/include/blocks/product/productDeliveryInfo/productDeliveryInfo";
+@import "/src/include/blocks/product/productUpgrades/productUpgrades";
+@import "/src/include/blocks/product/productMaterials/productMaterials";
+@import "/src/include/blocks/product/productDescription/productDescription";
+@import "/src/include/blocks/product/productUpgradeInfoLayer/productUpgradeInfoLayer";
+@import "/src/include/blocks/product/productUpgradeSelectionLayer/productUpgradeSelectionLayer";
+@import "/src/include/blocks/product/productUpgradePlaceLayer/productUpgradePlaceLayer";
 
+@import "/src/include/sections/product/productTags/productTags";
 @import "/src/include/sections/common/banners/banners";

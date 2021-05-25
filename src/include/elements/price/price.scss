@@ -6,4 +6,14 @@
         text-400
         lg:text-800
         lg:leading-none;
+
+    &_th {
+        @apply
+        text-100;
+    }
+
+    &_lg {
+        @apply
+            text-800;
+    }
 }

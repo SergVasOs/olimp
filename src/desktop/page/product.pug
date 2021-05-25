@@ -1,10 +1,20 @@
 extends /desktop/layout/layout
 include /include/sections/product/productHead/productHead
 include /include/sections/product/productContent/productContent
+include /include/sections/product/productTags/productTags
+include /include/sections/catalog/setList/setList
+include /include/sections/catalog/productList/productList
+include /include/sections/catalog/viewedList/viewedList
 
 block append pageVars
 	- var pageTitle = "Продукт";
+	- var pageClass = "product";
 
 block content
 	+productHead
 	+productContent
+	+setList('Готовые решения').__setList
+	+productList('Посмотрите аналоги').__productList
+	+productList('С этим товаром заказывают').__productList
+	+productTags.__productTags
+	+viewedList('Вы смотрели').__viewedList

@@ -11,3 +11,129 @@
         }
     }
 }
+
+.input {
+    @apply
+    w-full
+    h-11
+    p-2
+    flex
+    items-center
+    space-x-4
+    border
+    border-gray-400
+    rounded-lg
+    bg-white;
+
+    &__icon {
+        @apply text-blue-800;
+    }
+
+    &__field {
+        @apply
+        h-full
+        placeholder-gray-600
+        text-200
+        overflow-hidden
+        flex-1;
+    }
+
+    &_lg {
+        @apply h-14 p-3;
+    }
+}
+
+.textarea {
+    @apply
+    w-full
+    h-24
+    p-3
+    border
+    border-gray-400
+    rounded-lg
+    bg-white;
+}
+
+.select {
+    @apply
+    w-full
+    h-11
+    pl-2
+    pr-2
+    flex
+    items-center
+    border
+    border-gray-400
+    rounded-lg
+    bg-white
+    bg-select-arrow-icon
+    bg-no-repeat
+    bg-rightIcon
+    appearance-none;
+
+    &_sm {
+        @apply
+        h-8;
+    }
+
+    &_lg {
+        @apply
+        h-16
+        select-center
+        font-medium
+        bg-rightIconLg;
+    }
+
+    &_gray {
+        @apply
+        text-blue-900
+        border-0
+        bg-gray-100;
+    }
+}
+
+.checkbox {
+    @apply
+    flex
+    items-center
+    space-x-3
+    cursor-pointer;
+
+    &__icon {
+        @apply relative w-5 h-5;
+
+        & > * {
+            @apply
+            fill-white
+            stroke-gray-300;
+        }
+
+        &__input {
+            @apply absolute opacity-0 top-0 left-0 w-full h-full z-10;
+        }
+
+        &__input:checked + * {
+            @apply
+            fill-blue-300
+            stroke-blue-300;
+        }
+    }
+
+    &_disabled {
+        @apply cursor-default;
+    }
+
+    &_disabled & {
+        &__icon {
+            &__input:checked + * {
+                @apply fill-gray-300
+                stroke-gray-300;
+            }
+        }
+
+        &__label {
+            @apply text-gray-300;
+        }
+    }
+}
+

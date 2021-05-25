@@ -1,0 +1,33 @@
+.tabs {
+    @apply
+    h-13
+    flex
+    items-stretch
+    justify-between
+    border-b
+    w-full;
+
+    &__item {
+        @apply
+        relative
+        px-7
+        whitespace-nowrap
+        text-300
+        flex
+        items-center
+        cursor-pointer;
+
+        &_active {
+            @apply font-medium;
+
+            &:before {
+                @apply content-empty
+                absolute
+                inset-x-0
+                bottom-0
+                h-0.5
+                bg-black;
+            }
+        }
+    }
+}

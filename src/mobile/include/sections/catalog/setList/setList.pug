@@ -1,0 +1,15 @@
+include /include/blocks/catalog/setItem/setItem
+
+mixin setList(title)
+	+b.setList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+		+e.box.box._scroll
+			+e.items
+				+setItem.__item
+				+setItem.__item
+				+setItem.__item
+				+setItem.__item
+				+setItem.__item
+				+setItem.__item
+				+setItem.__item

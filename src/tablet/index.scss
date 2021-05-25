@@ -3,8 +3,8 @@
 @import "/src/include/layout/footer/footer";
 @import "layout/header/header";
 
-@import "/src/include/blocks/catalog/catalogItem/list/catalogItem";
-@import "/src/include/blocks/catalog/catalogItem/table/catalogItem";
+@import "/include/blocks/catalog/catalogItem/list/catalogListItem";
+@import "/include/blocks/catalog/catalogItem/table/catalogTableItem";
 
 @import "/src/include/sections/catalog/catalogContent/catalogContent";
 @import "/src/include/sections/catalog/catalogHead/catalogHead";

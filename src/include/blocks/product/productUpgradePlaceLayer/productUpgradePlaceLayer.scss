@@ -1,0 +1,92 @@
+.productUpgradePlaceLayer {
+    @apply pb-28 overflow-layer;
+
+    &__box {
+        @apply block;
+    }
+
+    &__add {
+        @apply
+            absolute
+            bottom-0
+            inset-x-0
+            h-24
+            flex
+            items-center
+            bg-white
+            shadow-product-menu;
+    }
+
+    &__title {
+        @apply
+        flex
+        items-center
+        space-x-5
+        text-650
+        text-blue-900
+        font-bold
+        uppercase
+        mb-6;
+
+        &__img {
+            @apply
+            w-14
+            h-14
+            object-contain;
+        }
+    }
+
+    &__text {
+        @apply
+            text-600
+            space-y-3
+            mb-6;
+    }
+
+    &__desc {
+        @apply
+            bg-gray-100
+            rounded-lg
+            p-5
+            text-200
+            mb-14;
+    }
+
+    &__config {
+        &__app {
+            @apply mb-3;
+
+            &__top {
+                @apply
+                    flex
+                    justify-between
+                    mb-2;
+            }
+
+            &__title {
+                @apply
+                    text-700;
+            }
+
+            &__block {
+                @apply
+                border
+                rounded-lg
+                pt-7
+                pb-4
+                px-4
+                space-y-4;
+            }
+        }
+
+        &__fileList {
+            @apply mb-18;
+        }
+    }
+
+    &__download {
+        @apply
+            mb-12;
+    }
+}
+

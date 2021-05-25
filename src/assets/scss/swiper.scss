@@ -1,0 +1,54 @@
+.swiper {
+    @apply
+    w-full
+    overflow-hidden
+    relative;
+
+    &__list {
+        @apply
+            flex
+            space-x-8
+            items-stretch;
+    }
+
+    &__item {
+        @apply
+        flex-1;
+    }
+
+    &__prev {
+        @apply
+        border
+        cursor-pointer
+        rounded-md
+        flex
+        justify-center
+        items-center
+        bg-white
+        text-black
+        w-16
+        h-21
+        absolute
+        top-2/5
+        transform -translate-y-1/2 rotate-180
+        left-0;
+    }
+
+    &__next {
+        @apply
+        border
+        cursor-pointer
+        rounded-md
+        flex
+        justify-center
+        items-center
+        bg-white
+        text-black
+        w-16
+        h-21
+        absolute
+        top-2/5
+        transform -translate-y-1/2
+        right-0;
+    }
+}

@@ -1,6 +1,6 @@
 mixin catalogSubCategories
-	+b.catalogSubCategories
-		+e.box.box
+	+b.catalogSubCategories&attributes(attributes)
+		+e.box.box._scroll
 			+b.__items
 				+e.item._active(href='#') Металические
 				+e.item(href='#') Пластиковые

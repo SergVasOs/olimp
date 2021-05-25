@@ -1,9 +1,7 @@
 mixin quantity
 	+e.quantity.quantity__&attributes(attributes)
-		+b.button._sm._blue
-			+b.icon._sm
-				include /assets/images/minusIcon.svg
+		+e.button._minus
+			include /assets/images/minusIcon.svg
 		+e.input 2
-		+b.button._sm._blue
-			+b.icon._sm
-				include /assets/images/plusIcon.svg
+		+e.button._plus
+			include /assets/images/plusIcon.svg

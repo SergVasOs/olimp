@@ -1,0 +1,58 @@
+.fileList {
+    &__title {
+        @apply
+            font-medium
+            text-700
+            mb-4;
+    }
+
+    &__items {
+        @apply space-y-2 mb-8;
+    }
+
+    &__item {
+        @apply
+        py-4.5
+        px-6
+        text-300
+        border
+        rounded-lg
+        flex
+        items-center
+        space-x-5 font-medium;
+
+        &__name {
+            @apply flex-1;
+        }
+
+        &__delIcon {
+            @apply text-blue-900 cursor-pointer;
+        }
+    }
+
+    &__uploadArea {
+        @apply
+        h-16
+        flex
+        items-center
+        justify-center
+        space-x-3
+        text-blue-800
+        text-300
+        font-bold
+        border
+        border-dashed
+        border-gray-300
+        rounded-md
+        mb-6;
+    }
+
+    &__example {
+        @apply
+        underline
+        text-200
+        font-medium
+        block
+        text-center;
+    }
+}

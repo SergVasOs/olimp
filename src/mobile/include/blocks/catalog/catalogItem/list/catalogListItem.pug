@@ -1,0 +1,31 @@
+include /include/elements/size/size
+include /include/elements/price/price
+include /include/elements/oldPrice/oldPrice
+include /include/elements/buyButton/buyButton
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/elements/image/image
+include /include/elements/dots/dots
+
+mixin catalogListItem
+	+b.catalogListItem
+		+e.img
+			+labels
+			+favoriteIcon._active
+			+image
+			+dots
+		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
+		+e.prices
+			+price
+			+oldPrice
+		+size
+		+b.__props
+			+b.__item._material
+				+e.name Материал:
+				+e.value Металл + пластиковые элементы
+			+b.__item
+				+e.name Вес:
+				+e.value 1665 гр
+			+b.__item
+				+e.name В наличии:
+				+e.value 133 шт.

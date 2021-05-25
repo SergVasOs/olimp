@@ -1,0 +1,24 @@
+include /include/elements/quantity/quantity
+
+mixin productCategories
+	+b.productCategories&attributes(attributes)
+		+e.box.box
+			+e.items
+				+b.__item
+					+e.info
+						+e.title Все кубки
+						+e.desc Категория
+					+b.icon.__arrow
+						include /assets/images/arrowIcon.svg
+				+b.__item
+					+e.info
+						+e.title Все футбольные кубки
+						+e.desc Категория и тематика
+					+b.icon.__arrow
+						include /assets/images/arrowIcon.svg
+				+b.__item
+					+e.info
+						+e.title Все пластиковые кубки
+						+e.desc Категория и материал
+					+b.icon.__arrow
+						include /assets/images/arrowIcon.svg

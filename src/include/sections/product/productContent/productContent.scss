@@ -1,152 +1,182 @@
 .productContent {
-	@apply pt-6
+	@apply
+		pt-6
+		mb-52
 		lg:pt-8;
 
 	&__box {
-		@apply space-x-4 xl:space-x-6;
+		@apply space-x-4;
 	}
+
 	&__left {
-		@apply w-1/4 xl:w-sidebar;
+		@apply
+		w-3/5
+		2xl:w-1/2;
 	}
 
 	&__right {
 		@apply flex-1;
 	}
 
-	&__menu {
-		@apply space-y-1 mb-5;
-
-		&__title {
-			@apply p-3
-                text-500
-                font-bold
-                border
-                border-transparent;
-		}
-
-		&__item {
-			&__link {
-				@apply p-3
-                    flex
-                    items-center
-                    justify-between
-                    space-x-3
-                    border
-                    border-gray-200
-                    rounded;
-			}
-
-			&__submenu {
-				@apply flex
-                flex-col
-                space-y-3
-                ml-6
-                my-3;
-
-				&__item {
-					@apply hover:underline;
-
-					&_active {
-						@apply text-blue-400
-                        font-bold
-                        underline;
-					}
-				}
-			}
-
-			&_active & {
-				&__link {
-					&__name {
-						@apply text-500
-                        font-bold;
-					}
-
-					&__icon {
-						@apply transform
-                        rotate-90;
-					}
-				}
-			}
-		}
-	}
-
-	&__items {
+	&__gallery {
 		@apply
-		grid
-		gap-2
-		grid-cols-2
-		md:grid-cols-3
-		xl:gap-8
-		lg:grid-cols-4;
+		relative
+		pb-full
+		mt-0.5
+		mb-8;
 
-		&_list {
-			@apply grid-cols-1;
+		&__labels {
+			@apply absolute
+			z-10
+			top-22
+			left-4;
 		}
 
-		&_table {
-			@apply grid-cols-1 gap-8 xl:gap-5;
+		&__img {
+			@apply absolute w-full h-full object-cover;
+		}
+
+		&__thumbs {
+			@apply absolute
+			flex-col
+			space-y-2
+			z-10
+			top-1/2
+			left-4;
 		}
 	}
 
-	&__pagination {
-		@apply mt-7
-        flex
-        items-center
-        space-x-5
-		md:mt-10;
+	&__productUpgrades {
+		@apply mb-20;
+	}
 
-		&__more {
+
+	&__productEdition {
+		@apply mb-9;
+	}
+
+	&__productProperties {
+		@apply mb-11;
+	}
+
+	&__productDeliveryInfo {
+		@apply mb-11;
+	}
+
+	&__productMaterials {
+		@apply mb-11;
+	}
+
+	&__buy {
+		@apply
+			border
+			rounded-lg;
+
+		&__info {
 			@apply
-			w-full
-			sm:w-auto;
+				pt-4
+				pr-6
+				pb-9
+				pl-14;
 		}
 
-		&__pages {
-			@apply flex
-                items-center
-                space-x-1;
+		&__top {
+			@apply
+				flex
+				justify-between
+				items-center
+				mb-2;
+		}
 
-			&__item {
-				@apply flex
-                items-center
-                justify-center
-                rounded
-                w-8
-                h-8;
+		&__sku {
+			@apply
+			ml-auto
+			font-medium
+			text-gray-700;
+		}
 
-				&_active {
-					@apply bg-gray-200;
-				}
+		&__prices {
+			@apply
+				flex
+				items-center
+				space-x-5
+				mb-4;
+		}
+
+		&__price {
+			@apply
+				flex
+				items-baseline
+				text-950
+				font-bold;
+
+			&__piece {
+				@apply
+				text-700;
 			}
 		}
-	}
 
-	&__popularKeywords {
-		@apply mt-9;
-
-		&__title {
-			@apply text-800
-                font-bold;
+		&__oldPrice {
+			@apply
+				text-gray-600
+				text-700
+				line-through;
 		}
 
-		&__items {
-			@apply mt-4
-                grid
-                gap-3
-				grid-cols-4
-                lg:grid-cols-5;
+		&__discount {
+			@apply
+				text-700
+				text-white
+				py-2
+				px-3
+				bg-red-300
+				rounded-r-lg;
+		}
 
-			&__item {
-				@apply border
-                    border-gray-200
-                    rounded
-                    text-black
-                    text-200
-                    text-center
-                    px-1
-                    py-4
-                    font-medium;
+		&__size {
+			@apply
+				mb-5;
+		}
+
+		&__stock {
+			@apply
+				text-gray-700
+				flex
+				mb-8;
+
+			&__value {
+				@apply
+					text-black
+					ml-1;
 			}
+		}
+
+		&__buttons {
+			@apply flex space-x-4;
+		}
+
+		&__buyButton,
+		&__upgradeButton {
+			@apply
+			h-14
+			px-6;
+		}
+
+		&__count {
+			@apply
+			bg-gradient-to-t
+			from-gray-250
+			to-gray-100;
+		}
+
+		&__editionLink {
+			@apply
+				block
+				text-center
+				py-2.5
+				text-black
+				underline;
 		}
 	}
 }
+

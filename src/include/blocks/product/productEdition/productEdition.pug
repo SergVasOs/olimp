@@ -1,0 +1,30 @@
+include /include/elements/quantity/quantity
+
+mixin productEdition
+	+b.productEdition&attributes(attributes)
+		+e.title Тираж
+		+e.table
+			+e.header
+				+e.col._size Размер
+				+e.col._stock На складе
+				+e.col._count Тираж
+			+e.row
+				+e.col._size 36 см
+				+e.col._stock 3242
+				+e.col._count
+					+quantity
+			+e.row
+				+e.col._size 36 см
+				+e.col._stock 3242
+				+e.col._count
+					+quantity
+			+e.row
+				+e.col._size 36 см
+				+e.col._stock 3242
+				+e.col._count
+					+quantity
+			+e.row
+				+e.col._size 36 см
+				+e.col._stock 3242
+				+e.col._count
+					+quantity

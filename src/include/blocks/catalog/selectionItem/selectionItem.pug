@@ -1,0 +1,18 @@
+include /include/elements/size/size
+include /include/elements/price/price
+include /include/elements/oldPrice/oldPrice
+include /include/elements/buyButton/buyButton
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/elements/image/image
+include /include/elements/dots/dots
+
+mixin selectionItem
+	+b.selectionItem
+		+image
+		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
+		+e.prices
+			+price
+			+oldPrice
+		+b.__addButton.button._blue
+			+e.text Добавить

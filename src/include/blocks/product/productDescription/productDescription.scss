@@ -1,0 +1,19 @@
+.productDescription {
+    &__title {
+        @apply
+            text-850
+            font-bold
+            mb-4;
+    }
+
+    &__text {
+        @apply space-y-4;
+    }
+
+    &__more {
+        @apply
+            text-blue-400
+            underline
+            ml-1;
+    }
+}

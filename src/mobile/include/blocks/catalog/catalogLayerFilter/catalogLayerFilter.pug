@@ -2,35 +2,38 @@ include /include/blocks/catalog/catalogFilters/catalogFilters
 
 mixin catalogLayerFilter
 	+b#layer_filters.layer
-		+e.title Фильтр
-			+b.icon.__close
-				include /assets/images/crossIcon.svg
-		+b.catalogLayerFilter.__body
-			+b.__view
-				+e.label Вид
-				+e.items
-					+e.item._active(href='catalog.html')
-						+b.icon._md
-							include /assets/images/viewGridIcon.svg
-					+e.item(href='catalog-list.html')
-						+b.icon._md
-							include /assets/images/viewListIcon.svg
-					+e.item(href='catalog-table.html')
-						+b.icon._md
-							include /assets/images/viewTableIcon.svg
-			+b.__sort
-				+e.label Сортировка
-				+e.items
-					+b.__item._active(href='catalog.html')
-						+e.text Цена
-						+b.icon.__icon
-							include /assets/images/triangleIcon.svg
-					+b.__item._desc(href='catalog-list.html')
-						+e.text Новизна
-						+b.icon.__icon
-							include /assets/images/triangleIcon.svg
-					+b.__item(href='catalog-table.html')
-						+e.text Рейтинг
-						+b.icon.__icon
-							include /assets/images/triangleIcon.svg
-			+catalogFilters
+		+e.body
+			+e.header Фильтр
+				+b.icon.__close
+					include /assets/images/crossIcon.svg
+			+b.catalogLayerFilter.__content
+				+e.box.box
+					+b.__view
+						+e.label Вид
+						+e.items
+							+e.item._active(href='catalog.html')
+								+b.icon._md
+									include /assets/images/viewGridIcon.svg
+							+e.item(href='catalog-list.html')
+								+b.icon._md
+									include /assets/images/viewListIcon.svg
+							+e.item(href='catalog-table.html')
+								+b.icon._md
+									include /assets/images/viewTableIcon.svg
+				+b.__sort
+					+e.label.box Сортировка
+					+e.items.box._scroll
+						+b.__item._active(href='catalog.html')
+							+e.text Цена
+							+b.icon.__icon
+								include /assets/images/triangleIcon.svg
+						+b.__item._desc(href='catalog-list.html')
+							+e.text Новизна
+							+b.icon.__icon
+								include /assets/images/triangleIcon.svg
+						+b.__item(href='catalog-table.html')
+							+e.text Рейтинг
+							+b.icon.__icon
+								include /assets/images/triangleIcon.svg
+				+e.box.box
+					+catalogFilters

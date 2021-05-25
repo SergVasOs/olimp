@@ -5,7 +5,12 @@ const fs = require('fs');
 
 const generateHtmlPlugins = (templateDir) => {
 	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-	return templateFiles.map(item => {
+	return templateFiles.filter(item => {
+		const parts = item.split('.');
+		const extension = parts[1];
+
+		return extension === 'pug';
+	}).map(item => {
 		const parts = item.split('.');
 		const name = parts[0];
 		const extension = parts[1];

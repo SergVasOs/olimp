@@ -1,0 +1,22 @@
+include /include/blocks/catalog/catalogFilters/catalogFilters
+
+mixin productUpgradeInfoLayer
+	+b#layer_upgrade_info.layer
+		+e.body
+			+e.header Описание
+				+b.icon.__close
+					include /assets/images/crossIcon.svg
+			+b.productUpgradeInfoLayer.__content
+				+e.box.box
+					+e.title
+						+e Шелкография
+						+e (трафаретная печать)
+					+e.text
+						+e Печать шелкографией — самая популярная и универсальная технология нанесения изображений на бизнес-подарки и промопродукцию. Этим методом логотип или рекламное сообщение можно нанести почти на любой материал — хлопок, нейлон, полиэстер, пластик, стекло, искусственную кожу, дерево и бумагу.
+						+e Шелкографию применяют для печати практически на всех видах промопродукции от футболок, зонтов и сумок до брелков, зажигалок и упаковки.
+					+e.media(src='images/productUpgadeInfoMedia.png')
+				+b.__examples
+					+e.title.box Примеры
+					+b.__items.box._scroll
+						+e.item(src='images/productUpgradeExample1.png')
+						+e.item(src='images/productUpgradeExample2.png')
