@@ -11,6 +11,7 @@
 
     &__items {
         @apply
+        overflow-box
         flex
         space-x-2.5
         lg:space-x-4;

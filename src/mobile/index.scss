@@ -7,17 +7,17 @@
 @import "include/blocks/catalog/catalogItem/list/catalogListItem";
 @import "include/blocks/catalog/catalogItem/table/catalogTableItem";
 @import "include/blocks/catalog/catalogLayerFilter/catalogLayerFilter";
-@import "include/blocks/product/edition/edition";
-@import "include/blocks/product/variants/variants";
+@import "include/blocks/product/productEdition/productEdition";
+@import "include/blocks/product/productVariants/productVariants";
 @import "include/blocks/product/productCategories/productCategories";
 @import "include/blocks/product/productProperties/productProperties";
 
 @import "include/sections/catalog/catalogContent/catalogContent";
 @import "include/sections/catalog/catalogHead/catalogHead";
-@import "include/sections/catalog/catalogSubCategories/catalogSubCategories";
 @import "include/sections/catalog/setList/setList";
 @import "include/sections/catalog/productList/productList";
 @import "include/sections/catalog/viewedList/viewedList";
+@import "include/sections/catalog/catalogSubCategories/catalogSubCategories";
 @import "include/sections/common/mainMenu/mainMenu";
 @import "include/sections/product/productContent/productContent";
 @import "include/sections/product/productHead/productHead";

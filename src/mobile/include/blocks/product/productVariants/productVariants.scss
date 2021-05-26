@@ -1,4 +1,4 @@
-.variants {
+.productVariants {
     @apply
         mb-7;
 
@@ -11,9 +11,15 @@
 
     &__items {
         @apply
-        flex
-        space-x-2.5
+        overflow-box
         py-3;
+    }
+
+    &__content {
+        @apply
+        w-unlimit
+        flex
+        space-x-2.5;
     }
 
     &__item {

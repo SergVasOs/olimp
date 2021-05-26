@@ -1,7 +1,9 @@
 .size {
     @apply
         flex
-        space-x-2;
+        items-start
+        space-x-2
+        overflow-block;
 
     &__item {
         @apply

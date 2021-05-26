@@ -28,34 +28,15 @@
 	}
 
 	&__tabs {
-		@apply h-12 items-stretch;
+		@apply tabs overflow-block;
 
 		&__item {
 			@apply
-				relative
-				px-7
-				whitespace-nowrap
-				text-300
-				flex
-				items-center;
-
-			&:before {
-				@apply content-empty
-				absolute
-				inset-x-0
-				bottom-0
-				h-px
-				bg-gray-300;
-			}
+				tabs__item;
 
 			&_active {
-				@apply font-medium;
-
-				&:before {
-					@apply
-						h-0.5
-						bg-black;
-				}
+				@apply
+				tabs__item_active;
 			}
 		}
 	}
@@ -63,8 +44,8 @@
 	&__size {
 		@apply
 			pt-6
-			items-start
-			h-22;
+			h-22
+			overflow-box;
 	}
 
 	&__popup {
@@ -152,7 +133,11 @@
 			@apply
 			hidden
 			h-full
-			overflow-layer;
+			overflow-scrollVert;
+
+			&__box {
+				@apply flex-col;
+			}
 
 			&__menu {
 				@apply
@@ -206,9 +191,15 @@
 				h-40
 				bg-white
 				shadow-product-menu
-				flex-col
 				pt-4
 				pb-3;
+
+				&__box {
+					@apply
+					flex
+					flex-col
+						h-full;
+				}
 
 				&__label {
 					@apply text-600 mb-1;
@@ -220,7 +211,7 @@
 			}
 
 			&__size {
-				@apply mt-6;
+				@apply mt-6 overflow-box;
 			}
 
 			&__card {
@@ -273,7 +264,8 @@
 				border-b
 				py-3.5
 				my-4
-				justify-center
+				-mx-4
+				text-center
 				text-blue-800;
 			}
 
@@ -336,6 +328,11 @@
 				&__buyButton {
 					@apply -mt-2;
 				}
+			}
+
+			&__productDeliveryInfo {
+				@apply
+				mb-9;
 			}
 
 			&__productDescription {

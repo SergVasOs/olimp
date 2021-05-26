@@ -7,8 +7,8 @@ include /include/blocks/product/productDeliveryInfo/productDeliveryInfo
 include /include/blocks/product/productUpgrades/productUpgrades
 include /include/blocks/product/productDescription/productDescription
 include /include/sections/product/productTags/productTags
-include /mobile/include/blocks/product/edition/edition
-include /mobile/include/blocks/product/variants/variants
+include /mobile/include/blocks/product/productEdition/productEdition
+include /mobile/include/blocks/product/productVariants/productVariants
 include /mobile/include/blocks/product/productCategories/productCategories
 include /mobile/include/blocks/product/productProperties/productProperties
 include /mobile/include/sections/catalog/setList/setList
@@ -17,15 +17,16 @@ include /mobile/include/sections/catalog/viewedList/viewedList
 
 mixin productContent
 	+b.productContent
-		+b.__gallery.box._full
-			+labels
-			+e.img(src='images/product1.png')
-			+dots
-		+b.__tabs.box._full._scroll
-			+e.item._active Фотографии
-			+e.item Нанесение и комплект
-			+e.item Готовые решения
-		+b.__size.box._scroll
+		+e.box.box._full
+			+b.__gallery
+				+labels
+				+e.img(src='images/product1.png')
+				+dots
+			+b.__tabs
+				+e.item._active Фотографии
+				+e.item Нанесение и комплект
+				+e.item Готовые решения
+		+e.box.box
 			+size._lg
 		+b.__popup
 			+e.body
@@ -44,63 +45,61 @@ mixin productContent
 						+e.item._active Характеристики
 						+e.item Описание
 						+e.item Все свойства
-					+b.__buy.box
-						+e.label Стоимость за шт:
-						+e.price 17,631 руб
-						+b.button._green._lg
-							+e.text Положить в корзину
-					+e.box.box._scroll
-						+size._lg.__size
+					+b.__buy
+						+e.box.box
+							+e.label Стоимость за шт:
+							+e.price 17,631 руб
+							+b.button._green._lg
+								+e.text Положить в корзину
 					+e.box.box
+						+size._lg.__size
 						+b.__card
 							+e.img(src='images/catalogItem.png')
 							+e.info
 								+e.sku Артикул: 271508
 								+e.name Кубок B368-3, высота 36 см
 								+e.price 3 249 ₽ / шт
-					+b.__icon.box
-						+b.icon._md
-							include /assets/images/plusIcon.svg
-					+e.box.box
+						+b.__icon
+							+b.icon._md
+								include /assets/images/plusIcon.svg
 						+productUpgrades
-					+b.__icon.box
-						+b.icon._md
-							include /assets/images/crossIcon.svg
-					+e.box.box
-						+edition
-					+b.__icon.box
-						+b.icon._md
-							include /assets/images/equalIcon.svg
-					+b.__total.box
-						+b.TABLE.__info
-							+b.THEAD.__header
-								+e.TD.col._label
-								+e.TD.col._thing за 1 шт
-								+e.TD.col._total за 238 шт
-							+b.TR.__row
-								+e.TD.col._label Аксессуары:
-								+e.TD.col._thing 840 ₽
-								+e.TD.col._total 840 ₽
-							+b.TR.__row
-								+e.TD.col._label Нанесение:
-								+e.TD.col._thing 1 683 ₽
-								+e.TD.col._total 1 683 ₽
-							+b.TR.__row
-								+e.TD.col._label._sum Итого:
-								+e.TD.col._thing 1 683 ₽
-								+e.TD.col._total 336 422₽
-						+buyButton('Добавить в корзину')._xl.__buyButton
-					+e.box.box
-						+productDeliveryInfo
+						+b.__icon
+							+b.icon._md
+								include /assets/images/crossIcon.svg
+						+productEdition
+						+b.__icon
+							+b.icon._md
+								include /assets/images/equalIcon.svg
+						+b.__total
+							+b.TABLE.__info
+								+b.THEAD.__header
+									+e.TD.col._label
+									+e.TD.col._thing за 1 шт
+									+e.TD.col._total за 238 шт
+								+b.TR.__row
+									+e.TD.col._label Аксессуары:
+									+e.TD.col._thing 840 ₽
+									+e.TD.col._total 840 ₽
+								+b.TR.__row
+									+e.TD.col._label Нанесение:
+									+e.TD.col._thing 1 683 ₽
+									+e.TD.col._total 1 683 ₽
+								+b.TR.__row
+									+e.TD.col._label._sum Итого:
+									+e.TD.col._thing 1 683 ₽
+									+e.TD.col._total 336 422₽
+							+buyButton('Добавить в корзину')._xl.__buyButton
+						+productDeliveryInfo.__productDeliveryInfo
 					+setList('Готовые работы').__setList
-					+variants.__variants
 					+e.box.box
+						+productVariants.__productVariants
 						+productDescription.__productDescription
-					+productCategories
+						+productCategories
 					+productList('Посмотрите аналоги').__analog
 					+productList('С этим товаром заказывают').__relative
-					+productProperties
-					+productTags
+					+e.box.box
+						+productProperties
+						+productTags
 					+viewedList.__viewed
 					+e.box.box
 						+b.button._xl._lightGray.__helpButton(href='#')

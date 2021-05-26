@@ -4,6 +4,7 @@
 
     &__box {
         @apply
+            flex
             items-center
             space-x-3;
     }

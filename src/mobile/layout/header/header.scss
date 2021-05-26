@@ -13,6 +13,8 @@
 
     &__box {
         @apply
+            flex
+            justify-between
             items-center;
     }
 

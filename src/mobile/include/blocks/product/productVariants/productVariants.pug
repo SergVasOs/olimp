@@ -1,11 +1,8 @@
-include /include/elements/quantity/quantity
-
-mixin variants
-	+b.variants&attributes(attributes)
-		+e.box.box
-			+e.title Измени комплектацию
-		+e.box.box._scroll
-			+e.items
+mixin productVariants
+	+b.productVariants&attributes(attributes)
+		+e.title Измени комплектацию
+		+e.items
+			+e.content
 				+b.__item._best._active
 					+e.label ЛУЧШИЙ
 					+e.title Кубок + табличка + крышка + фигурка + вкладыш

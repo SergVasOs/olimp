@@ -1,8 +1,8 @@
 .catalogLayerFilter {
-	@apply space-y-5;
-
 	&__view {
-		&__label {
+        @apply mb-5;
+
+        &__label {
 			@apply text-600 font-medium mb-3;
 		}
 
@@ -27,12 +27,14 @@
 	}
 
 	&__sort {
+        @apply mb-5;
+
 		&__label {
 			@apply text-600 font-medium mb-3;
 		}
 
 		&__items {
-			@apply flex space-x-4;
+			@apply flex space-x-4 overflow-layer;
 		}
 
         &__item {

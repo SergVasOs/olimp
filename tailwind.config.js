@@ -96,6 +96,12 @@ module.exports = {
 				modal: '435px',
 				sidebar: '275px',
 				layer: '676px',
+				unlimit: '10000px',
+			},
+			minWidth: {
+      	'overflow-box': 'calc(100% + 1rem)',
+      	'overflow-layer': 'calc(100% + 1.25rem)',
+      	'overflow-layer-lg': 'calc(100% + 2.25rem)',
 			},
 			maxHeight: {
       	layer: '80vh',

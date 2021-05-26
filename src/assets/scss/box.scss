@@ -1,17 +1,10 @@
 .box {
     @apply
-    flex
-    flex-wrap
-    justify-between
     container
     overflow-hidden
     mx-auto;
 
     &_full {
         @apply w-full p-0;
-    }
-
-    &_scroll {
-        @apply overflow-layer flex-nowrap justify-start;
     }
 }

@@ -32,6 +32,8 @@
 
         &__items {
             @apply
+            overflow-layer
+            flex
             space-x-5;
         }
     }

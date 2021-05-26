@@ -7,6 +7,8 @@
     &__box {
         @apply
             h-11
+            flex
+            justify-between
             items-center
             space-x-4;
     }

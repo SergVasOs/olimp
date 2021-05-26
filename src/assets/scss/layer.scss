@@ -60,7 +60,9 @@
         @apply
         flex-1
         h-0
-        overflow-layer
-        py-7;
+        overflow-scrollVert
+        py-7
+        px-5
+        lg:px-9;
     }
 }

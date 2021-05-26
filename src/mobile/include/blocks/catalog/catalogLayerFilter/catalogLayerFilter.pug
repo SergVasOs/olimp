@@ -7,22 +7,21 @@ mixin catalogLayerFilter
 				+b.icon.__close
 					include /assets/images/crossIcon.svg
 			+b.catalogLayerFilter.__content
-				+e.box.box
-					+b.__view
-						+e.label Вид
-						+e.items
-							+e.item._active(href='catalog.html')
-								+b.icon._md
-									include /assets/images/viewGridIcon.svg
-							+e.item(href='catalog-list.html')
-								+b.icon._md
-									include /assets/images/viewListIcon.svg
-							+e.item(href='catalog-table.html')
-								+b.icon._md
-									include /assets/images/viewTableIcon.svg
+				+b.__view
+					+e.label Вид
+					+e.items
+						+e.item._active(href='catalog.html')
+							+b.icon._md
+								include /assets/images/viewGridIcon.svg
+						+e.item(href='catalog-list.html')
+							+b.icon._md
+								include /assets/images/viewListIcon.svg
+						+e.item(href='catalog-table.html')
+							+b.icon._md
+								include /assets/images/viewTableIcon.svg
 				+b.__sort
-					+e.label.box Сортировка
-					+e.items.box._scroll
+					+e.label Сортировка
+					+e.items
 						+b.__item._active(href='catalog.html')
 							+e.text Цена
 							+b.icon.__icon
@@ -35,5 +34,4 @@ mixin catalogLayerFilter
 							+e.text Рейтинг
 							+b.icon.__icon
 								include /assets/images/triangleIcon.svg
-				+e.box.box
-					+catalogFilters
+				+catalogFilters

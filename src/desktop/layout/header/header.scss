@@ -11,7 +11,7 @@
 		items-center;
 
 	&__box {
-		@apply items-center;
+		@apply flex items-center;
 	}
 
 	&__logo {

@@ -1,15 +1,12 @@
 .catalogSubCategories {
-    &__box {
-        @apply
-        h-11
-        items-stretch;
-    }
+    @apply
+    mt-4;
 
     &__items {
         @apply
-        flex-1
         flex
-        space-x-4;
+        space-x-4
+        overflow-box;
 
         &__item {
             @apply
@@ -18,6 +15,7 @@
             flex
             items-center
             px-3
+            py-2.5
             border
             border-gray-400
             rounded;

@@ -3,7 +3,7 @@
 		lg:pt-8;
 
 	&__box {
-		@apply space-x-4 xl:space-x-6;
+		@apply flex space-x-4 xl:space-x-6;
 	}
 	&__left {
 		@apply w-1/4 xl:w-sidebar;

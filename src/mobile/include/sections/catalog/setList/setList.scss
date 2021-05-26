@@ -10,9 +10,16 @@
 
 	&__items {
 		@apply
-			flex
-			space-x-3;
+			overflow-box;
 	}
+
+	&__content {
+		@apply
+		w-unlimit
+		flex
+		space-x-3;
+	}
+
 
 	&__item {
 		@apply

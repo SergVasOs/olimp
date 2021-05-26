@@ -6,10 +6,55 @@
     content: '';
 }
 
-.overflow-layer {
-    overflow: scroll;
+.overflow {
+    &-scrollVert {
+        @apply
+        overflow-x-hidden
+        overflow-y-scroll
+        md:pr-2;
 
-    &::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+            @apply
+                hidden
+                w-1
+                h-1
+                md:block;
+        }
+
+        &::-webkit-scrollbar-track {
+            @apply inset-y-3;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @apply
+            bg-orange-200
+            rounded-full;
+        }
+    }
+
+    &-box {
+        @apply overflow-x-scroll min-w-overflow-box;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
+    }
+
+    &-layer {
+        @apply overflow-x-scroll min-w-overflow-layer
+        lg:min-w-overflow-layer-lg;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
+    }
+
+    &-block {
+        @apply overflow-x-scroll;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
     }
 }
+

@@ -1,20 +1,25 @@
 .productUpgradePlaceLayer {
-    @apply pb-28 overflow-layer;
-
-    &__box {
-        @apply block;
-    }
+    @apply mb-28;
 
     &__add {
         @apply
             absolute
             bottom-0
             inset-x-0
+            px-4
             h-24
             flex
             items-center
             bg-white
             shadow-product-menu;
+
+        &__button {
+            @apply
+                button
+                button_blue
+                button_lg
+                w-full;
+        }
     }
 
     &__title {
