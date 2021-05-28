@@ -1,22 +1,12 @@
 .swiper {
-    @apply
-    w-full
-    overflow-hidden
-    relative;
-
-    &__list {
-        @apply
-            flex
-            space-x-8
-            items-stretch;
+    &-container {
+        &-vertical {
+            @apply h-full;
+        }
     }
 
-    &__item {
-        @apply
-        flex-1;
-    }
-
-    &__prev {
+    &-prev,
+    &-next {
         @apply
         border
         cursor-pointer
@@ -26,29 +16,44 @@
         items-center
         bg-white
         text-black
-        w-16
+        w-15
         h-21
+        px-5
+        py-7
         absolute
+        z-10
         top-2/5
+        transform -translate-y-1/2;
+    }
+
+    &-prev {
+        @apply
         transform -translate-y-1/2 rotate-180
         left-0;
     }
 
-    &__next {
+    &-next {
         @apply
-        border
-        cursor-pointer
-        rounded-md
-        flex
-        justify-center
-        items-center
-        bg-white
-        text-black
-        w-16
-        h-21
-        absolute
-        top-2/5
-        transform -translate-y-1/2
         right-0;
+    }
+
+    &-dots {
+        @apply flex
+        items-center
+        justify-center
+        space-x-2;
+
+        &-item {
+            @apply w-2
+            h-2
+            bg-gray-500
+            rounded-full
+            cursor-pointer
+            hover:bg-gray-700;
+
+            &-active {
+                @apply bg-gray-700;
+            }
+        }
     }
 }

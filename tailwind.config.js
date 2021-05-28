@@ -97,11 +97,10 @@ module.exports = {
 				sidebar: '275px',
 				layer: '676px',
 				unlimit: '10000px',
-			},
-			minWidth: {
-      	'overflow-box': 'calc(100% + 1rem)',
-      	'overflow-layer': 'calc(100% + 1.25rem)',
-      	'overflow-layer-lg': 'calc(100% + 2.25rem)',
+				'overflow-box-full': 'calc(100% + 2rem)',
+				'overflow-box': 'calc(100% + 1rem)',
+				'overflow-layer': 'calc(100% + 1.25rem)',
+				'overflow-layer-lg': 'calc(100% + 2.25rem)',
 			},
 			maxHeight: {
       	layer: '80vh',
@@ -133,6 +132,7 @@ module.exports = {
 				'4/5': '80%',
 				'7/8': '87.5%',
 				'4.5': '1.125rem',
+				'15': '3.75rem',
 				'18': '4.5rem',
 				'21': '5.25rem',
 				'26': '6.5rem',

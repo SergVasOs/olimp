@@ -1,7 +1,4 @@
 .productVariants {
-    @apply
-        mb-7;
-
     &__title {
         @apply
             text-850
@@ -9,17 +6,12 @@
             mb-3;
     }
 
-    &__items {
+    &__swiper {
         @apply
-        overflow-box
+        overflow-box-full
+        pl-4
+        -ml-4
         py-3;
-    }
-
-    &__content {
-        @apply
-        w-unlimit
-        flex
-        space-x-2.5;
     }
 
     &__item {

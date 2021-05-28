@@ -5,15 +5,9 @@
         flex-col
         rounded-2xl border border-gray-500;
 
-    &__image {
+    &__catalogItemGallery {
         @apply
-        rounded-t-2xl
-        pb-full;
-    }
-
-    &__dots {
-        @apply
-        h-6;
+        rounded-t-2xl;
     }
 
     &__name {

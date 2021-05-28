@@ -1,0 +1,18 @@
+.catalogItemGallery {
+    @apply overflow-hidden;
+
+    &__slide {
+        @apply relative overflow-hidden pb-4/3;
+
+        &__img {
+            @apply
+            absolute h-full w-full;
+        }
+    }
+
+    &__dots {
+        @apply
+        h-10;
+    }
+
+}

@@ -30,11 +30,14 @@
                 text-850;
         }
 
-        &__items {
+        &__swiper {
             @apply
             overflow-layer
-            flex
-            space-x-5;
+            h-60;
+        }
+
+        &__item {
+            @apply object-cover w-auto;
         }
     }
 }

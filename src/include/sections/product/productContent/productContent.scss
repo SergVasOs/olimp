@@ -17,7 +17,9 @@
 	}
 
 	&__right {
-		@apply flex-1;
+		@apply
+		w-2/5
+		2xl:w-1/2;
 	}
 
 	&__gallery {

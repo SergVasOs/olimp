@@ -20,14 +20,21 @@ mixin productContent
 		+e.box.box._full
 			+b.__gallery
 				+labels
-				+e.img(src='images/product1.png')
-				+dots
+				+b.swiper-container.__swiper
+					+b.swiper-wrapper
+						+b.productContent__gallery__slide.swiper-slide
+							+e.img(src='images/product1.png')
+						+b.productContent__gallery__slide.swiper-slide
+							+e.img(src='images/product1.png')
+						+b.productContent__gallery__slide.swiper-slide
+							+e.img(src='images/product1.png')
+					+b.swiper-dots.productContent__gallery__dots
 			+b.__tabs
 				+e.item._active Фотографии
 				+e.item Нанесение и комплект
 				+e.item Готовые решения
 		+e.box.box
-			+size._lg
+			+size._lg.__size
 		+b.__popup
 			+e.body
 				+e.handler
@@ -93,13 +100,14 @@ mixin productContent
 					+setList('Готовые работы').__setList
 					+e.box.box
 						+productVariants.__productVariants
+					+e.box.box
 						+productDescription.__productDescription
 						+productCategories
 					+productList('Посмотрите аналоги').__analog
 					+productList('С этим товаром заказывают').__relative
 					+e.box.box
 						+productProperties
-						+productTags
+					+productTags
 					+viewedList.__viewed
 					+e.box.box
 						+b.button._xl._lightGray.__helpButton(href='#')

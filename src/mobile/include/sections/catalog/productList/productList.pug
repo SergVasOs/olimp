@@ -4,12 +4,13 @@ mixin productList(title)
 	+b.productList&attributes(attributes)
 		+e.box.box
 			+e.title #{title}
-			+e.items
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
-				+catalogGridItem.__item
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item
+					+catalogGridItem.swiper-slide.productList__item

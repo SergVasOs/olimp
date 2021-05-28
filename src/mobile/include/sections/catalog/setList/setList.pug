@@ -4,12 +4,11 @@ mixin setList(title)
 	+b.setList&attributes(attributes)
 		+e.box.box
 			+e.title #{title}
-			+e.items
-				+e.content
-					+setItem.__item
-					+setItem.__item
-					+setItem.__item
-					+setItem.__item
-					+setItem.__item
-					+setItem.__item
-					+setItem.__item
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+setItem.swiper-slide.setList__item
+					+setItem.swiper-slide.setList__item
+					+setItem.swiper-slide.setList__item
+					+setItem.swiper-slide.setList__item
+					+setItem.swiper-slide.setList__item
+					+setItem.swiper-slide.setList__item

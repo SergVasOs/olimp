@@ -1,12 +1,20 @@
 mixin productTags
 	+b.productTags&attributes(attributes)
-		+e.title Товар находят по запросам
-		+e.items
-			+e.item(href='#') Все футболки
-			+e.item(href='#') Пластиковые
-			+e.item(href='#') Стеклянные
-			+e.item(href='#') Спорт товары
-			+e.item(href='#') Все футболки
-			+e.item(href='#') Пластиковые
-			+e.item(href='#') Стеклянные
-			+e.item(href='#') Спорт товары
+		+e.box.box
+			+e.title Товар находят по запросам
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.swiper-slide.__item(href='#') Все футболки
+					+b.swiper-slide.__item(href='#') Пластиковые
+					+b.swiper-slide.__item(href='#') Стеклянные
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Все футболки
+					+b.swiper-slide.__item(href='#') Пластиковые
+					+b.swiper-slide.__item(href='#') Стеклянные
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары
+					+b.swiper-slide.__item(href='#') Спорт товары

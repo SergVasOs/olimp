@@ -4,15 +4,15 @@ mixin productList(title)
 	+b.productList&attributes(attributes)
 		+e.box.box
 			+e.title #{title}
-			+e.items
-				+e.list
-					+catalogGridItem.__item
-					+catalogGridItem.__item
-					+catalogGridItem.__item
-					+catalogGridItem.__item
-				+e.prev
-					+b.icon
-						include /assets/images/arrowIcon.svg
-				+e.next
-					+b.icon
-						include /assets/images/arrowIcon.svg
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+				+b.swiper-prev
+					include /assets/images/arrowIcon.svg
+				+b.swiper-next
+					include /assets/images/arrowIcon.svg

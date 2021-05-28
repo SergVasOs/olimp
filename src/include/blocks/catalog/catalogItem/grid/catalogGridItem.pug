@@ -4,16 +4,14 @@ include /include/elements/oldPrice/oldPrice
 include /include/elements/buyButton/buyButton
 include /include/elements/labels/labels
 include /include/elements/favoriteIcon/favoriteIcon
-include /include/elements/image/image
-include /include/elements/dots/dots
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
 
 mixin catalogGridItem
 	+b.catalogGridItem&attributes(attributes)
 		+labels
 		+favoriteIcon._active
-		+image
-		+dots
-		+size
+		+catalogItemGallery.__catalogItemGallery
+		+size.__size
 		+e.material Пластик
 		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
 		+e.bottom

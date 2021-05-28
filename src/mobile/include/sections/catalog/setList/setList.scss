@@ -8,18 +8,10 @@
 		mb-5;
 	}
 
-	&__items {
+	&__swiper {
 		@apply
 			overflow-box;
 	}
-
-	&__content {
-		@apply
-		w-unlimit
-		flex
-		space-x-3;
-	}
-
 
 	&__item {
 		@apply

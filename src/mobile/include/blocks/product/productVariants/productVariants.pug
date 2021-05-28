@@ -1,21 +1,21 @@
 mixin productVariants
 	+b.productVariants&attributes(attributes)
 		+e.title Измени комплектацию
-		+e.items
-			+e.content
-				+b.__item._best._active
+		+b.swiper-container.__swiper
+			+b.swiper-wrapper
+				+b.productVariants__item._best._active.swiper-slide
 					+e.label ЛУЧШИЙ
 					+e.title Кубок + табличка + крышка + фигурка + вкладыш
 					+e.prices
 						+e.price от 3 249 ₽ / шт
 						+e.oldPrice 4 749 ₽ / шт
-				+b.__item._standart
+				+b.productVariants__item._standart.swiper-slide
 					+e.label СТАНДАРТНЫЙ
 					+e.title Кубок + табличка + вкладыш
 					+e.prices
 						+e.price от 2 249 ₽ / шт
 						+e.oldPrice 2 749 ₽ / шт
-				+b.__item._econom
+				+b.productVariants__item._econom.swiper-slide
 					+e.label ЭКОНОМНЫЙ
 					+e.title Только кубок
 					+e.prices

@@ -33,28 +33,18 @@
     }
 
     &-box {
-        @apply overflow-x-scroll min-w-overflow-box;
+        @apply
+        w-overflow-box;
 
-        &::-webkit-scrollbar {
-            @apply hidden;
+        &-full {
+            @apply
+            w-overflow-box-full;
         }
     }
 
     &-layer {
-        @apply overflow-x-scroll min-w-overflow-layer
-        lg:min-w-overflow-layer-lg;
-
-        &::-webkit-scrollbar {
-            @apply hidden;
-        }
-    }
-
-    &-block {
-        @apply overflow-x-scroll;
-
-        &::-webkit-scrollbar {
-            @apply hidden;
-        }
+        @apply w-overflow-layer
+        lg:w-overflow-layer-lg;
     }
 }
 

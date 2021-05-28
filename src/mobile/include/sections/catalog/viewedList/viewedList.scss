@@ -8,11 +8,9 @@
 		mb-5;
 	}
 
-	&__items {
+	&__swiper {
 		@apply
-			overflow-box
-			flex
-			space-x-3;
+		overflow-box;
 	}
 
 	&__item {

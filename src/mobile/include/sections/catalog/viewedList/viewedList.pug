@@ -4,11 +4,12 @@ mixin viewedList
 	+b.viewedList&attributes(attributes)
 		+e.box.box
 			+e.title Вы смотрели
-			+e.items
-				+viewedItem.__item
-				+viewedItem.__item
-				+viewedItem.__item
-				+viewedItem.__item
-				+viewedItem.__item
-				+viewedItem.__item
-				+viewedItem.__item
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item
+					+viewedItem.swiper-slide.viewedList__item

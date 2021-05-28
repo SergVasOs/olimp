@@ -9,16 +9,16 @@
             mb-3;
     }
 
-    &__items {
+    &__swiper {
         @apply
-        overflow-box
-        flex
-        space-x-2.5
-        lg:space-x-4;
+            overflow-box
+            md:w-full;
     }
 
-    &__item {
-        @apply border
+    &__swiper__wrapper__item {
+        @apply
+        w-min
+        border
         border-gray-200
         rounded
         text-blue-900

@@ -17,10 +17,11 @@ mixin productUpgradeInfoLayer
 				+e.media(src='images/productUpgadeInfoMedia.png')
 				+b.__examples
 					+e.title Примеры
-					+b.__items
-						+e.item(src='images/productUpgradeExample1.png')
-						+e.item(src='images/productUpgradeExample2.png')
-						+e.item(src='images/productUpgradeExample1.png')
-						+e.item(src='images/productUpgradeExample2.png')
-						+e.item(src='images/productUpgradeExample1.png')
-						+e.item(src='images/productUpgradeExample2.png')
+					+b.swiper-container.__swiper
+						+b.swiper-wrapper
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
+							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')

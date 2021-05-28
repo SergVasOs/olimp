@@ -4,7 +4,7 @@ include /include/elements/oldPrice/oldPrice
 include /include/elements/buyButton/buyButton
 include /include/elements/labels/labels
 include /include/elements/favoriteIcon/favoriteIcon
-include /include/elements/image/image
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
 include /include/elements/dots/dots
 include /include/elements/quantity/quantity
 
@@ -16,7 +16,7 @@ mixin catalogTableItem
 			+e.col._size Размер
 		+e.variant
 			+e.img
-				+image
+				+catalogItemGallery
 			+e.info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.prices
@@ -26,7 +26,7 @@ mixin catalogTableItem
 			+buyButton.__buyButton
 		+e.variant
 			+e.img
-				+image
+				+catalogItemGallery
 			+e.info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.prices

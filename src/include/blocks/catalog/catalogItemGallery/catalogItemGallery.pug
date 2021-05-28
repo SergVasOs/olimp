@@ -1,0 +1,13 @@
+include /include/elements/dots/dots
+
+mixin catalogItemGallery
+	+b.catalogItemGallery&attributes(attributes)
+		+b.swiper-container.__swiper
+			+b.swiper-wrapper
+				+b.catalogItemGallery__slide.swiper-slide
+					+e.img(src='images/catalogItem.png')
+				+b.catalogItemGallery__slide.swiper-slide
+					+e.img(src='images/catalogItem.png')
+				+b.catalogItemGallery__slide.swiper-slide
+					+e.img(src='images/catalogItem.png')
+			+b.swiper-dots.catalogItemGallery__dots

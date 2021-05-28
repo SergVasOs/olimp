@@ -28,7 +28,7 @@
 	}
 
 	&__tabs {
-		@apply tabs overflow-block;
+		@apply tabs;
 
 		&__item {
 			@apply
@@ -134,10 +134,6 @@
 			hidden
 			h-full
 			overflow-scrollVert;
-
-			&__box {
-				@apply flex-col;
-			}
 
 			&__menu {
 				@apply
@@ -338,6 +334,11 @@
 			&__productDescription {
 				@apply
 				mb-9;
+			}
+
+			&__productVariants {
+				@apply
+				mb-7;
 			}
 
 			&__setList {

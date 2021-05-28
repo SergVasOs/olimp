@@ -1,8 +1,0 @@
-.image {
-    @apply relative overflow-hidden pb-4/3;
-
-    &__img {
-        @apply
-        absolute h-full w-full object-cover;
-    }
-}

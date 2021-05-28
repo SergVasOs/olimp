@@ -1,15 +1,7 @@
 .size {
-    @apply
-        flex
-        items-start
-        space-x-2
-        overflow-block;
-
-    &__item {
+    &__swiper__wrapper__item {
         @apply
-            inline-block
-            w-auto
-            h-auto
+            w-min
             text-100
             text-blue-800
             border
@@ -28,7 +20,7 @@
     }
 
     &_lg & {
-        &__item {
+        &__swiper__wrapper__item {
             @apply
             text-200
             font-medium

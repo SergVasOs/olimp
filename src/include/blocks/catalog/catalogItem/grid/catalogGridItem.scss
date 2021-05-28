@@ -23,14 +23,9 @@
             left-4;
     }
 
-    &__image {
+    &__catalogItemGallery {
         @apply
         rounded-t-2xl;
-    }
-
-    &__dots {
-        @apply
-        h-10;
     }
 
     &__size {
