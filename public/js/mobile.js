@@ -14,22 +14,22 @@ const onClickProductPopupHandler = (e) => {
 
 new Swiper('.productContent__size .size__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 7,
+	spaceBetween: swiperSpaceTh,
 	freeMode: true,
 	nested: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 new Swiper('.productContent__popup__full__size .size__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 7,
+	spaceBetween: swiperSpaceTh,
 	freeMode: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 new Swiper('.productVariants__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 14,
+	spaceBetween: swiperSpaceSm,
 	freeMode: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 
 new Swiper('.productContent__gallery__swiper', {
@@ -51,30 +51,47 @@ if (productContent__popup__handler) {
 //swiper
 new Swiper('.productList__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 20,
+	spaceBetween: swiperSpaceMd,
 	freeMode: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 
 new Swiper('.setList__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 20,
+	spaceBetween: swiperSpaceMd,
 	freeMode: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 
 new Swiper('.viewedList__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 20,
+	spaceBetween: swiperSpaceMd,
 	freeMode: true,
-	slidesOffsetAfter: 14,
+	slidesOffsetAfter: boxPadding,
 });
 
 new Swiper('.catalogGridItem__size .size__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: 7,
+	spaceBetween: swiperSpaceTh,
 	freeMode: true,
 	nested: true,
-	slidesOffsetAfter: 10.5,
+	slidesOffsetAfter: catalogItemPadding,
+});
+new Swiper('.catalogListItem__size .size__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceTh,
+	freeMode: true,
+	nested: true,
+	slidesOffsetAfter: catalogItemListPadding,
 });
 
+new Swiper('.catalogItemGallery__swiper', {
+	slidesPerView: 1,
+	pagination: {
+		bulletClass: 'swiper-dots-item',
+		bulletActiveClass: 'swiper-dots-item-active',
+		el: '.swiper-dots',
+		clickable: true,
+	},
+	nested: true,
+});

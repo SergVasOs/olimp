@@ -17,8 +17,9 @@ mixin catalogTableItem
 			+e.col._material Материал
 			+e.col._prices Цена
 		+e.variant
-			+e.img
-				+catalogItemGallery
+			+b.__img
+				+e.wrapper
+					+e.image(src='images/catalogItem.png')
 			+e.info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.sku Артикул: 37692
@@ -33,8 +34,9 @@ mixin catalogTableItem
 			+quantity
 			+buyButton.__buyButton
 		+e.variant
-			+e.img
-				+catalogItemGallery
+			+b.__img
+				+e.wrapper
+					+e.image(src='images/catalogItem.png')
 			+e.info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.sku Артикул: 37692

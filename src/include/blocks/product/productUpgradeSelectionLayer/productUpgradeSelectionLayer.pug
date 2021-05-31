@@ -1,4 +1,3 @@
-include /include/blocks/catalog/catalogFilters/catalogFilters
 include /include/blocks/catalog/selectionItem/selectionItem
 
 mixin productUpgradeSelectionLayer
@@ -21,15 +20,17 @@ mixin productUpgradeSelectionLayer
 						+e.handler._end
 						+e.bar
 				+b.__categories
-					+e.item(href='#') Металические
-					+e.item(href='#') Пластиковые
-					+e.item(href='#') Стеклянные
-					+e.item(href='#') Пластиковые
-					+e.item(href='#') Стеклянные
-					+e.item(href='#') Пластиковые
-					+e.item(href='#') Стеклянные
-					+e.item(href='#') Пластиковые
-					+e.item(href='#') Стеклянные
+					+b.swiper-container.__swiper
+						+b.swiper-wrapper
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Металические
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
+							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
 				+b.__items
 					+e.__content
 						+selectionItem

@@ -11,13 +11,16 @@
 
     &__categories {
         @apply
-        flex
-        space-x-4
-        overflow-layer
         mt-6;
+
+        &__swiper {
+            @apply
+            overflow-layer;
+        }
 
         &__item {
             @apply
+            w-auto
             text-500
             text-blue-900
             flex

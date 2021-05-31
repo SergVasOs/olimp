@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build-mobile": "rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production --env view=mobile",
-    "start-mobile": "webpack serve --mode=development --env view=mobile",
-    "build-desktop": "rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production --env view=desktop",
-    "start-desktop": "webpack serve --mode=development --env view=desktop",
+    "build-mobile": "OLIMP_VIEW=mobile rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production",
+    "start-mobile": "OLIMP_VIEW=mobile webpack serve --mode=development",
+    "build-desktop": "OLIMP_VIEW=desktop rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production",
+    "start-desktop": "OLIMP_VIEW=desktop webpack serve --mode=development",
     "pretty": "prettier --write '**/*.pug'"
   },
   "author": "",
@@ -22,7 +22,6 @@
     "node-sass": "^5.0.0",
     "postcss": "^8.2.10",
     "postcss-loader": "^5.2.0",
-    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "pug": "^3.0.2",
     "pug-loader": "github:antpaw/pug-loader#master",

@@ -2,7 +2,7 @@
 	@apply -mt-16;
 
 	&__gallery {
-		@apply relative h-product-gallery-mob;
+		@apply relative h-product-gallery;
 
 		&__labels {
 			@apply absolute
@@ -11,7 +11,7 @@
 			left-4;
 		}
 
-		&__img {
+		&__upgrade {
 			@apply w-full h-full object-cover;
 		}
 
@@ -24,20 +24,6 @@
 			top-1/2
 			right-4
 			transform -translate-x-1/2;
-		}
-	}
-
-	&__tabs {
-		@apply tabs;
-
-		&__item {
-			@apply
-				tabs__item;
-
-			&_active {
-				@apply
-				tabs__item_active;
-			}
 		}
 	}
 

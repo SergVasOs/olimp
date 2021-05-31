@@ -2,12 +2,12 @@ include /include/elements/dots/dots
 
 mixin catalogItemGallery
 	+b.catalogItemGallery&attributes(attributes)
-		+b.swiper-container.__swiper
-			+b.swiper-wrapper
-				+b.catalogItemGallery__slide.swiper-slide
+		+b.__swiper.swiper-container
+			+b.__wrapper.swiper-wrapper
+				+b.__slide.swiper-slide
 					+e.img(src='images/catalogItem.png')
-				+b.catalogItemGallery__slide.swiper-slide
+				+b.__slide.swiper-slide
 					+e.img(src='images/catalogItem.png')
-				+b.catalogItemGallery__slide.swiper-slide
+				+b.__slide.swiper-slide
 					+e.img(src='images/catalogItem.png')
-			+b.swiper-dots.catalogItemGallery__dots
+			+b.__dots.swiper-dots

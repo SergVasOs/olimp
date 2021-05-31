@@ -54,12 +54,15 @@
 	}
 
 	&__img {
-		@apply w-22 relative;
-	}
+		@apply w-22;
 
-	&__image {
-		@apply rounded-l-2xl
-        pb-10/7;
+		&__wrapper {
+			@apply relative pb-10/7;
+		}
+
+		&__image {
+			@apply rounded-l-2xl flexImage;
+		}
 	}
 
 	&__info {
@@ -107,8 +110,8 @@
 	}
 
 	&__quantity {
-		@apply hidden
-            xl:flex;
+		@apply
+		w-30;
 	}
 
 	&__buyButton {

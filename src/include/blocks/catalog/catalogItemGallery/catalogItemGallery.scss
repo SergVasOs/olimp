@@ -1,18 +1,37 @@
 .catalogItemGallery {
-    @apply overflow-hidden;
+    @apply
+    overflow-hidden;
 
-    &__slide {
-        @apply relative overflow-hidden pb-4/3;
+    &__swiper {
+        @apply
+        pb-6;
 
-        &__img {
-            @apply
-            absolute h-full w-full;
+        &__wrapper {
+            &__slide {
+                @apply relative overflow-hidden pb-4/3;
+
+                &__img {
+                    @apply
+                    flexImage;
+                }
+            }
         }
     }
 
-    &__dots {
-        @apply
-        h-10;
-    }
+    &_list & {
+        &__swiper {
+            @apply pb-0;
 
+            &__wrapper {
+                &__slide {
+                    @apply pb-10/7;
+                }
+            }
+
+            &__dots {
+                @apply
+                bottom-3;
+            }
+        }
+    }
 }

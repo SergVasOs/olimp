@@ -18,21 +18,39 @@ include /mobile/include/sections/catalog/viewedList/viewedList
 mixin productContent
 	+b.productContent
 		+e.box.box._full
-			+b.__gallery
-				+labels
-				+b.swiper-container.__swiper
-					+b.swiper-wrapper
-						+b.productContent__gallery__slide.swiper-slide
-							+e.img(src='images/product1.png')
-						+b.productContent__gallery__slide.swiper-slide
-							+e.img(src='images/product1.png')
-						+b.productContent__gallery__slide.swiper-slide
-							+e.img(src='images/product1.png')
-					+b.swiper-dots.productContent__gallery__dots
-			+b.__tabs
-				+e.item._active Фотографии
-				+e.item Нанесение и комплект
-				+e.item Готовые решения
+			+b.tabs
+				+b.__content
+					+e.item._active(data-tab='images')
+						+b.productContent__gallery
+							+labels.__labels
+							+b.swiper-container.__swiper
+								+b.swiper-wrapper
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/product1.png')
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/product1.png')
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/product1.png')
+								+b.swiper-dots.productContent__gallery__dots
+					+e.item(data-tab='upgrade')
+						+b.productContent__gallery
+							+b.__upgrade
+								+e.img(src='images/upgrade.png')
+					+e.item(data-tab='sets')
+						+b.productContent__gallery
+							+b.swiper-container.__swiper
+								+b.swiper-wrapper
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/set.png')
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/set.png')
+									+b.productContent__gallery__slide.swiper-slide
+										+e.img(src='images/set.png')
+								+b.swiper-dots.productContent__gallery__dots
+				+b.__buttons
+					+e.item._active(data-tab='images') Фотографии
+					+e.item(data-tab='upgrade') Нанесение и комплект
+					+e.item(data-tab='sets') Готовые решения
 		+e.box.box
 			+size._lg.__size
 		+b.__popup

@@ -22,13 +22,13 @@ const generateHtmlPlugins = (templateDir) => {
 	})
 };
 
-const config = (env) => {
-	const {view} = env;
-	const htmlPlugins = generateHtmlPlugins(`./src/${view}/page`);
+const config = () => {
+	const {OLIMP_VIEW} = process.env;
+	const htmlPlugins = generateHtmlPlugins(`./src/${OLIMP_VIEW}/page`);
 
 	return {
 		entry: {
-			app: `./src/${view}/index.js`,
+			app: `./src/${OLIMP_VIEW}/index.js`,
 		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),

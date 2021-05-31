@@ -10,13 +10,12 @@ include /include/elements/dots/dots
 mixin catalogListItem
 	+b.catalogListItem
 		+e.img
-			+labels
+			+labels.__labels
 			+favoriteIcon._active
-			+catalogItemGallery
-			+dots
+			+catalogItemGallery._list.__catalogItemGallery
 		+e.info
 			+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
-			+size
+			+size.__size
 			+b.__props
 				+b.__item
 					+e.name Материал:

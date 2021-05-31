@@ -25,9 +25,8 @@
         left-2.5;
 	}
 
-	&__image {
-		@apply rounded-t-2xl
-        pb-4/5;
+	&__catalogItemGallery {
+		@apply rounded-t-2xl;
 	}
 
 	&__dots {

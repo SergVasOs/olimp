@@ -29,24 +29,44 @@
 		mt-0.5
 		mb-8;
 
-		&__labels {
+		&__left {
 			@apply absolute
+			w-18
 			z-10
-			top-22
-			left-4;
+			inset-y-10
+			left-10
+			flex
+			flex-col
+			items-center
+			space-y-4;
+		}
+
+		&__views {
+			@apply w-full;
+		}
+
+		&__thumbs {
+			@apply
+			w-full
+			h-1/2;
+
+			&__wrapper {
+				&__slide {
+					&__img {
+						@apply w-full h-full object-cover;
+					}
+				}
+			}
+		}
+
+		&__next {
+			@apply
+			transform rotate-90
+			cursor-pointer;
 		}
 
 		&__img {
 			@apply absolute w-full h-full object-cover;
-		}
-
-		&__thumbs {
-			@apply absolute
-			flex-col
-			space-y-2
-			z-10
-			top-1/2
-			left-4;
 		}
 	}
 

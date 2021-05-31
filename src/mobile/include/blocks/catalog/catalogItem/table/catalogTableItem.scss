@@ -41,14 +41,16 @@
 	}
 
     &__img {
-        @apply w-18 relative;
-    }
+        @apply w-18;
 
-	&__image {
-		@apply
-        rounded-l-2xl
-        pb-4/3;
-	}
+        &__wrapper {
+            @apply relative pb-4/3;
+        }
+
+        &__image {
+            @apply rounded-l-2xl flexImage;
+        }
+    }
 
     &__info {
         @apply flex-1;

@@ -25,12 +25,13 @@
 
     &__catalogItemGallery {
         @apply
-        rounded-t-2xl;
+        rounded-t-2xl
+        mb-4;
     }
 
     &__size {
         @apply
-            px-3;
+            pl-3;
     }
 
     &__material {

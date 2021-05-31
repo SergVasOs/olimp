@@ -32,6 +32,14 @@
         }
     }
 
+    &-block {
+        @apply overflow-x-scroll;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
+    }
+
     &-box {
         @apply
         w-overflow-box;
@@ -43,8 +51,12 @@
     }
 
     &-layer {
-        @apply w-overflow-layer
-        lg:w-overflow-layer-lg;
+        @apply w-overflow-layer;
     }
+}
+
+.flexImage {
+    @apply
+    absolute h-full w-full object-cover;
 }
 

@@ -2,6 +2,7 @@
     @apply
     w-min
     flex
+    justify-center
     items-center
     space-x-1.5
     text-white
@@ -20,5 +21,9 @@
     &_discount {
         @apply
         bg-red-300;
+    }
+
+    &_lg {
+        @apply text-600
     }
 }

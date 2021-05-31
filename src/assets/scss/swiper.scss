@@ -1,10 +1,4 @@
 .swiper {
-    &-container {
-        &-vertical {
-            @apply h-full;
-        }
-    }
-
     &-prev,
     &-next {
         @apply
@@ -24,6 +18,15 @@
         z-10
         top-2/5
         transform -translate-y-1/2;
+
+        &_thumb {
+            @apply
+            p-0
+            w-6
+            h-6
+            bg-transparent
+            border-0;
+        }
     }
 
     &-prev {
@@ -41,7 +44,9 @@
         @apply flex
         items-center
         justify-center
-        space-x-2;
+        space-x-2
+        absolute
+        z-10;
 
         &-item {
             @apply w-2
@@ -54,6 +59,43 @@
             &-active {
                 @apply bg-gray-700;
             }
+        }
+    }
+
+    &-container > &-dots {
+        @apply
+        bottom-0;
+    }
+
+    &-container-vertical {
+        @apply h-full;
+    }
+
+    &-container-vertical & {
+        &-prev,
+        &-next {
+            @apply
+            h-15
+            w-21
+            py-5
+            px-7
+            top-0
+            left-1/2
+            transform -translate-x-1/2 rotate-90
+            right-auto;
+
+            &_thumb {
+                @apply
+                p-0
+                w-6
+                h-6;
+            }
+        }
+
+        &-next {
+            @apply
+                top-auto
+                bottom-0;
         }
     }
 }
