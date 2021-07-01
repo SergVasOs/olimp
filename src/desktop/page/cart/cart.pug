@@ -1,0 +1,19 @@
+extends /desktop/layout/layout
+include /include/sections/cart/cartHead/cartHead
+include /include/blocks/cart/cartItems/cartItems
+include /include/blocks/cart/cartTotal/cartTotal
+include /include/blocks/cart/cartDiscount/cartDiscount
+
+block append pageVars
+	- var pageTitle = "Корзина";
+	- var pageClass = "cart";
+
+block content
+	+cartHead.__head
+	+b.__content
+		+e.box.box
+			+e.left
+				+cartItems
+			+e.right
+				+cartTotal
+				+cartDiscount

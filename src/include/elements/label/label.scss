@@ -4,26 +4,26 @@
     flex
     justify-center
     items-center
-    space-x-1.5
+    space-x-1
     text-white
-    text-150
-    py-1.5
-    px-2.5
-    bg-gray-500
-    rounded-full;
+    text-sm
+    px-2
+    bg-gray-light
+    rounded-full
+    h-6;
 
     &_new {
         @apply
-        bg-green-300;
+        bg-green;
     }
 
 
     &_discount {
         @apply
-        bg-red-300;
+        bg-red;
     }
 
     &_lg {
-        @apply text-600
+        @apply text-lg
     }
 }

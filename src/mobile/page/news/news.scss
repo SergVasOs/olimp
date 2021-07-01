@@ -1,0 +1,62 @@
+.news {
+    &__head {
+        @apply
+        mb-4;
+    }
+
+    &__tabs {
+        @apply
+        mb-4;
+    }
+
+    &__items {
+        @apply
+        space-y-4
+        mb-6;
+
+        &__item {
+            @apply
+                border
+                rounded;
+
+            &__img {
+                @apply w-full;
+            }
+
+            &__content {
+                @apply
+                p-4
+                pt-2;
+
+                &__top {
+                    @apply
+                        flex
+                        justify-between
+                        items-center
+                        mb-2;
+
+                    &__title {
+                        @apply
+                            h5;
+                    }
+
+                    &__date {
+                        @apply
+                            text-sm
+                            text-gray;
+                    }
+                }
+
+                &__text {
+                    @apply
+                        mb-8;
+                }
+
+                &__more {
+                    @apply
+                    text-blue;
+                }
+            }
+        }
+    }
+}

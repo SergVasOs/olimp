@@ -20,7 +20,7 @@
 	}
 
 	&__catalogButton {
-		@apply text-500
+		@apply text-lg
         mr-8;
 	}
 
@@ -38,7 +38,7 @@
 
 		&__label {
 			@apply text-inherit
-                text-600
+                text-lg
                 border-b-2
                 border-dotted
                 border-inherit
@@ -52,7 +52,7 @@
         mr-8;
 
 		&__label {
-			@apply text-600
+			@apply text-lg
                 ml-2;
 		}
 	}

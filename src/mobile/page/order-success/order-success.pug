@@ -1,0 +1,25 @@
+extends /mobile/layout/layout
+include /include/blocks/common/callback/callback
+
+block append pageVars
+	- var pageTitle = "Оформление заказа";
+	- var pageClass = "orderSuccess";
+	- var hideFooter = true;
+
+block content
+	.box
+		+b.icon._3xl.__successIcon
+			include /assets/images/4xl/orderSuccessIcon.svg
+		+e.title Спасибо за заказ!
+		+e.text
+			| Заказ №9293 оформлен.
+			br
+			| Мы уже начали его обрабатывать
+			br
+			|
+			| и скоро вам позвоним.
+		+callback.__callback
+		+b.links.__links
+			+e.item(href='#') Узнать статус заказа
+			+e.item(href='#') Перейти в свой аккаунт
+		+b.button._lg._blue.__button(href='catalog-grid.html') Вернуться в каталог

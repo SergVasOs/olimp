@@ -1,0 +1,37 @@
+.color {
+    &__swiper {
+        @apply
+            overflow-visible;
+
+        &__wrapper {
+            &__item {
+                @apply
+                border
+                border-transparent
+                rounded
+                object-contain
+                cursor-pointer
+                h-8
+                w-8
+                p-1;
+
+                &_active {
+                    @apply
+                    border-gray-border;
+                }
+            }
+        }
+    }
+
+    &_lg & {
+        &__swiper {
+            &__wrapper {
+                &__item {
+                    @apply
+                    h-12
+                    w-12;
+                }
+            }
+        }
+    }
+}

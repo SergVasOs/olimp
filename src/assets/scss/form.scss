@@ -1,13 +1,29 @@
 .form {
     &__row {
-        @apply mb-2;
+        @apply
+        mb-4
+        last:mb-0;
+    }
+
+    &__label {
+        @apply
+        text-blue-dark
+        mb-2;
     }
 
     &__footer {
-        @apply flex;
+        @apply
+        flex
+        flex-col
+        space-y-4
+        mt-8
+        md:flex-row
+        md:space-y-0
+        md:space-x-4;
 
         & > * {
-            @apply flex-1;
+            @apply
+            md:flex-1;
         }
     }
 }
@@ -15,61 +31,57 @@
 .input {
     @apply
     w-full
-    h-11
-    p-2
+    h-12
+    px-4
+    py-2
     flex
     items-center
-    space-x-4
+    space-x-2
     border
-    border-gray-400
-    rounded-lg
+    rounded
     bg-white;
 
     &__icon {
-        @apply text-blue-800;
+        @apply
+        inline-block
+        text-blue-dark
+        w-8
+        h-8;
     }
 
     &__field {
         @apply
         h-full
-        placeholder-gray-600
-        text-200
+        placeholder-gray
         overflow-hidden
         flex-1;
     }
 
     &_lg {
-        @apply h-14 p-3;
+        @apply h-16;
     }
 }
 
 .textarea {
     @apply
+    block
     w-full
-    h-24
-    p-3
+    h-28
+    p-4
     border
-    border-gray-400
-    rounded-lg
-    bg-white;
+    rounded
+    bg-white
+    placeholder-gray;
 }
 
 .select {
     @apply
     w-full
-    h-11
-    pl-2
-    pr-2
-    flex
-    items-center
+    h-12
     border
-    border-gray-400
-    rounded-lg
+    rounded
     bg-white
-    bg-select-arrow-icon
-    bg-no-repeat
-    bg-rightIcon
-    appearance-none;
+    relative;
 
     &_sm {
         @apply
@@ -78,17 +90,43 @@
 
     &_lg {
         @apply
-        h-16
-        select-center
-        font-medium
-        bg-rightIconLg;
+        h-16;
+    }
+
+    &_lg & {
+        &__input {
+            @apply
+            pl-4
+            pr-16
+            select-center
+            font-medium;
+        }
     }
 
     &_gray {
         @apply
-        text-blue-900
         border-0
-        bg-gray-100;
+        bg-gray-card;
+    }
+
+    &__input {
+        @apply
+        w-full
+        h-full
+        pl-2
+        pr-12
+        bg-transparent
+        appearance-none;
+    }
+
+    &__icon {
+        @apply
+            h-8
+            w-8
+            absolute
+            top-1/2
+            transform -translate-y-1/2
+            right-4;
     }
 }
 
@@ -96,16 +134,16 @@
     @apply
     flex
     items-center
-    space-x-3
+    space-x-4
     cursor-pointer;
 
     &__icon {
-        @apply relative w-5 h-5;
+        @apply relative w-6 h-6;
 
         & > * {
             @apply
             fill-white
-            stroke-gray-300;
+            stroke-gray-border;
         }
 
         &__input {
@@ -114,8 +152,57 @@
 
         &__input:checked + * {
             @apply
-            fill-blue-300
-            stroke-blue-300;
+            fill-blue
+            stroke-blue;
+        }
+    }
+
+    &__label {
+        @apply text-blue-dark;
+    }
+
+    &_disabled {
+        @apply cursor-default;
+    }
+
+    &_disabled & {
+        &__icon {
+            &__input:checked + * {
+                @apply fill-gray-border
+                stroke-gray-border;
+            }
+        }
+
+        &__label {
+            @apply text-gray;
+        }
+    }
+}
+
+.radio {
+    @apply
+    flex
+    items-center
+    space-x-4
+    cursor-pointer;
+
+    &__icon {
+        @apply relative w-6 h-6;
+
+        & > * {
+            @apply
+            fill-white
+            stroke-blue-dark;
+        }
+
+        &__input {
+            @apply absolute opacity-0 top-0 left-0 w-full h-full z-10;
+        }
+
+        &__input:checked + * {
+            @apply
+            fill-blue-dark
+            stroke-blue-dark;
         }
     }
 
@@ -126,8 +213,8 @@
     &_disabled & {
         &__icon {
             &__input:checked + * {
-                @apply fill-gray-300
-                stroke-gray-300;
+                @apply fill-gray-border
+                stroke-gray-border;
             }
         }
 
@@ -137,3 +224,15 @@
     }
 }
 
+.links {
+    @apply
+    space-y-2;
+
+    &__item {
+        @apply
+        text-lg
+        font-medium
+        block
+        text-center;
+    }
+}

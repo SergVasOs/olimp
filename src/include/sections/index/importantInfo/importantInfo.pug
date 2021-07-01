@@ -1,0 +1,14 @@
+mixin importantInfo
+	+b.importantInfo&attributes(attributes)
+		.box
+			+e.title Важная информация
+			+e.items
+				+b.__item(href='shipping.html')
+					+e.img(src='images/info.png')
+					+e.name Доставка
+				+b.__item(href='payment.html')
+					+e.img(src='images/info.png')
+					+e.name Оплата
+				+b.__item(href='gallery.html')
+					+e.img(src='images/info.png')
+					+e.name Наши работы

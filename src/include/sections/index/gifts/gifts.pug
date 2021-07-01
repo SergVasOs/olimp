@@ -1,0 +1,51 @@
+mixin gifts(title)
+	+b.gifts&attributes(attributes)
+		.box
+			+e.title #{title}
+			+b.menu
+				+b.__swiper.swiper-container
+					+b.__wrapper.swiper-wrapper
+						+b.__item._active.swiper-slide(href='#') Кому?
+						+b.__item.swiper-slide(href='#') Профессии
+						+b.__item.swiper-slide(href='#') Праздники
+				+b.__items._cols2
+					+b.__item._active(href='#')
+						+e.img(src='images/categoryIcon3.png')
+						+e.name Медали из акрила
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon4.png')
+						+e.name Литые статуэтки
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon5.png')
+						+e.name Пластиковые фигурки
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon6.png')
+						+e.name Призы из акрила
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon7.png')
+						+e.name Деревянные награды
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon8.png')
+						+e.name Стеклянные награды
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon9.png')
+						+e.name Плакетки
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon10.png')
+						+e.name Для выпускников
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon11.png')
+						+e.name Спортовары
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon12.png')
+						+e.name Тарелки
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon13.png')
+						+e.name Сувениры
+					+b.__item(href='#')
+						+e.img(src='images/categoryIcon14.png')
+						+e.name Дипломы и грамоты
+				+b.button._lg._full.__button
+					+e.icon
+						include /assets/images/lg/blockIcon.svg
+					+e.text Показать больше категорий

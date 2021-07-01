@@ -1,0 +1,20 @@
+include /desktop/include/blocks/viewedItem/viewedItem
+
+mixin viewedList(title)
+	+b.viewedList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+					+viewedItem.swiper-slide
+				+b.swiper-prev
+					include /assets/images/shevronBold.svg
+				+b.swiper-next
+					include /assets/images/shevronBold.svg

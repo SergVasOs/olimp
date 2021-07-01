@@ -1,0 +1,52 @@
+include /include/elements/quantity/quantity
+include /include/elements/buyButton/buyButton
+include /include/layout/modals/deleteCartItemModal/deleteCartItemModal
+
+mixin compositionItem(mode)
+	+b.compositionItem&attributes(attributes)
+		+b.__card
+			+e.img(src='images/catalogItem.png')
+			+b.__info
+				+e.name(href='product.html') Кубок B368-3
+				+e.prop Размер: 20,5 см
+				+b.__prices
+					+e.price 27 354 ₽
+					+e.oldPrice 47 354 ₽
+			if (mode !== 'profile')
+				+b.__actions
+					+e.buttons
+						+b.icon(href='#')
+							include /assets/images/md/editIcon.svg
+						+b.icon(href='#')
+							include /assets/images/md/copyIcon.svg
+						+b.icon(href='#modal_delete_cart_item')
+							include /assets/images/md/crossIcon.svg
+					+quantity.__quantity
+			else
+				+e.count 22 шт
+		+b.__parts
+			+b.__item
+				+e.img(src='images/cap.png')
+				+b.__info
+					+e.name Вкладыш D1 Факел A40
+					+e.prop Диаметр вкладыша: 25
+					+e.price 427 руб / шт
+			+b.__item
+				+e.img(src='images/cupLabel.png')
+				+b.__info
+					+e.name Табличка
+					+e.prop Тут самый лучший текст на табличку кубка за первое место
+					+e.price 427 руб / шт
+					+e.files
+						+b.icon._sm
+							include /assets/images/sm/fileIcon.svg
+						+e 3 файла
+		+b.__buttons
+			if (mode !== 'cart')
+				+buyButton('В корзину')._sm
+			+b.button._sm._blue(href='#')
+				+e.icon
+					include /assets/images/md/editIcon.svg
+				+e.text Изменить комплект
+		if (mode !== 'profile')
+			+deleteCartItemModal

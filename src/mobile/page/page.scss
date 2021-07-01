@@ -1,5 +1,26 @@
-.catalog {
-    &__subCategories {
-        @apply mt-4;
-    }
-}
+@import "/src/mobile/page/cart/cart";
+@import "/src/mobile/page/catalog/catalog";
+@import "/src/mobile/page/index/index";
+@import "/src/mobile/page/login/login";
+@import "/src/mobile/page/order/order";
+@import "/src/mobile/page/order-success/order-success";
+@import "/src/mobile/page/product/product";
+@import "/src/mobile/page/registration/registration";
+@import "/src/mobile/page/gallery/gallery";
+@import "/src/mobile/page/gallery-cat/gallery-cat";
+@import "/src/mobile/page/set/set";
+@import "/src/mobile/page/forgot-password/forgot-password";
+@import "/src/mobile/page/forgot-password-message/forgot-password-message";
+@import "/src/mobile/page/profile/profile";
+@import "/src/mobile/page/profile-edit/profile-edit";
+@import "/src/mobile/page/order-status/order-status";
+@import "/src/mobile/page/profile-orders/profile-orders";
+@import "/src/mobile/page/profile-order/profile-order";
+@import "/src/mobile/page/profile-addresses/profile-addresses";
+@import "/src/mobile/page/profile-address/profile-address";
+@import "/src/mobile/page/payment/payment";
+@import "/src/mobile/page/shipping/shipping";
+@import "/src/mobile/page/contacts/contacts";
+@import "/src/mobile/page/about-us/about-us";
+@import "/src/mobile/page/news/news";
+@import "/src/mobile/page/search/search";

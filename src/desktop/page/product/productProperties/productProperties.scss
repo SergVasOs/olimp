@@ -1,0 +1,41 @@
+.productProperties {
+    &__title {
+        @apply
+        text-3xl
+        font-bold
+        mb-5;
+    }
+
+    &__content {
+        @apply flex items-stretch space-x-7;
+    }
+
+    &__items {
+        @apply
+            flex-1
+        bg-gray-50
+        border
+        rounded-xl
+        px-9
+        py-5;
+    }
+
+    &__item {
+        @apply
+            py-3.5
+            flex
+            items-center;
+
+        &__name {
+            @apply
+                flex-1;
+        }
+
+        &__value {
+            @apply
+            font-bold
+            text-blue-400
+            hover:underline;
+        }
+    }
+}

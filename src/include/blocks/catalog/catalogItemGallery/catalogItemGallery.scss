@@ -1,10 +1,11 @@
 .catalogItemGallery {
     @apply
+    relative
     overflow-hidden;
 
     &__swiper {
         @apply
-        pb-6;
+        md:pb-6;
 
         &__wrapper {
             &__slide {
@@ -12,26 +13,87 @@
 
                 &__img {
                     @apply
-                    flexImage;
+                    flexImageCover;
                 }
             }
         }
+
+        &__dots {
+            @apply
+            mb-2
+            md:mb-0;
+        }
+    }
+
+    &__3dIcon {
+        @apply
+            absolute
+            bottom-4
+            left-2
+            z-10;
     }
 
     &_list & {
         &__swiper {
-            @apply pb-0;
+            @apply
+            pb-6
+            md:pb-0;
 
             &__wrapper {
                 &__slide {
-                    @apply pb-10/7;
+                    @apply
+                    pb-4/5
+                    md:pb-10/7;
                 }
             }
 
             &__dots {
                 @apply
-                bottom-3;
+                mb-0
+                md:bottom-3;
             }
+        }
+    }
+
+    &_productList & {
+        &__swiper {
+            @apply
+            pb-6;
+
+            &__wrapper {
+                &__slide {
+                    @apply pb-4/5;
+                }
+            }
+
+            &__dots {
+                @apply
+                mb-0;
+            }
+        }
+
+        &__3dIcon {
+            @apply
+            left-4
+            bottom-10;
+        }
+    }
+
+    &_viewed & {
+        &__swiper {
+            @apply
+            pb-4;
+
+            &__dots {
+                @apply
+                transform scale-75
+                mb-0;
+            }
+        }
+
+        &__3dIcon {
+            @apply
+            hidden;
         }
     }
 }

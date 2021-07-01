@@ -1,0 +1,9 @@
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
+
+mixin viewedItem
+	+b.viewedItem&attributes(attributes)
+		+catalogItemGallery._viewed.__catalogItemGallery
+		+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
+		+b.__prices
+			+e.price 127 354 ₽
+			+e.oldPrice 147 354 ₽

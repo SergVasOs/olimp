@@ -1,38 +1,52 @@
-//product
-const onClickProductPopupHandler = (e) => {
+//common
+new Swiper('.productList__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceMd,
+	freeMode: true,
+});
+
+new Swiper('.viewedList__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceMd,
+	freeMode: true,
+});
+
+const onClickFooterMenu = (e) => {
 	e.preventDefault();
 
-	const el = document.querySelector('.productContent__popup');
-	const isOpen = el.classList.contains('productContent__popup_open');
-	if (isOpen) {
-		el.classList.remove('productContent__popup_open');
+	const menuTitle = e.currentTarget;
+	const menu = menuTitle.closest('.footer__menus__menu');
+	const opened = menu.classList.contains('footer__menus__menu_open');
+
+	if (opened) {
+		menu.classList.remove('footer__menus__menu_open');
 	} else {
-		el.classList.add('productContent__popup_open');
-		updateSwipers(el);
+		menu.classList.add('footer__menus__menu_open');
 	}
 };
 
-new Swiper('.productContent__size .size__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
-	freeMode: true,
-	nested: true,
-	slidesOffsetAfter: boxPadding,
-});
-new Swiper('.productContent__popup__full__size .size__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
-	freeMode: true,
-	slidesOffsetAfter: boxPadding,
-});
-new Swiper('.productVariants__swiper', {
+document.querySelectorAll('.footer__menus__menu__title').forEach((el) => el.addEventListener('click', onClickFooterMenu));
+
+
+//product
+new Swiper('.product__prop .size__swiper, .product__prop .color__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceSm,
 	freeMode: true,
-	slidesOffsetAfter: boxPadding,
+	nested: true,
+});
+new Swiper('.productPopper__full__prop .size__swiper, .productPopper__full__prop .color__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceSm,
+	freeMode: true,
+});
+new Swiper('.productVariants__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceMd,
+	freeMode: true,
 });
 
-new Swiper('.productContent__gallery__swiper', {
+new Swiper('.product__top__gallery__swiper', {
 	slidesPerRow: 1,
 	pagination: {
 		bulletClass: 'swiper-dots-item',
@@ -43,55 +57,40 @@ new Swiper('.productContent__gallery__swiper', {
 	direction: 'vertical',
 });
 
-const productContent__popup__handler = document.querySelector('.productContent__popup__handler');
-if (productContent__popup__handler) {
-	productContent__popup__handler.addEventListener('click', onClickProductPopupHandler);
-}
 
-//swiper
-new Swiper('.productList__swiper', {
+//catalog
+new Swiper('.catalogGridItem__prop .size__swiper, .catalogGridItem__prop .color__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceMd,
-	freeMode: true,
-	slidesOffsetAfter: boxPadding,
-});
-
-new Swiper('.setList__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceMd,
-	freeMode: true,
-	slidesOffsetAfter: boxPadding,
-});
-
-new Swiper('.viewedList__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceMd,
-	freeMode: true,
-	slidesOffsetAfter: boxPadding,
-});
-
-new Swiper('.catalogGridItem__size .size__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
+	spaceBetween: swiperSpaceSm,
 	freeMode: true,
 	nested: true,
-	slidesOffsetAfter: catalogItemPadding,
 });
-new Swiper('.catalogListItem__size .size__swiper', {
+new Swiper('.catalogListItem__prop .size__swiper, .catalogListItem__prop .color__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
+	spaceBetween: swiperSpaceSm,
 	freeMode: true,
 	nested: true,
-	slidesOffsetAfter: catalogItemListPadding,
 });
-
 new Swiper('.catalogItemGallery__swiper', {
 	slidesPerView: 1,
+	nested: true,
 	pagination: {
 		bulletClass: 'swiper-dots-item',
 		bulletActiveClass: 'swiper-dots-item-active',
 		el: '.swiper-dots',
 		clickable: true,
 	},
-	nested: true,
+});
+new Swiper('.catalogFilterLayer__sort__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceMd,
+	freeMode: true,
+});
+
+
+//profile
+new Swiper('.profile__info__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceSm,
+	freeMode: true,
 });

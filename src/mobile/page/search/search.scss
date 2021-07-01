@@ -1,0 +1,46 @@
+.search {
+    @apply pb-32;
+
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__box {
+        @apply
+        flex-1
+        flex
+        flex-col
+        items-stretch;
+    }
+
+
+    &__search {
+        @apply
+        mb-6;
+    }
+
+    &__help {
+        @apply flex-1 mb-4;
+
+        &__title {
+            @apply
+            text-xs
+            text-gray
+                mb-4;
+        }
+
+        &__items {
+            @apply
+                space-y-4;
+
+            &__item {
+                @apply
+                    flex
+                    justify-between
+                    items-center
+                    text-black;
+            }
+        }
+    }
+}

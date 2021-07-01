@@ -1,0 +1,100 @@
+.catalogTableItem {
+	@apply flex
+        flex-col
+        space-y-3;
+
+	&__header {
+		@apply flex
+        items-center
+        space-x-4
+        bg-gradient-to-t
+        from-gray-gradient-from
+        to-gray-gradient-to
+        p-4
+        rounded;
+
+        &__col {
+            @apply text-sm;
+
+
+            &_img {
+                @apply w-16;
+            }
+
+            &_info {
+                @apply flex-1;
+            }
+
+            &_prop {
+                @apply w-32;
+            }
+        }
+	}
+
+	&__variant {
+		@apply
+        flex
+        items-center
+        space-x-4
+        rounded border
+        pr-4;
+
+        &__img {
+            @apply w-20;
+
+            &__wrapper {
+                @apply relative pb-4/3;
+
+                &__image {
+                    @apply rounded-l flexImageCover;
+                }
+            }
+        }
+
+        &__info {
+            @apply flex-1;
+
+            &__name {
+                @apply text-black
+                line-clamp-2;
+            }
+
+            &__prices {
+                @apply
+                mt-2
+                flex
+                items-baseline;
+
+                &__price {
+                    @apply price;
+                }
+
+                &__oldPrice {
+                    @apply
+                    oldPrice
+                    ml-2
+                    text-sm;
+                }
+            }
+        }
+
+        &__prop {
+            @apply
+            w-16
+            text-xs
+            text-gray
+            border
+            text-center
+            p-2
+            rounded;
+
+            &__img {
+                @apply
+                    w-8
+                    h-8
+                    object-contain
+                    m-auto;
+            }
+        }
+	}
+}

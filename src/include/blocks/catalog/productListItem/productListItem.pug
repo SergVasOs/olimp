@@ -1,0 +1,13 @@
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
+
+mixin productListItem
+	+b.productListItem&attributes(attributes)
+		+labels.__labels
+		+favoriteIcon._active.__favoriteIcon
+		+catalogItemGallery._productList.__catalogItemGallery
+		+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
+		+b.__prices
+			+e.price 127 354 руб
+			+e.oldPrice 147 354 руб

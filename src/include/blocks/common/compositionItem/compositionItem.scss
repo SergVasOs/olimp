@@ -1,0 +1,159 @@
+.compositionItem {
+    @apply
+    p-4
+    border
+    rounded-lg;
+
+    &__card {
+        @apply
+        flex
+        items-stretch
+        pb-4
+        mb-4
+        border-b
+        space-x-4;
+
+        &__img {
+            @apply
+            w-20
+            h-20
+            object-cover;
+        }
+
+        &__info {
+            @apply
+            flex
+            flex-col
+            flex-1;
+
+            &__name {
+                @apply
+                text-black
+                mb-2;
+            }
+
+            &__prop {
+                @apply
+                text-sm
+                text-gray-light
+                mb-2;
+            }
+
+            &__prices {
+                @apply
+                mt-auto
+                flex
+                items-baseline
+                space-x-2;
+
+                &__price {
+                    @apply
+                    price;
+                }
+
+                &__oldPrice {
+                    @apply
+                    oldPrice
+                    text-sm;
+                }
+            }
+        }
+
+        &__actions {
+            @apply
+            flex
+            flex-col
+            items-stretch
+            justify-between;
+
+            &__buttons {
+                @apply
+                flex
+                space-x-2
+                justify-end
+                items-center;
+            }
+
+            &__quantity {
+                @apply
+                w-28;
+            }
+        }
+
+        &__count {
+            @apply
+                flex
+                items-end;
+        }
+    }
+
+    &__parts {
+        @apply
+        space-y-4
+        mb-4;
+
+        &__item {
+            @apply
+            relative
+            flex
+            items-stretch
+            p-4
+            space-x-4
+            border
+            rounded
+            bg-gray-card;
+
+            &__img {
+                @apply
+                w-20
+                h-20
+                p-2
+                rounded-full
+                border
+                bg-white
+                object-contain;
+            }
+
+            &__info {
+                @apply
+                space-y-2
+                flex-1
+                flex
+                flex-col
+                justify-between;
+
+                &__name {
+                    @apply
+                    line-clamp-2;
+                }
+
+                &__prop {
+                    @apply text-sm
+                    text-gray-light;
+                }
+
+                &__price {
+                    @apply
+                    price;
+                }
+
+                &__files {
+                    @apply
+                    absolute
+                    right-4
+                    bottom-4
+                    text-gray
+                    text-xs
+                    flex
+                    items-center
+                    space-x-1;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        @apply
+        space-x-4;
+    }
+}

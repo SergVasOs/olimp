@@ -1,0 +1,6 @@
+mixin captcha
+	+b.captcha&attributes(attributes)
+		+e.img(src='images/captcha.png')
+		+e.refresh
+			+b.icon._lg
+				include /assets/images/lg/refreshIcon.svg

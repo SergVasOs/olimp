@@ -1,0 +1,15 @@
+.fileItem {
+    @apply
+    p-3
+    text-sm
+    border
+    rounded
+    flex
+    items-center
+    space-x-4
+    font-medium;
+
+    &__name {
+        @apply flex-1;
+    }
+}

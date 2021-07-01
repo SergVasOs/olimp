@@ -1,0 +1,25 @@
+.categoriesLayer {
+    @apply
+        space-y-8;
+
+    &__group {
+        &__title {
+            @apply
+                font-bold
+                text-3xl
+                mb-4;
+        }
+
+        &__items {
+            &__item {
+                @apply
+                    flex
+                    justify-between
+                    space-x-4
+                    border-b
+                    py-4
+                    last:border-0;
+            }
+        }
+    }
+}

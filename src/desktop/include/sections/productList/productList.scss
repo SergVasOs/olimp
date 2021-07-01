@@ -1,0 +1,10 @@
+.productList {
+	@apply block;
+
+	&__title {
+		@apply
+		text-3xl
+		font-bold
+		mb-5;
+	}
+}

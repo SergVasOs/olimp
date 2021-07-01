@@ -1,0 +1,14 @@
+@import "/src/mobile/page/order/orderContactsContent/orderContactsContent";
+@import "/src/mobile/page/order/orderShippingContent/orderShippingContent";
+@import "/src/mobile/page/order/orderPaymentContent/orderPaymentContent";
+
+
+.order {
+    @apply
+    pb-32;
+
+    &__head {
+        @apply
+        mb-4;
+    }
+}

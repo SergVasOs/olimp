@@ -1,0 +1,42 @@
+.orderPaymentContent {
+    &__text {
+        @apply
+        text-gray-light
+        mb-4;
+    }
+
+    &__item {
+        @apply
+        p-4
+        border
+        rounded
+        space-y-2
+        mb-4
+        last:mb-0;
+
+        &__top {
+            @apply
+                flex
+                items-center
+                justify-between
+                space-x-8;
+
+            &__title {
+                @apply
+                h4;
+            }
+        }
+
+        &__desc {
+            @apply
+            text-sm
+            text-gray-light;
+        }
+
+        &_active {
+            @apply
+            border-yellow-light
+            bg-yellow-light;
+        }
+    }
+}

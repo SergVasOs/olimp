@@ -1,0 +1,36 @@
+.catalogContent {
+	&__box {
+		@apply items-stretch flex-col;
+	}
+
+	&__items {
+		@apply
+		grid
+		gap-4
+		grid-cols-2;
+
+		&_list {
+			@apply grid-cols-1 gap-6;
+		}
+
+		&_table {
+			@apply grid-cols-1 gap-8;
+		}
+	}
+
+	&__more {
+		@apply
+		button_gray
+		button_lg
+		w-full
+		mt-8;
+	}
+
+	&__popularKeywords {
+		@apply mt-12;
+	}
+
+	&__textBlock {
+		@apply mt-4;
+	}
+}

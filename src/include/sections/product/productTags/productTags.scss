@@ -1,37 +1,24 @@
 .productTags {
-    @apply
-        mb-7;
-
     &__title {
         @apply
-            text-850
-            font-bold
-            mb-3;
+            h2
+            mb-4;
     }
 
     &__swiper {
         @apply
-            overflow-box
-            md:w-full;
+            overflow-visible;
     }
 
-    &__swiper__wrapper__item {
-        @apply
-        w-min
-        border
-        border-gray-200
-        rounded
-        text-blue-900
-        text-500
-        text-center
-        px-4
-        py-3
-        whitespace-nowrap
-        lg:px-5
-        hover:text-blue-900
-        hover:border-transparent
-        hover:bg-gradient-to-t
-        hover:from-gray-250
-        hover:to-gray-100;
+    &__swiper {
+        &__wrapper {
+            &__item {
+                @apply
+                w-auto
+                button_white
+                px-6
+                min-w-menuItem;
+            }
+        }
     }
 }

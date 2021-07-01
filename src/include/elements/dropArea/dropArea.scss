@@ -1,0 +1,14 @@
+.dropArea {
+    @apply
+    h-16
+    flex
+    items-center
+    justify-center
+    space-x-2
+    text-blue-dark
+    text-sm
+    font-bold
+    border
+    border-dashed
+    rounded;
+}

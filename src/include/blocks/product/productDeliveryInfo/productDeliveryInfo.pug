@@ -1,33 +1,26 @@
+include /include/blocks/common/bestDelivery/bestDelivery
+
 mixin productDeliveryInfo
 	+b.productDeliveryInfo&attributes(attributes)
 		+e.title О доставке
-		+b.__best
-			+b.icon._xl.__icon
-				include /assets/images/bestDeliveryIcon.svg
-			+e.info
-				+b.__date
-					+e.label Ближайшая доставка:
-					+e.value 20 февраля
-				+e.UL.items
-					+e.item Самовывоз (без нанесения) - 1 день
-					+e.item Изготовление нанесения 1- 3 дня
+		+bestDelivery.__best
 		+e.blocks
 			+b.__info
 				+b.__item
 					+b.icon._lg.__icon
-						include /assets/images/carIcon.svg
+						include /assets/images/lg/carIcon.svg
 					+e.name От 3000 р. бесплатно по Москве
 				+b.__item
 					+b.icon._lg.__icon
-						include /assets/images/cameraIcon.svg
+						include /assets/images/lg/cameraIcon.svg
 					+e.name Сделаем фото перед отгрузкой
 				+b.__item
 					+b.icon._lg.__icon
-						include /assets/images/discountIcon.svg
+						include /assets/images/lg/discountIcon.svg
 					+e.name Скидка 15% на ВСЁ
 				+b.__item
 					+b.icon._lg.__icon
-						include /assets/images/buildingIcon.svg
+						include /assets/images/lg/buildingIcon.svg
 					+e.name Оптовые скидки от 15 000 ₽
 				+e.more(href='#') Подробнее о доставке
 			+b.__props

@@ -1,96 +1,67 @@
+include /include/elements/logo/logo
+
 +b.footer
-	+e.menus
-		+e.box._menus.box
-			+b.__menu._active
-				+b.__title На Олимпе
-					+b.icon.__arrow
-						include /assets/images/arrowRoundedIcon.svg
-				+b.__items
-					+e.item(href='#') Наши работы
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') О компании
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Новости
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Контакты
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
+	+b.__menus
+		+e.box.box
 			+b.__menu
-				+b.__title Интернет магазин
-					+b.icon.__arrow
-						include /assets/images/arrowRoundedIcon.svg
+				+b.__title
+					+e.name На Олимпе
+					+b.icon._xl.__arrow
+						include /assets/images/xl/arrowRoundIcon.svg
 				+b.__items
-					+e.item(href='#') Доставка
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Оплата
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Скидки
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Акции
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Статус заказа
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
+					+b.__item(href='gallery.html') Наши работы
+					+b.__item(href='about-us.html') О компании
+					+b.__item(href='news.html') Новости
+					+b.__item(href='contacts.html') Контакты
 			+b.__menu
-				+b.__title Справочная информация
-					+b.icon.__arrow
-						include /assets/images/arrowRoundedIcon.svg
+				+b.__title
+					+e.name Интернет магазин
+					+b.icon._xl.__arrow
+						include /assets/images/xl/arrowRoundIcon.svg
 				+b.__items
-					+e.item(href='#') Как заказать?
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Каталог товаров
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Обмен и возврат
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Статьи
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Политика безопасности
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
+					+b.__item(href='shipping.html') Доставка
+					+b.__item(href='payment.html') Оплата
+					+b.__item(href='discount.html') Скидки
+					+b.__item(href='promo.html') Акции
+					+b.__item(href='order-status.html') Статус заказа
 			+b.__menu
-				+b.__title Обратная связь
-					+b.icon.__arrow
-						include /assets/images/arrowRoundedIcon.svg
+				+b.__title
+					+e.name Справочная информация
+					+b.icon._xl.__arrow
+						include /assets/images/xl/arrowRoundIcon.svg
 				+b.__items
-					+e.item(href='#') Отзывы
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-					+e.item(href='#') Карта сайта
-						+b.icon._th.__arrow
-							include /assets/images/arrowIcon.svg
-	+e.contacts
-		+e.box._contacts.box
-			include /include/elements/logo/logo
+					+b.__item(href='#') Как заказать?
+					+b.__item(href='catalog-grid.html') Каталог товаров
+					+b.__item(href='#') Обмен и возврат
+					+b.__item(href='#') Статьи
+					+b.__item(href='#') Политика безопасности
+			+b.__menu
+				+b.__title
+					+e.name Обратная связь
+					+b.icon._xl.__arrow
+						include /assets/images/xl/arrowRoundIcon.svg
+				+b.__items
+					+b.__item(href='#') Отзывы
+					+b.__item(href='#') Карта сайта
+	+b.__contacts
+		+e.box.box
+			+logo.__logo
 			+e.phone(href='#') 8 (495) 775-59-52
 			+e.email(href='#') info@na-olimpe.ru
-			+e.divider
 			+b.__address
 				+e.main Москва, Верейская
 				+e ул., 29, стр. 106
-			+b.button._md._white.__routeButton(href='#') Проложить маршрут
+			+b.button.__routeButton(href='#') Проложить маршрут
 			+b.__worktime
 				+e.label Режим работы:
 				+e пн-пт с 10:00 до 19:00
-			+e.divider
 			+b.__socialLinks
-				+e.item(href='#')
-					include /assets/images/vkIcon.svg
-				+e.item(href='#')
-					include /assets/images/instagramIcon.svg
-				+e.item(href='#')
-					include /assets/images/instagramIcon.svg
-			+e.divider
+				+b.icon._lg.__item(href='#')
+					include /assets/images/lg/vkIcon.svg
+				+b.icon._lg.__item(href='#')
+					include /assets/images/lg/fbIcon.svg
+				+b.icon._lg.__item(href='#')
+					include /assets/images/lg/igIcon.svg
 			+b.__menu
 				+e.item(href='#') Портал поставщиков
 				+e.item(href='#') Перейти на десктопную версию

@@ -1,0 +1,9 @@
+include /include/blocks/common/pageHead/pageHead
+include /mobile/include/blocks/catalogFilterLayer/catalogFilterLayer
+
+mixin catalogHead
+	+pageHead('Кубки пластиковые с длинным названием', 'catalog.html')&attributes(attributes)
+		+b.button._yellow.__icon(href='#layer_filters')
+			+e.icon
+				include /assets/images/lg/filterIcon1.svg
+	+catalogFilterLayer

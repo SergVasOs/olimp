@@ -37,22 +37,20 @@
 
     &__header {
         @apply
-        relative
-        bg-blue-800
-        px-12
-        pt-10
-        pb-5
-        text-700
-        text-center
+        bg-blue-dark
+        px-4
+        h-20
+        flex
+        justify-between
+        items-center
+        space-x-4
+        text-2xl
         text-white
         font-medium;
     }
 
     &__close {
         @apply
-        absolute
-        top-10
-        right-6
         cursor-pointer;
     }
 

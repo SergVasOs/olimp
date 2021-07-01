@@ -12,8 +12,8 @@
             relative
             mt-4
             h-2
-            bg-gray-300
-            rounded-lg;
+            bg-gray-card
+            rounded-full;
 
         &__bar {
             @apply
@@ -21,20 +21,20 @@
                 inset-y-0
                 left-1/4
                 w-1/2
-                bg-yellow-400
-                rounded-lg;
+                bg-orange-light
+                rounded;
         }
 
         &__handler {
             @apply
             absolute
             z-10
-            w-5
-            h-5
+            w-4
+            h-4
             rounded-full
             bg-white
             border
-            border-yellow-400
+            border-orange-light
             top-1/2
             transform
             -translate-x-1/2

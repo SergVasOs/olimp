@@ -1,0 +1,36 @@
+@import "/src/desktop/page/index/clients/clients";
+@import "/src/desktop/page/index/bottomInfo/bottomInfo";
+
+.index {
+    &__banners {
+        @apply mb-4;
+    }
+
+    &__exclusive {
+        @apply mb-8;
+    }
+
+    &__mainMenu {
+        @apply mb-8;
+    }
+
+    &__sale {
+        @apply mb-8;
+    }
+
+    &__importantInfo {
+        @apply mb-8;
+    }
+
+    &__gifts {
+        @apply mb-8;
+    }
+
+    &__clients {
+        @apply mb-8;
+    }
+
+    &__souvenirs {
+        @apply mb-12;
+    }
+}

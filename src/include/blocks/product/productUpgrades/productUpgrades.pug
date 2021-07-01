@@ -1,79 +1,72 @@
+include /include/elements/fileItem/fileItem
 include /include/blocks/product/productUpgradeInfoLayer/productUpgradeInfoLayer
 include /include/blocks/product/productUpgradeSelectionLayer/productUpgradeSelectionLayer
-include /include/blocks/product/productUpgradePlaceLayer/productUpgradeCupPlaceLayer
+include /include/blocks/product/productUpgradePlaceLayer/productUpgradePlaceLayer
 
 mixin productUpgrades
 	+b.productUpgrades&attributes(attributes)
 		+e.title Улучшить
-		+e.items
-			+b.__item._active
+		+b.__list
+			+b.__item
 				+e.step 1
 				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
-					include /assets/images/infoIcon.svg
-				+e.card
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
 					+e.img(src='images/cap.png')
-					+e.label
+					+b.__label
 						+e.name Крышка
 						+e.price 249 ₽ / шт
-					+b.button._gray.__editButton(href='#layer_upgrade_selection')
+					+b.button._xs.__editButton(href='#layer_upgrade_selection')
 						+e.text Изменить
-					+b.icon.__deleteIcon
-						include /assets/images/crossIcon.svg
+					+b.icon._lg.__deleteIcon
+						include /assets/images/lg/crossIcon.svg
 			+b.__item
 				+e.step 2
 				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
-					include /assets/images/infoIcon.svg
-				+e.card
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
 					+e.img(src='images/cupLabel.png')
-					+e.label
+					+b.__label
 						+e.name Эмблема
-					+b.__addButton.button._blue(href='#layer_upgrade_selection')
+					+b.button._xs.__addButton(href='#layer_upgrade_selection')
 						+e.text Добавить
 			+b.__item
 				+e.step 3
 				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
-					include /assets/images/infoIcon.svg
-				+e.card
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
 					+e.img(src='images/cupFigure.png')
-					+e.label
+					+b.__label
 						+e.name Фигурка
-					+b.__addButton.button._blue(href='#layer_upgrade_selection')
+					+b.button._xs.__addButton(href='#layer_upgrade_selection')
 						+e.text Добавить
 			+b.__item._active
 				+e.step 4
 				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
-					include /assets/images/infoIcon.svg
-				+e.card
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
 					+e.img(src='images/cupShield.png')
-					+e.label
+					+b.__label
 						+e.name Табличка
 						+e.price 249 ₽ / шт
-					+b.button._gray.__editButton(href='#layer_upgrade_cup_place')
+					+b.button._xs.__editButton(href='#layer_upgrade_cup_place')
 						+e.text Изменить
-					+b.icon.__deleteIcon
-						include /assets/images/crossIcon.svg
+					+b.icon._lg.__deleteIcon
+						include /assets/images/lg/crossIcon.svg
 				+b.__config
 					+e.text Лучшему начальнику
 					+b.__files
-						+b.__item
-							+b.icon
-								include /assets/images/fileIcon.svg
-							+e.name Название файла
-							+b.icon.__deleteIcon
-								include /assets/images/crossIcon.svg
-						+b.__item
-							+b.icon
-								include /assets/images/fileIcon.svg
-							+e.name Название файла
-							+b.icon.__deleteIcon
-								include /assets/images/crossIcon.svg
+						+fileItem
+						+fileItem
 			+b.__item
 				+e.step 5
-				+e.card
-					+e.label
+				+b.icon._sm.__infoIcon(href='#layer_upgrade_info')
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
+					+b.__label
 						+e.name Особые пожелания
-					+b.__addButton.button._blue(href='#layer_upgrade_cup_place')
+					+b.button._xs.__addButton(href='#layer_upgrade_cup_place')
 						+e.text Добавить
 	+productUpgradeInfoLayer
 	+productUpgradeSelectionLayer
-	+productUpgradeCupPlaceLayer
+	+productUpgradePlaceLayer

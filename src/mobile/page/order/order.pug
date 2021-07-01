@@ -1,0 +1,15 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/elements/bottomButton/bottomButton
+include /mobile/page/order/orderContactsContent/orderContactsContent
+
+block append pageVars
+	- var pageTitle = "Оформление заказа";
+	- var pageClass = "order";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Контактная информация', false)._noIcons.__head
+	+orderContactsContent
+	+bottomButton
+		+b.button._lg._green(href='order-shipping.html') Продолжить

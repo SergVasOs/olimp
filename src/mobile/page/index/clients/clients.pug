@@ -1,0 +1,27 @@
+mixin clients
+	+b.clients&attributes(attributes)
+		.box
+			+e.title Наши клиенты
+			+b.menu
+				+b.__swiper.swiper-container
+					+b.__wrapper.swiper-wrapper
+						+b.__item._active.swiper-slide(href='#') Банки
+						+b.__item.swiper-slide(href='#') Авто
+						+b.__item.swiper-slide(href='#') Фитнес клубы
+				+b.clients__items
+					+b.__item(href='#')
+						+e.img(src='images/clientImg1.png')
+						+e.logo(src='images/sberLogo.png')
+					+b.__item(href='#')
+						+e.img(src='images/clientImg2.png')
+						+e.logo(src='images/sberLogo.png')
+					+b.__item(href='#')
+						+e.img(src='images/clientImg1.png')
+						+e.logo(src='images/sberLogo.png')
+					+b.__item(href='#')
+						+e.img(src='images/clientImg2.png')
+						+e.logo(src='images/sberLogo.png')
+				+b.button._lg._full.__button
+					+e.icon
+						include /assets/images/lg/blockIcon.svg
+					+e.text Показать больше

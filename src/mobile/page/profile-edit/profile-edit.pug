@@ -1,0 +1,36 @@
+extends /mobile/layout/layout
+include /include/elements/avatar/avatar
+include /include/elements/bottomButton/bottomButton
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Личные данные";
+	- var pageClass = "profileEdit";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Личные данные', 'profile.html')._profile.__head
+		+avatar._sm.__icon
+	.box
+		+b.FORM.form.__form
+			+e.H4.row Личные данные
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Имя', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Фамилия', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Отчество', required)
+			+e.H4.row Контактные данные
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='e-mail', required)
+		+b.links.__links
+			+e.item(href='terms-of-policy.html') Политика конфиденциальности
+	+bottomButton
+		+b.button._lg._green(href='profile.html') Сохранить

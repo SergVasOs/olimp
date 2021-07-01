@@ -1,0 +1,50 @@
+include /include/elements/dropArea/dropArea
+include /include/blocks/common/fileList/fileList
+
+mixin orderShippingContent
+	+b.orderShippingContent&attributes(attributes)
+		.box
+			+e.text Выберите тип доставки
+			+b.__group
+				+e.title Самовывоз
+				+b.__items
+					+b.__item._active
+						+b.__card
+							+b.__name
+								+e.title Самовывоз из магазина
+								+e.desc Стоимость: бесплатно
+							+b.LABEL.radio
+								+b.__icon
+									+e.INPUT.input(type='radio', name='shippingId', checked='true')
+									include /assets/images/md/radioIcon.svg
+						+b.button._blue._lg._full.__button
+							+e.icon
+								include /assets/images/lg/targetIcon.svg
+							+e.text Выбрать точку самовывоза
+			+b.__group
+				+e.title Доставка до вашей двери
+				+e.desc Срок доставки указан для готового заказа, без учета времени изготовления
+				+b.__items
+					+b.__item
+						+b.__card
+							+b.__name
+								+e.title Курьерская
+								+e.desc Бесплатно от 3 000 рублей
+							+b.__info
+								+e.date Завтра
+								+e.price 400 р.
+							+b.LABEL.radio
+								+b.__icon
+									+e.INPUT.input(type='radio', name='shippingId')
+									include /assets/images/md/radioIcon.svg
+					+b.__item
+						+b.__card
+							+b.__name
+								+e.title Другая транспортная компания
+							+b.__info
+								+e.date Завтра
+								+e.price 400 р.
+							+b.LABEL.radio
+								+b.__icon
+									+e.INPUT.input(type='radio', name='shippingId')
+									include /assets/images/md/radioIcon.svg

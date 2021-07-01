@@ -4,14 +4,14 @@ mixin productUpgradeSelectionLayer
 	+b#layer_upgrade_selection.layer
 		+e.body
 			+e.header Добавить крышку
-				+b.icon.__close
-					include /assets/images/crossIcon.svg
+				+b.icon._xl.__close
+					include /assets/images/xl/crossIcon.svg
 			+b.productUpgradeSelectionLayer.__content
-				+b.input._lg.__search
-					+b.icon.__icon
-						include /assets/images/searchIcon.svg
+				+b.input.__search
+					+e.icon
+						include /assets/images/lg/searchIcon.svg
 					+e.INPUT.field(type='text', placeholder='Поиск')
-				+b.slider
+				+b.slider.__slider
 					+b.__labels
 						+e.item._start 100
 						+e.item._end 2700
@@ -19,20 +19,20 @@ mixin productUpgradeSelectionLayer
 						+e.handler._start
 						+e.handler._end
 						+e.bar
-				+b.__categories
-					+b.swiper-container.__swiper
-						+b.swiper-wrapper
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Металические
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Пластиковые
-							+b.swiper-slide.productUpgradeSelectionLayer__categories__item(href='#') Стеклянные
+				+b.menu.__categories
+					+b.__swiper.swiper-container
+						+b.__wrapper.swiper-wrapper
+							+b.__item._active.swiper-slide(href='#') Металические
+							+b.__item.swiper-slide(href='#') Пластиковые
+							+b.__item.swiper-slide(href='#') Стеклянные
+							+b.__item.swiper-slide(href='#') Пластиковые
+							+b.__item.swiper-slide(href='#') Стеклянные
+							+b.__item.swiper-slide(href='#') Пластиковые
+							+b.__item.swiper-slide(href='#') Стеклянные
+							+b.__item.swiper-slide(href='#') Пластиковые
+							+b.__item.swiper-slide(href='#') Стеклянные
 				+b.__items
-					+e.__content
+					+e.content
 						+selectionItem
 						+selectionItem
 						+selectionItem

@@ -1,0 +1,97 @@
+include /include/elements/size/size
+include /include/elements/color/color
+include /include/elements/buyButton/buyButton
+include /include/elements/upgradeButton/upgradeButton
+include /include/blocks/product/productDeliveryInfo/productDeliveryInfo
+include /include/blocks/product/productUpgrades/productUpgrades
+include /include/blocks/product/productDescription/productDescription
+include /include/blocks/product/productEdition/productEdition
+include /include/sections/product/productTags/productTags
+include /mobile/page/product/productVariants/productVariants
+include /mobile/page/product/productCategories/productCategories
+include /mobile/page/product/productProperties/productProperties
+include /mobile/include/sections/productList/productList
+include /mobile/include/sections/viewedList/viewedList
+
+mixin productPopper(shirt=false)
+	+b#product_popper.popper.productPopper&attributes(attributes)
+		+e.body.productPopper__body
+			+e.handler
+			+e.content
+				+b.productPopper__short
+					.box
+						+e.name Стеклянная награда J42-115 с цветным нанесением, высота 11.5 см
+						+b.__info
+							+e.price от 3 249 ₽ / шт
+							+e.material Пластик
+						+e.buttons
+							+upgradeButton
+							+buyButton('В корзину')
+				+b.productPopper__full
+					+b.tabs.__tabs
+						+b.__buttons
+							+e.item._active(data-tab='images') Характеристики
+							+e.item(data-tab='upgrade') Описание
+							+e.item(data-tab='sets') Все свойства
+					+b.__buy
+						+e.box.box
+							+e.label Стоимость за шт:
+							+e.price 17,631 руб
+							+b.button.__button
+								+e.text Положить в корзину
+					.box
+						if (shirt)
+							+color._lg.__prop
+						else
+							+size._lg.__prop
+						+b.__card
+							+e.img(src=shirt ? "images/shirt.png" : "images/catalogItem.png")
+							+e.info
+								+e.sku Артикул: 271508
+								+e.name Кубок B368-3, высота 36 см
+								+e.price 3 249 ₽ / шт
+						+b.__icon
+							+b.icon._lg
+								include /assets/images/lg/plusIcon.svg
+						+productUpgrades
+						+b.__icon
+							+b.icon._lg
+								include /assets/images/lg/crossIcon.svg
+						+productEdition
+						+b.__icon
+							+b.icon._lg
+								include /assets/images/lg/equalIcon.svg
+						+b.__total
+							+b.__info
+								+b.__header
+									+e.col._label
+									+e.col._thing за 1 шт
+									+e.col._total за 238 шт
+								+b.__row
+									+e.col._label Аксессуары:
+									+e.col._thing 840 ₽
+									+e.col._total 840 ₽
+								+b.__row
+									+e.col._label Нанесение:
+									+e.col._thing 1 683 ₽
+									+e.col._total 1 683 ₽
+								+b.__row
+									+e.col._label._sum Итого:
+									+e.col._thing 1 683 ₽
+									+e.col._total 336 422₽
+							+buyButton('Добавить в корзину')._lg.__buyButton
+						+productDeliveryInfo.__productDeliveryInfo
+					+productList('Готовые работы').__setList
+					.box
+						+productVariants.__productVariants
+						+productDescription.__productDescription
+						+productCategories.__productCategories
+					+productList('Посмотрите аналоги').__analog
+					+productList('С этим товаром заказывают').__relative
+					.box
+						+productProperties.__productProperties
+					+productTags.__productTags
+					+viewedList.__viewed
+					.box
+						+b.button.__helpButton(href='#')
+							+e.text Нужна помощь?

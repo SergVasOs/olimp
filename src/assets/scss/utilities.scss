@@ -1,3 +1,32 @@
+.h2 {
+    @apply
+    text-3xl
+    font-bold;
+}
+
+.h3 {
+    @apply
+    text-2xl
+    font-medium;
+}
+
+.h4 {
+    @apply
+    text-xl
+    font-medium;
+}
+
+.h5 {
+    @apply
+    text-lg
+    font-medium;
+}
+
+.h6 {
+    @apply
+    font-medium;
+}
+
 .select-center {
     text-align-last: center;
 }
@@ -27,7 +56,7 @@
 
         &::-webkit-scrollbar-thumb {
             @apply
-            bg-orange-200
+            bg-orange
             rounded-full;
         }
     }
@@ -39,24 +68,44 @@
             @apply hidden;
         }
     }
-
-    &-box {
-        @apply
-        w-overflow-box;
-
-        &-full {
-            @apply
-            w-overflow-box-full;
-        }
-    }
-
-    &-layer {
-        @apply w-overflow-layer;
-    }
 }
 
-.flexImage {
+.fullImageCover {
     @apply
-    absolute h-full w-full object-cover;
+    h-full w-full object-cover;
+}
+
+.flexImageCover {
+    @apply
+    absolute fullImageCover;
+}
+
+.fullImageContain {
+    @apply
+    h-full w-full object-contain;
+}
+
+.flexImageContain {
+    @apply
+    absolute fullImageContain;
+}
+
+.price {
+    @apply
+    whitespace-nowrap
+    font-bold;
+}
+
+.oldPrice {
+    @apply
+    whitespace-nowrap
+    line-through text-gray-light;
+}
+
+.bgGrayGradient {
+    @apply
+    bg-gradient-to-t
+    from-gray-gradient-from
+    to-gray-gradient-to;
 }
 

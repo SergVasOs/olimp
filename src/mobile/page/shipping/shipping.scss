@@ -1,0 +1,102 @@
+.shipping {
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__text {
+        @apply
+        text-lg
+        mb-6;
+    }
+
+    &__search {
+        @apply
+        mb-6;
+    }
+
+    &__cost {
+        @apply
+        space-y-4
+        mb-6;
+
+        &__row {
+            @apply
+                flex
+                justify-between
+                text-lg;
+
+            &__label {
+                @apply
+                    text-gray-500;
+            }
+        }
+    }
+
+    &__info {
+        @apply
+        text-gray-500
+        text-sm
+        mb-4;
+    }
+
+    &__viewSelect {
+        @apply
+        w-full
+        mb-4;
+    }
+
+    &__map {
+        @apply
+            w-full
+            h-80
+            mb-6;
+    }
+
+    &__points {
+        &__title {
+            @apply
+            text-lg
+            mb-4;
+        }
+
+        &__list {
+            @apply
+                space-y-4
+                mb-8;
+
+            &__item {
+                @apply
+                space-y-2;
+
+                &__info {
+                    @apply
+                    text-gray;
+                }
+            }
+        }
+
+        &__desc {
+            &__title {
+                @apply
+                text-lg
+                mb-4;
+            }
+
+            &__list {
+                @apply
+                space-y-4;
+
+                &__item {
+                    @apply
+                    space-y-2;
+
+                    &__text {
+                        @apply
+                        text-gray;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,13 +10,13 @@
         items-center
         bg-white
         text-black
-        w-15
-        h-21
+        w-16
+        h-20
         px-5
         py-7
         absolute
         z-10
-        top-2/5
+        top-1/2
         transform -translate-y-1/2;
 
         &_thumb {
@@ -32,12 +32,12 @@
     &-prev {
         @apply
         transform -translate-y-1/2 rotate-180
-        left-0;
+        left-1;
     }
 
     &-next {
         @apply
-        right-0;
+        right-1;
     }
 
     &-dots {
@@ -51,20 +51,42 @@
         &-item {
             @apply w-2
             h-2
-            bg-gray-500
+            bg-gray-light
             rounded-full
             cursor-pointer
-            hover:bg-gray-700;
+            hover:bg-blue-dark;
 
             &-active {
-                @apply bg-gray-700;
+                @apply bg-blue-dark;
+            }
+        }
+
+        &_sm {
+            @apply space-x-1;
+        }
+
+        &_sm & {
+            &-item {
+                @apply
+                w-1
+                h-1;
+            }
+        }
+
+        &_lg & {
+            &-item {
+                @apply
+                w-2
+                h-2
+                lg:w-3.5
+                lg:h-3.5;
             }
         }
     }
 
     &-container > &-dots {
         @apply
-        bottom-0;
+        bottom-0.5;
     }
 
     &-container-vertical {
@@ -75,8 +97,8 @@
         &-prev,
         &-next {
             @apply
-            h-15
-            w-21
+            h-16
+            w-20
             py-5
             px-7
             top-0

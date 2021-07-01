@@ -1,0 +1,51 @@
+.importantInfo {
+    @apply
+        md:py-8
+        md:bg-gray-bg;
+
+    &__title {
+        @apply
+        h2
+        mb-4
+        md:text-center;
+    }
+
+    &__items {
+        @apply
+        flex justify-between items-stretch
+        space-x-2
+        md:justify-center
+        md:space-x-8;
+    }
+
+    &__item {
+        @apply
+            text-black
+            border
+            rounded
+            flex-1
+            md:flex-none;
+
+        &__img {
+            @apply
+            w-full
+            h-20
+            object-cover
+            rounded-t
+            md:w-48
+            md:h-32;
+        }
+
+        &__name {
+            @apply
+                text-xs
+                font-medium
+                flex
+                items-center
+                justify-center
+                h-10
+                text-center
+                md:text-lg;
+        }
+    }
+}

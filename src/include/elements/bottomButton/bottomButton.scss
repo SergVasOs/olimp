@@ -1,0 +1,16 @@
+.bottomButton {
+    @apply
+    fixed
+    bottom-0
+    inset-x-0
+    py-6
+    flex
+    items-center
+    bg-white
+    shadow-top;
+
+    &__box > * {
+        @apply
+        w-full;
+    }
+}

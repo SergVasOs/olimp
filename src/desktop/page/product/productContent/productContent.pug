@@ -1,0 +1,98 @@
+include /include/blocks/product/productUpgrades/productUpgrades
+include /include/blocks/product/productEdition/productEdition
+include /desktop/page/product/productProperties/productProperties
+include /include/blocks/product/productDeliveryInfo/productDeliveryInfo
+include /desktop/page/product/productMaterials/productMaterials
+include /include/blocks/product/productDescription/productDescription
+include /include/elements/buyButton/buyButton
+include /include/elements/upgradeButton/upgradeButton
+include /include/elements/size/size
+include /include/elements/label/label
+
+mixin productContent
+	+b.productContent&attributes(attributes)
+		+e.box.box
+			+e.left
+				+b.tabs
+					+b.__buttons
+						+e.item._active(data-tab='images') Фотографии
+						+e.item(data-tab='upgrade') Нанесение и комплект
+						+e.item(data-tab='sets') Готовые решения
+					+b.__content
+						+e.item._active(data-content-tab='images')
+							+b.productContent__gallery
+								+e.left
+									+label._lg._views.__views
+										+b.icon._sm
+											include /assets/images/sm/cameraIcon.svg
+										+e 4
+									+b.__thumbs.swiper-container
+										+b.__wrapper.swiper-wrapper
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+									+b.icon.__next
+										include /assets/images/shevronIcon.svg
+								+e.img(src='images/product1.png')
+						+e.item(data-content-tab='upgrade')
+							+b.productContent__gallery
+								+e.img(src='images/upgrade.png')
+						+e.item(data-content-tab='sets')
+							+b.productContent__gallery
+								+e.left
+									+label._lg._views.__views
+										+b.icon._sm
+											include /assets/images/sm/cameraIcon.svg
+										+e 4
+									+b.__thumbs.swiper-container
+										+b.__wrapper.swiper-wrapper
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+											+b.__slide.swiper-slide
+												+e.img(src='images/catalogItem.png')
+									+b.icon.__next
+										include /assets/images/shevronIcon.svg
+								+e.img(src='images/set.png')
+				+productUpgrades.__productUpgrades
+				+productEdition.__productEdition
+				+productProperties.__productProperties
+				+productDeliveryInfo.__productDeliveryInfo
+				+productMaterials.__productMaterials
+				+productDescription.__productDescription
+			+e.right
+				+b.__buy
+					+e.info
+						+e.top
+							+label._new.__new Новый
+							+e.sku Артикул: 214007
+						+e.prices
+							+b.__price 365 ₽/
+								+e.piece шт
+							+e.oldPrice 430 руб
+							+e.discount -15%
+						+size._lg.__size
+						+b.__stock
+							+e В наличии:
+							+e.value 264 шт.
+						+e.buttons
+							+upgradeButton._xl.__upgradeButton
+							+buyButton('Добавить в корзину')._xl.__buyButton
+					+e.count
+						+e.editionLink(href='#') Указать колличество

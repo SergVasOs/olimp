@@ -1,11 +1,47 @@
+include /include/elements/logo/logo
+include /include/sections/index/catalogMenu/catalogMenu
+include /include/sections/index/importantInfo/importantInfo
+include /include/blocks/common/chooseCityLayer/chooseCityLayer
+
 +b.header
 	+e.box.box
-		+b.icon.__catalogIcon(href='/catalog.html')
-			include /assets/images/sandwitchIcon.svg
-		+b.icon.__pointIcon(href='#')
-			include /assets/images/pointIcon.svg
-		include /include/elements/logo/logo
-		+b.icon.__searchIcon(href='#')
-			include /assets/images/searchIcon.svg
-		+b.icon.__cartIcon(href='#')
-			include /assets/images/basketIcon.svg
+		+b.__catalogButton
+			+e.stick._first
+			+e.stick._second
+			+e.stick._third
+			+e.stick._forth
+		+b.icon._xl(href='search.html')
+			include /assets/images/xl/searchIcon.svg
+		+logo.__logo
+		+b.icon._xl(href='favorites.html')
+			include /assets/images/xl/favoriteIcon.svg
+		+b.icon._xl(href='cart.html')
+			include /assets/images/xl/basketIcon.svg
++b.mainMenu
+	.box
+		+b.__top
+			+b.button.__homeButton(href='')
+				+e.icon
+					include /assets/images/md/homeIcon.svg
+			+b.__link(href='profile.html')
+				+b.icon
+					include /assets/images/md/userIcon.svg
+				+e.text Мой аккаунт
+			+b.__link(href='order-status.html')
+				+b.icon
+					include /assets/images/md/bestDeliveryIcon.svg
+				+e.text Статус заказа
+		+b.__galleryLink(href='gallery.html')
+			+e.img(src='images/galleryBanner.png')
+			+e.text Наши работы
+		+b.__location
+			+b.icon
+				include /assets/images/md/pointIcon.svg
+			+e.label Ваш город:
+			+e.city(href='#layer_choose_city') Москва
+	+catalogMenu(false).__catalogMenu
+	+importantInfo.__importantInfo
+	.box
+		+b.button.__helpButton(href='#')
+			+e.text Нужна помощь?
++chooseCityLayer

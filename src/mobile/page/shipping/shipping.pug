@@ -1,0 +1,88 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Доставка";
+	- var pageClass = "shipping";
+
+block content
+	+pageHead('Доставка').__head
+	.box
+		+e.text Минимальные тарифы транспортных компаний
+		+b.input.__search
+			+e.icon
+				include /assets/images/lg/searchIcon.svg
+			+e.INPUT.field(type='text', placeholder='Поиск населённого пункта', required)
+		+b.__cost
+			+b.__row
+				+e.label Срок доставки:
+				+e.value 4 Дня*
+			+b.__row
+				+e.label Стоимость доставки
+				+e.value 450 руб*
+		+e.info
+			+e * Стоимость расчитана для веса (кг): 6-20 кг
+			+e * Для стандартной коробки 40*50*60 см
+			+e * Стоимость и сроки указаны ориентировочно.Точную информацию можно получить у операторов Транспортной компании.
+		+b.select._gray._lg.__viewSelect
+			+e.SELECT.input
+				+e Показать на карте
+				+e Показать под картой
+			+e.icon
+				include /assets/images/lg/shevronIcon.svg
+		+e.IFRAME.map(
+			src='https://yandex.ru/map-widget/v1/?um=constructor%3A5df468bdb3401947570015569b5ab6e860003bb4646ee6ccd0207d3a80cb2a1b&amp;source=constructor'
+		)
+		+b.__points
+			+e.title Адреса в Вашем городе:
+			+b.__list
+				+b.__item
+					+e.title Пункт №1:
+					+e.address ул. Ленина, д. 187
+					+e.info
+						| Часы работы: пн-пт с 9.00 до 18.00, сб 10.00 до 15.00
+						br
+						| ТК: СДЭК
+				+b.__item
+					+e.title Пункт №1:
+					+e.address ул. Ленина, д. 187
+					+e.info
+						| Часы работы: пн-пт с 9.00 до 18.00, сб 10.00 до 15.00
+						br
+						| ТК: СДЭК
+				+b.__item
+					+e.title Пункт №1:
+					+e.address ул. Ленина, д. 187
+					+e.info
+						| Часы работы: пн-пт с 9.00 до 18.00, сб 10.00 до 15.00
+						br
+						| ТК: СДЭК
+			+b.__desc
+				+e.title Адреса в Вашем городе:
+				+b.__list
+					+b.__item
+						+e.title Стоимость:
+						+e.text
+							| - до терминала ТК в Москве БЕСПЛАТНО;
+							br
+							| минимальная сумму заказа 1 000 руб.
+							br
+							| - доставка из Москвы согласно тарифам ТК.
+					+b.__item
+						+e.title Список транспортных компаний:
+						+e.text
+							| Деловые Линии;
+							br
+							| ПЭК;
+							br
+							| Байкал-Сервис;
+							br
+							| КИТ;
+							br
+							| ЦАП;
+							br
+							| СДЭК;
+							br
+							| ЖелДорЭкспедиция;
+							br
+							| Желдор Альянс

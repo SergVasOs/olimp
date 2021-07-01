@@ -4,9 +4,8 @@
         z-30
         top-0
         -inset-x-0
-        bg-gray-100
+        bg-gray-card
         border-b
-        border-gray-200
         h-20
         flex
         items-center;
@@ -18,19 +17,178 @@
             items-center;
     }
 
+    &__catalogButton {
+        @apply
+        w-7
+        h-5
+        relative
+        cursor-pointer;
+
+        &__stick {
+            @apply
+            block
+            absolute
+            h-2px
+            w-full
+            bg-blue-dark
+            rounded-full
+            opacity-100
+            left-0
+            transform rotate-0
+            transition duration-200;
+
+            &_first {
+                @apply top-0;
+            }
+
+            &_second,
+            &_third {
+                @apply
+                top-1/2
+                transform -translate-y-1/2;
+            }
+
+            &_forth {
+                @apply bottom-0;
+            }
+        }
+
+        &_open & {
+            &__stick {
+                &_first {
+                    @apply
+                        top-1/2
+                        w-0
+                        left-1/2;
+                }
+
+                &_second {
+                    @apply
+                    transform rotate-45;
+                }
+
+                &_third {
+                    @apply
+                    transform -rotate-45;
+                }
+
+                &_forth {
+                    @apply
+                    bottom-1/2
+                    w-0
+                    left-1/2;
+                }
+            }
+        }
+    }
+
     &__logo {
         @apply
             w-40
             mx-auto;
     }
+}
 
-    &__catalogIcon {
+.mainMenu {
+    @apply
+        pt-4
+        pb-14
+        fixed
+        inset-x-0
+        h-popper
+        -top-full
+        bg-white
+        z-20
+        overflow-scrollVert
+        transition-top duration-500 ease-in-out;
+
+    &_open {
         @apply
-        mr-5;
+            top-20;
     }
 
-    &__searchIcon {
+    &__top {
         @apply
-        mr-5;
+            flex
+            items-center
+            justify-between
+            mb-4;
+
+        &__homeButton {
+            @apply
+                button_sm
+                button_yellow;
+        }
+
+        &__link {
+            @apply
+                text-lg
+                font-medium
+                flex
+                items-center
+                space-x-2;
+        }
+    }
+
+    &__galleryLink {
+        @apply
+        relative
+        block
+        mb-4;
+
+        &__img {
+            @apply
+            w-full
+            rounded;
+        }
+
+        &__text {
+            @apply
+            absolute
+            top-1/2
+            left-1/2
+            transform -translate-x-1/2 -translate-y-1/2
+            text-white
+            text-2xl
+            font-bold;
+        }
+    }
+
+    &__location {
+        @apply
+            flex
+            items-center
+            justify-center
+            space-x-2
+            mb-4;
+
+        &__label {
+            @apply
+                font-medium;
+        }
+
+        &__city {
+            @apply
+                text-blue-dark
+                underline
+                cursor-pointer;
+        }
+    }
+
+    &__catalogMenu {
+        @apply
+            mb-8;
+    }
+
+    &__importantInfo {
+        @apply
+        mb-8;
+    }
+
+    &__helpButton {
+        @apply
+            button_lg
+            button_gray
+            w-full;
     }
 }

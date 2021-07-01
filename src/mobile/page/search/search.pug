@@ -1,0 +1,48 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/common/callback/callback
+include /include/elements/bottomButton/bottomButton
+include /mobile/include/blocks/catalogFilterLayer/catalogFilterLayer
+
+block append pageVars
+	- var pageTitle = "Поиск по сайту";
+	- var pageClass = "search";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Поиск по сайту', false)._noIcons.__head
+	+e.box.box
+		+b.input.__search
+			+e.icon
+				include /assets/images/lg/searchIcon.svg
+			+e.INPUT.field(type='text', placeholder='Поиск по каталогу', required)
+			+b.button._xs._yellow(href='#layer_filters')
+				+e.icon
+					include /assets/images/sm/filterIcon.svg
+		+b.__help
+			+e.title ПОДСКАЗКИ
+			+b.__items
+				+e.item(href='catalog-grid.html')
+					+e Кубки
+					+b.icon
+						include /assets/images/md/shevronIcon.svg
+				+e.item(href='catalog-grid.html')
+					+e Кубки
+					+b.icon
+						include /assets/images/md/shevronIcon.svg
+				+e.item(href='catalog-grid.html')
+					+e Кубки
+					+b.icon
+						include /assets/images/md/shevronIcon.svg
+				+e.item(href='catalog-grid.html')
+					+e Кубки
+					+b.icon
+						include /assets/images/md/shevronIcon.svg
+				+e.item(href='catalog-grid.html')
+					+e Кубки
+					+b.icon
+						include /assets/images/md/shevronIcon.svg
+		+callback
+	+bottomButton
+		+b.button._lg._blue(href='catalog-grid.html') Показать больше
+	+catalogFilterLayer

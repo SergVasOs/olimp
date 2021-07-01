@@ -1,0 +1,8 @@
+mixin pageHead(title='', backLink='index.html')
+	+b.pageHead&attributes(attributes)
+		+e.box.box
+			if (backLink)
+				+b.icon._xl.__back(href=backLink)
+					include /assets/images/xl/shevronIcon.svg
+			+e.title #{title}
+			block

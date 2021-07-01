@@ -1,0 +1,6 @@
+include /include/elements/bottomButton/bottomButton
+
+mixin orderContinue(link, text = 'Продолжить')
+	+b.orderContinue&attributes(attributes)
+		+bottomButton
+			+b.button._lg._green(href=link) #{text}

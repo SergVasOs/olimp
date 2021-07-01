@@ -1,0 +1,118 @@
+.menu {
+    &__swiper {
+        @apply
+        overflow-visible;
+
+        &__wrapper {
+            &__item {
+                @apply
+                w-auto
+                text-blue-dark
+                px-6
+                border
+                border-blue-dark
+                rounded
+                h-12
+                flex
+                items-center
+                justify-center
+                min-w-menuItem
+                lg:px-10;
+
+                &_active {
+                    @apply
+                    border-orange-light
+                    bg-orange-light;
+                }
+            }
+        }
+    }
+
+    &__items {
+        @apply
+        mt-6
+        grid
+        grid-cols-3
+        gap-2
+        md:grid-cols-6
+        md:gap-6;
+
+        &__item {
+            @apply
+            border
+            rounded
+            p-2
+            pt-4
+            flex
+            flex-col
+            space-y-2
+            items-center
+            md:p-3
+            md:flex-row
+            md:space-y-0
+            md:space-x-5;
+
+            &__img {
+                @apply
+                w-16
+                h-16
+                object-contain
+                md:h-12
+                md:w-12;
+            }
+
+            &__name {
+                @apply
+                text-sm
+                text-center
+                flex-1
+                flex
+                items-center
+                md:text-left
+                md:font-medium;
+            }
+        }
+
+        &_cols2 {
+            @apply
+            grid-cols-2
+            gap-4
+            md:grid-cols-6;
+        }
+
+        &_cols2 & {
+            &__item {
+                @apply
+                p-4
+                flex-row
+                space-y-0
+                space-x-2;
+
+                &__img {
+                    @apply h-14 w-14;
+                }
+
+                &__name {
+                    @apply
+                    text-left font-medium;
+                }
+            }
+        }
+    }
+
+    &__button {
+        @apply
+            mt-4
+            button_gray;
+    }
+
+    &_catalogMenu & {
+        &__items {
+            @apply mt-6;
+        }
+
+        &__button {
+            @apply mt-8;
+        }
+    }
+}

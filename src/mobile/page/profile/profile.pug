@@ -1,0 +1,60 @@
+extends /mobile/layout/layout
+include /include/elements/avatar/avatar
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/profile/orderItem/orderItem
+include /include/blocks/profile/changePasswordLayer/changePasswordLayer
+
+block append pageVars
+	- var pageTitle = "Профиль";
+	- var pageClass = "profile";
+	- var hideFooter = true;
+
+block content
+	+b.__head
+		+e.box.box
+			+avatar
+			+b.__info
+				+e.name Лукьян Дмитрий Михайлович
+				+e.label Личные данные
+			+b.icon._xl.__icon(href='profile-edit.html')
+				include /assets/images/xl/shevronIcon.svg
+	.box
+		+b.__info
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.__item._discount.swiper-slide
+						+e.title Ваша скидка
+						+e.text 10% на весь каталог
+					+b.__item.swiper-slide
+						+e.title Баланс
+						+e.text 2 993 ₽
+					+b.__item.swiper-slide
+						+e.title Ваша скидка
+						+e.text 10% на весь каталог
+		+b.__orders
+			+e.title Сейчас в работе
+			+e.list
+				+orderItem(true)
+				+orderItem(true)
+		+b.__menu
+			+b.__item(href='order-status.html')
+				+b.icon._lg
+					include /assets/images/lg/bestDeliveryIcon.svg
+				+e.title Узнать статус заказа
+			+b.__item(href='profile-orders.html')
+				+b.icon._lg
+					include /assets/images/lg/bagIcon.svg
+				+e.title История заказов
+			+b.__item(href='profile-addresses.html')
+				+b.icon._lg
+					include /assets/images/lg/addressIcon.svg
+				+e.title Адреса доставки
+			+b.__item(href='#layer_change_password')
+				+b.icon._lg
+					include /assets/images/lg/lockIcon.svg
+				+e.title Изменить пароль
+			+b.__item(href='login.html')
+				+b.icon._lg
+					include /assets/images/lg/exitIcon.svg
+				+e.title Выйти
+	+changePasswordLayer

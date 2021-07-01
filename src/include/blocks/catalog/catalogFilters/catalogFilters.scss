@@ -1,34 +1,30 @@
 .catalogFilters {
-    @apply space-y-5;
-
     &__filter {
         @apply
             border-b;
 
         &__label {
             @apply
-            text-600
-            font-medium
-            mb-5
+            h5
+            text-blue-dark
+            py-4
             flex
-            justify-between;
+            justify-between
+            items-center;
         }
 
         &__body {
-            @apply hidden pb-3;
+            @apply hidden pb-6;
         }
 
         &__search {
             @apply
-                p-4
                 mb-4;
         }
 
         &__checkboxes {
             @apply
-            flex
-            flex-col
-            space-y-3;
+            space-y-4;
         }
 
         &__items {
@@ -41,24 +37,24 @@
                 @apply
                 cursor-pointer
                 flex
-                space-x-3
+                space-x-4
                 m-2
-                p-3
+                p-2
                 font-medium
-                bg-gray-100
+                bg-gray-card
                 rounded;
 
                 &__count {
-                    @apply text-gray-700;
+                    @apply text-gray;
                 }
             }
         }
 
         &__more {
             @apply
-                text-blue-400
+                text-blue
                 cursor-pointer
-                mt-6;
+                mt-4;
         }
 
         &:last-child {
@@ -81,7 +77,9 @@
 
         &_flat & {
             &__label {
-                @apply mb-3;
+                @apply
+                pt-0
+                pb-2;
             }
 
             &__body {

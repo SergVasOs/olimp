@@ -1,0 +1,15 @@
+.banners {
+    &__swiper {
+        @apply
+            pb-6
+            md:pb-8;
+
+        &__wrapper {
+            &__item {
+                &__img {
+                    @apply w-full;
+                }
+            }
+        }
+    }
+}

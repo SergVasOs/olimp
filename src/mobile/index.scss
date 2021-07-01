@@ -1,23 +1,18 @@
 @import "/src/assets/scss/index";
+
+@import "/src/mobile/include/blocks/viewedItem/viewedItem";
+@import "/src/mobile/include/blocks/catalogItem/list/catalogListItem";
+@import "/src/mobile/include/blocks/catalogItem/table/catalogTableItem";
+@import "/src/mobile/include/blocks/catalogFilterLayer/catalogFilterLayer";
+@import "/src/mobile/include/blocks/freeDeliveryPopper/freeDeliveryPopper";
+@import "/src/mobile/include/blocks/giftPopper/giftPopper";
+@import "/src/mobile/include/blocks/bookOrderPopper/bookOrderPopper";
+
+@import "/src/mobile/include/sections/productList/productList";
+@import "/src/mobile/include/sections/viewedList/viewedList";
+@import "/src/mobile/include/sections/saleList/saleList";
+
 @import "/src/mobile/layout/footer/footer";
 @import "/src/mobile/layout/header/header";
 @import "/src/mobile/page/page";
 
-@import "/src/mobile/include/blocks/catalog/viewedItem/viewedItem";
-@import "/src/mobile/include/blocks/catalog/catalogItem/list/catalogListItem";
-@import "/src/mobile/include/blocks/catalog/catalogItem/table/catalogTableItem";
-@import "/src/mobile/include/blocks/catalog/catalogLayerFilter/catalogLayerFilter";
-@import "/src/mobile/include/blocks/product/productEdition/productEdition";
-@import "/src/mobile/include/blocks/product/productVariants/productVariants";
-@import "/src/mobile/include/blocks/product/productCategories/productCategories";
-@import "/src/mobile/include/blocks/product/productProperties/productProperties";
-
-@import "/src/mobile/include/sections/catalog/catalogContent/catalogContent";
-@import "/src/mobile/include/sections/catalog/catalogHead/catalogHead";
-@import "/src/mobile/include/sections/catalog/setList/setList";
-@import "/src/mobile/include/sections/catalog/productList/productList";
-@import "/src/mobile/include/sections/catalog/viewedList/viewedList";
-@import "/src/mobile/include/sections/catalog/catalogSubCategories/catalogSubCategories";
-@import "/src/mobile/include/sections/common/mainMenu/mainMenu";
-@import "/src/mobile/include/sections/product/productContent/productContent";
-@import "/src/mobile/include/sections/product/productHead/productHead";

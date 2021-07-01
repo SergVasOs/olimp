@@ -1,0 +1,20 @@
+mixin productCategories
+	+b.productCategories&attributes(attributes)
+		+b.__item
+			+b.__info
+				+e.title Все кубки
+				+e.desc Категория
+			+b.icon.__arrow
+				include /assets/images/md/shevronIcon.svg
+		+b.__item
+			+b.__info
+				+e.title Все футбольные кубки
+				+e.desc Категория и тематика
+			+b.icon.__arrow
+				include /assets/images/md/shevronIcon.svg
+		+b.__item
+			+b.__info
+				+e.title Все пластиковые кубки
+				+e.desc Категория и материал
+			+b.icon.__arrow
+				include /assets/images/md/shevronIcon.svg

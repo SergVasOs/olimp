@@ -1,0 +1,16 @@
+mixin bestDelivery
+	+b.bestDelivery&attributes(attributes)
+		+b.__date
+			+b.icon._lg.__icon
+				include /assets/images/lg/bestDeliveryIcon.svg
+			+e.label Ближайшая доставка:
+			+e.value 20 февраля
+		+b.UL.__items
+			+b.__item
+				+b.icon._sm.__icon
+					include /assets/images/sm/listIcon.svg
+				+e Самовывоз (без нанесения) - 1 день
+			+b.__item
+				+b.icon._sm.__icon
+					include /assets/images/sm/listIcon.svg
+				+e Изготовление нанесения 1- 3 дня

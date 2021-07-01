@@ -1,0 +1,20 @@
+include /include/blocks/common/compositionItem/compositionItem
+include /include/blocks/common/productItem/productItem
+
+mixin cartItems
+	+b.cartItems&attributes(attributes)
+		+b.__category
+			+b.__header
+				+e.name Кубки
+				+e.count 2 шт
+			+e.__items
+				+compositionItem('cart')
+				+productItem('cart')
+				+compositionItem('cart')
+		+b.__category
+			+b.__header
+				+e.name Медали
+				+e.count 12 шт
+			+e.__items
+				+compositionItem('cart')
+				+compositionItem('cart')

@@ -1,0 +1,61 @@
+extends /mobile/layout/layout
+include /include/elements/avatar/avatar
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/common/compositionItem/compositionItem
+include /include/blocks/common/productItem/productItem
+
+block append pageVars
+	- var pageTitle = "История заказов";
+	- var pageClass = "profileOrder";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Заказ 32324-234', 'profile-orders.html')._profile.__head
+		+b.icon._xl.__icon
+			include /assets/images/xl/bagIcon.svg
+	.box
+		+b.__top
+			+e.count Всего в заказе: 300 позиций
+			+e.status._blue Макетирование
+		+b.__info
+			+b.__row
+				+b.__col
+					+e.title Дата и время:
+					+e.text 05.06.2020, 20:20
+				+b.__col
+					+e.title Способ оплаты:
+					+e.text Наличными курьеру
+			+b.__row
+				+b.__col
+					+e.title Способ доставки:
+					+e.text 05.06.2020, 20:20
+				+b.__col
+					+e.title Адрес:
+					+e.text Москва, ул. Зои и Александра Космедемьянских д 2 строение 2 этаж 3 кваритра 334
+			+b.__contact
+				+e.title Ваш менеджер:
+				+b.__content
+					+avatar._sm
+					+b.__info
+						+e.name Чистопольская Анастасия
+						+b.__contacts
+							+b.__item(href='tel:88007755952') 8 (800) 775-5952
+								+e.add доб 223
+							+e.item(href='mailto:info@na-olimpe.ru') info@na-olimpe.ru
+		+b.__list
+			+e.title Состав заказа
+			+b.__category
+				+b.__header
+					+e.name Кубки
+					+e.count 2 шт
+				+e.__items
+					+compositionItem('profile')
+					+productItem('profile')
+					+compositionItem('profile')
+			+b.__category
+				+b.__header
+					+e.name Медали
+					+e.count 12 шт
+				+e.__items
+					+compositionItem('profile')
+					+compositionItem('profile')

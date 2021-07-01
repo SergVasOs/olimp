@@ -1,0 +1,15 @@
+.profileEdit {
+    @apply
+        pt-0
+        pb-32;
+
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__form {
+        @apply
+        mb-6;
+    }
+}

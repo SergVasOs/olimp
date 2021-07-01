@@ -1,0 +1,42 @@
+.galleryCategory {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__menu {
+        @apply mb-4;
+    }
+
+    &__list {
+        @apply
+            grid
+            grid-cols-3
+            gap-8
+            mb-8;
+    }
+
+    &__item {
+        @apply
+        pb-full
+        relative;
+
+        &_big {
+            @apply
+            col-span-2
+            row-span-2;
+        }
+
+        &__img {
+            @apply
+            rounded
+            flexImageCover;
+        }
+    }
+
+    &__more {
+        @apply
+            button_lg
+            button_gradientGray
+            w-full;
+    }
+}

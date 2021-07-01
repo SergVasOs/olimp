@@ -1,0 +1,48 @@
+@import "/src/mobile/page/index/clients/clients";
+
+.index {
+    &__banners {
+        @apply
+        mb-4;
+    }
+
+    &__catalogMenu {
+        @apply
+        mb-12;
+    }
+
+    &__exclusive {
+        @apply
+        mb-12;
+    }
+
+    &__sale {
+        @apply
+        mb-12;
+    }
+
+    &__importantInfo {
+        @apply
+        mb-12;
+    }
+
+    &__gifts {
+        @apply
+        mb-16;
+    }
+
+    &__clients {
+        @apply
+        mb-12;
+    }
+
+    &__suvenir {
+        @apply
+        mb-8;
+    }
+
+    &__textInfo {
+        @apply
+        mb-10;
+    }
+}

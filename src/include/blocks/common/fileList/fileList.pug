@@ -1,0 +1,8 @@
+include /include/elements/fileItem/fileItem
+
+mixin fileList
+	+b.fileList&attributes(attributes)
+		+e.title Загруженные документы:
+		+b.__items
+			+fileItem
+			+fileItem

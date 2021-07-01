@@ -1,0 +1,8 @@
+mixin cartHead
+	+b.cartHead&attributes(attributes)
+		.box
+			+e.title Ваша корзина
+			+e.subtitle
+				| Всего в корзине:
+				+e.count 300
+				| позиций

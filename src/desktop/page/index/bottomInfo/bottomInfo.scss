@@ -1,0 +1,18 @@
+.bottomInfo {
+    &__box {
+        @apply
+        flex
+        justify-between
+        space-x-4;
+    }
+
+    &__textBlock {
+        @apply
+            w-1/2;
+    }
+
+    &__consultForm {
+        @apply
+        w-1/3;
+    }
+}

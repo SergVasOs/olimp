@@ -1,0 +1,55 @@
+extends /mobile/layout/layout
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/elements/color/color
+include /include/blocks/common/pageHead/pageHead
+include /mobile/page/product/productPopper/productPopper
+
+block append pageVars
+	- var pageTitle = "Продукт";
+	- var pageClass = "product";
+	- var hideFooter = true;
+
+block content
+	+pageHead('', '/catalog-grid.html').__head
+		+b.icon.__icon(href='#')
+			include /assets/images/md/shareIcon.svg
+		+favoriteIcon._active.__icon
+	+b.box._full.__top
+		+b.tabs._stretch
+			+b.__content
+				+e.item._active(data-content-tab='images')
+					+b.product__top__gallery
+						+labels.__labels
+						+b.icon._2lg.__3dIcon(href='#')
+							include /assets/images/2lg/3dIcon.svg
+						+b.__swiper.swiper-container
+							+b.__wrapper.swiper-wrapper
+								+b.__slide.swiper-slide
+									+e.img(src='images/shirt.png')
+								+b.__slide.swiper-slide
+									+e.img(src='images/shirt.png')
+								+b.__slide.swiper-slide
+									+e.img(src='images/shirt.png')
+							+b.__dots.swiper-dots
+				+e.item(data-content-tab='upgrade')
+					+b.product__top__gallery
+						+b.__upgrade
+							+e.img(src='images/upgrade-shirt.png')
+				+e.item(data-content-tab='sets')
+					+b.product__top__gallery
+						+b.__swiper.swiper-container
+							+b.__wrapper.swiper-wrapper
+								+b.__slide.swiper-slide
+									+e.img(src='images/set-shirt.png')
+								+b.__slide.swiper-slide
+									+e.img(src='images/set-shirt.png')
+								+b.__slide.swiper-slide
+									+e.img(src='images/set-shirt.png')
+							+b.__dots.swiper-dots
+			+b.__buttons
+				+e.item._active(data-tab='images') Фотографии
+				+e.item(data-tab='upgrade') Нанесение и комплект
+				+e.item(data-tab='sets') Готовые решения
+	.box
+		+color._lg.__prop
+	+productPopper(true)

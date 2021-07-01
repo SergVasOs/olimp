@@ -1,0 +1,9 @@
+@import "/src/desktop/page/catalog/catalogContent/catalogContent";
+@import "/src/desktop/page/catalog/catalogHead/catalogHead";
+
+.catalog {
+    &__head {
+        @apply mb-4
+        lg:mb-8;
+    }
+}

@@ -1,0 +1,19 @@
+.productFileList {
+    &__fileList {
+        @apply mb-6;
+    }
+
+    &__dropArea {
+        @apply
+        mb-6;
+    }
+
+    &__example {
+        @apply
+        underline
+        text-sm
+        font-medium
+        block
+        text-center;
+    }
+}

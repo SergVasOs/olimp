@@ -1,0 +1,12 @@
+.fileList {
+    &__title {
+        @apply
+            font-bold
+            text-3xl
+            mb-4;
+    }
+
+    &__items {
+        @apply space-y-4;
+    }
+}

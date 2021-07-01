@@ -1,0 +1,122 @@
+.freeDeliveryPopper {
+    &__box {
+        @apply
+        flex
+        flex-col
+        items-stretch;
+    }
+
+    &__applyIcon {
+        @apply
+        mx-auto
+        mb-4;
+    }
+
+    &__title {
+        @apply
+            text-xl
+            text-center
+            text-blue-dark
+            mb-4;
+    }
+
+    &__info {
+        @apply
+        text-sm
+        text-gray
+        mb-6
+        text-center;
+    }
+
+    &__steps {
+        @apply
+        w-full
+        flex
+        px-2
+        mb-10;
+
+        &__step {
+            @apply
+            text-gray
+            w-min
+                flex
+                flex-col
+                items-center;
+
+            &_active {
+                @apply text-black;
+            }
+
+            &__icon {
+                @apply
+                mb-2;
+            }
+
+            &__name {
+                @apply
+                -mx-4
+                text-sm
+                text-center;
+            }
+        }
+
+        &__process {
+            @apply
+                flex-1
+                mt-10
+                h-px
+                bg-gray
+                relative;
+
+            &__bar {
+                @apply
+                    bg-orange-light
+                    h-1
+                    absolute
+                    bottom-0
+                    left-0;
+            }
+        }
+    }
+
+    &__remainder {
+        @apply
+            text-center
+            mb-6;
+
+        &__label {
+            @apply
+                text-sm
+                text-gray
+                mb-4;
+        }
+
+        &__price {
+            @apply
+                text-3xl
+                text-blue-dark;
+        }
+    }
+
+    &__buttons {
+        @apply
+            grid
+            grid-cols-2
+            gap-2
+            mb-6;
+    }
+
+    &__products {
+        &__title {
+            @apply
+                text-center
+                text-xl
+                text-blue-dark
+                mb-4;
+        }
+        &__list {
+            @apply
+            grid grid-cols-2 gap-4;
+        }
+    }
+}

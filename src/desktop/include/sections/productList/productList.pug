@@ -1,0 +1,18 @@
+include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+
+mixin productList(title)
+	+b.productList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+			+b.swiper-container.__swiper
+				+b.swiper-wrapper
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+					+catalogGridItem.swiper-slide
+				+b.swiper-prev
+					include /assets/images/shevronBold.svg
+				+b.swiper-next
+					include /assets/images/shevronBold.svg

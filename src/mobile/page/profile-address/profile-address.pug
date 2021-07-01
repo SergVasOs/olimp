@@ -1,0 +1,36 @@
+extends /mobile/layout/layout
+include /include/elements/bottomButton/bottomButton
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/profile/mapLayer/mapLayer
+
+block append pageVars
+	- var pageTitle = "Добавить адрес";
+	- var pageClass = "profileAddress";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Добавить адрес', 'profile-addresses.html')._profile.__head
+		+b.icon._xl.__icon
+			include /assets/images/xl/addressIcon.svg
+	.box
+		+b.FORM.form.__form
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Адрес', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Квартира / Офис', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Подъезд', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Этаж', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Домофон', required)
+		+b.links.__links
+			+e.item(href='#layer_map') Уточнить на карте
+	+bottomButton
+		+b.button._lg._green(href='profile.html') Сохранить
+	+mapLayer

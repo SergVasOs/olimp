@@ -1,0 +1,24 @@
+extends /mobile/layout/layout
+include /include/elements/bottomButton/bottomButton
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/profile/addressItem/addressItem
+
+block append pageVars
+	- var pageTitle = "Адреса доставки";
+	- var pageClass = "profileAddresses";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Адреса доставки', 'profile.html')._profile.__head
+		+b.icon._xl.__icon
+			include /assets/images/xl/addressIcon.svg
+	.box
+		+e.list
+			+addressItem
+			+addressItem
+			+addressItem
+			+addressItem
+			+addressItem
+			+addressItem
+	+bottomButton
+		+b.button._lg._green(href='profile.html') Сохранить

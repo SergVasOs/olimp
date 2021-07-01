@@ -1,0 +1,34 @@
+extends /mobile/layout/layout
+include /include/elements/avatar/avatar
+include /include/elements/bottomButton/bottomButton
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/profile/orderItem/orderItem
+
+block append pageVars
+	- var pageTitle = "Узнать статус заказа";
+	- var pageClass = "orderStatus";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Узнать статус заказа', 'profile.html')._profile.__head
+		+b.icon._xl.__icon
+			include /assets/images/xl/bestDeliveryIcon.svg
+	.box
+		+b.FORM.form.__form
+			+e.row
+				+b.input
+					+e.icon
+						include /assets/images/lg/searchIcon.svg
+					+e.INPUT.field(type='text', placeholder='Укажите номер заказа', required)
+			+e.row
+				+e.label Телефон указанный при заказе *
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)
+		+b.__orders
+			+e.title ПОПУЛЯРНОЕ
+			+e.list
+				+orderItem(true)
+				+orderItem(true)
+				+orderItem(true)
+	+bottomButton
+		+b.button._lg._blue(href='profile.html') Искать

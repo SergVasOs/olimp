@@ -1,0 +1,42 @@
+include /include/elements/dropArea/dropArea
+include /include/blocks/common/fileList/fileList
+
+mixin orderContactsContent
+	+b.orderContactsContent&attributes(attributes)
+		+e.box.box
+			+b.tabs._blue.__tabs
+				+b.__buttons
+					+e.item._active(data-tab='phys') Физическое лицо
+					+e.item(data-tab='jur') Юридическое лицо
+				+b.__content
+					+e.item._active(data-content-tab='phys')
+						+b.FORM.form
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Ваше имя', required)
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Телефон', required)
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Ваша почта', required)
+							+e.row
+								+b.TEXTAREA.textarea(placeholder='Комментарии к заказу')
+					+e.item(data-content-tab='jur')
+						+b.FORM.form
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Название организации', required)
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='ИНН', required)
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Телефон', required)
+							+e.row
+								+b.input._lg
+									+e.INPUT.field(type='text', placeholder='Электронная почта', required)
+							+e.row
+								+b.TEXTAREA.textarea(placeholder='Комментарии к заказу')
+			+dropArea.__dropArea
+			+fileList.__fileList

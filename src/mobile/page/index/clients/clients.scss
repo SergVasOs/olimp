@@ -1,0 +1,36 @@
+.clients {
+    &__title {
+        @apply
+        h2
+        mb-4;
+    }
+
+    &__items {
+        @apply
+            mt-6 grid grid-cols-2 gap-4;
+
+        &__item {
+            @apply
+            shadow
+            border
+            rounded;
+
+            &__img {
+                @apply
+                h-44
+                w-full
+                object-cover
+                rounded-t;
+            }
+
+            &__logo {
+                @apply
+                my-2
+                px-4
+                h-12
+                w-full
+                object-contain;
+            }
+        }
+    }
+}

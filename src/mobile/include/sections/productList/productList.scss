@@ -1,0 +1,21 @@
+.productList {
+	@apply block;
+
+	&__title {
+		@apply
+		h2
+		mb-4;
+	}
+
+	&__swiper {
+		@apply
+			overflow-visible;
+
+		&__wrapper {
+			&__item {
+				@apply
+				w-80;
+			}
+		}
+	}
+}

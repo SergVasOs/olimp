@@ -1,0 +1,114 @@
+.productVariants {
+    &__title {
+        @apply
+            h2
+            mb-8;
+    }
+
+    &__swiper {
+        @apply
+        overflow-visible;
+
+        &__wrapper {
+            &__item {
+                @apply
+                relative
+                w-64
+                h-auto
+                border
+                rounded
+                shadow-lg
+                p-4
+                flex
+                flex-col
+                items-stretch
+                bg-gray-bg;
+
+                &__label {
+                    @apply
+                    absolute
+                    left-4
+                    top-0
+                    h-4
+                    px-3
+                    rounded-full
+                    text-xxs
+                    transform -translate-y-1/2
+                    flex
+                    items-center;
+                }
+
+                &__title {
+                    @apply
+                    flex-1
+                    font-bold
+                    mb-2;
+                }
+
+                &__prices {
+                    @apply
+                    mt-auto
+                    flex
+                    justify-between
+                    items-baseline;
+
+                    &__price {
+                        @apply
+                        text-lg;
+                    }
+
+                    &__oldPrice {
+                        @apply
+                        ml-2
+                        text-xs
+                        oldPrice;
+                    }
+                }
+
+                &_best {
+                    @apply
+                    ring-green
+                    border-green;
+                }
+
+                &_best & {
+                    &__label {
+                        @apply
+                        bg-green;
+                    }
+                }
+
+                &_standart {
+                    @apply
+                    ring-orange
+                    border-orange;
+                }
+
+                &_standart & {
+                    &__label {
+                        @apply
+                        bg-orange;
+                    }
+                }
+
+                &_econom {
+                    @apply
+                    ring-orange-light
+                    border-orange-light;
+                }
+
+                &_econom & {
+                    &__label {
+                        @apply
+                        bg-orange-light;
+                    }
+                }
+
+                &_active {
+                    @apply
+                    ring-2;
+                }
+            }
+        }
+    }
+}

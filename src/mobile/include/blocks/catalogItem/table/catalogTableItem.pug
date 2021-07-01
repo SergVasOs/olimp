@@ -1,0 +1,40 @@
+mixin catalogTableItem(book=false,shirt=false)
+	+b.catalogTableItem&attributes(attributes)
+		+b.__header
+			+e.col._img Фото
+			+e.col._info Название/Цена
+			+e.col._prop #{shirt ? 'Цвет' : 'Размер'}
+		+b.__variant
+			+b.__img
+				+b.__wrapper
+					+e.image(src=shirt ? "images/shirt.png" : "images/catalogItem.png")
+			+b.__info
+				+e.name(href=!shirt ? "product.html" : "product-shirt.html") Название товара Название товара Название товара Название товара Название товара
+				+b.__prices
+					+e.price 127 354 ₽
+					+e.oldPrice 137 354 ₽
+			if (shirt)
+				+b.__prop
+					+e.img(src='images/color1.png')
+			else
+				+e.prop 20.5 см
+			+b.button._yellow.__buyButton
+				+e.icon
+					include /assets/images/lg/basket1Icon.svg
+		+b.__variant
+			+b.__img
+				+b.__wrapper
+					+e.image(src=!shirt ? "images/shirt.png" : "images/catalogItem.png")
+			+b.__info
+				+e.name(href=shirt ? "product.html" : "product-shirt.html") Название товара Название товара Название товара Название товара Название товара
+				+b.__prices
+					+e.price 127 354 ₽
+					+e.oldPrice 137 354 ₽
+			if (shirt)
+				+b.__prop
+					+e.img(src='images/color1.png')
+			else
+				+e.prop 20.5 см
+			+b.button._yellow.__buyButton
+				+e.icon
+					include /assets/images/lg/basket1Icon.svg

@@ -1,0 +1,29 @@
+.saleList {
+	&__title {
+		@apply
+		text-3xl
+		font-bold
+		mb-4;
+	}
+
+	&__content {
+		@apply
+			flex
+			items-stretch
+			space-x-8;
+	}
+
+	&__banner {
+		@apply
+		w-1/4;
+
+		&__img {
+			@apply fullImageCover;
+		}
+	}
+
+	&__swiper {
+		@apply
+			w-3/4;
+	}
+}

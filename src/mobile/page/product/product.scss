@@ -1,0 +1,60 @@
+@import "/src/mobile/page/product/productVariants/productVariants";
+@import "/src/mobile/page/product/productCategories/productCategories";
+@import "/src/mobile/page/product/productProperties/productProperties";
+@import "/src/mobile/page/product/productPopper/productPopper";
+
+.product {
+    @apply
+    pb-44;
+
+    &__head {
+        @apply z-10;
+    }
+
+    &__top {
+        @apply
+            -mt-16
+            relative
+            mb-4;
+
+        &__gallery {
+            @apply relative h-product-gallery;
+
+            &__labels {
+                @apply absolute
+                z-10
+                top-20
+                left-4;
+            }
+
+            &__3dIcon {
+                @apply absolute
+                z-10
+                bottom-4
+                left-4;
+            }
+
+            &__upgrade {
+                @apply h-full;
+
+                &__img {
+                    @apply fullImageContain;
+                }
+            }
+
+            &__swiper {
+                &__dots {
+                    @apply
+                    flex-col
+                    space-x-0
+                    space-y-2
+                    absolute
+                    z-10
+                    top-1/2
+                    right-4
+                    transform -translate-x-1/2;
+                }
+            }
+        }
+    }
+}

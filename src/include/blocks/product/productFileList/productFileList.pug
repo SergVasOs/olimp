@@ -1,0 +1,8 @@
+include /include/elements/dropArea/dropArea
+include /include/blocks/common/fileList/fileList
+
+mixin productFileList
+	+b.productFileList&attributes(attributes)
+		+fileList.__fileList
+		+dropArea.__dropArea
+		+e.example(href='#') Скачать файл шаблона

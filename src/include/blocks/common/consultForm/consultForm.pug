@@ -1,0 +1,16 @@
+mixin consultForm
+	+b.consultForm&attributes(attributes)
+		+e.title
+			| Не нашли что искали?
+			br
+			| Требуется консультация?
+		+e.subtitle Закажите обратный звонок. Наш консультант перезвонит в течении часа.
+		+b.FORM.form
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Фамилия, имя, отчество', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='+7(', required)
+			+e.footer
+				+b.BUTTON.button._lg Перезвоните мне

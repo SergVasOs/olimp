@@ -1,0 +1,31 @@
+include /include/elements/quantity/quantity
+include /include/elements/buyButton/buyButton
+include /include/layout/modals/deleteCartItemModal/deleteCartItemModal
+
+mixin productItem(mode)
+	+b.productItem&attributes(attributes)
+		+b.__card
+			+e.img(src='images/catalogItem.png')
+			+b.__info
+				+e.name Кубок B368-3
+				+e.prop Размер: 20,5 см
+				+b.__prices
+					+e.price 27 354 ₽
+					+e.oldPrice 47 354 ₽
+			if (mode !== 'profile')
+				+b.__actions
+					+e.buttons
+						+b.icon(href='#')
+							include /assets/images/md/editIcon.svg
+						+b.icon(href='#')
+							include /assets/images/md/copyIcon.svg
+						+b.icon(href='#modal_delete_cart_item')
+							include /assets/images/md/crossIcon.svg
+					+quantity.__quantity
+			else
+				+e.count 22 шт
+		if (mode !== 'cart')
+			+b.__button
+				+buyButton('В корзину')._sm
+		if (mode !== 'profile')
+			+deleteCartItemModal

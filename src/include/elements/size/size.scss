@@ -1,30 +1,46 @@
 .size {
-    &__swiper__wrapper__item {
+    &__swiper {
         @apply
-            w-min
-            text-100
-            text-blue-800
-            border
-            border-gray-400
-            rounded
-            cursor-pointer
-            whitespace-nowrap
-            p-1;
+            overflow-visible;
 
-        &_active {
-            @apply
-                bg-blue-800
-                text-white
-                border-blue-800;
+        &__wrapper {
+            &__item {
+                @apply
+                w-auto
+                min-w-size
+                text-xs
+                text-blue-dark
+                border
+                rounded
+                cursor-pointer
+                whitespace-nowrap
+                h-8
+                flex
+                items-center
+                justify-center
+                p-2;
+
+                &_active {
+                    @apply
+                    bg-blue-dark
+                    text-white
+                    border-blue-dark;
+                }
+            }
         }
     }
 
     &_lg & {
-        &__swiper__wrapper__item {
-            @apply
-            text-200
-            font-medium
-            p-3;
+        &__swiper {
+            &__wrapper {
+                &__item {
+                    @apply
+                    text-sm
+                    font-medium
+                    h-10
+                    p-4;
+                }
+            }
         }
     }
 }

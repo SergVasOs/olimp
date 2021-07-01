@@ -1,0 +1,165 @@
+.profileOrder {
+    @apply
+        pt-0;
+
+    &__head {
+        @apply
+        mb-8;
+    }
+
+    &__top {
+        @apply
+        flex
+        justify-between
+        items-center
+        space-x-4
+        mb-4;
+
+        &__count {
+            @apply text-gray-light;
+        }
+
+        &__status {
+            @apply
+            h-10
+            w-40
+            flex
+            justify-center
+            items-center
+            bg-green
+            text-white
+            text-sm
+            font-bold
+            rounded;
+
+            &_red {
+                @apply bg-red;
+            }
+
+            &_blue {
+                @apply bg-blue-dark;
+            }
+
+            &_gray {
+                @apply bg-gray-border;
+            }
+        }
+    }
+
+    &__info {
+        @apply
+        border
+        rounded-lg
+        p-4
+        mb-8;
+
+        &__row {
+            @apply
+                space-x-4
+                mb-4
+                pb-4
+                border-b
+                flex
+                justify-between;
+
+            &__col {
+                @apply
+                    space-y-2
+                    first:w-32
+                    last:flex-1;
+
+                &__title {
+                    @apply
+                        text-xs
+                        text-gray-light
+                        uppercase;
+                }
+
+                &__text {
+                    @apply
+                        text-sm;
+                }
+            }
+        }
+
+        &__contact {
+            &__title {
+                @apply
+                text-xs
+                text-gray-light
+                uppercase
+                mb-2;
+            }
+
+            &__content {
+                @apply
+                    flex
+                    space-x-4
+                    items-center;
+
+                &__info {
+                    @apply
+                    text-sm
+                        space-y-4;
+
+                    &__name {
+                        @apply
+                            font-bold;
+                    }
+
+                    &__contacts {
+                        @apply
+                            space-x-2;
+
+                        &__item {
+                            @apply
+                                text-blue
+                                font-medium;
+
+                            &__add {
+                                @apply
+                                    ml-1
+                                    text-gray-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__list {
+        @apply
+        space-y-4;
+
+        &__title {
+            @apply h2;
+        }
+
+        &__category {
+            @apply
+            space-y-4;
+
+            &__header {
+                @apply
+                p-4
+                bg-gray-card
+                rounded
+                flex
+                items-center
+                justify-between;
+
+                &__count {
+                    @apply
+                    font-bold;
+                }
+            }
+
+            &__items {
+                @apply
+                space-y-4;
+            }
+        }
+    }
+}

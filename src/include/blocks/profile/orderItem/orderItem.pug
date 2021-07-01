@@ -1,0 +1,40 @@
+include /include/elements/quantity/quantity
+include /include/elements/buyButton/buyButton
+
+mixin orderItem(isShort)
+	+b.orderItem&attributes(attributes)
+		+b.__card
+			+b.__col
+				+e.title Номер:
+				+e.text 11786
+			+b.__col._status
+				+e.title Статус:
+				+e.text._status Отгружен
+			+b.__col
+				+e.title Сумма:
+				+e.text 12 500 руб
+			+b.icon._xl(href='profile-order.html')
+				include /assets/images/xl/shevronIcon.svg
+		if (!isShort)
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')
+					+b.__item.swiper-slide(src='images/cap.png')

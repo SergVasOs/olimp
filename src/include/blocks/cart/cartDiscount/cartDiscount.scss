@@ -1,0 +1,42 @@
+.cartDiscount {
+    @apply
+    p-4
+    border
+    rounded;
+
+    &__title {
+        @apply
+            text-lg
+            font-medium
+            mb-4;
+    }
+
+    &__items {
+        @apply
+            grid
+            grid-cols-2
+        gap-y-2
+        gap-x-16
+        mb-6;
+    }
+
+    &__item {
+        @apply
+            flex
+            items-center
+            justify-between;
+
+        &__value {
+            @apply
+                text-green-300;
+        }
+    }
+
+    &__info {
+        @apply mb-2;
+    }
+
+    &__link {
+        @apply text-blue-400 underline;
+    }
+}

@@ -1,0 +1,24 @@
+include /include/elements/buyButton/buyButton
+include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+
+mixin bookOrderPopper
+	+b#popper_book_order.popper
+		+e.body
+			+e.handler
+			+b.icon._lg.__close
+				include /assets/images/lg/crossIcon.svg
+			+b.bookOrderPopper.__content
+				.box
+					+b.icon._2xl.__applyIcon
+						include /assets/images/3xl/applyIcon.svg
+					+e.title Все готово!
+					+e.text Выбор сделан! Ваш подарок будет лежать в корзине. Забронируйте заказ, чтобы не потерять его.
+					+b.FORM.form
+						+e.row
+							+b.input._lg
+								+e.INPUT.field(type='text', placeholder='Фамилия, имя, отчество', required)
+						+e.row
+							+b.input._lg
+								+e.INPUT.field(type='text', placeholder='+7(', required)
+						+e.footer
+							+b.button._lg._white(href='#') Забронировать

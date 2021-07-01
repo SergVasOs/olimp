@@ -1,0 +1,14 @@
+.cart {
+    @apply
+        pt-6;
+
+    &__head {
+        @apply
+            mb-4;
+    }
+
+    &__cartItems {
+        @apply
+        mb-8;
+    }
+}

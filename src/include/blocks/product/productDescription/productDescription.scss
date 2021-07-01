@@ -1,8 +1,7 @@
 .productDescription {
     &__title {
         @apply
-            text-850
-            font-bold
+            h2
             mb-4;
     }
 
@@ -12,7 +11,7 @@
 
     &__more {
         @apply
-            text-blue-400
+            text-blue
             underline
             ml-1;
     }

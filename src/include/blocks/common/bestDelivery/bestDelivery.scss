@@ -1,0 +1,48 @@
+.bestDelivery {
+    @apply
+    p-4
+    border
+    rounded
+    lg:mb-6
+    lg:border-0
+    lg:p-0;
+
+    &__date {
+        @apply
+        flex
+        items-center
+        font-medium
+        mb-1
+        lg:font-normal;
+
+        &__icon {
+            @apply
+            text-blue-dark
+            mr-4;
+        }
+
+        &__label {
+            @apply
+            text-gray
+            mr-2;
+        }
+    }
+
+    &__items {
+        @apply
+            space-y-1
+            ml-12;
+
+        &__item {
+            @apply
+            flex
+            items-center
+            text-gray;
+
+            &__icon {
+                @apply
+                text-orange-light;
+            }
+        }
+    }
+}

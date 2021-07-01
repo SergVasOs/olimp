@@ -1,0 +1,86 @@
+.orderShippingContent {
+    &__text {
+        @apply
+            text-gray-light
+            mb-4;
+    }
+
+    &__group {
+        @apply
+        mb-6
+        last:mb-0;
+
+        &__title {
+            @apply
+                h2;
+        }
+
+        &__desc {
+            @apply
+            mt-2
+            text-gray-light;
+        }
+
+        &__items {
+            @apply
+            mt-4
+            space-y-4;
+
+            &__item {
+                @apply
+                space-y-4;
+
+                &__card {
+                    @apply
+                    p-4
+                    border
+                    rounded
+                    flex
+                    items-center
+                    space-x-8;
+
+                    &__name {
+                        @apply
+                        flex-1
+                        space-y-2;
+
+                        &__title {
+                            @apply
+                            font-medium;
+                        }
+
+                        &__desc {
+                            @apply
+                            text-sm
+                            text-gray-light;
+                        }
+                    }
+
+                    &__info {
+                        @apply
+                        text-right
+                        space-y-2;
+
+                        &__price {
+                            @apply
+                            font-medium;
+                        }
+                    }
+                }
+
+                &__button {
+                    @apply
+                    w-full;
+                }
+
+                &_active & {
+                    &__card {
+                        @apply
+                        border-yellow-light
+                        bg-yellow-light;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.profileAddresses {
+    @apply
+        pt-0
+        pb-32;
+
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__list {
+        @apply
+        space-y-4;
+    }
+}

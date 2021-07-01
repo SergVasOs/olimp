@@ -1,18 +1,10 @@
-include /include/elements/size/size
-include /include/elements/price/price
-include /include/elements/oldPrice/oldPrice
-include /include/elements/buyButton/buyButton
-include /include/elements/labels/labels
-include /include/elements/favoriteIcon/favoriteIcon
-include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
-include /include/elements/dots/dots
-
 mixin selectionItem
 	+b.selectionItem
-		+catalogItemGallery
-		+e.name(href='/product.html') Название товара Название товара Название товара Название товара Название товара
-		+e.prices
-			+price
-			+oldPrice
-		+b.__addButton.button._blue
+		+b.__image
+			+e.img(src='images/cap.png')
+		+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
+		+b.__prices
+			+e.price 127 354 ₽
+			+e.oldPrice 147 354 ₽
+		+b.button.__addButton
 			+e.text Добавить

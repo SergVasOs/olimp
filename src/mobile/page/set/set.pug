@@ -1,0 +1,37 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/common/compositionItem/compositionItem
+include /include/elements/buyButton/buyButton
+
+block append pageVars
+	- var pageTitle = "Комплект";
+	- var pageClass = "set";
+
+block content
+	+pageHead('', '/gallery-cat.html').__head
+	+b.__gallery
+		.box.box_full
+			+e.img(src='images/set.png')
+	.box
+		+b.__buy
+			+b.__total
+				+e.label Итоговая сумма:
+				+e.oldPrice 9 523 р.
+				+e.price 2 523 р.
+			+b.__items
+				+b.__item
+					+e.label Cтоимость товара:
+					+e.price 840 р.
+				+b.__item
+					+e.label Cтоимость товара:
+					+e.price 840 р.
+				+b.__item
+					+e.label Cтоимость товара:
+					+e.price 840 р.
+			+buyButton('Добавить в корзину')._lg.__buyButton
+		+b.__composition
+			+e.title Состав комплекта
+			+e.items
+				+compositionItem('set')._open
+				+compositionItem('set')
+				+compositionItem('set')

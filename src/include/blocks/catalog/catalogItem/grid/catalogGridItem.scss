@@ -3,16 +3,18 @@
         relative
         flex
         flex-col
-        rounded-2xl border border-gray-500
+        rounded
+        border
+        pb-6
         xl:border-transparent
-        xl:hover:border-gray-500;
+        xl:hover:border-gray-border;
 
     &__favoriteIcon {
         @apply
             absolute
             z-10
             top-4
-            right-4;
+            right-2;
     }
 
     &__labels {
@@ -20,77 +22,93 @@
             absolute
             z-10
             top-4
-            left-4;
+            left-2;
     }
 
     &__catalogItemGallery {
         @apply
-        rounded-t-2xl
+        rounded-t
         mb-4;
     }
 
-    &__size {
+    &__prop {
         @apply
-            pl-3;
+            overflow-hidden
+            px-2
+            mb-4;
     }
 
     &__material {
         @apply
-            text-gray-500
-            text-300
+            text-gray-light
+            text-xs
             font-medium
             flex
             flex-1
-            items-end
-            px-3
-            pt-3
-            pb-2;
+            px-2
+            mb-2;
     }
 
     &__name {
         @apply
-        text-black
-            leading-5
+            text-black
+            text-sm
             line-clamp-2
-            px-3;
+            px-2
+            mb-4;
     }
 
     &__bottom {
         @apply
-            px-3
-            pt-4
-            pb-5
+            px-2
             flex
             justify-between
-            items-center
-            lg:pt-2;
-    }
+            items-center;
 
-    &__prices {
-        @apply
+        &__prices {
+            @apply
             flex
             items-baseline
+            flex-wrap
             lg:block;
-    }
 
-    &__oldPrice {
-        @apply
-            ml-2
-            lg:ml-0
-            lg:mt-1;
-    }
+            &__price {
+                @apply
+                price
+                font-bold
+                text-2xl
+                mr-2
+                lg:mr-0;
+            }
 
-    &__buyButton {
-        @apply
+            &__oldPrice {
+                @apply
+                oldPrice
+                text-lg
+                lg:mt-1;
+            }
+        }
+
+        &__buyButton {
+            @apply
             hidden
             xl:invisible
             lg:flex;
+        }
+
+        &__bookButton {
+            @apply
+            w-full;
+        }
     }
 
+
     &:hover & {
-        &__buyButton {
-            @apply
-            xl:visible;
+        &__bottom {
+            &__buyButton {
+                @apply
+                xl:visible;
+            }
         }
     }
 }

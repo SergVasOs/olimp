@@ -1,0 +1,35 @@
+.profileOrders {
+    @apply
+        pt-0
+        pb-16;
+
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__orders {
+        @apply
+        space-y-4;
+    }
+
+    &__products {
+        &__buttons {
+            @apply
+            flex
+            space-x-4
+            mb-4;
+
+            &__button {
+                @apply
+                button_gray
+                flex-1;
+            }
+        }
+
+        &__list {
+            @apply
+            space-y-4;
+        }
+    }
+}

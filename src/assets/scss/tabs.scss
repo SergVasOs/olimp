@@ -8,9 +8,10 @@
             }
         }
     }
+
     &__buttons {
         @apply
-        h-13
+        bg-white
         flex
         items-stretch
         justify-between
@@ -21,11 +22,14 @@
         &__item {
             @apply
             relative
-            px-7
+            py-4
+            px-2
+            mx-4
             whitespace-nowrap
-            text-300
+            text-sm
             flex
             items-center
+            justify-center
             cursor-pointer;
 
             &_active {
@@ -36,7 +40,7 @@
                     absolute
                     inset-x-0
                     bottom-0
-                    h-0.5
+                    h-1
                     bg-black;
                 }
             }
@@ -54,6 +58,38 @@
     &_stretch & {
         &__content {
             @apply flex-1;
+        }
+    }
+
+    &_blue & {
+        &__buttons {
+            @apply
+            bg-gray-card
+            rounded
+            border-0;
+
+            &__item {
+                @apply
+                rounded
+                flex-1
+                mx-0
+                font-medium;
+
+                &_active {
+                    @apply
+                    bg-blue-dark
+                    text-white;
+
+                    &:before {
+                        @apply
+                        hidden;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            @apply mt-4;
         }
     }
 }

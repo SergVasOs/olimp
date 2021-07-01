@@ -1,0 +1,16 @@
+include /include/blocks/catalog/productListItem/productListItem
+
+mixin productList(title)
+	+b.productList&attributes(attributes)
+		.box
+			+e.title #{title}
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide
+					+productListItem.__item.swiper-slide

@@ -1,0 +1,93 @@
+.cartTotal {
+    @apply
+    p-4
+    border
+    rounded
+    md:p-8
+    md:pb-12;
+
+    &__freeDelivery {
+        @apply
+        text-lg
+        flex
+        space-x-4
+        items-center
+        mb-6;
+
+        &__text {
+            &__price {
+                @apply
+                font-medium
+                inline
+                mx-1;
+            }
+
+            &__more {
+                @apply
+                text-blue-400
+                ml-1;
+            }
+        }
+    }
+
+    &__info {
+        @apply
+            text-lg
+            space-y-2
+            pb-4
+            mb-4
+            border-b;
+
+        &__row {
+            @apply
+                flex
+                justify-between;
+
+            &_subtotal & {
+                &__value {
+                    @apply
+                        font-bold;
+                }
+            }
+
+            &_discount & {
+                &__value {
+                    @apply
+                    text-green;
+                }
+            }
+        }
+    }
+
+    &__sum {
+        @apply
+        mb-4
+        md:mb-8;
+
+        &__label {
+            @apply
+            text-lg
+            mb-2;
+        }
+
+        &__value {
+            @apply
+            h2;
+        }
+    }
+
+    &__buttons {
+        @apply
+        flex
+        flex-col
+        items-stretch
+        space-y-4;
+    }
+
+    &__bestDelivery {
+        @apply
+            mt-4
+            hidden
+            md:flex;
+    }
+}

@@ -1,47 +1,41 @@
 .modal {
-    @apply fixed z-30 inset-0 overflow-y-auto hidden;
+    @apply fixed z-30 inset-0 overflow-y-auto hidden opacity-0 bg-black bg-opacity-30 transition-opacity duration-300;
 
     &_show {
-        @apply block;
-    }
-
-    &__area {
-        @apply flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0;
-    }
-
-    &__overlay {
-        @apply fixed inset-0 bg-black bg-opacity-75 transition-opacity;
-    }
-
-    &__trick {
-        @apply hidden sm:inline-block sm:align-middle sm:h-screen;
-    }
-
-    &__box {
-        @apply inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-modal;
+        @apply block opacity-100;
     }
 
     &__body {
-        @apply bg-white p-12;
+        @apply
+        absolute
+        max-w-full
+        max-h-screen
+        top-1/2
+        left-1/2
+        transform -translate-x-1/2 -translate-y-1/2
+        bg-white p-12;
+
+        &_screen {
+            @apply
+            w-screen
+            h-screen;
+        }
+    }
+
+    &__close {
+        @apply
+        absolute
+        top-4
+        right-4
+        text-blue-dark
+        cursor-pointer;
     }
 
     &__title {
-        @apply text-800 font-bold pb-7;
+        @apply text-2xl font-bold pb-8;
     }
 
     &__content {
-    }
-
-    &__links {
-        @apply mt-4
-            flex
-            justify-between;
-
-        &__item {
-            @apply flex-1
-            text-center
-            text-gray-900
-            font-medium;
-        }
+        @apply overflow-scrollVert;
     }
 }

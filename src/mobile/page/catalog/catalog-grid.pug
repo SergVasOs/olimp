@@ -1,0 +1,14 @@
+extends /mobile/layout/layout
+include /mobile/page/catalog/catalogHead/catalogHead
+include /mobile/page/catalog/catalogContent/catalogContent
+include /mobile/page/catalog/catalogSubCategories/catalogSubCategories
+
+block append pageVars
+	- var pageTitle = "Кубки пластиковые";
+	- var catalogView = "grid";
+	- var pageClass = "catalog";
+
+block content
+	+catalogHead.__head
+	+catalogSubCategories.__subCategories
+	+catalogContent

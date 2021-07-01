@@ -1,13 +1,4 @@
-.product {
-    &__setList {
-        @apply mb-9;
-    }
-
-    &__productList {
-        @apply mb-9;
-    }
-
-    &__viewedList {
-        @apply mb-9;
-    }
-}
+@import "/src/desktop/page/cart/cart";
+@import "/src/desktop/page/catalog/catalog";
+@import "/src/desktop/page/index/index";
+@import "/src/desktop/page/product/product";

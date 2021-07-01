@@ -11,7 +11,13 @@
 
 html {
     @apply
-    font-sans text-400 text-black;
+    font-sans text-base text-black
+    overflow-x-hidden;
+
+    &.js-modal {
+        @apply
+        overflow-hidden;
+    }
 }
 
 body {
@@ -21,18 +27,38 @@ body {
     min-h-screen
     flex
     flex-col
-    items-stretch;
-
-    &.js-modal {
-        @apply overflow-hidden;
-    }
+    items-stretch
+    overflow-x-hidden;
 }
 
 a {
     @apply
     no-underline
-    text-blue-900
-    border-blue-900
-    hover:text-blue-400
-    hover:border-blue-400;
+    text-blue-dark
+    hover:text-blue-dark;
+}
+
+h2 {
+    @apply
+    h2;
+}
+
+h3 {
+    @apply
+    h3;
+}
+
+h4 {
+    @apply
+    h4;
+}
+
+h5 {
+    @apply
+    h5;
+}
+
+h6 {
+    @apply
+    h6;
 }

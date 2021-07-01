@@ -1,0 +1,36 @@
+.addressItem {
+    @apply
+    p-4
+    border
+    rounded
+    space-y-4;
+
+    &__top {
+        @apply
+            flex
+            space-x-4;
+
+        &__city {
+            @apply
+            flex-1;
+        }
+
+        &__buttons {
+            @apply
+                flex
+                space-x-2;
+        }
+    }
+
+    &__bottom {
+        @apply
+        flex
+        space-x-4
+        items-start;
+
+        &__address {
+            @apply
+            flex-1;
+        }
+    }
+}

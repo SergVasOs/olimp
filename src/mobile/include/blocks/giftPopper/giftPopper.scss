@@ -1,0 +1,19 @@
+.giftPopper {
+    &__box {
+        @apply
+            h-full
+        overflow-scrollVert;
+    }
+    &__title {
+        @apply
+            text-xl
+            text-center
+            text-blue-dark
+            mb-8;
+    }
+
+    &__list {
+        @apply
+        grid grid-cols-2 gap-4;
+    }
+}

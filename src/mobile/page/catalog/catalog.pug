@@ -1,0 +1,36 @@
+extends /mobile/layout/layout
+include /mobile/page/catalog/catalogHead/catalogHead
+include /mobile/page/catalog/catalogSubCategories/catalogSubCategories
+include /mobile/page/catalog/catalogContent/catalogContent
+include /mobile/include/sections/productList/productList
+include /mobile/include/sections/viewedList/viewedList
+
+block append pageVars
+	- var pageTitle = "Каталог";
+	- var catalogView = "grid";
+	- var pageClass = "catalog";
+
+block content
+	+catalogHead.__head
+	+catalogSubCategories.__subCategories
+	.box
+		+b.__topCategories
+			+b.__item
+				+e.img(src='images/categoryIcon1.png')
+				+b.__info
+					+e.title Кубки с Российской символикой
+					+b.__list
+						+e.item(href='catalog-grid.html') Первый вариант
+						+e.item(href='catalog-grid.html') Еще вариант
+						+e.item(href='catalog-grid.html') Самый лучший вариант
+					+b.button.__button(href='catalog-grid.html') Смотреть все
+			+b.__item
+				+e.img(src='images/categoryIcon1.png')
+				+b.__info
+					+e.title Кубки с Российской символикой
+					+b.button.__button(href='catalog-grid.html') Смотреть все
+		+b.__banner
+			+e.img(src='images/banner.png')
+	+catalogContent
+	+productList('Наши эксклюзивы').__exclusive
+	+viewedList.__viewed

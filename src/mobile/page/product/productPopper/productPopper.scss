@@ -1,0 +1,228 @@
+.productPopper {
+	&__body {
+		@apply top-product-popper shadow-top p-0;
+	}
+
+	&__short {
+		@apply
+		bg-gray-card
+		pt-6;
+
+		&__name {
+			@apply h4
+			mb-2
+			line-clamp-1;
+		}
+
+		&__info {
+			@apply flex
+			justify-between
+			items-baseline
+			mb-4;
+
+			&__material {
+				@apply text-gray-light;
+			}
+		}
+
+		&__buttons {
+			@apply flex
+			space-x-4;
+
+			& > * {
+				@apply flex-1;
+			}
+		}
+	}
+
+	&__full {
+		@apply
+		pt-24
+		pb-48
+		hidden
+		h-full
+		overflow-scrollVert;
+
+		&__tabs {
+			@apply
+			bg-white
+			absolute
+			pt-6
+			top-0
+			inset-x-0
+			z-10;
+		}
+
+		&__buy {
+			@apply absolute
+			bottom-0
+			inset-x-0
+			h-40
+			bg-white
+			shadow-top
+			py-4
+			z-10;
+
+			&__box {
+				@apply flex
+				flex-col
+				justify-between
+				h-full;
+			}
+
+			&__label {
+				@apply text-lg;
+			}
+
+			&__price {
+				@apply price text-xl;
+			}
+
+			&__button {
+				@apply button_lg
+				button_green
+				w-full;
+			}
+		}
+
+		&__prop {
+			@apply mb-4;
+		}
+
+		&__card {
+			@apply w-full
+			border
+			rounded
+			p-4
+			flex
+			items-stretch
+			space-x-4;
+
+			&__img {
+				@apply w-20
+				h-20
+				object-contain;
+			}
+
+			&__info {
+				@apply flex
+				flex-col;
+			}
+
+			&__sku {
+				@apply text-sm
+				text-gray-light
+				mb-2;
+			}
+
+			&__name {
+				@apply font-bold
+				mb-2;
+			}
+
+			&__price {
+				@apply text-lg
+				mt-auto;
+			}
+		}
+
+		&__icon {
+			@apply border-t
+			border-b
+			py-2
+			my-4
+			-mx-4
+			text-center
+			text-blue-dark;
+		}
+
+		&__total {
+			@apply mb-4;
+
+			&__info {
+				@apply border
+				rounded-t
+				space-y-2
+				py-6
+				px-4;
+
+				&__header {
+					@apply flex
+					space-x-8;
+
+					&__col {
+						@apply text-gray-dark
+						text-right;
+
+						&_label {
+							@apply flex-1;
+						}
+
+						&_thing,
+						&_total {
+							@apply w-20;
+						}
+					}
+				}
+
+				&__row {
+					@apply flex
+					space-x-8;
+
+					&__col {
+						&_label {
+							@apply flex-1
+							text-gray-dark;
+						}
+
+						&_sum {
+							@apply flex-1
+							font-medium;
+						}
+
+						&_thing,
+						&_total {
+							@apply w-20
+							font-bold
+							text-right;
+						}
+					}
+				}
+			}
+
+			&__buyButton {
+				@apply -mt-2 w-full;
+			}
+		}
+
+		&__productDeliveryInfo,
+		&__setList,
+		&__productVariants,
+		&__productDescription,
+		&__productCategories,
+		&__analog,
+		&__relative,
+		&__productProperties,
+		&__productTags,
+		&__viewed {
+			@apply mb-8;
+		}
+
+		&__helpButton {
+			@apply button_lg
+			button_gray
+			w-full;
+		}
+	}
+
+	//TODO: fix this class
+	&.popper_open & {
+		&__short {
+			@apply hidden;
+		}
+
+		&__full {
+			@apply block;
+		}
+	}
+}

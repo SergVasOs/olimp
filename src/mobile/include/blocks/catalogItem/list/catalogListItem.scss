@@ -1,0 +1,84 @@
+.catalogListItem {
+	@apply
+	relative
+    rounded
+	border
+	overflow-hidden;
+
+	&__favoriteIcon {
+		@apply absolute
+        z-10
+        top-4
+        right-4;
+	}
+
+	&__labels {
+		@apply absolute
+        z-10
+        top-4
+        left-4;
+	}
+
+	&__catalogItemGallery {
+		@apply
+		rounded-t
+		mb-2;
+	}
+
+	&__name {
+		@apply
+		block
+		px-4
+		text-black
+        text-lg
+		mb-2;
+	}
+
+	&__prop {
+		@apply
+		mb-4
+		px-4;
+	}
+
+	&__prices {
+		@apply
+		px-4
+		mb-4
+        flex
+        items-baseline;
+	}
+
+	&__price {
+		@apply price text-2xl;
+	}
+
+	&__oldPrice {
+		@apply oldPrice ml-2 text-lg;
+	}
+
+	&__props {
+		@apply
+		mx-4
+		py-4
+		flex
+		justify-between
+		space-x-8
+		border-t;
+
+		&__item {
+			&__name {
+				@apply font-medium mb-2 whitespace-nowrap;
+			}
+
+			&__value {
+				@apply text-sm whitespace-nowrap;
+			}
+
+			&_material & {
+				&__value {
+					@apply whitespace-normal;
+				}
+			}
+		}
+	}
+}

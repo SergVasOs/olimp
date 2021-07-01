@@ -1,0 +1,72 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /mobile/include/blocks/catalogFilterLayer/catalogFilterLayer
+
+block append pageVars
+	- var pageTitle = "Галерея наших работ";
+	- var pageClass = "galleryCategory";
+
+block content
+	+pageHead('Кубки', '/gallery.html').__head
+		+b.button._yellow.__icon(href='#layer_filters')
+			+e.icon
+				include /assets/images/lg/filterIcon1.svg
+	+e.box.box
+		+b.menu.__menu
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.__item._active.swiper-slide(href='#') Награды
+					+b.__item.swiper-slide(href='#') Подарки
+					+b.__item.swiper-slide(href='#') Сувениры
+					+b.__item.swiper-slide(href='#') Гостинцы
+		+e.list
+			+b.__item._big(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item._big(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item._big(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+			+b.__item(href='set.html')
+				+e.img(src='images/galleryCatItem.png')
+		+b.button.__more Загрузить ещё
+	+catalogFilterLayer

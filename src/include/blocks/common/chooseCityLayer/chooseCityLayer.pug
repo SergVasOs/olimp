@@ -1,0 +1,40 @@
+mixin chooseCityLayer
+	+b#layer_choose_city.layer
+		+e.body
+			+e.header Выбрать город
+				+b.icon._xl.__close
+					include /assets/images/xl/crossIcon.svg
+			+b.chooseCityLayer.__content
+				+b.input.__search
+					+b.__icon
+						include /assets/images/lg/searchIcon.svg
+					+e.INPUT.field(type='text', placeholder='Поиск города', required)
+				+b.__group._popular
+					+e.item(href='#') Все города
+					+e.item(href='#') Москва и МО
+					+e.item(href='#') Санкт-Петербург и ЛО
+				+b.__group
+					+e.label А
+					+e.item(href='#') Алтайский край
+					+e.item(href='#') Архангельская область
+					+e.item(href='#') Астраханская область
+				+b.__group
+					+e.label Б
+					+e.item(href='#') Белгородская область
+					+e.item(href='#') Брянская область
+					+e.item(href='#') Астраханская область
+				+b.__group
+					+e.label В
+					+e.item(href='#') Владимирская область
+					+e.item(href='#') Волгоградская область
+					+e.item(href='#') Вологодская область
+					+e.item(href='#') Воронежская область
+				+b.__group
+					+e.label З
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край
+					+e.item(href='#') Забайкальский край

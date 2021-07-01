@@ -1,0 +1,52 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Новости";
+	- var pageClass = "news";
+
+block content
+	+pageHead('Новости').__head
+	.box
+		+b.tabs._blue.__tabs
+			+b.__buttons
+				+e.item._active(href='news.html') Новости
+				+e.item(href='promo.html') Акции
+				+e.item(href='discount.html') Скидки
+		+b.__items
+			+b.__item
+				+e.img(src='images/newItem.png')
+				+b.__content
+					+b.__top
+						+e.title Industry
+						+e.date 12 августа, 2020
+					+e.text Dive into the world of international finance as seen through the eyes of ambitious twentysomethings struggling to secure their futures.
+					+e.more(href='#') Читать далее
+			+b.__item
+				+e.img(src='images/newItem.png')
+				+b.__content
+					+b.__top
+						+e.title Industry
+						+e.date 12 августа, 2020
+					+e.text Dive into the world of international finance as seen through the eyes of ambitious twentysomethings struggling to secure their futures.
+					+e.more(href='#') Читать далее
+			+b.__item
+				+e.img(src='images/newItem.png')
+				+b.__content
+					+b.__top
+						+e.title Industry
+						+e.date 12 августа, 2020
+					+e.text Dive into the world of international finance as seen through the eyes of ambitious twentysomethings struggling to secure their futures.
+					+e.more(href='#') Читать далее
+			+b.__item
+				+e.img(src='images/newItem.png')
+				+b.__content
+					+b.__top
+						+e.title Industry
+						+e.date 12 августа, 2020
+					+e.text Dive into the world of international finance as seen through the eyes of ambitious twentysomethings struggling to secure their futures.
+					+e.more(href='#') Читать далее
+		+b.button._lg._full._gray(href='#')
+			+e.text Показать больше
+			+e.icon
+				include /assets/images/lg/arrowRight.svg

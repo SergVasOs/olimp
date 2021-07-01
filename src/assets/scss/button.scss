@@ -1,94 +1,127 @@
 .button {
     @apply
-        h-11
-        rounded-lg
-        bg-orange-200
-        text-blue-900
-        flex
+        h-12
+        rounded
+        bg-orange
+        text-blue-dark
+        inline-flex
         justify-center
         items-center
         cursor-pointer
-        px-7
+        px-2
+        font-medium
+        space-x-2
         hover:opacity-90
-        hover:text-blue-900
+        hover:text-blue-dark
         active:ring-1;
+
+    &__icon {
+        @apply
+        inline-block
+        w-8
+        h-8;
+    }
+
+    &__text {
+        @apply
+        text-center;
+    }
+
+    &_xs {
+        @apply
+        text-sm
+        px-2
+        h-8;
+    }
+
+    &_xs & {
+        &__icon {
+            @apply
+            w-4
+            h-4;
+        }
+    }
 
     &_sm {
         @apply
-            text-200
-            rounded-md
-            h-8
-            px-2;
+            h-10;
     }
 
-    &_md {
-        @apply
-        text-200
-        rounded-md
-        h-9
-        px-4;
+    &_sm & {
+        &__icon {
+            @apply
+            w-6
+            h-6;
+        }
     }
 
     &_lg {
         @apply
+        text-lg
         rounded-lg
-        font-medium
-        h-13;
+        space-x-4
+        px-4
+        h-16;
     }
 
-    &_xl {
+    &_gradientGray {
         @apply
-        text-600
-        font-medium
-        rounded-lg
-        h-16;
+            bg-gradient-to-t
+            from-gray-gradient-from
+            to-gray-gradient-to;
     }
 
     &_gray {
         @apply
-            bg-gradient-to-t
-            from-gray-250
-            to-gray-100;
-    }
-
-    &_lightGray {
-        @apply
-        bg-gray-200;
+        bg-gray-bg;
     }
 
     &_white {
         @apply
         border
-        border-blue-900
+        border-blue-dark
         bg-white
-        hover:bg-blue-900
+        hover:bg-blue-dark
         hover:text-white;
     }
 
     &_blue {
         @apply
         border
-        border-blue-900
-        bg-blue-900
+        bg-blue-dark
         text-white
-        hover:text-blue-900
+        hover:text-blue-dark
         hover:bg-white;
     }
 
     &_green {
         @apply
-        bg-green-400
+        bg-green
         text-white;
     }
 
-
-    &__icon + &__text {
+    &_yellow {
         @apply
-            ml-2;
+        bg-orange-light;
     }
 
-    &__text + &__icon {
+    &_full {
         @apply
-        ml-auto;
+        space-x-0
+        w-full
+        px-14
+        relative;
+    }
+
+    &_full & {
+        &__icon {
+            @apply
+                absolute
+                top-1/2
+                transform -translate-y-1/2
+                first:left-4
+                last:right-4;
+        }
     }
 }
+

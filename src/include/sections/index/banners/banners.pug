@@ -1,0 +1,12 @@
+mixin banners
+	+b.banners&attributes(attributes)
+		.box
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.__item.swiper-slide
+						+e.img(src='images/banner.png')
+					+b.__item.swiper-slide
+						+e.img(src='images/banner.png')
+					+b.__item.swiper-slide
+						+e.img(src='images/banner.png')
+				+b.__dots.swiper-dots

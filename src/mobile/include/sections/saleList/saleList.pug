@@ -1,0 +1,21 @@
+include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+
+mixin saleList(title)
+	+b.saleList&attributes(attributes)
+		+e.box.box
+			+e.title #{title}
+			+b.__banner
+				+e.img(src='images/banner.png')
+			+b.__items
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+			+b.button._lg._full._gray
+				+e.text Показать больше товаров
+				+e.icon
+					include /assets/images/lg/arrowRight.svg

@@ -1,0 +1,53 @@
+.pageHead {
+    &__box {
+        @apply
+        flex
+        items-center;
+    }
+
+    &__title {
+        @apply
+        text-2xl
+        font-bold
+        flex-1
+        max-w-max
+        truncate
+        mr-auto;
+    }
+
+    &__back {
+        @apply
+        bg-gray-bg
+        rounded
+        transform rotate-180
+        mr-4;
+    }
+
+    &__icon {
+        @apply
+        ml-4;
+    }
+
+    &_noIcons {
+        @apply mt-2;
+    }
+
+    &_profile {
+        @apply
+            bg-gray-bg
+            py-6;
+    }
+
+    &_profile & {
+        &__back {
+            @apply
+            bg-white;
+        }
+
+        &__title {
+            @apply
+            font-medium
+            ml-auto;
+        }
+    }
+}

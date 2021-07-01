@@ -1,5 +1,5 @@
 mixin downloadButton(text='Скачать')
-	+b.button._lightGray._xl.downloadButton.__downloadButton&attributes(attributes)
-		+b.icon._md.__icon
-			include /assets/images/downloadIcon.svg
+	+b.button._gray._lg._full&attributes(attributes)
+		+e.icon
+			include /assets/images/lg/downloadIcon.svg
 		+e.text #{text}

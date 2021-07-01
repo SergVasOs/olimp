@@ -1,0 +1,20 @@
+include /include/elements/quantity/quantity
+include /include/elements/buyButton/buyButton
+
+mixin addressItem
+	+b.addressItem&attributes(attributes)
+		+b.__top
+			+e.H3.city г. Москва
+			+e.buttons
+				+b.icon(href='profile-address.html')
+					include /assets/images/md/editIcon.svg
+				+b.icon(href='#')
+					include /assets/images/md/copyIcon.svg
+				+b.icon(href='#')
+					include /assets/images/md/crossIcon.svg
+		+b.__bottom
+			+e.address Ул. Зои и Александра Космедемьянских д 2 строение 2 этаж 3 кваритра 334
+			+b.LABEL.radio
+				+b.__icon
+					+e.INPUT.input(type='radio', name='addressId')
+					include /assets/images/md/radioIcon.svg

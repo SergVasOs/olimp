@@ -1,17 +1,17 @@
 +b.header
 	+e.box.box
 		include /include/elements/logo/logo
-		+b.button.__catalogButton(href='/catalog.html')
+		+b.button.__catalogButton(href='catalog-grid.html')
 			+b.icon.__icon
 				include /assets/images/listIcon.svg
 			+e.text Каталог
 		+b.input.__searchInput
 			+b.icon.__icon
-				include /assets/images/searchIcon.svg
+				include /assets/images/xl/searchIcon.svg
 			+e.INPUT.field(type='text', placeholder='Поиск по сайту')
 			+b.button._sm.__button
 				+b.icon._sm
-					include /assets/images/filterIcon.svg
+					include /assets/images/sm/filterIcon.svg
 		+b.__regionChoice(href='#')
 			include /assets/images/regionChoiceIcon.svg
 			+e.label Москва
@@ -20,8 +20,8 @@
 				include /assets/images/phoneIcon.svg
 			+e.label 8 (495) 775-5952
 		+b.icon._lg.__userIcon(href='#modal_login')
-			include /assets/images/userIcon.svg
+			include /assets/images/md/userIcon.svg
 		+b.icon._lg.__favoriteIcon(href='#')
-			include /assets/images/heartIcon.svg
-		+b.icon._lg.__cartIcon(href='#')
-			include /assets/images/basketIcon.svg
+			include /assets/images/xl/favoriteIcon.svg
+		+b.icon._lg.__cartIcon(href='cart.html')
+			include /assets/images/xl/basketIcon.svg

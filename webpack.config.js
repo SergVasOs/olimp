@@ -1,29 +1,35 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const fs = require('fs');
 
-const generateHtmlPlugins = (templateDir) => {
-	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-	return templateFiles.filter(item => {
-		const parts = item.split('.');
-		const extension = parts[1];
+const generateHtmlPlugins = (templatesDir) => {
+	const templateDirs = fs.readdirSync(path.resolve(__dirname, templatesDir));
 
-		return extension === 'pug';
-	}).map(item => {
-		const parts = item.split('.');
-		const name = parts[0];
-		const extension = parts[1];
+	return templateDirs.filter(templateDir => templateDir.split('.').length === 1).map(templateDir => {
+		const templateFiles = fs.readdirSync(path.resolve(__dirname, `${templatesDir}/${templateDir}`));
 
-		return new HtmlWebpackPlugin({
-			filename: `${name}.html`,
-			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+		return templateFiles.filter(item => {
+			const parts = item.split('.');
+			const extension = parts[1];
+
+			return extension === 'pug';
+		}).map(item => {
+			const parts = item.split('.');
+			const name = parts[0];
+			const extension = parts[1];
+
+			return new HtmlWebpackPlugin({
+				filename: `${name}.html`,
+				template: path.resolve(__dirname, `${templatesDir}/${templateDir}/${name}.${extension}`)
+			})
 		})
-	})
+	}).flat(1);
 };
 
-const config = () => {
-	const {OLIMP_VIEW} = process.env;
+const config = (env) => {
+	const { OLIMP_VIEW } = env;
 	const htmlPlugins = generateHtmlPlugins(`./src/${OLIMP_VIEW}/page`);
 
 	return {
@@ -74,10 +80,15 @@ const config = () => {
 				},
 			],
 		},
+		optimization: {
+			minimizer: [
+				new CssMinimizerPlugin(),
+			],
+		},
 		plugins: [
 			...htmlPlugins,
 			new MiniCssExtractPlugin({
-				filename: 'style.css',
+				filename: 'css/style.css',
 			}),
 		],
 	};

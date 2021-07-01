@@ -2,12 +2,13 @@ mixin productUpgradeInfoLayer
 	+b#layer_upgrade_info.layer
 		+e.body
 			+e.header Описание
-				+b.icon.__close
-					include /assets/images/crossIcon.svg
+				+b.icon._xl.__close
+					include /assets/images/xl/crossIcon.svg
 			+b.productUpgradeInfoLayer.__content
 				+e.title
-					+e Шелкография
 					+e
+						| Шелкография
+						br
 						| (трафаретная печать)
 				+e.text
 					+e Печать шелкографией — самая популярная и универсальная технология нанесения изображений на бизнес-подарки и промопродукцию. Этим методом логотип или рекламное сообщение можно нанести почти на любой материал — хлопок, нейлон, полиэстер, пластик, стекло, искусственную кожу, дерево и бумагу.
@@ -15,11 +16,11 @@ mixin productUpgradeInfoLayer
 				+e.media(src='images/productUpgadeInfoMedia.png')
 				+b.__examples
 					+e.title Примеры
-					+b.swiper-container.__swiper
-						+b.swiper-wrapper
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample1.png')
-							+b.swiper-slide.productUpgradeInfoLayer__examples__item(src='images/productUpgradeExample2.png')
+					+b.__swiper.swiper-container
+						+b.__wrapper.swiper-wrapper
+							+b.__item.swiper-slide(src='images/productUpgradeExample1.png')
+							+b.__item.swiper-slide(src='images/productUpgradeExample2.png')
+							+b.__item.swiper-slide(src='images/productUpgradeExample1.png')
+							+b.__item.swiper-slide(src='images/productUpgradeExample2.png')
+							+b.__item.swiper-slide(src='images/productUpgradeExample1.png')
+							+b.__item.swiper-slide(src='images/productUpgradeExample2.png')

@@ -1,0 +1,25 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Регистрация";
+	- var pageClass = "registration";
+	- var hideFooter = true;
+
+block content
+	+pageHead('Регистрация', false)._noIcons.__head
+	.box
+		+b.FORM.form.__form
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Адрес e-mail', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='password', placeholder='Пароль', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='password', placeholder='Повторить', required)
+			+e.footer
+				+b.button._lg._blue(href='#') Регистрация
+		+b.links.__links
+			+e.item(href='login.html') Есть аккаунт? Вход

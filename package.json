@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build-mobile": "OLIMP_VIEW=mobile rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production",
-    "start-mobile": "OLIMP_VIEW=mobile webpack serve --mode=development",
-    "build-desktop": "OLIMP_VIEW=desktop rm -R -f ./dist && cp -r ./public ./dist && export NODE_ENV=production && webpack --mode=production",
-    "start-desktop": "OLIMP_VIEW=desktop webpack serve --mode=development",
+    "build-mobile": "NODE_ENV=production rm -R -f ./dist && cp -r ./public ./dist && webpack --mode=production --env OLIMP_VIEW=mobile",
+    "start-mobile": "webpack serve --mode=development --env OLIMP_VIEW=mobile",
+    "build-desktop": "NODE_ENV=production rm -R -f ./dist && cp -r ./public ./dist && webpack --mode=production --env OLIMP_VIEW=desktop",
+    "start-desktop": "webpack serve --mode=development --env OLIMP_VIEW=desktop",
     "pretty": "prettier --write '**/*.pug'"
   },
   "author": "",
@@ -30,5 +30,8 @@
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "css-minimizer-webpack-plugin": "^3.0.2"
   }
 }

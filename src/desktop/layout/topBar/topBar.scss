@@ -16,14 +16,14 @@
             &__item {
                 @apply flex
                 items-center
-                text-600
+                text-lg
                 text-gray-500
                 mr-9;
 
                 &_active {
-                    @apply text-blue-900
+                    @apply text-blue-dark
                     border-b-2
-                    border-blue-900;
+                    border-blue-dark;
                 }
             }
         }
@@ -51,7 +51,7 @@
     }
 
     &__subMenu {
-        @apply text-200
+        @apply text-sm
         font-medium
         mt-6
         lg:mt-8;
@@ -93,7 +93,7 @@
                 &_active {
                     @apply border-transparent
                     ring-2
-                    ring-orange-200
+                    ring-orange-light
                     hover:border-transparent;
                 }
 
@@ -102,7 +102,7 @@
                 }
 
                 &__name {
-                    @apply text-200
+                    @apply text-sm
                     font-medium
                     ml-1;
                 }

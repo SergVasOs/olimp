@@ -1,0 +1,40 @@
+.gallery {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__menu {
+        @apply mb-4;
+    }
+
+    &__list {
+        @apply
+            grid
+            grid-cols-2
+            gap-4;
+    }
+
+    &__item {
+        @apply
+        text-black
+        border
+        rounded;
+
+        &__img {
+            @apply
+            rounded-t
+            w-full
+            h-32
+            object-cover;
+        }
+
+        &__name {
+            @apply
+            px-4
+            font-medium
+            flex
+            items-center
+            h-14;
+        }
+    }
+}

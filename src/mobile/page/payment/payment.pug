@@ -1,0 +1,50 @@
+extends /mobile/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Способы оплаты";
+	- var pageClass = "payment";
+
+block content
+	+pageHead('Способы оплаты').__head
+	.box
+		+e.text Оплатить свой заказ вы можете в разделе «Мои заказы» в личном кабинете. Для этого вы должны быть авторизированы на сайте.
+		+e.title Варианты оплаты
+		+b.__cards
+			+b.__item
+				+e.H4 Наличные
+				+e.desc Оплата производится наличными деньгами. Подтверждением оплаты является фискальный кассовый чек, вручаемый после оплаты.
+			+b.__item
+				+e.H4 Банковский перевод
+				+e.desc Вы можете оплатить заказ по счету в Банке. Комиссия банка может составить от 3%. Перечисление денег займет от 1 дня.
+			+b.__item
+				+e.H4 Картой в офисе
+				+e.desc Оплата производится банковской картой в нашем офисе.
+			+b.__item
+				+e.H4 Картой онлайн
+				+e.desc Оплата производится банковской картой по ссылке, которую высылает менеджер после согласования счета.
+		+e.title Варианты оплаты
+		+b.__groups
+			+b.__item
+				+e.title Электронные деньги
+				+e.imgs
+					+e(src='images/yandexMoneyLogo.png')
+					+e(src='images/webmoneyLogo.png')
+			+b.__item
+				+e.title Мобильная связь
+				+e.imgs
+					+e(src='images/beelineLogo.png')
+					+e(src='images/megafonLogo.png')
+					+e(src='images/mtsLogo.png')
+			+b.__item
+				+e.title Онлайн-банк
+				+e.imgs
+					+e(src='images/sberOnlineLogo.png')
+					+e(src='images/alfabankLogo.png')
+					+e(src='images/psbBankLogo.png')
+			+b.__item
+				+e.title Банковские карты
+				+e.imgs
+					+e(src='images/maestroLogo.png')
+					+e(src='images/mastercardLogo.png')
+					+e(src='images/visaLogo.png')

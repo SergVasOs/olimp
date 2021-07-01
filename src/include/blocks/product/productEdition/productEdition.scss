@@ -1,0 +1,48 @@
+.productEdition {
+    &__title {
+        @apply hidden
+        h2
+        mb-4
+        md:block;
+    }
+
+    &__table {
+        @apply w-full
+        border
+        rounded
+        p-4
+        space-y-4
+        md:p-8;
+
+        &__header {
+            @apply flex
+            space-x-4
+            font-medium;
+        }
+
+        &__col {
+            &_size {
+                @apply w-24
+                md:w-28;
+            }
+
+            &_stock {
+                @apply flex-1;
+            }
+
+            &_count {
+                @apply w-28;
+            }
+        }
+
+        &__row {
+            @apply flex
+            items-center
+            space-x-2
+            pb-4
+            border-b
+            last:border-0
+            last:pb-0;
+        }
+    }
+}

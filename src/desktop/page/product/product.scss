@@ -1,0 +1,28 @@
+@import "/src/desktop/page/product/productContent/productContent";
+@import "/src/desktop/page/product/productHead/productHead";
+@import "/src/desktop/page/product/productProperties/productProperties";
+@import "/src/desktop/page/product/productMaterials/productMaterials";
+
+.product {
+    &__head {
+        @apply
+        mb-8;
+    }
+
+    &__content {
+        @apply
+        mb-52;
+    }
+
+    &__setList {
+        @apply mb-8;
+    }
+
+    &__productList {
+        @apply mb-8;
+    }
+
+    &__viewedList {
+        @apply mb-8;
+    }
+}

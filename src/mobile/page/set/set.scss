@@ -1,0 +1,94 @@
+.set {
+    @apply
+    relative
+    pt-0;
+
+    &__head {
+        @apply
+        w-full
+        absolute
+        top-4
+        z-10;
+    }
+
+    &__gallery {
+        @apply
+        mb-6;
+
+        &__img {
+            @apply
+            w-full;
+        }
+    }
+
+    &__buy {
+        @apply
+            mb-12;
+
+        &__total {
+            @apply
+            flex
+            items-baseline
+            space-x-2
+            text-xl
+            mb-4;
+
+            &__label {
+                @apply
+                    flex-1;
+            }
+
+            &__oldPrice {
+                @apply
+                oldPrice;
+            }
+
+            &__price {
+                @apply
+                price;
+            }
+        }
+
+        &__items {
+            @apply
+                space-y-2
+                mb-8;
+
+            &__item {
+                @apply
+                flex
+                items-baseline
+                space-x-2;
+
+                &__label {
+                    @apply
+                    text-gray-light
+                    flex-1;
+                }
+
+                &__price {
+                    @apply
+                    price;
+                }
+            }
+        }
+
+        &__buyButton {
+            @apply w-full;
+        }
+    }
+
+    &__composition {
+        @apply
+            space-y-6;
+
+        &__title {
+            @apply h2;
+        }
+
+        &__items {
+            @apply
+            space-y-4;
+        }
+    }
+}

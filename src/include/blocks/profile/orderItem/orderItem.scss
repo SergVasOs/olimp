@@ -1,0 +1,130 @@
+.orderItem {
+    @apply
+    py-6
+    pl-8
+    pr-4
+    border
+    rounded
+    relative;
+
+    &:before {
+        @apply
+            rounded-l
+            content-empty
+            absolute
+            -inset-y-px
+            -left-px
+            w-2
+            bg-green;
+
+
+    }
+
+    &__card {
+        @apply
+            flex
+            items-center
+            space-x-4;
+
+        &__col {
+            @apply
+                space-y-4;
+
+            &_status {
+                @apply
+                flex-1;
+            }
+
+            &__title {
+                @apply
+                    text-xs
+                    text-gray-light
+                    uppercase;
+            }
+
+            &__text {
+                @apply
+                text-sm
+                font-bold;
+
+                &_status {
+                    @apply
+                    text-green;
+                }
+            }
+        }
+    }
+
+    &__swiper {
+        @apply
+        mt-4;
+
+        &__wrapper {
+            &__item {
+                @apply
+                    w-10
+                    h-10
+                    object-contain
+                    rounded-full
+                    border;
+            }
+        }
+    }
+
+    &_gray {
+        &:before {
+            @apply bg-gray-border;
+        }
+    }
+
+    &_gray & {
+        &__card {
+            &__col {
+                &__text {
+                    &_status {
+                        @apply
+                        text-gray-border;
+                    }
+                }
+            }
+        }
+    }
+
+    &_red {
+        &:before {
+            @apply bg-red;
+        }
+    }
+
+    &_red & {
+        &__card {
+            &__col {
+                &__text {
+                    &_status {
+                        @apply
+                        text-red;
+                    }
+                }
+            }
+        }
+    }
+
+    &_blue {
+        &:before {
+            @apply bg-blue-dark;
+        }
+    }
+
+    &_blue & {
+        &__card {
+            &__col {
+                &__text {
+                    &_status {
+                        @apply
+                        text-blue-dark;
+                    }
+                }
+            }
+        }
+    }
+}

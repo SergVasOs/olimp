@@ -1,3 +1,21 @@
+new Swiper('.saleList__swiper', {
+	slidesPerView: 3,
+	spaceBetween: swiperSpaceLg,
+	navigation: {
+		nextEl: '.swiper-next',
+		prevEl: '.swiper-prev',
+	},
+});
+
+new Swiper('.clients__swiper', {
+	slidesPerView: 6,
+	spaceBetween: swiperSpaceMd,
+	navigation: {
+		nextEl: '.swiper-next',
+		prevEl: '.swiper-prev',
+	},
+});
+
 new Swiper('.productList__swiper', {
 	slidesPerView: 4,
 	spaceBetween: swiperSpaceLg,
@@ -27,25 +45,17 @@ new Swiper('.viewedList__swiper', {
 
 new Swiper('.catalogGridItem__size .size__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
+	spaceBetween: swiperSpaceSm,
 	freeMode: true,
 	nested: true,
 	slidesOffsetAfter: catalogItemPadding,
 });
 new Swiper('.catalogListItem__size .size__swiper', {
 	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
+	spaceBetween: swiperSpaceSm,
 	freeMode: true,
 	nested: true,
 });
-
-new Swiper('.productContent__buy__size .size__swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: swiperSpaceTh,
-	freeMode: true,
-	nested: true,
-});
-
 new Swiper('.catalogItemGallery__swiper', {
 	slidesPerView: 1,
 	pagination: {
@@ -57,6 +67,14 @@ new Swiper('.catalogItemGallery__swiper', {
 	nested: true,
 });
 
+
+//product
+new Swiper('.productContent__buy__size .size__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceSm,
+	freeMode: true,
+	nested: true,
+});
 new Swiper('.productContent__gallery__thumbs', {
 	slidesPerView: 5,
 	spaceBetween: swiperSpaceSm,

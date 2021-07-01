@@ -1,0 +1,21 @@
+.saleList {
+	&__title {
+		@apply
+		h2
+		mb-4;
+	}
+
+	&__banner {
+		@apply
+		mb-4;
+
+		&__img {
+			@apply w-full;
+		}
+	}
+
+	&__items {
+		@apply
+			grid grid-cols-2 gap-4 mb-8;
+	}
+}

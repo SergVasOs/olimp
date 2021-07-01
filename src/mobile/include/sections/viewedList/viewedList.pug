@@ -1,0 +1,15 @@
+include /mobile/include/blocks/viewedItem/viewedItem
+
+mixin viewedList
+	+b.viewedList&attributes(attributes)
+		.box
+			+e.title Вы смотрели
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide
+					+viewedItem.__item.swiper-slide

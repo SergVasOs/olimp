@@ -1,0 +1,27 @@
+.cart {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__content {
+        &__box {
+            @apply
+            flex
+            space-x-4;
+        }
+
+        &__left {
+            @apply w-3/5;
+        }
+
+        &__right {
+            @apply
+            w-2/5
+            flex
+            flex-col
+            justify-between
+            items-stretch
+            space-y-4;
+        }
+    }
+}

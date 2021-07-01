@@ -1,0 +1,42 @@
+.productProperties {
+    &__title {
+        @apply
+        h2
+        mb-4;
+    }
+
+    &__items {
+        @apply
+        bgGrayGradient
+        border
+        rounded
+        p-4
+        space-y-4;
+
+        &__item {
+            @apply
+            border-b
+            pb-4
+            flex
+            items-center
+            space-x-6
+            last:border-0
+            last:pb-0;
+
+            &__name {
+                @apply
+                flex-1;
+            }
+
+            &__value {
+                @apply
+                font-bold;
+            }
+
+            &__arrow {
+                @apply
+                text-blue-dark;
+            }
+        }
+    }
+}

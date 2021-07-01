@@ -1,0 +1,30 @@
+include /include/elements/size/size
+include /include/elements/color/color
+include /include/elements/buyButton/buyButton
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
+
+mixin catalogListItem(book=false,shirt=false)
+	+b.catalogListItem&attributes(attributes)
+		+catalogItemGallery(shirt)._list.__catalogItemGallery
+		+labels.__labels
+		+favoriteIcon._active.__favoriteIcon
+		+e.name(href=!shirt ? "product.html" : "product-shirt.html") Название товара Название товара Название товара Название товара Название товара
+		+e.prices
+			+e.price 127 354 ₽
+			+e.oldPrice 147 354 ₽
+		if (shirt)
+			+color.__prop
+		else
+			+size.__prop
+		+b.__props
+			+b.__item._material
+				+e.name Материал:
+				+e.value Металл + пластиковые элементы
+			+b.__item
+				+e.name Вес:
+				+e.value 1665 гр
+			+b.__item
+				+e.name В наличии:
+				+e.value 133 шт.

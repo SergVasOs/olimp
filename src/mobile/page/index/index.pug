@@ -1,0 +1,27 @@
+extends /mobile/layout/layout
+include /include/sections/index/banners/banners
+include /include/blocks/common/consultForm/consultForm
+include /include/sections/index/catalogMenu/catalogMenu
+include /include/sections/index/importantInfo/importantInfo
+include /include/sections/index/gifts/gifts
+include /mobile/page/index/clients/clients
+include /mobile/page/index/textInfo/textInfo
+include /mobile/include/sections/productList/productList
+include /mobile/include/sections/saleList/saleList
+
+block append pageVars
+	- var pageTitle = "Главная";
+	- var pageClass = "index";
+
+block content
+	+banners.__banners
+	+catalogMenu.__catalogMenu
+	+productList('Наши эксклюзивы').__exclusive
+	+saleList('Распродажа').__sale
+	+importantInfo.__importantInfo
+	+gifts('Подарки').__gifts
+	+clients.__clients
+	+gifts('Сувениры').__suvenir
+	+textInfo.__textInfo
+	.box
+		+consultForm

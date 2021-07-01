@@ -1,0 +1,32 @@
+.orderStatus {
+    @apply
+        pt-0
+        pb-32;
+
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__form {
+        @apply
+        mb-6;
+    }
+
+    &__orders {
+        @apply
+        mb-2
+        space-y-2;
+
+        &__title {
+            @apply
+            text-xs
+            text-gray;
+        }
+
+        &__list {
+            @apply
+            space-y-2;
+        }
+    }
+}

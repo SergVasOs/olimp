@@ -1,0 +1,26 @@
+.captcha {
+    @apply
+    flex
+    space-x-2
+    h-16
+    items-stretch;
+
+    &__img {
+        @apply
+        border
+        rounded
+        flex-1
+        object-cover;
+    }
+
+    &__refresh {
+        @apply
+            flex
+            items-center
+            justify-center
+            w-16
+            text-gray-400
+            border
+            rounded;
+    }
+}

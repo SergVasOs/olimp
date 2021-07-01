@@ -1,0 +1,76 @@
+.popper {
+    @apply
+    fixed
+    inset-x-0
+    bottom-0
+    z-10
+    bg-transparent
+    transition-background;
+
+    &__body {
+        @apply
+        transition-top
+        inset-x-0
+        top-full
+        h-popper
+        fixed
+        pt-14
+        pb-6
+        bg-white
+        overflow-hidden;
+    }
+
+    &__handler {
+        @apply
+        absolute
+        left-1/2
+        top-2
+        z-20
+        transform -translate-x-1/2
+        h-1
+        w-12
+        bg-gray-border
+        rounded-full;
+    }
+
+    &__close {
+        @apply
+        absolute
+        right-2
+        top-2;
+    }
+
+    &__content {
+        @apply
+            h-full
+        overflow-scrollVert;
+    }
+
+    &_withBottomButton & {
+        &__body {
+            @apply
+            pb-32;
+        }
+
+        &__bottomButton {
+            @apply absolute;
+        }
+    }
+
+    &_open {
+        @apply
+        z-40
+        top-0
+        bg-black
+        bg-opacity-30;
+    }
+
+    &_open & {
+        &__body {
+            @apply
+            rounded-t
+            top-20
+            shadow-top;
+        }
+    }
+}

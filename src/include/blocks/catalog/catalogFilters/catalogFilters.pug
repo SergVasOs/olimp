@@ -22,67 +22,67 @@ mixin catalogFilters
 						+e.handler._start
 						+e.handler._end
 						+e.bar
-		+b.__filter._open
+		+b.__filter
 			+e.label Материал
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
 			+e.body
 				+b.__checkboxes
 					+b.LABEL.checkbox
 						+b.__icon
 							+e.INPUT.input(type='checkbox', checked='true')
-							include /assets/images/checkboxIcon.svg
+							include /assets/images/md/checkboxIcon.svg
 						+e.label Металл + пластиковые эл. (36)
 					+b.LABEL.checkbox
 						+b.__icon
 							+e.INPUT.input(type='checkbox')
-							include /assets/images/checkboxIcon.svg
+							include /assets/images/md/checkboxIcon.svg
 						+e.label Металлический (36)
 					+b.LABEL.checkbox._disabled
 						+b.__icon
 							+e.INPUT.input(type='checkbox', checked='true', disabled='true')
-							include /assets/images/checkboxIcon.svg
+							include /assets/images/md/checkboxIcon.svg
 						+e.label Пластиковый (0)
-		+b.__filter._open
+		+b.__filter
 			+e.label Форма чаши
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
 			+e.body
 				+b.input.__search
-					+b.icon.__icon
-						include /assets/images/searchIcon.svg
+					+e.icon
+						include /assets/images/lg/searchIcon.svg
 					+e.INPUT.field(type='text', placeholder='Искать форму чаши')
 				+b.__checkboxes
 					+b.LABEL.checkbox
 						+b.__icon
 							+e.INPUT.input(type='checkbox', checked='true')
-							include /assets/images/checkboxIcon.svg
+							include /assets/images/md/checkboxIcon.svg
 						+e.label мяч/шар (36)
 					+b.LABEL.checkbox
 						+b.__icon
 							+e.INPUT.input(type='checkbox')
-							include /assets/images/checkboxIcon.svg
+							include /assets/images/md/checkboxIcon.svg
 						+e.label полусфера (518)
 		+b.__filter
 			+e.label Размер ручек
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
 		+b.__filter
 			+e.label Материал цоколя
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
 		+b.__filter
 			+e.label Цвет цоколя
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
-		+b.__filter._open
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
+		+b.__filter
 			+e.label Диаметр вкладыша
-				+b.icon._sm.__arrow
-					include /assets/images/arrowIcon.svg
+				+b.icon.__arrow
+					include /assets/images/md/shevronIcon.svg
 			+e.body
 				+b.input.__search
-					+b.icon.__icon
-						include /assets/images/searchIcon.svg
+					+e.icon
+						include /assets/images/lg/searchIcon.svg
 					+e.INPUT.field(type='text', placeholder='Искать диаметр вкладыша')
 				+b.__items
 					+b.__item

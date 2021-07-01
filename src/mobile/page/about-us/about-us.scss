@@ -1,0 +1,254 @@
+.aboutUs {
+    &__head {
+        @apply
+        mb-4;
+    }
+
+    &__top {
+        @apply
+            space-y-4
+            mb-8;
+    }
+
+    &__gallery {
+        @apply
+        mb-4;
+
+        &__title {
+            @apply
+            h2
+            mb-4;
+        }
+
+        &__list {
+            @apply
+            grid
+            grid-cols-2
+            gap-4
+            my-4;
+
+            &__item {
+                @apply
+                text-black
+                border rounded;
+
+                &__img {
+                    @apply
+                    rounded-t
+                    w-full
+                    h-32
+                    object-cover;
+                }
+
+                &__name {
+                    @apply
+                    px-4
+                    font-medium
+                    flex
+                    items-center
+                    h-14;
+                }
+            }
+        }
+
+        &__button {
+            @apply
+            button_lg
+            button_gray
+            w-full;
+        }
+    }
+
+    &__text {
+        @apply
+            mb-4;
+    }
+
+    &__callback {
+        @apply
+            mb-8;
+    }
+
+    &__quote {
+        @apply
+            space-y-4
+            mb-12;
+    }
+
+    &__technology {
+        @apply
+            mb-12;
+
+        &__title {
+            @apply
+            mb-4;
+        }
+
+        &__text {
+            @apply
+            space-y-4
+            mb-8;
+        }
+
+        &__swiper {
+            @apply
+                mb-8
+                pb-6;
+
+            &__wrapper {
+                &__item {
+                    @apply
+                        border
+                        rounded
+                        px-4
+                        py-6
+                        space-y-6;
+
+                    &__img {
+                        @apply
+                            mx-2;
+                    }
+
+                    &__title {
+                        @apply
+                        h4
+                        text-center;
+                    }
+
+                    &__list {
+                        @apply
+                        space-y-4;
+
+                        &__item {
+                            @apply
+                                flex
+                                space-x-2
+                                items-center;
+
+                            &__icon {
+                                @apply text-green;
+                            }
+
+                            &__name {
+                                @apply flex-1;
+                            }
+
+                            &_orange & {
+                                &__icon {
+                                    @apply text-orange-light;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__stages {
+        @apply mb-12;
+
+        &__title {
+            @apply
+            h2
+            mb-4;
+        }
+
+        &__list {
+            @apply
+                space-y-4;
+
+            &__item {
+                &__header {
+                    @apply
+                        border
+                        rounded
+                        p-4
+                        flex
+                        items-center
+                        space-x-4;
+
+                    &__number {
+                        @apply
+                            h4
+                            w-12
+                            h-12
+                            rounded-full
+                            flex
+                            justify-center
+                            items-center
+                            bg-blue-dark
+                            text-white;
+                    }
+
+                    &__name {
+                        @apply
+                            text-lg
+                            flex-1;
+                    }
+
+                    &__icon {
+                        @apply
+                        text-blue-dark;
+                    }
+                }
+
+                &__text {
+                    @apply
+                        p-4
+                        pb-0
+                        hidden;
+                }
+
+                &_open & {
+                    &__header {
+                        &__icon {
+                            @apply
+                                transform rotate-180;
+                        }
+                    }
+
+                    &__text {
+                        @apply block;
+                    }
+                }
+            }
+        }
+    }
+
+    &__principles {
+        @apply mb-4;
+
+        &__title {
+            @apply
+            h2
+            mb-4;
+        }
+
+        &__list {
+            @apply
+            space-y-8;
+
+            &__item {
+                @apply
+                border
+                rounded
+                p-6;
+
+                &__header {
+                    @apply
+                    flex
+                    items-center
+                    space-x-4
+                    mb-4;
+
+                    &__text {
+                        @apply
+                        text-3xl
+                        font-medium;
+                    }
+                }
+            }
+        }
+    }
+}

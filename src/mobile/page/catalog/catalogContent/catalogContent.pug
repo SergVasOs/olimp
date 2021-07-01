@@ -1,0 +1,19 @@
+include /mobile/include/blocks/catalogItem/catalogItem
+include /include/blocks/common/popularKeywords/popularKeywords
+
+mixin catalogContent
+	+b.catalogContent&attributes(attributes)
+		+e.box.box
+			+b.__items(class=`_${catalogView}`)
+				+catalogItem
+				+catalogItem
+				+catalogItem
+				+catalogItem
+				+catalogItem
+				+catalogItem
+				+catalogItem
+				+catalogItem
+			+b.button.__more
+				+e.text Загрузить ещё
+			+popularKeywords.__popularKeywords
+			+b.textBlock.__textBlock Традиционно, они выполняют функцию наград в спортивных состязаниях. Это может быть футбол, хоккей, гимнастика и соревнования в любых других видах спорта. Однако в последнее время все чаще используются подарочные варианты продукции. Так, например, кубки с гравировкой или без нее вручаются на юбилеи, по поводу знаменательных дат, профессиональных праздников, личных достижений. Это отличные, оригинальные и надолго запоминающиеся презенты! Поэтому, выбирая подарок для коллеги, друга или близкого человека, обратите на кубки с гравировкой самое пристальное внимание.

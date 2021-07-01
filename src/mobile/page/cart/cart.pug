@@ -1,0 +1,15 @@
+extends /mobile/layout/layout
+include /include/sections/cart/cartHead/cartHead
+include /include/blocks/cart/cartItems/cartItems
+include /include/blocks/cart/cartTotal/cartTotal
+
+block append pageVars
+	- var pageTitle = "Корзина";
+	- var pageClass = "cart";
+	- var hideFooter = true;
+
+block content
+	+cartHead.__head
+	.box
+		+cartItems.__cartItems
+		+cartTotal

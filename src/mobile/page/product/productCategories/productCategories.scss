@@ -1,0 +1,34 @@
+.productCategories {
+    @apply
+        space-y-4;
+
+    &__item {
+        @apply
+            border
+            rounded
+            p-4
+            flex
+            items-center;
+
+        &__info {
+            @apply flex-1;
+
+            &__title {
+                @apply
+                font-medium
+                mb-2;
+            }
+
+            &__desc {
+                @apply
+                text-sm
+                text-gray-light
+                }
+        }
+
+        &__arrow {
+            @apply
+                text-blue-dark;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+mixin orderPaymentContent
+	+b.orderPaymentContent&attributes(attributes)
+		.box
+			+e.text Выберите вариант оплаты
+			+b.__item._active
+				+b.__top
+					+e.title Наличные
+					+b.LABEL.radio
+						+b.__icon
+							+e.INPUT.input(type='radio', name='paymentId', checked='checked')
+							include /assets/images/md/radioIcon.svg
+				+e.desc Оплата производится наличными деньгами. Подтверждением оплаты является фискальный кассовый чек, вручаемый после оплаты.
+			+b.__item
+				+b.__top
+					+e.title Банковский перевод
+					+b.LABEL.radio
+						+b.__icon
+							+e.INPUT.input(type='radio', name='paymentId')
+							include /assets/images/md/radioIcon.svg
+				+e.desc Вы можете оплатить заказ по счету в Банке. Комиссия банка может составить от 3%. Перечисление денег займет от 1 дня.
+			+b.__item
+				+b.__top
+					+e.title Картой в офисе
+					+b.LABEL.radio
+						+b.__icon
+							+e.INPUT.input(type='radio', name='paymentId')
+							include /assets/images/md/radioIcon.svg
+				+e.desc Оплата производится банковской картой в нашем офисе.
+			+b.__item
+				+b.__top
+					+e.title Картой онлайн
+					+b.LABEL.radio
+						+b.__icon
+							+e.INPUT.input(type='radio', name='paymentId')
+							include /assets/images/md/radioIcon.svg
+				+e.desc Оплата производится банковской картой по ссылке, которую высылает менеджер после согласования счета.

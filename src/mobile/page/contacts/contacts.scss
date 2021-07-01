@@ -1,0 +1,109 @@
+.contacts {
+    &__head {
+        @apply
+        mb-6;
+    }
+
+    &__main {
+        @apply
+        space-y-4
+        mb-8;
+
+        &__title {
+            @apply
+                h2
+                text-center;
+        }
+
+        &__items {
+            @apply
+            space-y-4;
+
+            &__item {
+                @apply
+                flex
+                justify-between;
+
+                &__value {
+                    @apply text-blue-400;
+                }
+            }
+        }
+    }
+
+    &__chatButton {
+        @apply
+        mb-8;
+    }
+
+    &__info {
+        @apply
+        mb-10;
+
+        &__time {
+            @apply
+                mx-1
+                font-bold;
+        }
+    }
+
+    &__schema {
+        @apply
+        mb-8;
+
+        &__title {
+            @apply
+            h2
+            mb-4;
+        }
+
+        &__address {
+            @apply
+            mb-2;
+        }
+
+        &__info {
+            @apply
+            font-bold
+            mb-4;
+        }
+
+        &__text {
+            @apply
+            space-y-4;
+
+            &__time {
+                @apply
+                text-gray-500;
+            }
+        }
+    }
+
+    &__metro {
+        @apply
+        space-y-8;
+
+        &__item {
+            @apply
+            space-y-4;
+
+            &__title {
+                @apply h3;
+            }
+
+            &__routes {
+                @apply
+                space-y-4;
+
+                &__item {
+                    @apply
+                    space-y-4;
+
+                    &__time {
+                        @apply text-gray-500;
+                    }
+                }
+            }
+        }
+    }
+}

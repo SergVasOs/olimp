@@ -1,14 +1,8 @@
 .icon {
     @apply
         inline-block
-        w-5
-        h-5;
-
-    &_th {
-        @apply
-        w-3
-        h-3;
-    }
+        w-6
+        h-6;
 
     &_sm {
         @apply
@@ -16,22 +10,40 @@
         h-4;
     }
 
-    &_md {
-        @apply
-        w-6
-        h-6;
-    }
-
     &_lg {
         @apply
-        w-7
-        h-7;
+        w-8
+        h-8;
+    }
+
+    &_2lg {
+        @apply
+        w-10
+        h-10;
     }
 
     &_xl {
         @apply
-        w-9
-        h-9;
+        w-12
+        h-12;
+    }
+
+    &_2xl {
+        @apply
+        w-20
+        h-20;
+    }
+
+    &_3xl {
+        @apply
+        w-32
+        h-32;
+    }
+
+    &_auto {
+        @apply
+        w-auto
+        h-auto;
     }
 
     &_fill > * {
