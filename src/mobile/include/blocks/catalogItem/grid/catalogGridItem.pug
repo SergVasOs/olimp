@@ -1,0 +1,27 @@
+include /include/elements/size/size
+include /include/elements/color/color
+include /include/elements/buyButton/buyButton
+include /include/elements/labels/labels
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/blocks/catalog/catalogItemGallery/catalogItemGallery
+
+mixin catalogGridItem(book=false, shirt=false)
+	+b.catalogGridItem&attributes(attributes)
+		+labels.__labels
+		+favoriteIcon.__favoriteIcon
+		+catalogItemGallery(shirt, true).__catalogItemGallery
+		if (!shirt)
+			+size.__prop
+			+e.material Пластик
+			+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
+		else
+			+color.__prop
+			+e.material Лён
+			+e.name(href='product-shirt.html') Название товара Название товара Название товара Название товара Название товара
+		+b.__bottom
+			if (!book)
+				+b.__prices
+					+e.price 12 354 ₽
+					+e.oldPrice 17 354 ₽
+			else
+				+b.button._sm._blue.__bookButton Забрать

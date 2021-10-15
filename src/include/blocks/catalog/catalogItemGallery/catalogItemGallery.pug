@@ -1,22 +1,17 @@
-mixin catalogItemGallery(shirt=false)
+mixin catalogItemGallery(shirt=false, small=false)
 	+b.catalogItemGallery&attributes(attributes)
 		+b.__swiper.swiper-container
 			+b.__wrapper.swiper-wrapper
-				+b.__slide.swiper-slide
-					if (shirt)
-						+e.img(src='images/shirt.png')
-					else
-						+e.img(src='images/catalogItem.png')
-				+b.__slide.swiper-slide
-					if (shirt)
-						+e.img(src='images/shirt.png')
-					else
-						+e.img(src='images/catalogItem.png')
-				+b.__slide.swiper-slide
-					if (shirt)
-						+e.img(src='images/shirt.png')
-					else
-						+e.img(src='images/catalogItem.png')
-			+b.__dots.swiper-dots
-		+b.icon._2lg.__3dIcon(href='#')
-			include /assets/images/2lg/3dIcon.svg
+				+b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? "images/shirt.png" : "images/catalogItem.png"))
+					+b.swiper-lazy-preloader
+				+b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? "images/shirt.png" : "images/catalogItem.png"))
+					+b.swiper-lazy-preloader
+				+b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? "images/shirt.png" : "images/catalogItem.png"))
+					+b.swiper-lazy-preloader
+			+b.__dots.swiper-dots(class=(small ? '_sm' : ''))
+		if (small)
+			+b.icon._lg.__3dIcon(href='#')
+				include /assets/images/2lg/3dIcon.svg
+		else
+			+b.icon._2lg.__3dIcon(href='#')
+				include /assets/images/2lg/3dIcon.svg

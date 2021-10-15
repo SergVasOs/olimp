@@ -2,6 +2,7 @@ extends /mobile/layout/layout
 include /include/elements/bottomButton/bottomButton
 include /include/blocks/common/pageHead/pageHead
 include /include/blocks/profile/addressItem/addressItem
+include /include/blocks/profile/deleteAddressItemPopup/deleteAddressItemPopup
 
 block append pageVars
 	- var pageTitle = "Адреса доставки";
@@ -10,15 +11,17 @@ block append pageVars
 
 block content
 	+pageHead('Адреса доставки', 'profile.html')._profile.__head
-		+b.icon._xl.__icon
-			include /assets/images/xl/addressIcon.svg
+		+e.right
+			+b.icon._xl
+				include /assets/images/xl/addressIcon.svg
 	.box
 		+e.list
-			+addressItem
+			+addressItem(true)
 			+addressItem
 			+addressItem
 			+addressItem
 			+addressItem
 			+addressItem
 	+bottomButton
-		+b.button._lg._green(href='profile.html') Сохранить
+		+b.button._lg._blue(href='profile-address.html') Добавить адрес
+	+deleteAddressItemPopup

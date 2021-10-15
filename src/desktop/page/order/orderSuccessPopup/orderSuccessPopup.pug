@@ -1,0 +1,22 @@
+include /include/blocks/common/callback/callback
+
+mixin orderSuccessPopup
+	+b#popup_order_success.popup
+		+e.overlay
+		+e.body
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.orderSuccessPopup.__wrapper
+					+b.icon._4xl.__successIcon
+						include /assets/images/4xl/orderSuccessIcon.svg
+					+e.title Спасибо за заказ!
+					+e.text
+						| Заказ №9293 оформлен. Мы уже начали его обрабатывать
+						br
+						| и скоро вам позвоним.
+					+b.button._lg._blue.__button(href='catalog-grid.html') Вернуться в каталог
+					+b.links.__links
+						+e.item(href='order-status.html') Узнать статус заказа
+						+e.item(href='profile.html') Перейти в свой аккаунт
+					+callback.__callback

@@ -1,24 +1,15 @@
-include /include/elements/buyButton/buyButton
-include /include/blocks/catalog/catalogItem/grid/catalogGridItem
-include /include/elements/bottomButton/bottomButton
+include /include/blocks/common/giftContent/giftContent
+include /mobile/include/blocks/catalogItem/grid/catalogGridItem
 
 mixin giftPopper
-	+b#popper_gift.popper._withBottomButton
+	+b#popper_gift.popper
+		+e.overlay
 		+e.body
 			+e.handler
-			+b.icon._lg.__close
+			+b.icon._lg.__close(href="#")
 				include /assets/images/lg/crossIcon.svg
-			+b.giftPopper.__content
-				.box
-					+e.title Выберите подарок!
-					+e.list
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-						+catalogGridItem(true)
-			+bottomButton.__bottomButton
+			+b.__content
+				+b.__wrapper
+					+giftContent
+			+bottomButton._popup
 				+b.button._lg._white(href='#') Нет, спасибо

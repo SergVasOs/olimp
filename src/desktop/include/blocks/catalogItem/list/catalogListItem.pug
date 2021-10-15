@@ -8,11 +8,11 @@ mixin catalogListItem
 	+b.catalogListItem
 		+e.img
 			+labels.__labels
-			+favoriteIcon._active
+			+favoriteIcon.__favoriteIcon
 			+catalogItemGallery._list.__catalogItemGallery
-		+e.info
+		+b.__info
 			+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
-			+size.__size
+			+size.__prop
 			+b.__props
 				+b.__item
 					+e.name Материал:
@@ -29,7 +29,7 @@ mixin catalogListItem
 				+b.__item
 					+e.name Вес:
 					+e.value 1665 гр
-		+e.prices
+		+b.__prices
 			+e.price 127 354 ₽
 			+e.oldPrice 137 354 ₽
 			+b.__stock

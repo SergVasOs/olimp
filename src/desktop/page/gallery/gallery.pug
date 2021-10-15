@@ -1,0 +1,68 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Галерея наших работ";
+	- var pageClass = "gallery";
+
+block content
+	+pageHead('Галерея наших работ', false).__head
+	+e.box.box
+		+b.__menu
+			+e.item(href='#')
+				| Награды
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+			+e.item(href='#')
+				| Подарки
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+			+e.item(href='#')
+				| Сувениры
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+			+e.item(href='#')
+				| Гостинцы
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+		+b.__list
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat1.png')
+				+e.name Кубки
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat2.png')
+				+e.name Медали
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat3.png')
+				+e.name Медали из акрила
+			+b.__item._big(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat4.png')
+				+e.name Призы из акрила
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat5.png')
+				+e.name Фигурки
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat6.png')
+				+e.name Плакетки
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat7.png')
+				+e.name Деревянные трофеи
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat8.png')
+				+e.name Стеклянные награды
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat9.png')
+				+e.name Тарелки
+			+b.__item(href='gallery-cat.html')
+				+b.DIV.__picture
+					+e.img(src='images/galleryCat10.png')
+				+e.name Сувениры

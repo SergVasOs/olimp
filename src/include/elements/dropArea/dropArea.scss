@@ -10,5 +10,8 @@
     font-bold
     border
     border-dashed
-    rounded;
+    rounded
+    cursor-pointer
+    md:text-xl
+    hover:border-blue-dark;
 }

@@ -1,0 +1,122 @@
+.productUpgrades {
+    @apply
+    w-full;
+
+    &__title {
+        @apply
+            h4
+            mb-4;
+    }
+
+    &__list {
+        @apply
+        space-y-4;
+
+        &__item {
+            @apply
+            border
+
+            rounded
+            p-4
+            relative
+            overflow-hidden;
+
+            &__step {
+                @apply
+                bg-grayGradient
+                textBg
+                absolute
+                block
+                text-7xl
+                font-medium
+                -top-2
+                left-4;
+            }
+
+            &__infoIcon {
+                @apply
+                absolute
+                top-2
+                left-34
+                text-gray;
+            }
+
+            &__card {
+                @apply
+                min-h-upgrade
+                flex
+                items-center
+                flex-wrap
+                space-x-4
+                pl-16;
+
+                &__img {
+                    @apply
+                    w-12
+                    h-12
+                    p-2
+                    rounded-full
+                    border
+
+                    object-contain
+                    mr-4;
+                }
+
+                &__name {
+                    @apply
+                    flex-1
+                    font-medium;
+                }
+
+                &__actions {
+                    @apply
+                    w-40
+                    flex
+                    items-center
+                    space-x-4;
+                }
+
+                &__editButton {
+                    @apply
+                    flex-1
+                    button_white;
+                }
+
+                &__addButton {
+                    @apply
+                    flex-1
+                    button_blue;
+                }
+
+                &__deleteIcon {
+                    @apply text-blue-dark cursor-pointer;
+                }
+            }
+
+            &__config {
+                @apply
+                mt-6
+                w-full
+                flex
+                flex-col
+                items-stretch
+                space-y-4;
+
+                &__text {
+                    @apply
+                    p-4
+                    bg-gray-card
+                    border
+                    rounded;
+                }
+
+                &__files {
+                    @apply
+                    grid
+                    grid-cols-2
+                    gap-2;
+                }
+            }
+        }
+    }
+}

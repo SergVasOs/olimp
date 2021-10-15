@@ -1,0 +1,79 @@
+extends /desktop/layout/layout
+include /include/elements/avatar/avatar
+include /desktop/include/sections/profileHead/profileHead
+include /desktop/include/blocks/profileMenu/profileMenu
+include /include/blocks/profile/orderProductItem/orderProductItem
+include /include/blocks/profile/orderCompositionItem/orderCompositionItem
+include /include/blocks/profile/orderItem/orderItem
+
+block append pageVars
+	- var pageTitle = "Адреса доставки";
+	- var pageClass = "profileOrder";
+	- var hideTopSubmenu = true;
+
+block content
+	+profileHead.__head
+	+e.box.box
+		+e.left
+			+profileMenu
+		+e.right
+			+b.tabs._inline
+				+b.__buttons
+					+e.item._active(href='profile-orders.html') Заказы
+					+e.item(href='profile-orders.html') Товары
+			+b.__top
+				+e.title Заказ 32324-234
+				+b.__back(href="profile-orders.html")
+					+b.icon.__icon
+						include /assets/images/md/shevronIcon.svg
+					| К списку заказов
+			+b.__info
+				+b.__top
+					+e.count Всего в заказе: 300 позиций
+					+e.status._blue Макетирование
+				+b.__row
+					+b.__col
+						+e.title Дата и время:
+						+e.text 05.06.2020, 20:20
+					+b.__col
+						+e.title Способ оплаты:
+						+e.text Наличными курьеру
+				+b.__row
+					+b.__col
+						+e.title Способ доставки:
+						+e.text 05.06.2020, 20:20
+					+b.__col
+						+e.title Адрес:
+						+e.text Москва, ул. Зои и Александра Космедемьянских д 2 строение 2 этаж 3 кваритра 334
+					+b.__col
+						+e.title Ваш менеджер:
+						+b.__text._contact
+							+avatar._xs
+							+b.__info
+								+e.name Чистопольская Анастасия
+								+b.__contacts
+									+b.__item(href='tel:88007755952') 8 (800) 775-5952
+										+e.add доб 223
+									+e.item(href='mailto:info@na-olimpe.ru') info@na-olimpe.ru
+			+b.__list
+				+e.title Состав заказа
+				+b.__category
+					+b.__header
+						+e.name Кубки
+						+e.count 2 шт
+					+e.__items
+						+orderCompositionItem
+						+orderProductItem
+						+orderCompositionItem
+				+b.__category
+					+b.__header
+						+e.name Медали
+						+e.count 12 шт
+					+e.__items
+						+orderCompositionItem
+						+orderProductItem
+						+orderCompositionItem
+			+b.button._blue
+				+e.icon
+					include /assets/images/lg/basketIcon.svg
+				+e.text Повторить весь заказ

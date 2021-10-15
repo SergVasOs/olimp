@@ -1,8 +1,30 @@
 .form {
+    &__title {
+        @apply
+        h4
+        mb-4;
+    }
+
     &__row {
         @apply
         mb-4
         last:mb-0;
+
+        &_inline {
+            @apply
+                flex
+                space-x-8;
+        }
+
+        &_group {
+            @apply
+            flex
+            space-x-4;
+        }
+
+        &__button {
+            @apply flex-1;
+        }
     }
 
     &__label {
@@ -32,14 +54,17 @@
     @apply
     w-full
     h-12
-    px-4
     py-2
+    pl-4
+    pr-2
     flex
     items-center
     space-x-2
     border
     rounded
-    bg-white;
+    bg-white
+    hover:border-light
+    active:border-light;
 
     &__icon {
         @apply
@@ -52,9 +77,30 @@
     &__field {
         @apply
         h-full
-        placeholder-gray
+        placeholder-gray-light
         overflow-hidden
         flex-1;
+    }
+
+    //TODO: remove
+    &_short {
+        @apply
+        w-2/3;
+    }
+
+    &_hasError {
+        @apply
+        border-red
+        text-red
+        hover:border-red
+        active:border-red;
+    }
+
+    &_hasError & {
+        &__input {
+            @apply
+            text-red;
+        }
     }
 
     &_lg {
@@ -71,52 +117,28 @@
     border
     rounded
     bg-white
-    placeholder-gray;
+    placeholder-gray-light;
 }
 
 .select {
     @apply
     w-full
     h-12
-    border
     rounded
-    bg-white
-    relative;
-
-    &_sm {
-        @apply
-        h-8;
-    }
-
-    &_lg {
-        @apply
-        h-16;
-    }
-
-    &_lg & {
-        &__input {
-            @apply
-            pl-4
-            pr-16
-            select-center
-            font-medium;
-        }
-    }
-
-    &_gray {
-        @apply
-        border-0
-        bg-gray-card;
-    }
+    bg-gray-card
+    relative
+    cursor-pointer;
 
     &__input {
         @apply
         w-full
         h-full
-        pl-2
+        pl-4
         pr-12
         bg-transparent
-        appearance-none;
+        font-medium
+        appearance-none
+        cursor-pointer;
     }
 
     &__icon {
@@ -125,8 +147,43 @@
             w-8
             absolute
             top-1/2
-            transform -translate-y-1/2
+            transform -translate-y-1/2 rotate-90
             right-4;
+    }
+
+    &_sm {
+        @apply
+        border
+        h-8;
+    }
+
+    &_sm & {
+        &__input {
+            @apply
+            text-gray
+            text-xs;
+        }
+
+        &__icon {
+            @apply
+            h-4
+            w-4;
+        }
+    }
+
+    &_lg {
+        @apply
+        border-0
+        h-16;
+    }
+
+    &_lg & {
+        &__input {
+            @apply
+            pr-16
+            select-center
+            md:text-lg;
+        }
     }
 }
 
@@ -143,7 +200,7 @@
         & > * {
             @apply
             fill-white
-            stroke-gray-border;
+            stroke-gray-light;
         }
 
         &__input {
@@ -168,8 +225,8 @@
     &_disabled & {
         &__icon {
             &__input:checked + * {
-                @apply fill-gray-border
-                stroke-gray-border;
+                @apply fill-gray-light
+                stroke-gray-light;
             }
         }
 
@@ -183,7 +240,7 @@
     @apply
     flex
     items-center
-    space-x-4
+    space-x-2
     cursor-pointer;
 
     &__icon {
@@ -206,6 +263,10 @@
         }
     }
 
+    &__label {
+        @apply text-blue-dark;
+    }
+
     &_disabled {
         @apply cursor-default;
     }
@@ -213,26 +274,40 @@
     &_disabled & {
         &__icon {
             &__input:checked + * {
-                @apply fill-gray-border
-                stroke-gray-border;
+                @apply fill-gray-light
+                stroke-gray-light;
             }
         }
 
         &__label {
-            @apply text-gray-300;
+            @apply text-gray-light;
         }
     }
 }
 
 .links {
     @apply
-    space-y-2;
+    space-y-2
+    md:flex
+    md:justify-between
+    md:space-y-0;
 
     &__item {
         @apply
         text-lg
-        font-medium
         block
-        text-center;
+        text-center
+        md:text-base;
+
+        & > * {
+            @apply
+                font-medium
+                mx-1;
+        }
+    }
+
+    &_center {
+        @apply
+            justify-center;
     }
 }

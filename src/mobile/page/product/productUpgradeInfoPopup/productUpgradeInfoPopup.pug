@@ -1,0 +1,12 @@
+include /include/blocks/product/productUpgradeInfoContent/productUpgradeInfoContent
+
+mixin productUpgradeInfoPopup
+	+b#popup_upgrade_info.popup._layer
+		+e.overlay
+		+e.body
+			+b.icon._xl.__close(href="#")
+				include /assets/images/xl/crossIcon.svg
+			+e.header Описание
+			+b.__content
+				+b.__wrapper
+					+productUpgradeInfoContent

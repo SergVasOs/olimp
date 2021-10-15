@@ -13,4 +13,17 @@
         @apply
         w-full;
     }
+
+    &_popup {
+        @apply
+        relative
+        rounded-b;
+    }
+
+    &_popup & {
+        &__box {
+            @apply
+            md:px-12;
+        }
+    }
 }

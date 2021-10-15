@@ -15,12 +15,17 @@
             border
             rounded;
 
-            &__img {
+            &__picture {
                 @apply
-                h-44
-                w-full
-                object-cover
-                rounded-t;
+                block
+                relative
+                pb-full;
+
+                &__img {
+                    @apply
+                    flexBlockCover
+                    rounded-t;
+                }
             }
 
             &__logo {

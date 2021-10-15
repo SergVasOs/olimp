@@ -1,0 +1,12 @@
+.mapPopup {
+    &__map {
+        @apply
+        relative
+        pb-1/2;
+
+        &__frame {
+            @apply flexBlockCover;
+        }
+    }
+}
+

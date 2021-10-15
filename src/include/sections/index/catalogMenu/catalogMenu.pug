@@ -8,7 +8,7 @@ mixin catalogMenu(showMore=true)
 					+b.__item.swiper-slide(href='#') Сувениры
 					+b.__item.swiper-slide(href='#') Спорт.товары
 					+b.__item.swiper-slide(href='#') Вышивка
-			+b.__items
+			+b.__items._overflow
 				+b.__item._active(href='catalog-grid.html')
 					+e.img(src='images/categoryIcon1.png')
 					+e.name Кубки
@@ -33,8 +33,11 @@ mixin catalogMenu(showMore=true)
 				+b.__item(href='catalog-grid.html')
 					+e.img(src='images/categoryIcon8.png')
 					+e.name Стеклянные награды
+				+b.__item(href='catalog-grid.html')
+					+e.img(src='images/categoryIcon9.png')
+					+e.name Плакетки
 			if (showMore)
-				+b.button._lg._full.__button(href='catalog.html')
+				+b.button._lg._gray._full.__button(href='catalog.html')
 					+e.icon
 						include /assets/images/lg/blockIcon.svg
 					+e.text Показать больше категорий

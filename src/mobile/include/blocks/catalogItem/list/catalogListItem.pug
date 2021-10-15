@@ -9,7 +9,7 @@ mixin catalogListItem(book=false,shirt=false)
 	+b.catalogListItem&attributes(attributes)
 		+catalogItemGallery(shirt)._list.__catalogItemGallery
 		+labels.__labels
-		+favoriteIcon._active.__favoriteIcon
+		+favoriteIcon.__favoriteIcon
 		+e.name(href=!shirt ? "product.html" : "product-shirt.html") Название товара Название товара Название товара Название товара Название товара
 		+e.prices
 			+e.price 127 354 ₽

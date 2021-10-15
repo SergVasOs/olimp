@@ -1,51 +1,95 @@
-+b.topBar
++b.topBar.tabs
 	+b.__top
 		+e.box.box
-			+b.__menu
-				+e.item._active(href='#') Награды
-				+e.item(href='#') Подарки
-				+e.item(href='#') Сувениры
-				+e.item(href='#') Спорт.товары
-				+e.item(href='#') Вышивка
+			+b.__menu.tabs__buttons
+				+b.__item._active.tabs__buttons__item._active(data-tab='cat1') Награды
+				+b.__item.tabs__buttons__item(data-tab='cat2') Подарки
+				+b.__item.tabs__buttons__item(data-tab='cat3') Сувениры
+				+b.__item.tabs__buttons__item(data-tab='cat4') Спорт.товары
+				+b.__item.tabs__buttons__item(data-tab='cat5') Вышивка
 			+b.__breadcrumbs
-				+b.button._sm._gradientGray(href='')
-					+b.icon._sm
-						include /assets/images/homeIcon.svg
-				+e.shevron
-					include /assets/images/shevronIcon.svg
-				+e.item(href='#') Кубки
-				+e.shevron
-					include /assets/images/shevronIcon.svg
-				+e.item(href='#') Металлические кубки
-				+e.shevron
-					include /assets/images/shevronIcon.svg
+				+b.icon._sm.__home(href='index.html')
+					include /assets/images/sm/homeIcon.svg
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+				+e.item(href='catalog-grid.html') Кубки
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
+				+e.item(href='catalog-grid.html') Металлические кубки
+				+b.icon._sm
+					include /assets/images/sm/shevronIcon.svg
 				+e.item Кубок B368-3, высота 36 см
-	+b.__subMenu
-		+e.box.box
-			+b.__items
-				+b.__item._cat1._active(href='#')
-					+e.img(src='images/categoryIcon1.png')
-					+e.name Кубки
-				+b.__item._cat2(href='#')
-					+e.img(src='images/categoryIcon2.png')
-					+e.name Медали
-				+b.__item._cat3(href='#')
-					+e.img(src='images/categoryIcon3.png')
-					+e.name Медали из акрила
-				+b.__item._cat4(href='#')
-					+e.img(src='images/categoryIcon4.png')
-					+e.name Литые статуэтки
-				+b.__item._cat5(href='#')
-					+e.img(src='images/categoryIcon5.png')
-					+e.name Пластиковые фигурки
-				+b.__item._cat6(href='#')
-					+e.img(src='images/categoryIcon6.png')
-					+e.name Призы из акрила
-				+b.__item._cat7(href='#')
-					+e.img(src='images/categoryIcon7.png')
-					+e.name Деревянные награды
-				+b.__item._cat8(href='#')
-					+e.img(src='images/categoryIcon8.png')
-					+e.name Стеклянные награды
-			+b.__more(href='#')
-				include /assets/images/moreIcon.svg
+	if (!hideTopSubmenu)
+		+b.__subMenu
+			div.box
+				+b.tabs__content
+					+e.item._active(data-content-tab='cat1')
+						+b.topBar__subMenu__swiper.swiper-container
+							+b.__wrapper.swiper-wrapper
+								+b.__item._active.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon1.png')
+									+e.name Кубки
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon2.png')
+									+e.name Медали
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon3.png')
+									+e.name Медали из акрила
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon4.png')
+									+e.name Литые статуэтки
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon5.png')
+									+e.name Пластиковые фигурки
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon6.png')
+									+e.name Призы из акрила
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon7.png')
+									+e.name Деревянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+							+b.__next.swiper-next(href="#")
+								include /assets/images/xl/shevronIcon.svg
+					+e.item(data-content-tab='cat2')
+						+b.topBar__subMenu__swiper.swiper-container
+							+b.__wrapper.swiper-wrapper
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon6.png')
+									+e.name Призы из акрила
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon7.png')
+									+e.name Деревянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon8.png')
+									+e.name Стеклянные награды
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon1.png')
+									+e.name Кубки
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon2.png')
+									+e.name Медали
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon3.png')
+									+e.name Медали из акрила
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon4.png')
+									+e.name Литые статуэтки
+								+b.__item.swiper-slide(href='catalog-grid.html')
+									+e.img(src='images/categoryIcon5.png')
+									+e.name Пластиковые фигурки
+							+b.__next.swiper-next(href="#")
+								include /assets/images/xl/shevronIcon.svg

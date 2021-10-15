@@ -1,111 +1,162 @@
-.h2 {
-    @apply
-    text-3xl
-    font-bold;
-}
+@layer utilities {
+    @variants responsive {
+        .h2 {
+            @apply text-3xl
+            font-bold
+            md:text-4xl
+            md:font-normal
+            md:text-blue-dark;
+        }
 
-.h3 {
-    @apply
-    text-2xl
-    font-medium;
-}
+        .h3 {
+            @apply text-2xl
+            font-medium
+            md:text-3xl
+            md:font-bold
+            md:text-black;
+        }
 
-.h4 {
-    @apply
-    text-xl
-    font-medium;
-}
+        .h4 {
+            @apply text-xl
+            font-medium
+            md:text-2xl
+            md:font-bold
+            md:text-black;
+        }
 
-.h5 {
-    @apply
-    text-lg
-    font-medium;
-}
+        .h5 {
+            @apply text-lg
+            font-medium
+            md:text-xl;
+        }
 
-.h6 {
-    @apply
-    font-medium;
-}
-
-.select-center {
-    text-align-last: center;
-}
-
-.content-empty {
-    content: '';
-}
-
-.overflow {
-    &-scrollVert {
-        @apply
-        overflow-x-hidden
-        overflow-y-scroll
-        md:pr-2;
-
-        &::-webkit-scrollbar {
+        .h6 {
             @apply
-                hidden
+            font-medium
+            md:text-lg;
+        }
+    }
+
+    .select-center {
+        text-align-last: center;
+    }
+
+    .content-empty {
+        content: '';
+    }
+
+    .textBg {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .overflow {
+        &-vert {
+            @apply overflow-y-scroll;
+
+            &::-webkit-scrollbar {
+                @apply hidden;
+            }
+        }
+
+        &-scrollVert {
+            @apply overflow-x-hidden
+            overflow-y-scroll
+            md:pr-5
+            md:-mr-6;
+
+            &::-webkit-scrollbar {
+                @apply hidden
                 w-1
                 h-1
                 md:block;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @apply bg-yellow
+                rounded-full;
+            }
         }
 
-        &::-webkit-scrollbar-track {
-            @apply inset-y-3;
+        &-block {
+            @apply overflow-x-scroll;
+
+            &::-webkit-scrollbar {
+                @apply hidden;
+            }
+        }
+    }
+
+
+    .price {
+        @apply whitespace-nowrap
+        font-bold;
+    }
+
+    .oldPrice {
+        @apply whitespace-nowrap
+        line-through text-gray-light;
+    }
+
+    @variants responsive {
+        .fullBlockCover {
+            @apply h-full w-full object-cover;
         }
 
-        &::-webkit-scrollbar-thumb {
+        .flexBlockCover {
+            @apply absolute fullBlockCover;
+        }
+
+        .fullBlockContain {
+            @apply h-full w-full object-contain;
+        }
+
+        .flexBlockContain {
+            @apply absolute fullBlockContain;
+        }
+
+        .bg-grayGradient {
+            @apply bg-gradient-to-t
+            from-gray-gradient-from
+            to-gray-gradient-to;
+        }
+    }
+
+    .video {
+        @apply
+            block;
+
+        &__wrapper {
             @apply
-            bg-orange
-            rounded-full;
+            block
+            relative
+            pb-1/2;
+        }
+
+        &__img {
+            @apply
+            rounded
+            flexBlockCover;
+        }
+
+        &__icon {
+            @apply
+                z-10
+                absolute
+                w-40
+                h-40
+                top-1/2
+                left-1/2
+                transform -translate-x-1/2 -translate-y-1/2;
         }
     }
 
-    &-block {
-        @apply overflow-x-scroll;
-
-        &::-webkit-scrollbar {
-            @apply hidden;
-        }
+    .word-break-words {
+        word-break: break-word;
     }
-}
 
-.fullImageCover {
-    @apply
-    h-full w-full object-cover;
-}
-
-.flexImageCover {
-    @apply
-    absolute fullImageCover;
-}
-
-.fullImageContain {
-    @apply
-    h-full w-full object-contain;
-}
-
-.flexImageContain {
-    @apply
-    absolute fullImageContain;
-}
-
-.price {
-    @apply
-    whitespace-nowrap
-    font-bold;
-}
-
-.oldPrice {
-    @apply
-    whitespace-nowrap
-    line-through text-gray-light;
-}
-
-.bgGrayGradient {
-    @apply
-    bg-gradient-to-t
-    from-gray-gradient-from
-    to-gray-gradient-to;
+    .fixing {
+        @apply z-10;
+    }
 }
 

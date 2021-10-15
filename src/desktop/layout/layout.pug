@@ -1,4 +1,8 @@
 include /bemto/bemto
+include /desktop/include/blocks/freeDeliveryPopup/freeDeliveryPopup
+include /desktop/include/blocks/giftPopup/giftPopup
+include /desktop/include/blocks/bookOrderPopup/bookOrderPopup
+include /include/blocks/common/fastOrderPopup/fastOrderPopup
 
 - set_bemto_settings({ flat_elements: false });
 
@@ -11,6 +15,10 @@ body
 	include /include/layout/content/content
 	include /desktop/layout/footer/footer
 
-	include /include/layout/modals/login/login
+	+freeDeliveryPopup
+	+fastOrderPopup
+	+bookOrderPopup
+	+giftPopup
+
 	script(src='js/common.js')
 	script(src='js/desktop.js')

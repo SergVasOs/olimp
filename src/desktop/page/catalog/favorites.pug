@@ -1,0 +1,14 @@
+extends /desktop/layout/layout
+include /desktop/page/catalog/catalogHead/catalogHead
+include /desktop/page/catalog/catalogContent/catalogContent
+include /desktop/page/catalog/catalogBottom/catalogBottom
+
+block append pageVars
+	- var pageTitle = "Избранное";
+	- var pageClass = "catalog";
+	- var catalogView = "grid";
+
+block content
+	+catalogHead.__head
+	+catalogContent.__catalogContent
+	+catalogBottom.__catalogBottom

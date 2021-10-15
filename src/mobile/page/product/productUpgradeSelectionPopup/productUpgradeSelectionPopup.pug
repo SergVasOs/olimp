@@ -1,0 +1,12 @@
+include /include/blocks/product/productUpgradeSelectionContent/productUpgradeSelectionContent
+
+mixin productUpgradeSelectionPopup
+	+b#popup_upgrade_selection.popup._layer
+		+e.overlay
+		+e.body
+			+b.icon._xl.__close
+				include /assets/images/xl/crossIcon.svg
+			+e.header Добавить крышку
+			+b.__content
+				+b.__wrapper
+					+productUpgradeSelectionContent

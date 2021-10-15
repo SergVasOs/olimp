@@ -8,11 +8,64 @@
     &__title {
         @apply
         h2
-        mb-4;
+        flex
+        flex-col
+        mb-4
+        md:text-xl
+        md:font-bold;
     }
 
     &__subtitle {
         @apply
         mb-6;
     }
+
+    &__form {
+        &__footer {
+            &__button {
+                @apply
+                font-normal;
+            }
+        }
+    }
+
+    &_inline {
+        @apply
+            p-10
+            shadow-none;
+    }
+
+    &_inline & {
+        &__title {
+            @apply
+            flex-row
+            flex-wrap
+            space-x-2;
+        }
+
+        &__subtitle {
+            @apply
+            text-xl;
+        }
+
+        &__form {
+            @apply
+                w-full
+                flex
+                space-x-4;
+
+            &__row {
+                @apply
+                    w-2/5
+                    mb-0;
+            }
+
+            &__footer {
+                @apply
+                w-1/5
+                mt-0;
+            }
+        }
+    }
 }
+

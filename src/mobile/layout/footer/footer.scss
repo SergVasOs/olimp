@@ -2,7 +2,7 @@
     &__menus {
         @apply
         bg-gray-card
-        py-8;
+        py-4;
 
         &__box {
             @apply
@@ -35,16 +35,22 @@
 
             &__items {
                 @apply
-                mb-4
+                m-4
                 hidden;
 
                 &__item {
                     @apply
-                    block
+                    flex
+                    items-center
+                    space-x-2
                     text-black
-                    p-4
+                    py-4
                     border-b
                     text-lg;
+
+                    &__name {
+                        @apply flex-1;
+                    }
                 }
             }
 
@@ -81,8 +87,14 @@
         &__logo {
             @apply
             text-white
-            h-12
-            mb-6;
+            h-10
+            mb-12
+            fill-blue-dark;
+
+            & > * {
+                @apply
+                fill-inherit;
+            }
         }
 
         &__phone {
@@ -116,12 +128,12 @@
             button_white
             font-normal
             px-8
-            mb-4;
+            mb-6;
         }
 
         &__worktime {
             @apply
-            mb-10;
+            mb-8;
 
             &__label {
                 @apply font-bold;

@@ -1,69 +1,19 @@
 .catalogHead {
-    @apply
-    mt-5
-    lg:mt-8;
-
-    &__box {
-        @apply
-            flex
-            items-center;
-    }
-
-    &__title {
-        @apply
-        flex-1
-        max-w-max
-        text-blue-dark
-        text-4xl
-        truncate;
-    }
-
     &__count {
         @apply
-        hidden
         text-lg
-        ml-2
-        mr-6
-        mt-2
-        lg:block;
-    }
-
-    &__countTab {
-        @apply
-        text-xl
-        ml-2
-        mr-6
-        mt-1
-        lg:hidden;
+        mr-4
+        mt-2;
     }
 
     &__sort {
         @apply
-            w-44
-            mr-6
-            ml-auto
-            lg:w-60;
+        w-52;
     }
 
     &__views {
         @apply
-        flex
-        space-x-3;
-
-        &__item {
-            @apply
-            w-8
-            h-8
-            p-1.5
-            bg-white
-            border
-            rounded;
-
-            &_active {
-                @apply
-                    bg-blue-dark
-                    text-white;
-            }
-        }
+            flex
+            space-x-2;
     }
 }

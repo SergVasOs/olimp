@@ -1,0 +1,12 @@
+.mapPopup {
+    @apply
+    -my-6
+    -mx-4;
+
+    &__map {
+        @apply
+        h-full
+        w-full;
+    }
+}
+

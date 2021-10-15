@@ -1,0 +1,206 @@
+.profileOrder {
+    @apply
+    pt-0;
+
+    &__head {
+        @apply
+        mb-12;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-8;
+    }
+
+    &__left {
+        @apply
+        w-1/4;
+    }
+
+    &__right {
+        @apply
+        w-3/4;
+    }
+
+    &__top {
+        @apply
+        flex
+        justify-between
+        mb-4;
+
+        &__title {
+            @apply
+            h5;
+        }
+
+        &__back {
+            @apply
+            flex
+            items-center
+            underline;
+
+            &__icon {
+                @apply transform rotate-180;
+            }
+        }
+    }
+
+
+
+    &__info {
+        @apply
+        border
+        rounded-lg
+        p-6
+        mb-8;
+
+        &__top {
+            @apply
+            flex
+            justify-between
+            items-center
+            space-x-4
+            mb-4;
+
+            &__count {
+                @apply text-gray-light;
+            }
+
+            &__status {
+                @apply
+                h-10
+                w-40
+                flex
+                justify-center
+                items-center
+                bg-green
+                text-white
+                text-sm
+                font-bold
+                rounded;
+
+                &_red {
+                    @apply bg-red;
+                }
+
+                &_blue {
+                    @apply bg-blue-dark;
+                }
+
+                &_gray {
+                    @apply bg-gray-border;
+                }
+            }
+        }
+
+        &__row {
+            @apply
+                space-x-4
+                mb-4
+                pb-4
+                border-b
+                flex
+                justify-between
+                last:pb-0
+                last:mb-0
+                last:border-0;
+
+            &__col {
+                @apply
+                    space-y-2
+                    flex-1
+                    first:w-32
+                    first:flex-none;
+
+                &__title {
+                    @apply
+                        text-xs
+                        text-gray-light
+                        uppercase;
+                }
+
+                &__text {
+                    @apply
+                        text-sm;
+
+                    &_contact {
+                        @apply flex
+                        space-x-4
+                        items-center;
+                    }
+
+                    &_contact & {
+                        &__info {
+                            @apply
+                            text-sm
+                            space-y-4;
+
+                            &__name {
+                                @apply
+                                font-bold;
+                            }
+
+                            &__contacts {
+                                @apply
+                                space-x-2;
+
+                                &__item {
+                                    @apply
+                                    text-blue
+                                    font-medium;
+
+                                    &__add {
+                                        @apply
+                                        ml-1
+                                        text-gray-light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+    &__list {
+        @apply mb-8;
+
+        &__title {
+            @apply
+            h5
+            mb-4;
+        }
+
+        &__category {
+            @apply
+            space-y-4;
+
+            &__header {
+                @apply
+                p-4
+                rounded
+                flex
+                items-center
+                justify-between
+                text-lg
+                bg-grayGradient;
+
+                &__count {
+                    @apply
+                    font-bold
+                    text-lg;
+                }
+            }
+
+            &__items {
+                @apply
+                space-y-4;
+            }
+        }
+    }
+}

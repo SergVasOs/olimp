@@ -1,0 +1,138 @@
+.freeDeliveryContent {
+    &__applyIcon {
+        @apply
+        block
+        mx-auto
+        mb-4
+        md:icon_4xl;
+    }
+
+    &__title {
+        @apply
+            text-xl
+            text-center
+            text-blue-dark
+            mb-4
+            md:text-3xl;
+
+        & > * {
+            @apply
+                mx-1;
+        }
+    }
+
+    &__info {
+        @apply
+        text-sm
+        text-gray
+        mb-6
+        text-center
+        md:text-base
+        md:mb-8;
+    }
+
+    &__steps {
+        @apply
+        w-full
+        flex
+        px-2
+        mb-10
+        md:w-2/5
+        md:mx-auto;
+
+        &__step {
+            @apply
+            text-gray
+            w-min
+                flex
+                flex-col
+                items-center;
+
+            &_active {
+                @apply text-black;
+            }
+
+            &__icon {
+                @apply
+                mb-2;
+            }
+
+            &__name {
+                @apply
+                -mx-4
+                text-sm
+                text-center;
+            }
+        }
+
+        &__process {
+            @apply
+                flex-1
+                mt-10
+                h-px
+                bg-gray
+                relative;
+
+            &__bar {
+                @apply
+                    bg-yellow
+                    h-1
+                    absolute
+                    bottom-0
+                    left-0;
+            }
+        }
+    }
+
+    &__remainder {
+        @apply
+            text-center
+            mb-6;
+
+        &__label {
+            @apply
+                text-sm
+                text-gray
+                mb-4;
+        }
+
+        &__price {
+            @apply
+                text-3xl
+                text-blue-dark;
+        }
+    }
+
+    &__buttons {
+        @apply
+            grid
+            grid-cols-2
+            gap-2
+            md:w-2/5
+            md:gap-8
+            md:mx-auto;
+    }
+
+    &__products {
+        @apply
+            mt-6
+            md:mt-10
+            md:pt-10
+            md:border-t;
+
+        &__title {
+            @apply
+                text-center
+                text-xl
+                text-blue-dark
+                mb-4
+                md:mb-6
+                md:text-2xl;
+        }
+        &__list {
+            @apply
+            grid grid-cols-2 gap-4
+            md:grid-cols-4;
+        }
+    }
+}

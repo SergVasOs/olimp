@@ -1,0 +1,32 @@
+.pagination {
+	@apply
+	flex
+	items-center
+	space-x-4;
+
+	&__more {
+		@apply
+		px-16;
+	}
+
+	&__pages {
+		@apply flex
+		items-center
+		space-x-4;
+
+		&__item {
+			@apply
+			text-blue-dark
+			flex
+			items-center
+			justify-center
+			rounded
+			w-12
+			h-12;
+
+			&_active {
+				@apply bg-grayGradient;
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+.productContent {
+	@apply
+	overflow-hidden
+	flex
+	flex-col
+	items-stretch
+	pt-4
+	pb-44;
+
+	&__head {
+		@apply z-10;
+	}
+
+	&__top {
+		@apply
+		-mt-16
+		relative
+		mb-4;
+
+		&__gallery {
+			@apply relative h-product-gallery;
+
+			&__labels {
+				@apply absolute
+				z-10
+				top-20
+				left-4;
+			}
+
+			&__3dIcon {
+				@apply absolute
+				z-10
+				bottom-4
+				left-4;
+			}
+
+			&__upgrade {
+				@apply h-full;
+
+				&__img {
+					@apply
+					fullBlockContain
+					bg-black;
+				}
+			}
+
+			&__swiper {
+				&__wrapper {
+					&__slide {
+						&__img {
+							@apply
+							fullBlockContain
+							bg-black;
+						}
+					}
+				}
+				&__dots {
+					@apply
+					flex-col
+					space-x-0
+					space-y-2
+					absolute
+					z-10
+					top-1/2
+					right-4
+					transform -translate-x-1/2;
+				}
+			}
+		}
+	}
+}

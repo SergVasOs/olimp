@@ -1,8 +1,10 @@
 .productDescription {
     &__title {
         @apply
-            h2
-            mb-4;
+            text-3xl
+            font-bold
+            mb-4
+            md:h4;
     }
 
     &__text {

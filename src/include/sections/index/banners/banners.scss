@@ -1,15 +1,24 @@
 .banners {
     &__swiper {
         @apply
-            pb-6
+            pb-5
             md:pb-8;
 
         &__wrapper {
             &__item {
                 &__img {
-                    @apply w-full;
+                    @apply
+                    rounded
+                    w-full;
                 }
             }
+        }
+
+        &__dots {
+            @apply
+                pl-2
+                justify-start
+                md:pl-0;
         }
     }
 }

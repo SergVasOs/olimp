@@ -1,17 +1,19 @@
 .button {
     @apply
+        text-black
         h-12
         rounded
-        bg-orange
-        text-blue-dark
+        border
+        border-yellow-dark
+        bg-yellow-dark
         inline-flex
         justify-center
         items-center
         cursor-pointer
-        px-2
+        px-4
         font-medium
         space-x-2
-        hover:opacity-90
+        hover:bg-white
         hover:text-blue-dark
         active:ring-1;
 
@@ -27,10 +29,15 @@
         text-center;
     }
 
+    &_icon {
+        @apply
+        p-2
+        w-12;
+    }
+
     &_xs {
         @apply
         text-sm
-        px-2
         h-8;
     }
 
@@ -42,9 +49,19 @@
         }
     }
 
+    &_xs#{&}_icon {
+        @apply
+        w-8;
+    }
+
     &_sm {
         @apply
             h-10;
+    }
+
+    &_sm#{&}_icon {
+        @apply
+        w-10;
     }
 
     &_sm & {
@@ -55,39 +72,65 @@
         }
     }
 
+    @variants responsive {
+        &_md {
+            @apply h-12
+            text-base;
+        }
+
+        &_md & {
+            &__icon {
+                @apply w-8
+                h-8;
+            }
+        }
+    }
+
     &_lg {
         @apply
         text-lg
         rounded-lg
         space-x-4
-        px-4
         h-16;
     }
 
-    &_gradientGray {
+    &_lg#{&}_icon {
         @apply
-            bg-gradient-to-t
-            from-gray-gradient-from
-            to-gray-gradient-to;
+        w-16;
     }
 
     &_gray {
         @apply
-        bg-gray-bg;
+        text-blue-dark
+        border-gray-border-light
+        bg-gray-border-light
+        hover:bg-white;
     }
 
-    &_white {
+    &_lightGray {
         @apply
+        text-blue-dark
         border
-        border-blue-dark
-        bg-white
-        hover:bg-blue-dark
-        hover:text-white;
+        border-gray-card
+        bg-gray-card
+        hover:bg-white;
+    }
+
+    @variants responsive {
+        &_white {
+            @apply border
+            border-blue-dark
+            bg-white
+            text-blue-dark
+            hover:bg-blue-dark
+            hover:text-white;
+        }
     }
 
     &_blue {
         @apply
         border
+        border-blue-dark
         bg-blue-dark
         text-white
         hover:text-blue-dark
@@ -96,13 +139,16 @@
 
     &_green {
         @apply
+        border-green
         bg-green
         text-white;
     }
 
     &_yellow {
         @apply
-        bg-orange-light;
+        text-blue-dark
+        border-yellow
+        bg-yellow;
     }
 
     &_full {
@@ -124,4 +170,5 @@
         }
     }
 }
+
 

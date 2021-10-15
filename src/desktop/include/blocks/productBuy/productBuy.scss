@@ -1,0 +1,260 @@
+.productBuy {
+    @apply
+    bg-white
+    w-productRight
+    border
+    shadow
+    relative
+    rounded;
+
+    &__corner {
+        @apply
+        absolute
+        right-full
+        top-32;
+    }
+
+    &__info {
+        @apply
+        pt-4
+        px-12
+        pb-12;
+    }
+
+    &__top {
+        @apply
+        flex
+        justify-end
+        items-center
+        mb-4;
+
+        &__new {
+            @apply
+            mr-auto;
+        }
+
+        &__sku {
+            @apply
+            -mr-6
+            font-medium
+            text-gray;
+        }
+    }
+
+    &__prices {
+        @apply
+        flex
+        items-center
+        space-x-4
+        mb-2;
+
+        &__price {
+            @apply
+            flex
+            items-baseline
+            price
+            text-6xl
+            font-bold;
+
+            &__piece {
+                @apply
+                text-xl;
+            }
+        }
+
+        &__oldPrice {
+            @apply
+            oldPrice
+            text-xl;
+        }
+    }
+
+    &__prop {
+        @apply
+        overflow-hidden
+        mb-6;
+    }
+
+    &__stock {
+        @apply
+        font-medium
+        flex
+        mb-4;
+
+        &__label {
+            @apply
+            text-gray
+            mr-1;
+        }
+    }
+
+    &__upgrades {
+        @apply
+        mb-4;
+
+        &__title {
+            @apply
+            h6
+            underline
+            text-blue
+            mb-4;
+        }
+
+        &__swiper {
+            &__wrapper {
+                &__item {
+                    @apply
+                    relative
+                    w-12;
+
+                    &__img {
+                        @apply
+                        p-2
+                        w-12
+                        h-12
+                        border
+                        rounded-full;
+                    }
+
+                    &__delete {
+                        @apply
+                        p-3px
+                        rounded-circle
+                        bg-gray
+                        text-white
+                        absolute
+                        top-0
+                        right-0
+                        hover:bg-gray-light
+                        hover:text-black;
+                    }
+                }
+            }
+        }
+    }
+
+    &__edition {
+        @apply
+        mb-4;
+
+        &__title {
+            @apply
+            h6
+            underline
+            text-blue
+            mb-3;
+        }
+
+        &__list {
+            &__label {
+                @apply
+                inline-block
+                text-gray
+                text-sm
+                mr-2
+                py-1;
+            }
+
+            &__item {
+                @apply
+                inline-block
+                relative
+                mr-2
+                pr-2
+                py-1;
+
+                &__text {
+                    @apply
+                    text-sm;
+                }
+
+                &__delete {
+                    @apply
+                    p-2px
+                    rounded-circle
+                    bg-gray
+                    text-white
+                    absolute
+                    top-0
+                    right-0
+                    hover:bg-gray-light
+                    hover:text-black;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        @apply flex space-x-4;
+    }
+
+    &__buyButton {
+        @apply flex-1;
+    }
+
+    &__count {
+        @apply
+        bg-grayGradient;
+
+        &__editionLink {
+            @apply
+            block
+            text-center
+            py-4
+            text-black
+            underline;
+        }
+
+        &__editionInfo {
+            @apply
+            pl-16
+            pt-4
+            pr-12
+            pb-8
+            space-y-4;
+
+            &__header {
+                @apply flex
+                space-x-16;
+
+                &__col {
+                    @apply
+                    text-right;
+
+                    &_label {
+                        @apply flex-1;
+                    }
+
+                    &_thing,
+                    &_total {
+                        @apply w-20;
+                    }
+                }
+            }
+
+            &__row {
+                @apply flex
+                space-x-16;
+
+                &__col {
+                    &_label {
+                        @apply flex-1;
+                    }
+
+                    &_sum {
+                        @apply
+                        text-xl
+                        font-medium;
+                    }
+
+                    &_thing,
+                    &_total {
+                        @apply w-20
+                        font-bold
+                        text-right;
+                    }
+                }
+            }
+        }
+    }
+}

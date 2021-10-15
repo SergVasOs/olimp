@@ -1,0 +1,60 @@
+include /include/elements/fileItem/fileItem
+
+mixin productUpgrades
+	+b.productUpgrades&attributes(attributes)
+		+b.__item
+			+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+				include /assets/images/sm/infoIcon.svg
+			+b.__card
+				+e.img(src='images/cap.png')
+				+b.__label
+					+e.name Крышка
+					+e.price 249 ₽ / шт
+				+b.button._sm.__editButton(href='#popup_upgrade_selection')
+					+e.text Изменить
+				+b.icon._lg.__deleteIcon
+					include /assets/images/lg/crossIcon.svg
+		+b.__item
+			+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+				include /assets/images/sm/infoIcon.svg
+			+b.__card
+				+e.img(src='images/cupLabel.png')
+				+b.__label
+					+e.name Эмблема
+				+b.button._sm.__addButton(href='#popup_upgrade_selection')
+					+e.text Добавить
+		+b.__item
+			+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+				include /assets/images/sm/infoIcon.svg
+			+b.__card
+				+e.img(src='images/cupFigure.png')
+				+b.__label
+					+e.name Фигурка
+				+b.button._sm.__addButton(href='#popup_upgrade_selection')
+					+e.text Добавить
+		+b.__item._active
+			+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+				include /assets/images/sm/infoIcon.svg
+			+b.__card
+				+e.img(src='images/cupShield.png')
+				+b.__label
+					+e.name Табличка
+					+e.price 249 ₽ / шт
+				+b.button._sm.__editButton(href='#popup_upgrade_place')
+					+e.text Изменить
+				+b.icon._lg.__deleteIcon
+					include /assets/images/lg/crossIcon.svg
+			+b.__config
+				+e.text Лучшему начальнику
+				+b.__files
+					+fileItem
+					+fileItem
+		+b.__item
+			+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+				include /assets/images/sm/infoIcon.svg
+			+b.__card
+				+b.__label
+					+e.name Особые пожелания
+				+b.button._sm.__addButton(href='#popup_upgrade_place')
+					+e.text Добавить
+

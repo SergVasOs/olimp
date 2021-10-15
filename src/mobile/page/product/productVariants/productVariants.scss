@@ -22,17 +22,17 @@
                 flex
                 flex-col
                 items-stretch
-                bg-gray-bg;
+                bg-gray-border-light;
 
                 &__label {
                     @apply
                     absolute
                     left-4
                     top-0
-                    h-4
+                    h-6
                     px-3
                     rounded-full
-                    text-xxs
+                    text-xs
                     transform -translate-y-1/2
                     flex
                     items-center;
@@ -78,29 +78,29 @@
                     }
                 }
 
-                &_standart {
+                &_econom {
                     @apply
                     ring-orange
                     border-orange;
                 }
 
-                &_standart & {
+                &_econom & {
                     &__label {
                         @apply
                         bg-orange;
                     }
                 }
 
-                &_econom {
+                &_standart {
                     @apply
-                    ring-orange-light
-                    border-orange-light;
+                    ring-yellow
+                    border-yellow;
                 }
 
-                &_econom & {
+                &_standart & {
                     &__label {
                         @apply
-                        bg-orange-light;
+                        bg-yellow;
                     }
                 }
 

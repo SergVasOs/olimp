@@ -1,9 +1,11 @@
 include /include/blocks/common/pageHead/pageHead
-include /mobile/include/blocks/catalogFilterLayer/catalogFilterLayer
 
-mixin catalogHead
-	+pageHead('Кубки пластиковые с длинным названием', 'catalog.html')&attributes(attributes)
-		+b.button._yellow.__icon(href='#layer_filters')
-			+e.icon
-				include /assets/images/lg/filterIcon1.svg
-	+catalogFilterLayer
+mixin catalogHead(title='Кубки пластиковые с длинным названием')
+	+pageHead(title, 'catalog.html')&attributes(attributes)
+		+e.right
+			+b.button._icon._lightGray(href='#popup_categories')
+				+e.icon
+					include /assets/images/lg/categoriesIcon.svg
+			+b.button._icon._yellow(href='#popup_filters')
+				+e.icon
+					include /assets/images/lg/filterIcon1.svg

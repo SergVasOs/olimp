@@ -1,0 +1,15 @@
+include /include/elements/buyButton/buyButton
+
+mixin productHeader
+	+b.productHeader
+		+e.box.box
+			+b.tabs._productHead.__tabs
+				+b.__buttons
+					+e.item._active Нанесение
+					+e.item Все свойства
+					+e.item Описание
+					+e.item Доставка
+			+b.__prices
+				+e.price 365 939 руб/шт
+				+e.oldPrice 465 939 руб/шт
+			+buyButton('В корзину')._lg.__buyButton

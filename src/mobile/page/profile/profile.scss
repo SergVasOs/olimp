@@ -4,7 +4,7 @@
 
     &__head {
         @apply
-        bg-gray-bg
+        bg-gray-border-light
         pt-8
         pb-20
         -mb-12;
@@ -100,7 +100,7 @@
                 flex
                 items-center
                 space-x-4
-                p-4
+                py-4
                 border-b
                 last:border-0;
 

@@ -6,22 +6,23 @@ mixin productDeliveryInfo
 		+bestDelivery.__best
 		+e.blocks
 			+b.__info
-				+b.__item
-					+b.icon._lg.__icon
-						include /assets/images/lg/carIcon.svg
-					+e.name От 3000 р. бесплатно по Москве
-				+b.__item
-					+b.icon._lg.__icon
-						include /assets/images/lg/cameraIcon.svg
-					+e.name Сделаем фото перед отгрузкой
-				+b.__item
-					+b.icon._lg.__icon
-						include /assets/images/lg/discountIcon.svg
-					+e.name Скидка 15% на ВСЁ
-				+b.__item
-					+b.icon._lg.__icon
-						include /assets/images/lg/buildingIcon.svg
-					+e.name Оптовые скидки от 15 000 ₽
+				+b.__items
+					+b.__item
+						+b.icon._lg.__icon
+							include /assets/images/lg/carIcon.svg
+						+e.name От 3000 р. бесплатно по Москве
+					+b.__item
+						+b.icon._lg.__icon
+							include /assets/images/lg/cameraIcon.svg
+						+e.name Сделаем фото перед отгрузкой
+					+b.__item
+						+b.icon._lg.__icon
+							include /assets/images/lg/discountIcon.svg
+						+e.name Скидка 15% на ВСЁ
+					+b.__item
+						+b.icon._lg.__icon
+							include /assets/images/lg/buildingIcon.svg
+						+e.name Оптовые скидки от 15 000 ₽
 				+e.more(href='#') Подробнее о доставке
 			+b.__props
 				+e.row

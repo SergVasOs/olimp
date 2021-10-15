@@ -1,0 +1,226 @@
+@import "/src/desktop/page/order/orderSuccessPopup/orderSuccessPopup";
+
+.order {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-4;
+    }
+
+    &__left {
+        @apply
+        w-3/5
+        space-y-12;
+    }
+
+    &__step {
+        &__title {
+            @apply
+            text-lg
+            py-3
+            px-4
+            rounded
+            bg-grayGradient
+            mb-4;
+        }
+
+        &__upload {
+            @apply
+                mt-12
+                border
+                rounded
+                pt-8
+                pb-14
+                px-36;
+
+            &__title {
+                @apply
+                    font-medium
+                    text-blue-dark
+                    mb-4;
+            }
+
+            &__dropArea {
+                @apply
+                    mb-10;
+            }
+
+            &__files {
+                @apply
+                space-y-4;
+            }
+        }
+
+        &__shipping {
+            @apply
+                space-y-8;
+
+            &__group {
+                &__title {
+                    @apply
+                    text-lg
+                    font-medium
+                    mb-4;
+                }
+
+                &__items {
+                    @apply
+                    grid
+                    grid-cols-2
+                    gap-4;
+
+                    &__item {
+                        @apply
+                        space-y-4;
+
+                        &__card {
+                            @apply
+                            p-4
+                            border
+                            rounded
+                            flex
+                            items-center
+                            space-x-8;
+
+                            &__name {
+                                @apply
+                                flex-1
+                                space-y-2;
+
+                                &__title {
+                                    @apply
+                                    font-medium;
+                                }
+
+                                &__desc {
+                                    @apply
+                                    text-sm
+                                    text-gray-light;
+                                }
+                            }
+
+                            &__info {
+                                @apply
+                                text-right
+                                space-y-2;
+
+                                &__price {
+                                    @apply
+                                    font-medium;
+                                }
+                            }
+                        }
+
+                        &_active & {
+                            &__card {
+                                @apply
+                                border-yellow-light
+                                bg-yellow-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__map {
+            @apply
+                pb-1/2
+                relative
+                mt-8;
+
+                &__frame {
+                    @apply
+                    flexBlockCover;
+                }
+        }
+
+        &__point {
+            @apply
+                mt-6
+                border
+                rounded
+                px-6
+                py-4
+                flex
+                items-start
+                space-x-4;
+
+            &__logo {
+                @apply w-44;
+            }
+
+            &__text {
+                @apply
+                flex-1
+                space-y-2;
+
+                &__info {
+                    @apply text-gray-light;
+                }
+
+                &__contacts {
+                    @apply
+                        text-gray-light;
+                }
+            }
+        }
+
+        &__payment {
+            @apply
+            grid
+            grid-cols-2
+            gap-4;
+
+            &__item {
+                @apply
+                h-full
+                p-4
+                border
+                rounded
+                space-y-2
+                mb-4
+                last:mb-0;
+
+                &__top {
+                    @apply
+                    flex
+                    items-center
+                    justify-between
+                    space-x-4;
+
+                    &__title {
+                        @apply
+                        text-xl
+                        font-medium;
+                    }
+                }
+
+                &__desc {
+                    @apply
+                    text-sm
+                    text-gray-light;
+                }
+
+                &_active {
+                    @apply
+                    border-yellow-light
+                    bg-yellow-light;
+                }
+            }
+        }
+    }
+
+    &__right {
+        @apply
+        w-2/5
+        flex
+        flex-col
+        items-stretch
+        space-y-4;
+    }
+}

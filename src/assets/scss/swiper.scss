@@ -4,7 +4,7 @@
         @apply
         border
         cursor-pointer
-        rounded-md
+        rounded
         flex
         justify-center
         items-center
@@ -12,8 +12,6 @@
         text-black
         w-16
         h-20
-        px-5
-        py-7
         absolute
         z-10
         top-1/2
@@ -32,12 +30,21 @@
     &-prev {
         @apply
         transform -translate-y-1/2 rotate-180
-        left-1;
+        left-0;
     }
 
     &-next {
         @apply
-        right-1;
+        right-0;
+    }
+
+    &-button {
+        &-disabled {
+            @apply
+                cursor-default
+                text-gray
+                hover:text-gray;
+        }
     }
 
     &-dots {
@@ -52,12 +59,25 @@
             @apply w-2
             h-2
             bg-gray-light
-            rounded-full
+            rounded-circle
             cursor-pointer
             hover:bg-blue-dark;
 
             &-active {
                 @apply bg-blue-dark;
+            }
+        }
+
+        &_banners & {
+            &-item {
+                @apply
+                bg-gray-border-light
+                md:h-3
+                md:w-3;
+
+                &-active {
+                    @apply bg-yellow;
+                }
             }
         }
 
@@ -68,18 +88,8 @@
         &_sm & {
             &-item {
                 @apply
-                w-1
-                h-1;
-            }
-        }
-
-        &_lg & {
-            &-item {
-                @apply
-                w-2
-                h-2
-                lg:w-3.5
-                lg:h-3.5;
+                w-small-dot
+                h-small-dot;
             }
         }
     }
@@ -87,6 +97,13 @@
     &-container > &-dots {
         @apply
         bottom-0.5;
+    }
+
+    &-container-autoheight & {
+        &-wrapper {
+            @apply
+            items-stretch;
+        }
     }
 
     &-container-vertical {

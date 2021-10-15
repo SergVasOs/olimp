@@ -1,0 +1,52 @@
+.profileAddresses {
+    @apply
+    pt-0;
+
+    &__head {
+        @apply
+        mb-12;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-8;
+    }
+
+    &__left {
+        @apply
+        w-1/4;
+    }
+
+    &__right {
+        @apply
+        w-3/4
+        flex
+        space-x-8;
+    }
+
+    &__list {
+        @apply
+        w-2/3;
+
+        &__items {
+            @apply
+            space-y-4;
+        }
+
+        &__button {
+            @apply
+            mt-8
+            w-2/3;
+        }
+    }
+
+    &__banner {
+        @apply
+        w-1/3;
+
+        &__img {
+            @apply w-full;
+        }
+    }
+}

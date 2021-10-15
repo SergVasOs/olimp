@@ -1,3 +1,5 @@
+@import "/src/desktop/page/cart/cartItems/cartItems";
+
 .cart {
     &__head {
         @apply mb-4;
@@ -16,12 +18,12 @@
 
         &__right {
             @apply
+            relative
             w-2/5
             flex
             flex-col
-            justify-between
-            items-stretch
-            space-y-4;
+            justify-end
+            items-stretch;
         }
     }
 }

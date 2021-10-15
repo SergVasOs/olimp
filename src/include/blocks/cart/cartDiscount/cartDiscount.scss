@@ -28,7 +28,7 @@
 
         &__value {
             @apply
-                text-green-300;
+                text-green;
         }
     }
 
@@ -37,6 +37,6 @@
     }
 
     &__link {
-        @apply text-blue-400 underline;
+        @apply text-blue underline;
     }
 }

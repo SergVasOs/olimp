@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind components;
+//@tailwind components;
 @tailwind utilities;
 
 * {
@@ -11,12 +11,12 @@
 
 html {
     @apply
-    font-sans text-base text-black
-    overflow-x-hidden;
+    font-sans text-base text-black;
 
     &.js-modal {
         @apply
-        overflow-hidden;
+        overflow-hidden
+        md:pr-scrollbar;
     }
 }
 
@@ -27,15 +27,18 @@ body {
     min-h-screen
     flex
     flex-col
-    items-stretch
-    overflow-x-hidden;
+    items-stretch;
+
+    &.noHeader {
+        @apply pt-0;
+    }
 }
 
 a {
     @apply
     no-underline
     text-blue-dark
-    hover:text-blue-dark;
+    hover:text-blue;
 }
 
 h2 {

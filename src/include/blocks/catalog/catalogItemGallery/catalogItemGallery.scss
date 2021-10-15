@@ -4,24 +4,20 @@
     overflow-hidden;
 
     &__swiper {
-        @apply
-        md:pb-6;
-
         &__wrapper {
             &__slide {
-                @apply relative overflow-hidden pb-4/3;
-
-                &__img {
-                    @apply
-                    flexImageCover;
-                }
+                @apply
+                bg-auto
+                bg-no-repeat
+                bg-center
+                bg-cover
+                pb-4/3;
             }
         }
 
         &__dots {
             @apply
-            mb-2
-            md:mb-0;
+            mb-1;
         }
     }
 
@@ -30,67 +26,25 @@
             absolute
             bottom-4
             left-2
-            z-10;
+            z-10
+            md:left-4;
     }
 
     &_list & {
-        &__swiper {
+        &__3dIcon {
             @apply
-            pb-6
-            md:pb-0;
-
-            &__wrapper {
-                &__slide {
-                    @apply
-                    pb-4/5
-                    md:pb-10/7;
-                }
-            }
-
-            &__dots {
-                @apply
-                mb-0
-                md:bottom-3;
-            }
+            left-4;
         }
     }
 
     &_productList & {
-        &__swiper {
-            @apply
-            pb-6;
-
-            &__wrapper {
-                &__slide {
-                    @apply pb-4/5;
-                }
-            }
-
-            &__dots {
-                @apply
-                mb-0;
-            }
-        }
-
         &__3dIcon {
             @apply
-            left-4
-            bottom-10;
+            left-4;
         }
     }
 
     &_viewed & {
-        &__swiper {
-            @apply
-            pb-4;
-
-            &__dots {
-                @apply
-                transform scale-75
-                mb-0;
-            }
-        }
-
         &__3dIcon {
             @apply
             hidden;

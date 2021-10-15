@@ -1,0 +1,96 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/catalog/catalogFilters/catalogFilters
+include /desktop/include/blocks/pagination/pagination
+
+block append pageVars
+	- var pageTitle = "Галерея наших работ";
+	- var pageClass = "galleryCategory";
+
+block content
+	+pageHead('Кубки', false).__head
+	+e.box.box
+		+e.left
+			+b.__menu
+				+b.__item
+					+b.__link(href='#')
+						+e.name Кубки с Российской символикой
+						+b.icon._sm.__icon
+							include /assets/images/sm/shevronIcon.svg
+				+b.__item._active
+					+b.__link(href='#')
+						+e.name Стеклянные
+						+b.icon._sm.__icon
+							include /assets/images/sm/shevronIcon.svg
+					+b.__submenu
+						+e.item(href='#') Классические
+						+e.item._active(href='#') Спортивные
+						+e.item(href='#') С местом под вкладыш
+				+b.__item
+					+b.__link(href='#')
+						+e.name Спорт товары
+				+b.__item
+					+b.__link(href='#')
+						+e Кубки с Российской символикой
+				+b.__title Аксессуары
+				+b.__item
+					+b.__link(href='#')
+						+e.name Крышки для кубков
+				+b.__item
+					+b.__link(href='#')
+						+e.name Эмблемы
+				+b.__item
+					+b.__link(href='#')
+						+e.name Таблички
+			+catalogFilters
+		+e.right
+			+b.__list
+				+b.__item._big(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item._big(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item._big(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+				+b.__item(href='set.html')
+					+e.img(src='images/galleryCatItem.png')
+			+pagination.__pagination

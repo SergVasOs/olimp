@@ -1,17 +1,24 @@
-mixin catalogHead
-	+b.catalogHead
-		+e.box.box
-			+e.title Кубки пластиковые с длинным названием
-			+e.countTab (98)
-			+e.count Найдено 98 товаров
-			+b.SELECT.select._sm.__sort
-				+e Сортировка
-				+e По цене
-				+e По рейтингу
-			+b.__views
-				+e.item._active(href='catalog-grid.html')
-					include /assets/images/viewGridIcon.svg
-				+e.item(href='catalog-list.html')
-					include /assets/images/viewListIcon.svg
-				+e.item(href='catalog-table.html')
-					include /assets/images/viewTableIcon.svg
+include /include/blocks/common/pageHead/pageHead
+
+mixin catalogHead(title='Кубки пластиковые с длинным названием')
+	+pageHead(title, false).catalogHead&attributes(attributes)
+		if (!title)
+			+b.catalogHead__count Найдено 98 товаров
+		+e.right
+			+b.select._sm.catalogHead__sort
+				+e.SELECT.input
+					+e Сортировка
+					+e По цене
+					+e По рейтингу
+				+e.icon
+					include /assets/images/sm/shevronIcon.svg
+			+b.catalogHead__views
+				+b.button._xs._icon._blue(href='catalog-grid.html')
+					+e.icon
+						include /assets/images/sm/viewGridIcon.svg
+				+b.button._xs._icon._lightGray(href='catalog-list.html')
+					+e.icon
+						include /assets/images/sm/viewListIcon.svg
+				+b.button._xs._icon._lightGray(href='catalog-table.html')
+					+e.icon
+						include /assets/images/sm/viewTableIcon.svg

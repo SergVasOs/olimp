@@ -10,40 +10,40 @@ mixin catalogTableItem
 		+b.__header
 			+e.col._img Фото
 			+e.col._info Название
-			+e.col._size Размер
+			+e.col._prop Размер
 			+e.col._material Материал
 			+e.col._prices Цена
-		+e.variant
+		+b.__variant
 			+b.__img
 				+e.wrapper
 					+e.image(src='images/catalogItem.png')
-			+e.info
+			+b.__info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.sku Артикул: 37692
-			+e.size 20.5 см
+			+e.prop 20.5 см
 			+e.material Пластик
-			+e.prices
+			+b.__prices
 				+e.price 127 354 ₽
 				+e.oldPrice 137 354 ₽
 				+b.__stock
 					+e.label В наличии:
 					+e.value 133 шт.
-			+quantity
+			+quantity.__quantity
 			+buyButton.__buyButton
-		+e.variant
+		+b.__variant
 			+b.__img
 				+e.wrapper
 					+e.image(src='images/catalogItem.png')
-			+e.info
+			+b.__info
 				+e.name(href='product.html') Название товара Название товара Название товара Название товара Название товара
 				+e.sku Артикул: 37692
-			+e.size 20.5 см
+			+e.prop 20.5 см
 			+e.material Пластик
-			+e.prices
+			+b.__prices
 				+e.price 127 354 ₽
 				+e.oldPrice 137 354 ₽
 				+b.__stock
 					+e.label В наличии:
 					+e.value 133 шт.
-			+quantity
+			+quantity.__quantity
 			+buyButton.__buyButton

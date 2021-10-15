@@ -1,7 +1,9 @@
+//common
 const swiperSpaceSm = 7;
 const swiperSpaceMd = 14;
 const swiperSpaceLg = 28;
 const mobileBreakPoint = 768;
+const headerHeight = 70;
 
 const updateSwipers = (el) => {
 	el.querySelectorAll('.swiper-container').forEach(swiperContainer => {
@@ -9,40 +11,73 @@ const updateSwipers = (el) => {
 	});
 };
 
-const onClickModalHandler = (e) => {
-	e.preventDefault();
-
-	const modalId = e.currentTarget.getAttribute('href');
-	const modal = document.querySelector(modalId);
-	modal.classList.add('modal_show');
+const openPopup = (popup) => {
+	closePopups();
+	popup.classList.add('popup_invisible');
 	document.documentElement.classList.add('js-modal');
-	updateSwipers(modal);
+
+	setTimeout(() => popup.classList.remove('popup_invisible'), 500);
+	setTimeout(() => {
+		popup.classList.add('popup_open');
+		updateSwipers(popup);
+	}, 0);
 };
 
-const onClickModalClose = (e) => {
-	e.preventDefault();
-
-	const modal = e.currentTarget.closest('.modal');
-	modal.classList.remove('modal_show');
+const closePopup = (popup) => {
+	popup.classList.add('popup_invisible');
 	document.documentElement.classList.remove('js-modal');
+
+	setTimeout(() => popup.classList.remove('popup_invisible'), 500);
+	setTimeout(() => popup.classList.remove('popup_open'), 0);
 };
 
-const onClickLayerHandler = (e) => {
-	e.preventDefault();
+const closePopups = () => {
+	document.querySelectorAll('.popup_open:not(.popup_popper)').forEach(popup => {
+		closePopup(popup);
+	});
+};
 
-	const layerId = e.currentTarget.getAttribute('href');
-	const layer = document.querySelector(layerId);
-	layer.classList.add('layer_show');
+const openPopper = (popper) => {
+	closePopups();
+	popper.classList.add('popper_opening');
 	document.documentElement.classList.add('js-modal');
-	updateSwipers(layer);
+
+	setTimeout(() => {
+		popper.classList.remove('popper_opening');
+	}, 500);
+
+	setTimeout(() => {
+		popper.classList.add('popper_open');
+		updateSwipers(popper);
+	}, 0);
 };
 
-const onClickLayerClose = (e) => {
+const closePopper = (popper) => {
+	popper.classList.add('popper_closing');
+	document.documentElement.classList.remove('js-modal');
+
+	setTimeout(() => {
+		popper.classList.remove('popper_closing');
+	}, 500);
+
+	setTimeout(() => {
+		popper.classList.remove('popper_open');
+	}, 0);
+};
+
+const onClickPopupHandler = (e) => {
 	e.preventDefault();
 
-	const layer = e.currentTarget.closest('.layer');
-	layer.classList.remove('layer_show');
-	document.documentElement.classList.remove('js-modal');
+	const popupId = e.currentTarget.getAttribute('href');
+	const popup = document.querySelector(popupId);
+	openPopup(popup);
+};
+
+const onClickPopupClose = (e) => {
+	e.preventDefault();
+
+	const popup = e.currentTarget.closest('.popup');
+	closePopup(popup);
 };
 
 const onClickPopperHandler = (e) => {
@@ -50,10 +85,14 @@ const onClickPopperHandler = (e) => {
 
 	const popperId = e.currentTarget.getAttribute('href');
 	const popper = document.querySelector(popperId);
+	openPopper(popper);
+};
 
-	popper.classList.add('popper_open');
-	document.documentElement.classList.add('js-modal');
-	updateSwipers(popper);
+const onClickPopperClose = (e) => {
+	e.preventDefault();
+
+	const popper = e.currentTarget.closest('.popper');
+	closePopper(popper);
 };
 
 const onClickPopperToggle = (e) => {
@@ -63,12 +102,9 @@ const onClickPopperToggle = (e) => {
 	const isOpen = popper.classList.contains('popper_open');
 
 	if (isOpen) {
-		popper.classList.remove('popper_open');
-		document.documentElement.classList.remove('js-modal');
+		closePopper(popper);
 	} else {
-		popper.classList.add('popper_open');
-		document.documentElement.classList.add('js-modal');
-		updateSwipers(popper);
+		openPopper(popper);
 	}
 };
 
@@ -90,45 +126,65 @@ const onClickTabHandler = (e) => {
 	updateSwipers(activeTabContent);
 };
 
-const onClickCatalogButton = (e) => {
-	e.preventDefault();
+const onWindowScroll = (e) => {
+	const scrollTop = document.documentElement.scrollTop;
 
-	const catalogButton = e.currentTarget;
-	const mainMenu = document.querySelector('.mainMenu');
-	const opened = mainMenu.classList.contains('mainMenu_open');
+	document.querySelectorAll('.fixing').forEach(el => {
+		const elHeight = el.offsetHeight;
+		const parentTop = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+		const parentBottom = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top + el.parentElement.offsetHeight;
+		const offset = 20;
 
-	if (opened) {
-		mainMenu.classList.remove('mainMenu_open');
-		catalogButton.classList.remove('header__catalogButton_open');
-		document.documentElement.classList.remove('js-modal');
-	} else {
-		mainMenu.classList.add('mainMenu_open');
-		catalogButton.classList.add('header__catalogButton_open');
-		document.documentElement.classList.add('js-modal');
-		updateSwipers(mainMenu);
-	}
+		if (parentTop < scrollTop + headerHeight + offset && parentBottom > scrollTop + headerHeight + offset + elHeight) {
+			if (el.style.position !== 'fixed') {
+				el.style.position = 'fixed';
+				el.style.top = headerHeight + offset + 'px';
+				el.style.bottom = 'auto';
+			}
+		} else if (parentBottom < scrollTop + headerHeight + offset + elHeight) {
+				if (el.style.position !== 'absolute') {
+					el.style.position = 'absolute';
+					el.style.top = 'auto';
+					el.style.bottom = '0px';
+				}
+		} else {
+			el.style.position = 'relative';
+			el.style.top = 'auto';
+			el.style.bottom = 'auto';
+		}
+	});
 };
 
-document.querySelectorAll('a[href^="#modal"]').forEach((el) => el.addEventListener('click', onClickModalHandler));
+window.addEventListener('scroll', onWindowScroll);
 
-document.querySelectorAll('.modal__close').forEach((el) => el.addEventListener('click', onClickModalClose));
+document.querySelectorAll('a[href^="#popup"]').forEach((el) => el.addEventListener('click', onClickPopupHandler));
 
-document.querySelectorAll('a[href^="#layer"]').forEach((el) => el.addEventListener('click', onClickLayerHandler));
-
-document.querySelectorAll('.layer__close').forEach((el) => el.addEventListener('click', onClickLayerClose));
+document.querySelectorAll('.popup__close, .popup__overlay').forEach((el) => el.addEventListener('click', onClickPopupClose));
 
 document.querySelectorAll('a[href^="#popper"]').forEach((el) => el.addEventListener('click', onClickPopperHandler));
 
-document.querySelectorAll('.popper__close,.popper__handler').forEach((el) => el.addEventListener('click', onClickPopperToggle));
+document.querySelectorAll('.popper__close, .popper__overlay').forEach((el) => el.addEventListener('click', onClickPopperClose));
+
+document.querySelectorAll('.popper__handler').forEach((el) => el.addEventListener('click', onClickPopperToggle));
 
 document.querySelectorAll('[data-tab]').forEach((el) => el.addEventListener('click', onClickTabHandler));
-
-document.querySelectorAll('.header__catalogButton').forEach((el) => el.addEventListener('click', onClickCatalogButton));
 
 new Swiper('.menu__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceMd,
 	freeMode: true,
+});
+new Swiper('.catalogGridItem__prop .size__swiper, .catalogGridItem__prop .color__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceSm,
+	freeMode: true,
+	nested: true,
+});
+new Swiper('.productListItem__prop .size__swiper, .productListItem__prop .color__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: swiperSpaceSm,
+	freeMode: true,
+	nested: true,
 });
 
 
@@ -164,12 +220,12 @@ document.querySelectorAll('.catalogFilters__filter__label').forEach((el) => el.a
 
 
 //product
-new Swiper('.productUpgradeInfoLayer__examples__swiper', {
+new Swiper('.productUpgradeInfoContent__examples__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceMd,
 	freeMode: true,
 });
-new Swiper('.productUpgradeSelectionLayer__categories__swiper', {
+new Swiper('.productUpgradeSelectionPopup__categories__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceSm,
 	freeMode: true,
@@ -178,6 +234,12 @@ new Swiper('.productTags__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceMd,
 	freeMode: true,
+	breakpoints: {
+		[mobileBreakPoint]: {
+			slidesPerView: 6,
+			freeMode: false
+		},
+	},
 });
 
 
@@ -186,17 +248,12 @@ new Swiper('.orderItem__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: swiperSpaceSm,
 	freeMode: true,
-});
-
-
-//about-us
-new Swiper('.aboutUs__technology__swiper', {
-	slidesPerView: 1,
-	spaceBetween: swiperSpaceMd,
-	pagination: {
-		bulletClass: 'swiper-dots-item',
-		bulletActiveClass: 'swiper-dots-item-active',
-		el: '.swiper-dots',
-		clickable: true,
+	slidesOffsetAfter: swiperSpaceSm,
+	breakpoints: {
+		[mobileBreakPoint]: {
+			slidesOffsetAfter: 0,
+		},
 	},
 });
+
+

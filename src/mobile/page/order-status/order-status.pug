@@ -11,8 +11,9 @@ block append pageVars
 
 block content
 	+pageHead('Узнать статус заказа', 'profile.html')._profile.__head
-		+b.icon._xl.__icon
-			include /assets/images/xl/bestDeliveryIcon.svg
+		+e.right
+			+b.icon._xl
+				include /assets/images/xl/bestDeliveryIcon.svg
 	.box
 		+b.FORM.form.__form
 			+e.row
@@ -25,7 +26,7 @@ block content
 				+b.input._lg
 					+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)
 		+b.__orders
-			+e.title ПОПУЛЯРНОЕ
+			+e.title РЕЗУЛЬТАТЫ ПОИСКА
 			+e.list
 				+orderItem(true)
 				+orderItem(true)

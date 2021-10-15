@@ -28,6 +28,22 @@
         rounded-t;
     }
 
+    &__prop {
+        @apply
+        overflow-hidden
+        px-4
+        mb-4;
+    }
+
+    &__material {
+        @apply
+        text-gray-light
+        text-sm
+        font-medium
+        px-4
+        mb-4;
+    }
+
     &__name {
         @apply
             text-lg

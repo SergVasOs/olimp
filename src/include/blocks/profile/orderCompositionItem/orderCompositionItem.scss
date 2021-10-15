@@ -1,0 +1,155 @@
+.orderCompositionItem {
+    @apply
+    p-4
+    border
+    rounded-lg;
+
+    &__card {
+        @apply
+        flex
+        items-center
+        pb-4
+        mb-4
+        border-b
+        space-x-4;
+
+        &__img {
+            @apply
+            w-20
+            h-20
+            object-cover;
+        }
+
+        &__info {
+            @apply
+            flex-1;
+
+            &__name {
+                @apply
+                text-black
+                line-clamp-2
+                mb-2;
+            }
+
+            &__prop {
+                @apply
+                text-sm
+                text-gray-light;
+            }
+        }
+
+        &__prices {
+            @apply
+            text-right
+            w-20
+            space-y-1;
+
+            &__price {
+                @apply
+                price;
+            }
+
+            &__oldPrice {
+                @apply
+                oldPrice
+                text-sm;
+            }
+        }
+
+        &__count {
+            @apply
+            w-16;
+        }
+    }
+
+    &__parts {
+        @apply
+        space-y-4
+        mb-4;
+
+        &__item {
+            @apply
+            relative
+            flex
+            items-center
+            p-4
+            space-x-4
+            border
+            rounded
+            bg-gray-card;
+
+            &__img {
+                @apply
+                w-16
+                h-16
+                p-2
+                rounded-full
+                border
+                bg-white
+                object-contain;
+            }
+
+            &__info {
+                @apply
+                flex-1;
+
+                &__name {
+                    @apply
+                    text-black
+                    line-clamp-2
+                    mb-2;
+                }
+
+                &__prop {
+                    @apply
+                    text-sm
+                    text-gray-light;
+                }
+            }
+
+            &__prices {
+                @apply
+                text-right
+                w-20
+                space-y-1;
+
+                &__price {
+                    @apply
+                    price;
+                }
+
+                &__oldPrice {
+                    @apply
+                    oldPrice
+                    text-sm;
+                }
+            }
+
+            &__files {
+                @apply
+                absolute
+                right-4
+                bottom-2
+                text-gray-light
+                text-sm
+                flex
+                items-center
+                space-x-1;
+            }
+        }
+    }
+
+    &__bottom {
+        @apply
+        flex
+        space-x-6
+        mt-4
+        pt-4
+        border-t;
+
+        &__quantity {
+            @apply
+            w-28;
+        }
+    }
+}

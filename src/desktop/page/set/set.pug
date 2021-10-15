@@ -1,0 +1,81 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/common/bestDelivery/bestDelivery
+include /include/elements/favoriteIcon/favoriteIcon
+include /desktop/include/blocks/compositionItem/compositionItem
+include /include/elements/label/label
+include /include/sections/product/productTags/productTags
+include /desktop/include/sections/productList/productList
+include /desktop/include/sections/viewedList/viewedList
+
+block append pageVars
+	- var pageTitle = "Комплект";
+	- var pageClass = "set";
+
+block content
+	+pageHead('Стеклянная награда J42-115 с цветным нанесением, высота 11.5 см', false).__head
+		+e.right
+			+b.icon(href='#')
+				include /assets/images/md/shareIcon.svg
+			+favoriteIcon
+	+b.__content
+		+e.box.box
+			+e.left
+				+b.__gallery
+					+e.left
+						+label._lg._views.__views
+							+b.icon._sm
+								include /assets/images/sm/cameraIcon.svg
+							+e 4
+						+b.__thumbs.swiper-container
+							+b.__wrapper.swiper-wrapper
+								+b.__slide.swiper-slide
+									+e.img(src='images/3dIcon.png')
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+								+b.__slide.swiper-slide
+									+e.img(src=(shirt ? 'images/shirt.png' : 'images/catalogItem.png'))
+					+e.img(src='images/set.png')
+				+b.__composition
+					+e.title Состав комплекта
+					+e.items
+						+compositionItem('set')
+						+compositionItem('set')
+						+compositionItem('set')
+			+e.right
+				+b.__buy.fixing
+					+e.corner(src="images/corner.png")
+					+b.__total
+						+e.label Итоговая сумма:
+						+e.oldPrice 9 523 р.
+						+e.price 2 523 р.
+					+b.__items
+						+b.__item
+							+e.label Cтоимость товара:
+							+e.price 840 р.
+						+b.__item
+							+e.label Cтоимость аксессуаров:
+							+e.price 840 р.
+						+b.__item
+							+e.label Cтоимость нанесения:
+							+e.price 840 р.
+					+e.buttons
+						+b.button._lg._blue
+							+e.text Комплектация
+						+buyButton('Заказать весь комплект')._lg.__buyButton
+					+bestDelivery
+	+productList('Готовые решения').__productList
+	+productList('Посмотрите аналоги').__productList
+	+productList('С этим товаром заказывают').__productList
+	+productTags.__productTags
+	+viewedList('Вы смотрели').__viewedList

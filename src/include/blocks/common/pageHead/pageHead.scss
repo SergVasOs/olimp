@@ -7,25 +7,27 @@
 
     &__title {
         @apply
-        text-2xl
-        font-bold
+        h2
         flex-1
         max-w-max
         truncate
-        mr-auto;
+        mr-4
+        text-blue-dark;
     }
 
     &__back {
         @apply
-        bg-gray-bg
+        bg-gray-card
         rounded
         transform rotate-180
         mr-4;
     }
 
-    &__icon {
+    &__right {
         @apply
-        ml-4;
+        ml-auto
+        flex
+        space-x-4;
     }
 
     &_noIcons {
@@ -34,7 +36,7 @@
 
     &_profile {
         @apply
-            bg-gray-bg
+            bg-gray-border-light
             py-6;
     }
 

@@ -1,0 +1,22 @@
+mixin profileMenu
+	+b.profileMenu&attributes(attributes)
+		+b.__item._active(href='order-status.html')
+			+b.icon._lg
+				include /assets/images/lg/bestDeliveryIcon.svg
+			+e.title Узнать статус заказа
+		+b.__item(href='profile-orders.html')
+			+b.icon._lg
+				include /assets/images/lg/bagIcon.svg
+			+e.title История заказов
+		+b.__item(href='profile-addresses.html')
+			+b.icon._lg
+				include /assets/images/lg/addressIcon.svg
+			+e.title Адреса доставки
+		+b.__item(href='profile-change-password.html')
+			+b.icon._lg
+				include /assets/images/lg/lockIcon.svg
+			+e.title Изменить пароль
+		+b.__item(href='#')
+			+b.icon._lg
+				include /assets/images/lg/exitIcon.svg
+			+e.title Выйти

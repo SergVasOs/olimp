@@ -1,0 +1,90 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+include /include/blocks/common/consultForm/consultForm
+
+block append pageVars
+	- var pageTitle = "Контакты";
+	- var pageClass = "contacts";
+
+block content
+	+pageHead('Контакты', false).__head
+	.box
+		+b.__top
+			+b.__contacts
+				+e.title Свяжитесь с нами:
+				+b.__items
+					+b.__item
+						+e.label Москва и МО:
+						+e.value(href='#') 8 (495) 775-5952
+					+b.__item
+						+e.label Россия:
+						+e.value(href='#') 8 (800) 775-5952
+					+b.__item
+						+e.label Электронная почта:
+						+e.value(href='#') info@na-olimpe.ru
+
+			+b.__info
+				+b.button._full._blue.__chatButton
+					+e.text Напишите сообщение в чате
+					+e.icon
+						include /assets/images/lg/arrowRight.svg
+				+b.__text
+					| Наши консультанты на связи
+					+e.SPAN.time с 10:00 до 19:00
+					| по Москве.
+					br
+					br
+					| Сообщения, оставленные в другое время, будут обработаны на следующий день
+		+b.__middle
+			+b.__schema
+				+e.title Схема проезда
+				+e.address Наш адрес: 121357, Москва, Верейская ул., д. 29, стр. 106
+				+e.info На проходной нужно указать название компании: "НА ОЛИМПЕ: кубки, медали, награды".
+				+e.text
+					+e Проходная на территорию расположена по адресу:
+					+e
+						| по картам Яндекс - Верейская ул., д.29, стр.139,
+						br
+						| по картам Google - Верейская ул., д.29, стр.139 1а.
+					+e
+						| Заезд на парковку с ул.Верейская (на перекрестке Верейской и Рябиновой).
+						br
+						| Ориентир - вывеска "Паркет из Швеции"
+					+e.time режим работы: по будням с 10:00 до 19:00
+			+b.__map
+				+e.wrapper
+					+e.IFRAME.frame(
+					src='https://yandex.ru/map-widget/v1/?um=constructor%3A5df468bdb3401947570015569b5ab6e860003bb4646ee6ccd0207d3a80cb2a1b&amp;source=constructor'
+					)
+		+b.__metro
+			+b.__item
+				+e.title
+					+b.icon._lg
+						include /assets/images/lg/metroIcon.svg
+					+e Славянский бульвар
+				+b.__routes
+					+b.__item
+						+e.time Время проезда: 23 мин.
+						+e Автобус № 103, маршрутка № 523м: ост. «Метро Славянский бульвар» - ост. «Верейская ул.» (13 мин.). И 3 мин. пешком до офиса.
+					+b.__item
+						+e.time Время проезда: 24 мин.
+						+e Автобус № 622: ост. «Метро Славянский бульвар» - ост. «Завод КИМ» (20 мин.). И 4 мин. пешком до офиса.
+			+b.__item
+				+e.title
+					+b.icon._lg
+						include /assets/images/lg/metroIcon.svg
+					+e Кунцевская
+				+b.__routes
+					+b.__item
+						+e.time Время проезда: 18 мин.
+						+e Автобусы №№ 610, 612. Маршрутка № 575: ост. «Метро Кунцевская» - ост. «Завод КИМ» (13 мин.). И 5 мин. пешком до офиса.
+			+b.__item
+				+e.title
+					+b.icon._lg
+						include /assets/images/lg/metroIcon.svg
+					+e Молодежная
+				+b.__routes
+					+b.__item
+						+e.time Время проезда: 20 мин.
+						+e Автобус № 732. Маршрутки №№ 556м, 92м: ост. «Метро Молодежная» - ост. «Завод КИМ» (15 мин.). И 5 мин. пешком до офиса.
+		+consultForm._inline

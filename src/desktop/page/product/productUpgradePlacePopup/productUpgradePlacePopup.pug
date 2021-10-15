@@ -1,0 +1,13 @@
+include /include/blocks/product/productUpgradePlaceContent/productUpgradePlaceContent
+
+mixin productUpgradePlacePopup
+	+b#popup_upgrade_place.popup
+		+e.overlay
+		+e.body
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.__wrapper
+					+productUpgradePlaceContent
+			+bottomButton._popup
+				+b.button._lg._blue(href='#') Добавить

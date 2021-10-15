@@ -1,0 +1,46 @@
+extends /desktop/layout/layout
+include /desktop/include/sections/profileHead/profileHead
+include /desktop/include/blocks/profileMenu/profileMenu
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Личные данные";
+	- var pageClass = "profileEdit";
+	- var hideTopSubmenu = true;
+
+block content
+	+profileHead.__head
+	+e.box.box
+		+e.left
+			+profileMenu
+		+e.right
+			+b.__form
+				+b.FORM.form
+					+b.profileEdit__form__title Здесь вы можете изменить личные данные
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Имя', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Фамилия', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Отчество', required)
+					+b.profileEdit__form__title Дата рождения
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='ДД.ММ.ГГГГ', required)
+					+b.profileEdit__form__title Контактные данные
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='e-mail', required)
+					+e.footer
+						+b.button._lg._green(href="#") Обновить информацию
+				+b.links.__links
+					+e.item(href='terms-of-policy.html') Политика конфиденциальности
+			+b.__banner(href="#")
+				+e.img(src="images/profileBanner.png")
+

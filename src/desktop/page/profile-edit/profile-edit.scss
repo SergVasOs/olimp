@@ -1,0 +1,57 @@
+.profileEdit {
+    @apply
+    pt-0;
+
+    &__head {
+        @apply
+        mb-12;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-8;
+    }
+
+    &__left {
+        @apply
+        w-1/4;
+    }
+
+    &__right {
+        @apply
+        w-3/4
+        flex
+        space-x-8;
+    }
+
+    &__form {
+        @apply
+        w-1/2;
+
+        &__title {
+            @apply
+            text-lg
+            font-medium
+            mt-6
+            mb-4
+            first:mt-3;
+        }
+
+        &__links {
+            @apply
+            justify-center
+            mt-6;
+        }
+    }
+
+    &__banner {
+        @apply
+        mt-4
+        w-1/2;
+
+        &__img {
+            @apply w-full;
+        }
+    }
+}

@@ -12,4 +12,13 @@
         @apply
         mb-6;
     }
+
+    &__mapLink {
+        @apply
+        text-lg
+        block
+        w-max
+        mx-auto
+        underline;
+    }
 }

@@ -1,0 +1,11 @@
+include /include/blocks/product/productUpgradeInfoContent/productUpgradeInfoContent
+
+mixin productUpgradeInfoPopup
+	+b#popup_upgrade_info.popup
+		+e.overlay
+		+e.body
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.__wrapper
+					+productUpgradeInfoContent

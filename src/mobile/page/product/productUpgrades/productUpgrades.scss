@@ -1,0 +1,103 @@
+.productUpgrades {
+    @apply
+    w-full
+    space-y-4;
+
+    &__item {
+        @apply
+        border
+
+        rounded
+        p-4
+        relative
+        overflow-hidden;
+
+        &__infoIcon {
+            @apply
+            absolute
+            top-2
+            left-4
+            text-gray;
+        }
+
+        &__card {
+            @apply
+            min-h-upgrade
+            flex
+            items-center
+            flex-wrap
+            space-x-4
+            ml-4;
+
+            &__img {
+                @apply
+                w-16
+                h-16
+                p-2
+                rounded-full
+                border
+                border-gray-light
+                object-contain;
+            }
+
+            &__label {
+                @apply
+                flex-1;
+
+                &__name {
+                    @apply
+                    font-medium;
+                }
+
+                &__price {
+                    @apply mt-2;
+                }
+            }
+
+            &__editButton {
+                @apply
+                px-3
+                button_lightGray
+                text-sm;
+            }
+
+            &__addButton {
+                @apply
+                px-3
+                button_blue
+                font-medium
+                text-sm
+                w-32;
+            }
+
+            &__deleteIcon {
+                @apply text-blue-dark cursor-pointer;
+            }
+        }
+
+        &__config {
+            @apply
+            pt-4
+            mt-6
+            border-t
+            w-full
+            flex
+            flex-col
+            items-stretch
+            space-y-4;
+
+            &__text {
+                @apply
+                p-4
+                bg-gray-card
+                border
+                rounded;
+            }
+
+            &__files {
+                @apply
+                space-y-4;
+            }
+        }
+    }
+}

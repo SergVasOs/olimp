@@ -1,8 +1,7 @@
 .saleList {
 	&__title {
 		@apply
-		text-3xl
-		font-bold
+		h3
 		mb-4;
 	}
 
@@ -10,7 +9,7 @@
 		@apply
 			flex
 			items-stretch
-			space-x-8;
+			space-x-4;
 	}
 
 	&__banner {
@@ -18,7 +17,7 @@
 		w-1/4;
 
 		&__img {
-			@apply fullImageCover;
+			@apply fullBlockCover;
 		}
 	}
 

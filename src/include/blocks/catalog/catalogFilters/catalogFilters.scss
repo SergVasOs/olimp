@@ -10,7 +10,13 @@
             py-4
             flex
             justify-between
-            items-center;
+            items-center
+            cursor-pointer
+            md:h6;
+        }
+
+        &__arrow {
+            @apply transition-transform	transform rotate-90;
         }
 
         &__body {
@@ -63,7 +69,7 @@
 
         &_open & {
             &__arrow {
-                @apply transform rotate-90;
+                @apply transform -rotate-90;
             }
 
             &__body {

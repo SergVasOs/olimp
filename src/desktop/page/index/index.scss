@@ -2,8 +2,11 @@
 @import "/src/desktop/page/index/bottomInfo/bottomInfo";
 
 .index {
+    @apply
+        pt-8;
+
     &__banners {
-        @apply mb-4;
+        @apply mb-8;
     }
 
     &__exclusive {

@@ -1,12 +1,14 @@
 extends /desktop/layout/layout
 include /include/sections/cart/cartHead/cartHead
-include /include/blocks/cart/cartItems/cartItems
+include /desktop/page/cart/cartItems/cartItems
 include /include/blocks/cart/cartTotal/cartTotal
 include /include/blocks/cart/cartDiscount/cartDiscount
+include /include/blocks/cart/deleteCartItemPopup/deleteCartItemPopup
 
 block append pageVars
 	- var pageTitle = "Корзина";
 	- var pageClass = "cart";
+	- var hideTopSubmenu = true;
 
 block content
 	+cartHead.__head
@@ -15,5 +17,6 @@ block content
 			+e.left
 				+cartItems
 			+e.right
-				+cartTotal
+				+cartTotal(false)
 				+cartDiscount
+	+deleteCartItemPopup

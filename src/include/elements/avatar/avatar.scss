@@ -6,9 +6,15 @@
     border-2
     rounded-full;
 
-    &_sm {
+    &_xs {
         @apply
         h-12
         w-12;
+    }
+
+    &_sm {
+        @apply
+        h-16
+        w-16;
     }
 }

@@ -2,6 +2,7 @@
     &__title {
         @apply
         h2
-        mb-4;
+        mb-4
+        md:h3;
     }
 }

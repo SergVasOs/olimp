@@ -1,13 +1,15 @@
 .importantInfo {
     @apply
-        md:py-8
-        md:bg-gray-bg;
+        md:pt-8
+        md:pb-10
+        md:bg-gray-card;
 
     &__title {
         @apply
         h2
         mb-4
-        md:text-center;
+        md:text-center
+        md:h3;
     }
 
     &__items {
@@ -16,36 +18,37 @@
         space-x-2
         md:justify-center
         md:space-x-8;
-    }
 
-    &__item {
-        @apply
+        &__item {
+            @apply
             text-black
             border
             rounded
             flex-1
+            overflow-hidden
             md:flex-none;
 
-        &__img {
-            @apply
-            w-full
-            h-20
-            object-cover
-            rounded-t
-            md:w-48
-            md:h-32;
-        }
+            &__img {
+                @apply
+                w-full
+                h-20
+                object-cover
+                md:w-52
+                md:h-32;
+            }
 
-        &__name {
-            @apply
+            &__name {
+                @apply
                 text-xs
                 font-medium
                 flex
                 items-center
                 justify-center
-                h-10
+                py-3
                 text-center
-                md:text-lg;
+                md:text-lg
+                md:bg-white;
+            }
         }
     }
 }

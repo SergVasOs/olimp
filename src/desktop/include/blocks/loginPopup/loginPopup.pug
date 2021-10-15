@@ -1,0 +1,20 @@
+mixin loginPopup
+	+b#popup_login.popup
+		+e.overlay
+		+e.body._sm
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+e.content
+				+e.title Вход в личный кабинет
+				+b.FORM.form
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='text', placeholder='Логин', required)
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='password', placeholder='Пароль', required)
+					+e.footer
+						+b.button._lg._blue(href="profile.html") Войти
+				+b.links.__links
+					+e.item(href='#popup_registration') Регистрация
+					+e.item(href='#popup_forgot_password') Забыли пароль?

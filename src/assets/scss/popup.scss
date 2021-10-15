@@ -1,0 +1,166 @@
+.popup {
+    @apply
+    fixed
+    inset-0
+    hidden
+    z-50
+    justify-center
+    items-center
+    opacity-0
+    transition-opacity duration-500;
+
+    &_invisible {
+        @apply
+        flex
+        opacity-0;
+    }
+
+    &_open {
+        @apply
+        flex
+        opacity-100;
+    }
+
+    &__overlay {
+        @apply
+        absolute
+        z-10
+        inset-0
+        bg-black
+        opacity-30;
+    }
+
+    &__body {
+        @apply
+        relative
+        z-20
+        bg-white
+        w-popup
+        flex
+        flex-col
+        items-stretch
+        rounded
+        max-h-popup
+        max-w-popup;
+
+        &_sm {
+            @apply
+                w-popup-sm;
+        }
+
+        &_lg {
+            @apply
+            w-popup-lg;
+        }
+
+        &_xl {
+            @apply
+            w-popup-xl;
+        }
+    }
+
+    &__title {
+        @apply
+        h4
+        pr-10
+        mb-4;
+    }
+
+    &__close {
+        @apply
+        absolute
+        top-4
+        right-4
+        text-blue-dark;
+    }
+
+    &__content {
+        @apply
+        flex-1
+        h-0
+        flex
+        flex-col
+        items-stretch
+        p-4
+        md:p-12;
+
+        &__wrapper {
+            @apply
+            flex-1
+            h-0
+            overflow-scrollVert;
+        }
+    }
+
+    &__links {
+        @apply
+            mt-4;
+    }
+
+    &_screen & {
+        &__body {
+            @apply
+            w-full
+            h-full
+            max-h-screen
+            max-w-none
+            rounded-none
+            py-6
+            md:py-0
+            md:rounded
+            md:max-w-popup
+            md:max-h-popup
+            md:w-popup
+            md:h-auto;
+
+            &_sm {
+                @apply
+                md:w-popup-sm;
+            }
+
+            &_lg {
+                @apply
+                md:w-popup-lg;
+            }
+
+            &_xl {
+                @apply
+                md:w-popup-xl;
+            }
+        }
+    }
+
+    &_layer & {
+        &__close {
+            @apply
+            top-3.5
+            text-white
+            hover:text-blue;
+        }
+
+        &__body {
+            @apply
+                w-full
+                h-full
+                max-h-screen
+                max-w-none
+                rounded-none;
+        }
+
+        &__header {
+            @apply
+            h3
+            bg-blue-dark
+            text-white
+            pl-4
+            pr-14
+            py-6
+            mb-0;
+        }
+
+        &__content {
+            @apply
+            py-6;
+        }
+    }
+}

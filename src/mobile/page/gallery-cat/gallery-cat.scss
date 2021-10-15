@@ -29,14 +29,12 @@
         &__img {
             @apply
             rounded
-            flexImageCover;
+            flexBlockCover;
         }
     }
 
     &__more {
         @apply
-            button_lg
-            button_gradientGray
             w-full;
     }
 }

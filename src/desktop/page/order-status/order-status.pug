@@ -1,0 +1,37 @@
+extends /desktop/layout/layout
+include /desktop/include/sections/profileHead/profileHead
+include /desktop/include/blocks/profileMenu/profileMenu
+include /include/blocks/profile/orderItem/orderItem
+
+block append pageVars
+	- var pageTitle = "Узнать статус заказа";
+	- var pageClass = "orderStatus";
+	- var hideTopSubmenu = true;
+
+block content
+	+profileHead.__head
+	+e.box.box
+		+e.left
+			+profileMenu
+		+e.right
+			+b.__search
+				+e.title Поиск заказа
+				+b.FORM.form.__form
+					+e.row
+						+e.label Телефон указанный при заказе *
+						+b.input._short
+							+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)
+					+b.__row._group
+						+b.input._short
+							+e.icon
+								include /assets/images/lg/searchIcon.svg
+							+e.INPUT.field(type='text', placeholder='Укажите номер заказа', required)
+						+b.button._blue.__button Поиск
+				+b.__orders
+					+e.title РЕЗУЛЬТАТЫ ПОИСКА
+					+e.list
+						+orderItem(true)
+						+orderItem(true)
+						+orderItem(true)
+			+b.__banner(href="#")
+				+e.img(src="images/saleBanner.png")

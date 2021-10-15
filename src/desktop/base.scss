@@ -1,0 +1,12 @@
+.box {
+    @apply
+    container
+    mx-auto
+    min-w-screen-xl
+    lg:max-w-full
+    2xl:max-w-screen-2xl;
+
+    &_full {
+        @apply w-full p-0;
+    }
+}

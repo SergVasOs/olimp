@@ -3,8 +3,10 @@
     p-4
     border
     rounded
+    bg-white
     md:p-8
-    md:pb-12;
+    md:pb-12
+    md:mb-auto;
 
     &__freeDelivery {
         @apply
@@ -24,7 +26,7 @@
 
             &__more {
                 @apply
-                text-blue-400
+                text-blue
                 ml-1;
             }
         }
@@ -36,7 +38,8 @@
             space-y-2
             pb-4
             mb-4
-            border-b;
+            border-b
+            md:space-y-4;
 
         &__row {
             @apply
@@ -62,7 +65,10 @@
     &__sum {
         @apply
         mb-4
-        md:mb-8;
+        md:flex
+        md:justify-between
+        md:items-baseline
+        md:mb-6;
 
         &__label {
             @apply
@@ -72,7 +78,9 @@
 
         &__value {
             @apply
-            h2;
+            h2
+            md:text-2xl
+            md:font-bold;
         }
     }
 
@@ -88,6 +96,6 @@
         @apply
             mt-4
             hidden
-            md:flex;
+            md:block;
     }
 }

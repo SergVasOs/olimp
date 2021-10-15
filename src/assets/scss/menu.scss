@@ -19,10 +19,11 @@
                 min-w-menuItem
                 lg:px-10;
 
+                &:hover,
                 &_active {
                     @apply
-                    border-orange-light
-                    bg-orange-light;
+                    border-yellow
+                    bg-yellow;
                 }
             }
         }
@@ -30,12 +31,24 @@
 
     &__items {
         @apply
+        relative
         mt-6
         grid
         grid-cols-3
         gap-2
         md:grid-cols-6
-        md:gap-6;
+        md:gap-4;
+
+        &_overflow:before {
+            @apply
+                content-empty
+                absolute
+                inset-x-0
+                bottom-0
+                h-10
+                bg-gradient-to-t from-white
+                md:hidden;
+        }
 
         &__item {
             @apply
@@ -50,15 +63,16 @@
             md:p-3
             md:flex-row
             md:space-y-0
-            md:space-x-5;
+            md:space-x-2
+            hover:border-yellow;
 
             &__img {
                 @apply
                 w-16
                 h-16
                 object-contain
-                md:h-12
-                md:w-12;
+                md:h-14
+                md:w-14;
             }
 
             &__name {
@@ -86,7 +100,8 @@
                 p-4
                 flex-row
                 space-y-0
-                space-x-2;
+                space-x-2
+                md:p-3;
 
                 &__img {
                     @apply h-14 w-14;
@@ -102,17 +117,33 @@
 
     &__button {
         @apply
-            mt-4
-            button_gray;
+            mt-4;
     }
 
     &_catalogMenu & {
         &__items {
-            @apply mt-6;
+            @apply mt-4;
         }
 
         &__button {
             @apply mt-8;
+        }
+    }
+
+    &_light & {
+        &__swiper {
+            &__wrapper {
+                &__item {
+                    @apply
+                    border-gray-border;
+
+                    &:hover,
+                    &_active {
+                        @apply
+                        border-none;
+                    }
+                }
+            }
         }
     }
 }

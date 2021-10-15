@@ -2,7 +2,7 @@ extends /mobile/layout/layout
 include /include/elements/avatar/avatar
 include /include/blocks/common/pageHead/pageHead
 include /include/blocks/profile/orderItem/orderItem
-include /include/blocks/profile/changePasswordLayer/changePasswordLayer
+include /mobile/include/blocks/changePasswordPopup/changePasswordPopup
 
 block append pageVars
 	- var pageTitle = "Профиль";
@@ -49,7 +49,7 @@ block content
 				+b.icon._lg
 					include /assets/images/lg/addressIcon.svg
 				+e.title Адреса доставки
-			+b.__item(href='#layer_change_password')
+			+b.__item(href='#popup_change_password')
 				+b.icon._lg
 					include /assets/images/lg/lockIcon.svg
 				+e.title Изменить пароль
@@ -57,4 +57,4 @@ block content
 				+b.icon._lg
 					include /assets/images/lg/exitIcon.svg
 				+e.title Выйти
-	+changePasswordLayer
+	+changePasswordPopup

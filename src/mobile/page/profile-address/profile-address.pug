@@ -1,7 +1,7 @@
 extends /mobile/layout/layout
 include /include/elements/bottomButton/bottomButton
 include /include/blocks/common/pageHead/pageHead
-include /include/blocks/profile/mapLayer/mapLayer
+include /mobile/include/blocks/mapPopup/mapPopup
 
 block append pageVars
 	- var pageTitle = "Добавить адрес";
@@ -10,8 +10,9 @@ block append pageVars
 
 block content
 	+pageHead('Добавить адрес', 'profile-addresses.html')._profile.__head
-		+b.icon._xl.__icon
-			include /assets/images/xl/addressIcon.svg
+		+e.right
+			+b.icon._xl
+				include /assets/images/xl/addressIcon.svg
 	.box
 		+b.FORM.form.__form
 			+e.row
@@ -29,8 +30,7 @@ block content
 			+e.row
 				+b.input._lg
 					+e.INPUT.field(type='text', placeholder='Домофон', required)
-		+b.links.__links
-			+e.item(href='#layer_map') Уточнить на карте
+		+e.mapLink(href='#popup_map') Уточнить на карте
 	+bottomButton
 		+b.button._lg._green(href='profile.html') Сохранить
-	+mapLayer
+	+mapPopup

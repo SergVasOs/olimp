@@ -1,12 +1,17 @@
 @import "/src/assets/scss/index";
+@import "/src/mobile/base";
 
 @import "/src/mobile/include/blocks/viewedItem/viewedItem";
+@import "/src/mobile/include/blocks/catalogItem/grid/catalogGridItem";
 @import "/src/mobile/include/blocks/catalogItem/list/catalogListItem";
 @import "/src/mobile/include/blocks/catalogItem/table/catalogTableItem";
-@import "/src/mobile/include/blocks/catalogFilterLayer/catalogFilterLayer";
-@import "/src/mobile/include/blocks/freeDeliveryPopper/freeDeliveryPopper";
-@import "/src/mobile/include/blocks/giftPopper/giftPopper";
-@import "/src/mobile/include/blocks/bookOrderPopper/bookOrderPopper";
+@import "/src/mobile/include/blocks/catalogFilterPopup/catalogFilterPopup";
+@import "/src/mobile/include/blocks/compositionItem/compositionItem";
+@import "/src/mobile/include/blocks/productItem/productItem";
+@import "/src/mobile/include/blocks/chooseCityPopup/chooseCityPopup";
+@import "/src/mobile/include/blocks/categoriesPopup/categoriesPopup";
+@import "/src/mobile/include/blocks/changePasswordPopup/changePasswordPopup";
+@import "/src/mobile/include/blocks/mapPopup/mapPopup";
 
 @import "/src/mobile/include/sections/productList/productList";
 @import "/src/mobile/include/sections/viewedList/viewedList";
@@ -15,4 +20,3 @@
 @import "/src/mobile/layout/footer/footer";
 @import "/src/mobile/layout/header/header";
 @import "/src/mobile/page/page";
-

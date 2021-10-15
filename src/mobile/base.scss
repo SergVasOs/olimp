@@ -1,0 +1,19 @@
+html {
+    @apply
+    overflow-x-hidden;
+}
+
+body {
+    @apply
+    overflow-x-hidden;
+}
+
+.box {
+    @apply
+    container
+    mx-auto;
+
+    &_full {
+        @apply w-full p-0;
+    }
+}

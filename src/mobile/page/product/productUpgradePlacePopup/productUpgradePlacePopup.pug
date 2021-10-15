@@ -1,0 +1,14 @@
+include /include/blocks/product/productUpgradePlaceContent/productUpgradePlaceContent
+
+mixin productUpgradePlacePopup
+	+b#popup_upgrade_place.popup._layer
+		+e.overlay
+		+e.body
+			+b.icon._xl.__close
+				include /assets/images/xl/crossIcon.svg
+			+e.header Место нанесения
+			+b.__content
+				+b.__wrapper
+					+productUpgradePlaceContent
+			+bottomButton._popup
+				+b.button._lg._blue(href='#') Добавить

@@ -1,0 +1,16 @@
+include /include/elements/bottomButton/bottomButton
+
+mixin mapPopup
+	+b#popup_map.popup
+		+e.overlay
+		+e.body._xl
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.mapPopup.__content
+				+b.popup__title Уточнить на карте
+				+b.__map
+					+e.IFRAME.frame(
+						src='https://yandex.ru/map-widget/v1/?um=constructor%3A5df468bdb3401947570015569b5ab6e860003bb4646ee6ccd0207d3a80cb2a1b&amp;source=constructor'
+					)
+			+bottomButton._popup
+				+b.button._lg._blue(href='#') Выбрать

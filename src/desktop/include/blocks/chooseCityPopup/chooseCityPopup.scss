@@ -1,0 +1,94 @@
+.chooseCityPopup {
+    @apply
+        p-0;
+
+    &__wrapper {
+        @apply
+        space-x-4
+        flex
+        items-stretch;
+
+        &__cols {
+            @apply
+            flex
+            flex-1;
+
+            &__col {
+                @apply
+                min-w-col
+                overflow-vert
+                px-8
+                border-r
+                my-12
+                flex-1
+                relative
+                md:pr-8
+                first:pl-8;
+            }
+
+            &__group {
+                @apply
+                relative;
+
+                &__label {
+                    @apply
+                    absolute
+                    font-bold
+                    top-2
+                    left-0;
+                }
+
+                &__item {
+                    @apply
+                    py-2
+                    text-gray-light
+                    -ml-8
+                    -mr-13
+                    pl-16
+                    pr-13
+                    block;
+
+                    &:hover {
+                        @apply
+                            text-black
+                            bg-yellow;
+                    }
+                }
+
+                &_popular {
+                    @apply
+                    pb-2
+                    mb-2
+                    border-b;
+                }
+
+                &_popular & {
+                    &__item {
+                        @apply
+                        text-black
+                        pl-8;
+                    }
+                }
+            }
+        }
+
+        &__search {
+            @apply
+            py-12
+            pl-8
+            pr-20
+            flex-1;
+
+            &__input {
+                @apply
+                mb-4;
+            }
+
+            &__text {
+                @apply
+                text-sm
+                text-gray;
+            }
+        }
+    }
+}

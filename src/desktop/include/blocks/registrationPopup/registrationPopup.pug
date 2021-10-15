@@ -1,0 +1,22 @@
+mixin registrationPopup
+	+b#popup_registration.popup
+		+e.overlay
+		+e.body._sm
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+e.content
+				+e.title Регистрация
+				+b.FORM.form
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='text', placeholder='Адрес e-mail', required)
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='password', placeholder='Пароль', required)
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='password', placeholder='Повторите пароль', required)
+					+e.footer
+						+b.button._lg._blue(href="profile.html") Регистрация
+				+b.links._center.__links
+					+e.item(href='#popup_login') Есть аккаунт? Вход

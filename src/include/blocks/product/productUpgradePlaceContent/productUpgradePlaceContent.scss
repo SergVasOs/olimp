@@ -1,0 +1,84 @@
+.productUpgradePlaceContent {
+    &__header {
+        @apply
+        flex
+        items-center
+        space-x-4
+        h3
+        text-blue-dark
+        mb-4;
+
+        &__img {
+            @apply
+            w-16
+            h-16
+            object-contain;
+        }
+    }
+
+    &__title {
+        @apply
+        h3
+        mb-4;
+    }
+
+    &__text {
+        @apply
+            text-lg
+            space-y-4
+            mb-4;
+    }
+
+    &__desc {
+        @apply
+            bg-gray-card
+            rounded
+            p-2
+            text-sm
+            mb-4
+            md:text-lg
+            md:p-4
+            md:bg-grayGradient;
+    }
+
+    &__config {
+        @apply mb-10;
+
+        &__app {
+            @apply mb-6;
+
+            &__top {
+                @apply
+                    flex
+                    justify-between
+                    mb-4;
+
+                &__title {
+                    @apply
+                    text-xl;
+                }
+
+                &__price {
+                    @apply
+                    md:text-xl
+                    md:font-medium;
+                }
+            }
+
+            &__block {
+                @apply
+                border
+                rounded
+                p-4
+                space-y-4;
+            }
+        }
+    }
+
+    &__downloadButton {
+        @apply
+            mb-12
+            md:button_white;
+    }
+}
+

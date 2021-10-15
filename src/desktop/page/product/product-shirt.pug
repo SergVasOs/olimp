@@ -1,0 +1,21 @@
+extends /desktop/layout/layout
+include /desktop/page/product/productHeader/productHeader
+include /desktop/page/product/productHead/productHead
+include /desktop/page/product/productContent/productContent
+include /include/sections/product/productTags/productTags
+include /desktop/include/sections/productList/productList
+include /desktop/include/sections/viewedList/viewedList
+
+block append pageVars
+    - var pageTitle = "Продукт";
+    - var pageClass = "product";
+
+block content
+    +productHeader
+    +productHead.__head
+    +productContent(true).__content
+    +productList('Готовые решения').__productList
+    +productList('Посмотрите аналоги').__productList
+    +productList('С этим товаром заказывают').__productList
+    +productTags.__productTags
+    +viewedList('Вы смотрели').__viewedList

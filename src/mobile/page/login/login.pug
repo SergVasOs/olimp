@@ -11,8 +11,10 @@ block content
 	.box
 		+b.FORM.form.__form
 			+e.row
-				+b.input._lg
-					+e.INPUT.field(type='text', placeholder='Поиск по сайту', required)
+				+b.input._lg._hasError
+					+e.INPUT.field(type='text', placeholder='E-mail', required)
+					+b.icon
+						include /assets/images/md/alertIcon.svg
 			+e.row
 				+b.input._lg
 					+e.INPUT.field(type='password', placeholder='Пароль', required)
@@ -20,4 +22,5 @@ block content
 				+b.button._lg._blue(href='#') Войти
 				+b.button._lg._white(href='registration.html') Регистрация
 		+b.links.__links
-			+e.item(href='forgot-password.html') Забыли свой пароль?
+			+e.item
+				+e(href='forgot-password.html') Забыли свой пароль?

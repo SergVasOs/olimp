@@ -1,0 +1,44 @@
+include /include/elements/buyButton/buyButton
+
+mixin freeDeliveryContent
+	+b.freeDeliveryContent
+		+b.icon._3xl.__applyIcon
+			include /assets/images/3xl/applyIcon.svg
+		+e.title
+			| Ещё чуть-чуть до
+			b бесплатной доставки!
+		+e.info При заказе на сумму 25 000р доставка по Москве бесплатная.
+		+b.__steps
+			+b.__step._active
+				+b.icon._3xl.__icon
+					include /assets/images/3xl/stepGiftIcon.svg
+				+e.name Подарок при покупке
+			+b.__process
+				+e.bar(style='width: 33%')
+			+b.__step
+				+b.icon._3xl.__icon
+					include /assets/images/3xl/stepDeliveryIcon.svg
+				+e.name Бесплатная доставка
+			+b.__process
+				+e.bar
+			+b.__step
+				+b.icon._3xl.__icon
+					include /assets/images/3xl/stepDiscountIcon.svg
+				+e.name Дополнительная скидка
+		+b.__remainder
+			+e.label До бесплатной доставки осталось:
+			+e.price 12 450 р
+		+b.__buttons
+			+b.button._white Вернуться в каталог
+			+buyButton('В корзину')
+		+b.__products
+			+e.title Рекомендуем заказать
+			+e.list
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem
+				+catalogGridItem

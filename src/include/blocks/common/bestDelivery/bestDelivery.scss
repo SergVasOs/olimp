@@ -3,7 +3,6 @@
     p-4
     border
     rounded
-    lg:mb-6
     lg:border-0
     lg:p-0;
 
@@ -12,8 +11,7 @@
         flex
         items-center
         font-medium
-        mb-1
-        lg:font-normal;
+        mb-2;
 
         &__icon {
             @apply
@@ -41,7 +39,7 @@
 
             &__icon {
                 @apply
-                text-orange-light;
+                text-yellow;
             }
         }
     }

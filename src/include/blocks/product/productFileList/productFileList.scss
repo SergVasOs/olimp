@@ -1,6 +1,8 @@
 .productFileList {
     &__fileList {
-        @apply mb-6;
+        @apply
+        mb-6
+        md:mb-8;
     }
 
     &__dropArea {
@@ -14,6 +16,7 @@
         text-sm
         font-medium
         block
-        text-center;
+        text-center
+        md:text-lg;
     }
 }

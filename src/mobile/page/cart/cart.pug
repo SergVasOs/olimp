@@ -1,7 +1,8 @@
 extends /mobile/layout/layout
 include /include/sections/cart/cartHead/cartHead
-include /include/blocks/cart/cartItems/cartItems
+include /mobile/page/cart/cartItems/cartItems
 include /include/blocks/cart/cartTotal/cartTotal
+include /include/blocks/cart/deleteCartItemPopup/deleteCartItemPopup
 
 block append pageVars
 	- var pageTitle = "Корзина";
@@ -13,3 +14,4 @@ block content
 	.box
 		+cartItems.__cartItems
 		+cartTotal
+	+deleteCartItemPopup

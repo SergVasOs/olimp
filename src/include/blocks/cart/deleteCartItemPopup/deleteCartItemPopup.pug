@@ -1,0 +1,18 @@
+include /desktop/include/blocks/catalogItem/grid/catalogGridItem
+
+mixin deleteCartItemPopup
+	+b#popup_delete_cart_item.popup._screen
+		+e.overlay
+		+e.body._sm
+			+b.icon._lg.__close(href="#")
+				include /assets/images/lg/crossIcon.svg
+			+b.__content
+				+b.deleteCartItemPopup.__wrapper
+					+e.title Удалить товар?
+					+catalogGridItem.__item
+					+e.buttons
+						+b.button._white Отменить
+						+b.button._blue Удалить
+					+b.__favorite(href='#')
+						+favoriteIcon.__favoriteIcon
+						+e.text Добавить в избранное

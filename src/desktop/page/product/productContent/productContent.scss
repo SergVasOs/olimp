@@ -2,38 +2,47 @@
 	&__box {
 		@apply
 		flex
-		space-x-4;
+		space-x-8;
 	}
 
 	&__left {
 		@apply
-		w-3/5
-		2xl:w-1/2;
+		flex-1;
 	}
 
 	&__right {
 		@apply
-		w-2/5
-		2xl:w-1/2;
+		relative
+		w-productRight;
+	}
+
+	&__tabsButtons {
+		@apply
+			border-0;
+
+		& > * {
+			@apply
+			flex-1
+			py-3
+			mx-0;
+		}
 	}
 
 	&__gallery {
 		@apply
 		relative
-		pb-full
-		mt-0.5
-		mb-8;
+		mb-12;
 
 		&__left {
 			@apply absolute
-			w-18
+			w-16
 			z-10
-			inset-y-10
-			left-10
+			inset-y-8
+			left-8
 			flex
 			flex-col
-			items-center
-			space-y-4;
+			items-stretch
+			space-y-2;
 		}
 
 		&__views {
@@ -41,14 +50,14 @@
 		}
 
 		&__thumbs {
-			@apply
-			w-full
-			h-1/2;
+			@apply h-thumbs;
 
 			&__wrapper {
 				&__slide {
 					&__img {
-						@apply w-full h-full object-cover;
+						@apply
+						rounded
+						fullBlockCover;
 					}
 				}
 			}
@@ -56,146 +65,36 @@
 
 		&__next {
 			@apply
+			self-center
 			transform rotate-90
 			cursor-pointer;
 		}
 
 		&__img {
-			@apply absolute w-full h-full object-cover;
+			@apply w-full;
 		}
 	}
 
 	&__productUpgrades {
-		@apply mb-20;
+		@apply mb-12;
 	}
 
 
 	&__productEdition {
-		@apply mb-9;
+		@apply mb-12;
 	}
 
 	&__productProperties {
-		@apply mb-11;
+		@apply mb-12;
 	}
 
 	&__productDeliveryInfo {
-		@apply mb-11;
+		@apply mb-12;
 	}
 
 	&__productMaterials {
-		@apply mb-11;
-	}
-
-	&__buy {
-		@apply
-			border
-			rounded;
-
-		&__info {
-			@apply
-				pt-4
-				pr-6
-				pb-9
-				pl-14;
-		}
-
-		&__top {
-			@apply
-				flex
-				justify-between
-				items-center
-				mb-2;
-		}
-
-		&__sku {
-			@apply
-			ml-auto
-			font-medium
-			text-gray-700;
-		}
-
-		&__prices {
-			@apply
-				flex
-				items-center
-				space-x-5
-				mb-4;
-		}
-
-		&__price {
-			@apply
-				flex
-				items-baseline
-				text-950
-				font-bold;
-
-			&__piece {
-				@apply
-				text-xl;
-			}
-		}
-
-		&__oldPrice {
-			@apply
-				text-gray-600
-				text-xl
-				line-through;
-		}
-
-		&__discount {
-			@apply
-				text-xl
-				text-white
-				py-2
-				px-3
-				bg-red
-				rounded-r-lg;
-		}
-
-		&__size {
-			@apply
-				mb-5;
-		}
-
-		&__stock {
-			@apply
-				text-gray-700
-				flex
-				mb-8;
-
-			&__value {
-				@apply
-					text-black
-					ml-1;
-			}
-		}
-
-		&__buttons {
-			@apply flex space-x-4;
-		}
-
-		&__buyButton,
-		&__upgradeButton {
-			@apply
-			h-14
-			px-6;
-		}
-
-		&__count {
-			@apply
-			bg-gradient-to-t
-			from-gray
-			to-gray-100;
-		}
-
-		&__editionLink {
-			@apply
-				block
-				text-center
-				py-2.5
-				text-black
-				underline;
-		}
+		@apply mb-12;
 	}
 }
+
 

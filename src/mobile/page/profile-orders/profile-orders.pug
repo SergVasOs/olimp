@@ -3,10 +3,8 @@ include /include/elements/avatar/avatar
 include /include/elements/bottomButton/bottomButton
 include /include/blocks/common/pageHead/pageHead
 include /include/blocks/profile/orderItem/orderItem
-include /include/blocks/profile/categoriesLayer/categoriesLayer
-include /include/blocks/common/compositionItem/compositionItem
-include /include/blocks/common/productItem/productItem
-include /mobile/include/blocks/catalogFilterLayer/catalogFilterLayer
+include /mobile/include/blocks/compositionItem/compositionItem
+include /mobile/include/blocks/catalogItem/table/catalogTableItem
 
 block append pageVars
 	- var pageTitle = "История заказов";
@@ -15,8 +13,9 @@ block append pageVars
 
 block content
 	+pageHead('История заказов', 'profile.html')._profile.__head
-		+b.icon._xl.__icon
-			include /assets/images/xl/bagIcon.svg
+		+e.right
+			+b.icon._xl
+				include /assets/images/xl/bagIcon.svg
 	.box
 		+b.tabs._blue
 			+b.__buttons
@@ -36,22 +35,18 @@ block content
 				+e.item(data-content-tab='products')
 					+b.profileOrders__products
 						+b.__buttons
-							+b.button.__button(href='#layer_categories')
+							+b.button._lightGray.__button(href='#popup_categories')
 								+e.icon
-									include /assets/images/lg/shevronIcon.svg
+									include /assets/images/lg/shevronBottomIcon.svg
 								+e.text Все категории
-							+b.button.__button(href='#layer_filters')
+							+b.button._lightGray.__button(href='#popup_filters')
 								+e.icon
 									include /assets/images/lg/filterIcon.svg
 								+e.text Фильтр
 						+e.list
-							+compositionItem('profile')
-							+productItem('profile')
-							+compositionItem('profile')
-							+productItem('profile')
-							+compositionItem('profile')
-							+productItem('profile')
-							+compositionItem('profile')
-							+productItem('profile')
-	+catalogFilterLayer
-	+categoriesLayer
+							+catalogTableItem
+							+catalogTableItem
+							+catalogTableItem
+							+catalogTableItem
+							+catalogTableItem
+							+catalogTableItem

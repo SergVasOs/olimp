@@ -10,10 +10,11 @@ block append pageVars
 
 block content
 	+pageHead('Личные данные', 'profile.html')._profile.__head
-		+avatar._sm.__icon
+		+e.right
+			+avatar._xs
 	.box
 		+b.FORM.form.__form
-			+e.H4.row Личные данные
+			+e.title Личные данные
 			+e.row
 				+b.input._lg
 					+e.INPUT.field(type='text', placeholder='Имя', required)
@@ -23,7 +24,7 @@ block content
 			+e.row
 				+b.input._lg
 					+e.INPUT.field(type='text', placeholder='Отчество', required)
-			+e.H4.row Контактные данные
+			+e.title Контактные данные
 			+e.row
 				+b.input._lg
 					+e.INPUT.field(type='text', placeholder='+7 (9 _ _) _ _ _-__-__', required)

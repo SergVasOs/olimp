@@ -4,28 +4,4 @@
     flex-col
     items-start
     space-y-2;
-
-    &__item {
-        @apply
-        flex
-        items-center
-        space-x-1.5
-        text-white
-        text-xs
-        py-1.5
-        px-2.5
-        bg-gray-500
-        rounded-full;
-
-        &_new {
-            @apply
-            bg-green-300;
-        }
-
-
-        &_discount {
-            @apply
-            bg-red;
-        }
-    }
 }

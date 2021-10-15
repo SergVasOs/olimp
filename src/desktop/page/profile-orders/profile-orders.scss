@@ -1,0 +1,51 @@
+.profileOrders {
+    @apply
+    pt-0;
+
+    &__head {
+        @apply
+        mb-12;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-8;
+    }
+
+    &__left {
+        @apply
+        w-1/4;
+    }
+
+    &__right {
+        @apply
+        w-3/4;
+    }
+
+    &__orders {
+        @apply
+        flex
+        space-x-8;
+
+        &__list {
+            @apply
+            w-2/3
+            space-y-4;
+        }
+
+        &__banner {
+            @apply
+            w-1/3;
+
+            &__img {
+                @apply w-full;
+            }
+        }
+    }
+
+    &__products {
+        @apply
+        space-y-4;
+    }
+}

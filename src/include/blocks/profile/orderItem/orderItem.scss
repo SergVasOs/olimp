@@ -1,11 +1,13 @@
 .orderItem {
     @apply
     py-6
-    pl-8
-    pr-4
+    pl-6
+    pr-2
     border
     rounded
-    relative;
+    relative
+    md:py-8
+    md:px-6;
 
     &:before {
         @apply
@@ -14,10 +16,8 @@
             absolute
             -inset-y-px
             -left-px
-            w-2
+            w-1
             bg-green;
-
-
     }
 
     &__card {
@@ -28,11 +28,23 @@
 
         &__col {
             @apply
-                space-y-4;
+                space-y-4
+                md:space-y-2;
+
+            &_number {
+                @apply
+                w-16
+                md:w-20;
+            }
 
             &_status {
                 @apply
                 flex-1;
+            }
+
+            &_sum {
+                @apply
+                w-20;
             }
 
             &__title {
@@ -45,7 +57,8 @@
             &__text {
                 @apply
                 text-sm
-                font-bold;
+                font-bold
+                md:text-base;
 
                 &_status {
                     @apply
@@ -57,7 +70,19 @@
 
     &__swiper {
         @apply
-        mt-4;
+        mt-4
+        md:ml-24;
+
+        &:before {
+            @apply
+            content-empty
+            absolute
+            z-10
+            inset-y-0
+            right-0
+            w-10
+            bg-gradient-to-l from-white;
+        }
 
         &__wrapper {
             &__item {

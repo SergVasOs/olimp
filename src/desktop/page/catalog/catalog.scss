@@ -1,9 +1,24 @@
-@import "/src/desktop/page/catalog/catalogContent/catalogContent";
 @import "/src/desktop/page/catalog/catalogHead/catalogHead";
+@import "/src/desktop/page/catalog/catalogContent/catalogContent";
+@import "/src/desktop/page/catalog/catalogBottom/catalogBottom";
 
 .catalog {
+    @apply
+        pb-12;
+
     &__head {
-        @apply mb-4
-        lg:mb-8;
+        @apply mb-4;
+    }
+
+    &__catalogBottom {
+        @apply mt-8;
+    }
+
+    &__exclusive {
+        @apply mt-12;
+    }
+
+    &__viewed {
+        @apply mt-8;
     }
 }

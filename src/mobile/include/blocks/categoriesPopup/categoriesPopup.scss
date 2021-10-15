@@ -1,0 +1,29 @@
+.categoriesPopup {
+    @apply
+        space-y-8;
+
+    &__group {
+        &__title {
+            @apply
+                h3
+                mb-4;
+        }
+
+        &__items {
+            &__item {
+                @apply
+                    flex
+                    items-center
+                    space-x-4
+                    border-b
+                    py-4
+                    last:border-0;
+
+                &__name {
+                    @apply
+                        flex-1;
+                }
+            }
+        }
+    }
+}

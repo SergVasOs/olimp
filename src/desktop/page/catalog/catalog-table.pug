@@ -1,6 +1,7 @@
 extends /desktop/layout/layout
 include /desktop/page/catalog/catalogHead/catalogHead
 include /desktop/page/catalog/catalogContent/catalogContent
+include /desktop/page/catalog/catalogBottom/catalogBottom
 
 block append pageVars
 	- var pageTitle = "Кубки пластиковые";
@@ -8,5 +9,6 @@ block append pageVars
 	- var catalogView = "table";
 
 block content
-	+catalogHead
+	+catalogHead.__head
 	+catalogContent.__catalogContent
+	+catalogBottom.__catalogBottom

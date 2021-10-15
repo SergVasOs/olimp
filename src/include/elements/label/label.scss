@@ -14,16 +14,19 @@
 
     &_new {
         @apply
-        bg-green;
+        bg-green-dark;
     }
 
 
     &_discount {
         @apply
-        bg-red;
+        bg-red-dark;
     }
 
     &_lg {
-        @apply text-lg
+        @apply
+        h-8
+        px-4
+        text-base;
     }
 }

@@ -1,0 +1,21 @@
+mixin fastOrderPopup
+	+b#popup_fast_order.popup
+		+e.overlay
+		+e.body._sm
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+e.content
+				+e.title Быстрое оформление:
+				+b.FORM.form
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='text', placeholder='ФИО полностью *', required)
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='text', placeholder='+7 (9_ _) ___-__-__ *', required)
+					+e.row
+						+b.input._lg
+							+e.INPUT.field(type='text', placeholder='Ваш e-mail', required)
+					+e.footer
+						+b.button._lg._green(href="profile.html") Оформить заказ
+

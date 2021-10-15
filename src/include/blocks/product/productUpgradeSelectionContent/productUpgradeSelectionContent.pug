@@ -1,0 +1,53 @@
+include /include/blocks/catalog/selectionItem/selectionItem
+
+mixin productUpgradeSelectionContent
+	+b.productUpgradeSelectionContent
+		+b.input.__search
+			+e.icon
+				include /assets/images/lg/searchIcon.svg
+			+e.INPUT.field(type='text', placeholder='Поиск')
+			+b.button._xs._icon._yellow(href='#popup_filters')
+				+e.icon
+					include /assets/images/lg/filterIcon2.svg
+		+b.slider.__slider
+			+b.__labels
+				+e.item._start 100
+				+e.item._end 2700
+			+b.__track
+				+e.handler._start
+				+e.handler._end
+				+e.bar
+		+b.select.__select
+			+e.SELECT.input
+				+e Технология нанесения
+				+e F1: Флекс
+				+e F1: Флекс
+				+e F1: Флекс
+			+e.icon
+				include /assets/images/lg/shevronIcon.svg
+		+b.menu.__categories
+			+b.__swiper.swiper-container
+				+b.__wrapper.swiper-wrapper
+					+b.__item._active.swiper-slide(href='#') Металические
+					+b.__item.swiper-slide(href='#') Пластиковые
+					+b.__item.swiper-slide(href='#') Стеклянные
+					+b.__item.swiper-slide(href='#') Пластиковые
+					+b.__item.swiper-slide(href='#') Стеклянные
+					+b.__item.swiper-slide(href='#') Пластиковые
+					+b.__item.swiper-slide(href='#') Стеклянные
+					+b.__item.swiper-slide(href='#') Пластиковые
+					+b.__item.swiper-slide(href='#') Стеклянные
+		+b.__items
+			+e.content
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem
+				+selectionItem

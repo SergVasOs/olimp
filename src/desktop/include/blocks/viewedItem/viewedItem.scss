@@ -1,19 +1,36 @@
 .viewedItem {
     @apply
         relative
-        flex
-        flex-col
-        rounded-2xl border border-gray-300;
+        rounded
+        border
+        ;
+
+    &__favoriteIcon {
+        @apply
+        absolute
+        z-10
+        top-4
+        right-4;
+    }
+
+    &__labels {
+        @apply
+        absolute
+        z-10
+        top-4
+        left-4;
+    }
 
     &__catalogItemGallery {
         @apply
-        rounded-t-2xl;
+        rounded-t
+        mb-2;
     }
 
     &__material {
         @apply
-            text-xs
-            text-gray-500
+            text-sm
+            text-gray-light
             px-4
             mb-2;
     }
@@ -21,9 +38,8 @@
     &__name {
         @apply
             text-black
-            leading-4
             line-clamp-2
             px-4
-            mb-6;
+            mb-8;
     }
 }

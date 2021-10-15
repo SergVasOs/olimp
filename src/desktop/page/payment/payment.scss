@@ -1,0 +1,87 @@
+.payment {
+    &__head {
+        @apply
+        mb-4;
+    }
+
+    &__text {
+        @apply
+            text-sm
+            mb-8;
+    }
+
+    &__title {
+        @apply
+        h3
+        mb-4;
+    }
+
+    &__cards {
+        @apply
+        grid
+        grid-cols-3
+        gap-4
+        mb-8;
+
+        &__item {
+            @apply
+            px-4
+            pt-4
+            pb-8
+            border
+            rounded;
+
+            &__title {
+                @apply
+                h5
+                mb-2;
+            }
+
+            &__desc {
+                @apply
+                text-sm
+                text-gray-light;
+            }
+        }
+    }
+
+    &__groups {
+        @apply
+        grid
+        grid-cols-4
+        gap-4;
+
+        &__item {
+            @apply
+                flex
+                flex-col
+                items-stretch;
+
+            &__title {
+                @apply
+                    text-sm
+                    mb-4;
+            }
+
+            &__imgs {
+                @apply
+                flex-1
+                p-4
+                flex
+                border
+                rounded
+                justify-between
+                items-center
+                space-x-4;
+
+                &__item {
+                    @apply
+                        flex-1
+                        w-0
+                        h-auto
+                        object-contain;
+                }
+            }
+        }
+    }
+}

@@ -86,6 +86,11 @@
         @apply
             w-40
             mx-auto;
+
+        & > * {
+            @apply
+            fill-gray-border-light;
+        }
     }
 }
 
@@ -114,21 +119,17 @@
             justify-between
             mb-4;
 
-        &__homeButton {
-            @apply
-                button_sm
-                button_yellow;
-        }
-
         &__link {
             @apply
                 text-lg
                 font-medium
+                text-black
                 flex
                 items-center
                 space-x-2;
         }
     }
+
 
     &__galleryLink {
         @apply
@@ -169,10 +170,18 @@
 
         &__city {
             @apply
+                mt-px
                 text-blue-dark
-                underline
+                border-b
+                border-dotted
+                border-blue-dark
                 cursor-pointer;
         }
+    }
+
+    &__callback {
+        @apply
+        mb-4;
     }
 
     &__catalogMenu {
@@ -187,8 +196,6 @@
 
     &__helpButton {
         @apply
-            button_lg
-            button_gray
             w-full;
     }
 }

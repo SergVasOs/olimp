@@ -1,0 +1,10 @@
+mixin pagination
+	+b.pagination&attributes(attributes)
+		+b.button._white.__more Загрузить ещё
+		+b.__pages
+			+e.item(href='#') 1
+			+e.item._active(href='#') 2
+			+e.item(href='#') 3
+			+e.item(href='#') ...
+			+e.item(href='#') 9
+			+e.item(href='#') 10

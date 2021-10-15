@@ -10,7 +10,10 @@
 		mb-4;
 
 		&__img {
-			@apply w-full;
+			@apply
+			shadow
+			rounded
+			w-full;
 		}
 	}
 

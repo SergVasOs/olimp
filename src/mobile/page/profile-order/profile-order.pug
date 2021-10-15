@@ -1,8 +1,9 @@
 extends /mobile/layout/layout
 include /include/elements/avatar/avatar
 include /include/blocks/common/pageHead/pageHead
-include /include/blocks/common/compositionItem/compositionItem
-include /include/blocks/common/productItem/productItem
+include /mobile/include/blocks/compositionItem/compositionItem
+include /include/blocks/profile/orderProductItem/orderProductItem
+include /include/blocks/profile/orderCompositionItem/orderCompositionItem
 
 block append pageVars
 	- var pageTitle = "История заказов";
@@ -11,8 +12,9 @@ block append pageVars
 
 block content
 	+pageHead('Заказ 32324-234', 'profile-orders.html')._profile.__head
-		+b.icon._xl.__icon
-			include /assets/images/xl/bagIcon.svg
+		+e.right
+			+b.icon._xl
+				include /assets/images/xl/bagIcon.svg
 	.box
 		+b.__top
 			+e.count Всего в заказе: 300 позиций
@@ -35,7 +37,7 @@ block content
 			+b.__contact
 				+e.title Ваш менеджер:
 				+b.__content
-					+avatar._sm
+					+avatar._xs
 					+b.__info
 						+e.name Чистопольская Анастасия
 						+b.__contacts
@@ -49,13 +51,20 @@ block content
 					+e.name Кубки
 					+e.count 2 шт
 				+e.__items
-					+compositionItem('profile')
-					+productItem('profile')
-					+compositionItem('profile')
+					+orderCompositionItem
+					+orderProductItem
+					+orderCompositionItem
 			+b.__category
 				+b.__header
 					+e.name Медали
 					+e.count 12 шт
 				+e.__items
-					+compositionItem('profile')
-					+compositionItem('profile')
+					+orderCompositionItem
+					+orderCompositionItem
+		+b.__buttons
+			+b.button._lg._blue._full
+				+e.icon
+					include /assets/images/lg/basketIcon.svg
+				+e.text Повторить весь заказ
+			+b.button._lg._lightGray._full
+				+e.text Оставить отзыв

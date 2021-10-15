@@ -1,24 +1,28 @@
 .addressItem {
     @apply
     p-4
+    pb-8
     border
-    rounded
-    space-y-4;
+    rounded;
 
     &__top {
         @apply
             flex
-            space-x-4;
+            space-x-4
+            mb-4
+            md:mb-2;
 
         &__city {
             @apply
-            flex-1;
+            h4
+            flex-1
+            md:h5;
         }
 
         &__buttons {
             @apply
                 flex
-                space-x-2;
+                space-x-4;
         }
     }
 

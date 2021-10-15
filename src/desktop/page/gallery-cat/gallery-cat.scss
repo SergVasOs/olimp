@@ -1,0 +1,97 @@
+.galleryCategory {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__box {
+        @apply flex space-x-4;
+    }
+
+    &__left {
+        @apply w-1/4;
+    }
+
+    &__right {
+        @apply flex-1;
+    }
+
+    &__menu {
+        @apply space-y-4 mb-8;
+
+        &__title {
+            @apply
+            text-lg
+            text-blue-dark
+            font-medium
+            pt-4;
+        }
+
+        &__item {
+            &__link {
+                @apply
+                p-4
+                flex
+                items-center
+                justify-between
+                space-x-4
+                border
+                rounded;
+            }
+
+            &__submenu {
+                @apply flex
+                flex-col
+                space-y-4
+                ml-8
+                my-4;
+
+                &__item {
+                    &_active {
+                        @apply
+                        text-blue
+                        underline;
+                    }
+                }
+            }
+
+            &_active & {
+                &__link {
+                    &__icon {
+                        @apply transform
+                        rotate-90;
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        @apply
+            grid
+            grid-cols-3
+            gap-8;
+
+        &__item {
+            @apply
+            pb-full
+            relative;
+
+            &_big {
+                @apply
+                col-span-2
+                row-span-2;
+            }
+
+            &__img {
+                @apply
+                rounded
+                flexBlockCover;
+            }
+        }
+    }
+
+    &__pagination {
+        @apply
+        mt-4;
+    }
+}

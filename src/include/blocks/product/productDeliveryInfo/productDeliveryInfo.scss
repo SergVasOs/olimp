@@ -4,72 +4,79 @@
 
     &__title {
         @apply
-        text-3xl
-        font-bold
-        mb-5
+        h4
+        mb-4
         hidden
-        lg:block;
+        md:block;
     }
 
     &__best {
         @apply
-        mb-4;
+        mb-8;
     }
 
     &__blocks {
         @apply
-        lg:flex
-            lg:flex-row-reverse
-            lg:space-y-0
-        lg:items-stretch;
+        md:flex
+        md:flex-row-reverse
+        md:space-y-0
+        md:items-stretch;
     }
 
     &__info {
         @apply
-            bg-gray-card
-            rounded
-            py-6
-            px-4
-            space-y-4
-            mb-4
-            lg:flex-1
-            lg:mb-0
-            lg:ml-8
-            lg:bg-gray-50;
+        bg-gray-card
+        rounded
+        py-6
+        px-4
+        mb-4
+        md:p-8
+        md:w-80
+        md:mb-0
+        md:ml-4;
 
-        &__item {
-            @apply
+        &__items {
+            @apply space-y-4;
+
+            &__item {
+                @apply
                 flex
                 items-center
                 space-x-4;
 
-            &__icon {
-                @apply text-blue-dark;
-            }
+                &__icon {
+                    @apply text-blue-dark;
+                }
 
-            &__name {
-                @apply mt-1 whitespace-nowrap
-                lg:text-sm;
+                &__name {
+                    @apply
+                    md:text-sm;
+                }
             }
         }
 
         &__more {
             @apply
-                hidden
-                underline
-                text-xs
-            lg:block;
+            hidden
+            underline
+            text-sm
+            mt-6
+            md:block;
         }
     }
 
     &__props {
         @apply
-        bgGrayGradient
+        bg-grayGradient
         rounded
         px-4
         py-6
         space-y-4
-        lg:bg-gray-50;
+        md:flex-1
+        md:p-8
+        md:space-y-8
+        md:bg-none
+        md:bg-gray-card;
 
         &__row {
             @apply
@@ -78,6 +85,9 @@
             space-x-4
             pb-4
             border-b
+
+            md:space-x-8
+            md:pb-8
             last:border-0
             last:pb-0;
         }
@@ -86,7 +96,8 @@
             @apply
                 space-y-4
                 first:flex-1
-                last:w-36;
+                last:w-36
+                md:last:w-24;
 
             &__name {
                 @apply
@@ -95,8 +106,7 @@
 
             &__value {
                 @apply
-                    text-sm
-                    text-gray-light;
+                    text-gray;
             }
         }
     }

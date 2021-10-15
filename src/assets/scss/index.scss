@@ -1,20 +1,18 @@
 @import "base";
 @import "utilities";
-@import "box";
 @import "icon";
 @import "button";
-@import "modal";
-@import "layer";
+@import "popup";
+@import "popper";
 @import "form";
 @import "slider";
 @import "swiper";
 @import "tabs";
 @import "menu";
 @import "textBlock";
-@import "popper";
 
 @import "/src/include/layout/content/content";
-@import "/src/include/layout/modals/deleteCartItemModal/deleteCartItemModal";
+@import "/src/include/blocks/cart/deleteCartItemPopup/deleteCartItemPopup";
 
 @import "/src/include/elements/size/size";
 @import "/src/include/elements/color/color";
@@ -29,18 +27,16 @@
 @import "/src/include/elements/fileItem/fileItem";
 
 @import "/src/include/blocks/catalog/catalogItemGallery/catalogItemGallery";
-@import "/src/include/blocks/catalog/catalogItem/grid/catalogGridItem";
 @import "/src/include/blocks/catalog/selectionItem/selectionItem";
 @import "/src/include/blocks/catalog/catalogFilters/catalogFilters";
 @import "/src/include/blocks/catalog/productListItem/productListItem";
 
 @import "/src/include/blocks/product/productFileList/productFileList";
 @import "/src/include/blocks/product/productDeliveryInfo/productDeliveryInfo";
-@import "/src/include/blocks/product/productUpgrades/productUpgrades";
 @import "/src/include/blocks/product/productDescription/productDescription";
-@import "/src/include/blocks/product/productUpgradeInfoLayer/productUpgradeInfoLayer";
-@import "/src/include/blocks/product/productUpgradeSelectionLayer/productUpgradeSelectionLayer";
-@import "/src/include/blocks/product/productUpgradePlaceLayer/productUpgradePlaceLayer";
+@import "/src/include/blocks/product/productUpgradeInfoContent/productUpgradeInfoContent";
+@import "/src/include/blocks/product/productUpgradeSelectionContent/productUpgradeSelectionContent";
+@import "/src/include/blocks/product/productUpgradePlaceContent/productUpgradePlaceContent";
 @import "/src/include/blocks/product/productEdition/productEdition";
 
 @import "/src/include/blocks/common/consultForm/consultForm";
@@ -48,18 +44,17 @@
 @import "/src/include/blocks/common/fileList/fileList";
 @import "/src/include/blocks/common/popularKeywords/popularKeywords";
 @import "/src/include/blocks/common/pageHead/pageHead";
-@import "/src/include/blocks/common/compositionItem/compositionItem";
-@import "/src/include/blocks/common/chooseCityLayer/chooseCityLayer";
 @import "/src/include/blocks/common/callback/callback";
-@import "/src/include/blocks/common/productItem/productItem";
+@import "/src/include/blocks/common/bookOrderContent/bookOrderContent";
+@import "/src/include/blocks/common/freeDeliveryContent/freeDeliveryContent";
+@import "/src/include/blocks/common/giftContent/giftContent";
 
 @import "/src/include/blocks/profile/orderItem/orderItem";
 @import "/src/include/blocks/profile/addressItem/addressItem";
-@import "/src/include/blocks/profile/mapLayer/mapLayer";
-@import "/src/include/blocks/profile/changePasswordLayer/changePasswordLayer";
-@import "/src/include/blocks/profile/categoriesLayer/categoriesLayer";
+@import "/src/include/blocks/profile/deleteAddressItemPopup/deleteAddressItemPopup";
+@import "/src/include/blocks/profile/orderCompositionItem/orderCompositionItem";
+@import "/src/include/blocks/profile/orderProductItem/orderProductItem";
 
-@import "/src/include/blocks/cart/cartItems/cartItems";
 @import "/src/include/blocks/cart/cartTotal/cartTotal";
 @import "/src/include/blocks/cart/cartDiscount/cartDiscount";
 

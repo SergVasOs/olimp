@@ -1,0 +1,84 @@
+.profileHead {
+	@apply
+	bg-gray-border-light
+	py-8;
+
+	&__box {
+		@apply
+		flex
+		items-center
+		justify-between
+		space-x-12;
+	}
+
+	&__user {
+		@apply
+			flex
+			items-center
+			space-x-4;
+
+		&__info {
+			@apply
+			space-y-2;
+
+			&__name {
+				@apply
+				font-medium;
+			}
+
+			&__link {
+				@apply
+				text-black
+				underline
+				text-sm;
+			}
+		}
+	}
+
+	&__cards {
+		@apply
+			flex
+			items-stretch
+			space-x-8;
+
+		&__item {
+			@apply
+			min-w-menuItem
+			border
+			rounded
+			py-2
+			px-4
+			bg-white
+			flex items-center space-x-2;
+
+			&__content {
+				@apply
+				space-y-2;
+			}
+
+			&__title {
+				@apply
+				text-lg
+				font-medium;
+			}
+
+			&__text {
+				@apply
+				whitespace-nowrap
+				text-sm
+				text-blue-dark;
+			}
+
+			&_discount & {
+				&__text {
+					@apply
+					text-red;
+				}
+			}
+		}
+	}
+
+	&__label {
+		@apply text-lg;
+	}
+}

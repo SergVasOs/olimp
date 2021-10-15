@@ -1,7 +1,8 @@
 include /include/elements/logo/logo
+include /include/blocks/common/callback/callback
 include /include/sections/index/catalogMenu/catalogMenu
 include /include/sections/index/importantInfo/importantInfo
-include /include/blocks/common/chooseCityLayer/chooseCityLayer
+include /mobile/include/blocks/chooseCityPopup/chooseCityPopup
 
 +b.header
 	+e.box.box
@@ -20,16 +21,16 @@ include /include/blocks/common/chooseCityLayer/chooseCityLayer
 +b.mainMenu
 	.box
 		+b.__top
-			+b.button.__homeButton(href='')
+			+b.button._icon._sm._yellow(href='index.html')
 				+e.icon
 					include /assets/images/md/homeIcon.svg
 			+b.__link(href='profile.html')
-				+b.icon
-					include /assets/images/md/userIcon.svg
+				+b.icon._lg
+					include /assets/images/lg/userIcon.svg
 				+e.text Мой аккаунт
 			+b.__link(href='order-status.html')
-				+b.icon
-					include /assets/images/md/bestDeliveryIcon.svg
+				+b.icon._lg
+					include /assets/images/lg/bestDeliveryIcon.svg
 				+e.text Статус заказа
 		+b.__galleryLink(href='gallery.html')
 			+e.img(src='images/galleryBanner.png')
@@ -38,10 +39,11 @@ include /include/blocks/common/chooseCityLayer/chooseCityLayer
 			+b.icon
 				include /assets/images/md/pointIcon.svg
 			+e.label Ваш город:
-			+e.city(href='#layer_choose_city') Москва
+			+e.city(href='#popup_choose_city') Москва
+		+callback.__callback
 	+catalogMenu(false).__catalogMenu
 	+importantInfo.__importantInfo
 	.box
-		+b.button.__helpButton(href='#')
+		+b.button._lg._gray._full(href='#')
 			+e.text Нужна помощь?
-+chooseCityLayer
++chooseCityPopup

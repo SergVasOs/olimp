@@ -1,0 +1,17 @@
+include /include/elements/buyButton/buyButton
+
+mixin bookOrderContent
+	+b.bookOrderContent
+		+b.icon._3xl.__applyIcon
+			include /assets/images/3xl/applyIcon.svg
+		+e.title Забронируй предложение
+		+e.text Выбор сделан! Ваш подарок будет лежать в корзине. Забронируйте заказ, чтобы не потерять его.
+		+b.FORM.form
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='Фамилия, имя, отчество', required)
+			+e.row
+				+b.input._lg
+					+e.INPUT.field(type='text', placeholder='+7(', required)
+			+e.footer
+				+b.button._lg._white(href='#') Забронировать

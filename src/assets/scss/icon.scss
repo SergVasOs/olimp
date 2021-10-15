@@ -4,40 +4,48 @@
         w-6
         h-6;
 
-    &_sm {
-        @apply
-        w-4
-        h-4;
-    }
+    @variants responsive {
+        &_xs {
+            @apply
+            w-2
+            h-2;
+        }
 
-    &_lg {
-        @apply
-        w-8
-        h-8;
-    }
+        &_sm {
+            @apply
+            w-4
+            h-4;
+        }
 
-    &_2lg {
-        @apply
-        w-10
-        h-10;
-    }
+        &_lg {
+            @apply w-8
+            h-8;
+        }
 
-    &_xl {
-        @apply
-        w-12
-        h-12;
-    }
+        &_2lg {
+            @apply w-10
+            h-10;
+        }
 
-    &_2xl {
-        @apply
-        w-20
-        h-20;
-    }
+        &_xl {
+            @apply w-12
+            h-12;
+        }
 
-    &_3xl {
-        @apply
-        w-32
-        h-32;
+        &_2xl {
+            @apply w-16
+            h-16;
+        }
+
+        &_3xl {
+            @apply w-20
+            h-20;
+        }
+
+        &_4xl {
+            @apply w-32
+            h-32;
+        }
     }
 
     &_auto {

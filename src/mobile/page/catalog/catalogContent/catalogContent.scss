@@ -6,15 +6,15 @@
 	&__items {
 		@apply
 		grid
-		gap-4
+		gap-2
 		grid-cols-2;
 
 		&_list {
-			@apply grid-cols-1 gap-6;
+			@apply grid-cols-1 gap-4;
 		}
 
 		&_table {
-			@apply grid-cols-1 gap-8;
+			@apply grid-cols-1 gap-6;
 		}
 	}
 

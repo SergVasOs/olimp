@@ -1,5 +1,5 @@
 mixin buyButton(text)
-	+b.button._yellow&attributes(attributes)
+	+b.button(class=(!text ? '_icon' : ''))._yellow&attributes(attributes)
 		+e.icon
 			include /assets/images/lg/basketIcon.svg
 		if (text)

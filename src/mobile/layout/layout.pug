@@ -1,14 +1,29 @@
 include /bemto/bemto
+include /mobile/include/blocks/freeDeliveryPopper/freeDeliveryPopper
+include /mobile/include/blocks/giftPopper/giftPopper
+include /mobile/include/blocks/bookOrderPopper/bookOrderPopper
+include /mobile/include/blocks/catalogFilterPopup/catalogFilterPopup
+include /mobile/include/blocks/categoriesPopup/categoriesPopup
+include /include/blocks/common/fastOrderPopup/fastOrderPopup
 
 - set_bemto_settings({ flat_elements: false });
 
 doctype html
 html(lang='ru')
 	include /include/layout/head/head
-body
-	include header/header
+body(class=hideHeader && "noHeader")
+	if (!hideHeader)
+		include header/header
 	include /include/layout/content/content
 	if (!hideFooter)
 		include footer/footer
+
+	+freeDeliveryPopper
+	+fastOrderPopup
+	+bookOrderPopper
+	+giftPopper
+	+catalogFilterPopup
+	+categoriesPopup
+
 	script(src='js/common.js')
 	script(src='js/mobile.js')

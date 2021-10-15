@@ -1,0 +1,92 @@
+.productItem {
+    @apply
+    p-4
+    border
+    rounded;
+
+    &__card {
+        @apply
+        flex
+        items-stretch
+        space-x-4;
+
+        &__img {
+            @apply
+            w-20
+            h-20
+            object-cover;
+        }
+
+        &__info {
+            @apply
+            flex
+            flex-col
+            flex-1;
+
+            &__name {
+                @apply
+                mb-2;
+            }
+
+            &__prop {
+                @apply
+                text-sm
+                text-gray-light
+                mb-2;
+            }
+
+            &__prices {
+                @apply
+                mt-auto
+                flex
+                items-baseline
+                space-x-2;
+
+                &__price {
+                    @apply
+                    price;
+                }
+
+                &__oldPrice {
+                    @apply
+                    oldPrice
+                    text-sm;
+                }
+            }
+        }
+
+        &__actions {
+            @apply
+            flex
+            flex-col
+            items-stretch
+            justify-between;
+
+            &__buttons {
+                @apply
+                flex
+                space-x-2
+                justify-end
+                items-center;
+            }
+
+            &__quantity {
+                @apply
+                w-28;
+            }
+        }
+
+        &__count {
+            @apply
+                flex
+                items-end;
+        }
+    }
+
+    &__button {
+        @apply
+        pt-4
+        mt-4
+        border-t;
+    }
+}

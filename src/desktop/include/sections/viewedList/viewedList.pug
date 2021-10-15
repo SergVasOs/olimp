@@ -2,7 +2,7 @@ include /desktop/include/blocks/viewedItem/viewedItem
 
 mixin viewedList(title)
 	+b.viewedList&attributes(attributes)
-		+e.box.box
+		div.box
 			+e.title #{title}
 			+b.swiper-container.__swiper
 				+b.swiper-wrapper
@@ -15,6 +15,6 @@ mixin viewedList(title)
 					+viewedItem.swiper-slide
 					+viewedItem.swiper-slide
 				+b.swiper-prev
-					include /assets/images/shevronBold.svg
+					include /assets/images/xl/shevronIcon.svg
 				+b.swiper-next
-					include /assets/images/shevronBold.svg
+					include /assets/images/xl/shevronIcon.svg

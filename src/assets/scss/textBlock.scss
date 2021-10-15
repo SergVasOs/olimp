@@ -2,35 +2,34 @@
     @apply
         text-sm
         space-y-4
-        md:text-xl
+        md:text-base
         md:space-y-8;
 
     &__textList {
         @apply
-        space-y-2
+        space-y-4
         md:space-y-6;
 
         &__title {
             @apply
-                text-sm
                 font-medium
-                md:text-xl;
+                md:text-base;
         }
 
         &__items {
             @apply
-            space-y-2
+            space-y-4
             md:space-y-6;
         }
 
         &__item {
             @apply
-            text-xs
             text-gray;
 
             &__title {
                 @apply
-                text-black inline mr-1;
+                text-black
+                inline mr-1;
             }
         }
     }

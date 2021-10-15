@@ -8,12 +8,12 @@
 
     &__image {
         @apply
-            pb-4/5
+            pb-4/3
             relative
             mb-4;
 
         &__img {
-            @apply flexImageContain;
+            @apply flexBlockContain;
         }
     }
 

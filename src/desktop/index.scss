@@ -1,15 +1,25 @@
 @import "/src/assets/scss/index";
+@import "/src/desktop/base";
 @import "/src/desktop/layout/topBar/topBar";
 @import "/src/desktop/layout/footer/footer";
 @import "/src/desktop/layout/header/header";
 @import "/src/desktop/page/page";
 
-@import "/desktop/include/blocks/catalogItem/list/catalogListItem";
-@import "/desktop/include/blocks/catalogItem/table/catalogTableItem";
-@import "/desktop/include/blocks/viewedItem/viewedItem";
+@import "/src/desktop/include/blocks/catalogItem/grid/catalogGridItem";
+@import "/src/desktop/include/blocks/catalogItem/list/catalogListItem";
+@import "/src/desktop/include/blocks/catalogItem/table/catalogTableItem";
+@import "/src/desktop/include/blocks/viewedItem/viewedItem";
+@import "/src/desktop/include/blocks/compositionItem/compositionItem";
+@import "/src/desktop/include/blocks/profileMenu/profileMenu";
+@import "/src/desktop/include/blocks/productItem/productItem";
+@import "/src/desktop/include/blocks/pagination/pagination";
+@import "/src/desktop/include/blocks/chooseCityPopup/chooseCityPopup";
+@import "/src/desktop/include/blocks/mapPopup/mapPopup";
+@import "/src/desktop/include/blocks/productBuy/productBuy";
+@import "/src/desktop/include/blocks/ordersProductItem/ordersProductItem";
 
-@import "/desktop/include/sections/setList/setList";
-@import "/desktop/include/sections/productList/productList";
-@import "/desktop/include/sections/viewedList/viewedList";
-@import "/desktop/include/sections/saleList/saleList";
+@import "/src/desktop/include/sections/productList/productList";
+@import "/src/desktop/include/sections/viewedList/viewedList";
+@import "/src/desktop/include/sections/saleList/saleList";
+@import "/src/desktop/include/sections/profileHead/profileHead";
 

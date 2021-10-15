@@ -1,0 +1,37 @@
+.deleteAddressItemPopup {
+    &__title {
+        @apply
+            h3
+            text-blue-dark
+            text-center
+            mb-14;
+    }
+
+    &__item {
+        @apply
+            border
+            rounded
+            px-8
+            py-6
+            mx-auto
+            mb-8;
+
+        &__city {
+            @apply
+            h3
+            mb-2;
+        }
+
+        &__address {
+            @apply
+            text-gray;
+        }
+    }
+
+    &__buttons {
+        @apply
+        grid
+        grid-cols-2
+        gap-6;
+    }
+}

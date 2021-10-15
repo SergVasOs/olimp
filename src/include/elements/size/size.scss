@@ -6,6 +6,7 @@
         &__wrapper {
             &__item {
                 @apply
+                bg-gray-card
                 w-auto
                 min-w-size
                 text-xs
@@ -13,7 +14,6 @@
                 border
                 rounded
                 cursor-pointer
-                whitespace-nowrap
                 h-8
                 flex
                 items-center
@@ -22,6 +22,7 @@
 
                 &_active {
                     @apply
+                    bg-none
                     bg-blue-dark
                     text-white
                     border-blue-dark;

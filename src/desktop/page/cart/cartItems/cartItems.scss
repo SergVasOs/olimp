@@ -1,0 +1,31 @@
+.cartItems {
+    @apply
+    space-y-4;
+
+    &__category {
+        @apply
+        space-y-4;
+
+        &__header {
+            @apply
+            p-4
+            bg-gray-card
+            rounded
+            flex
+            items-center
+            justify-between
+            text-lg;
+
+            &__count {
+                @apply
+                font-bold
+                text-lg;
+            }
+        }
+
+        &__items {
+            @apply
+            space-y-4;
+        }
+    }
+}

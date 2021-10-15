@@ -1,0 +1,39 @@
+.new {
+    &__img {
+        @apply
+        w-full
+        mb-4;
+    }
+
+    &__back {
+        @apply
+        text-gray
+        flex
+        items-center
+        underline
+        space-x-2
+        mb-6;
+
+        &__icon {
+            @apply transform rotate-180;
+        }
+    }
+
+    &__title {
+        @apply
+            h3
+        mb-4;
+    }
+
+    &__date {
+        @apply
+        text-lg
+        text-gray
+        mb-6;
+    }
+
+    &__text {
+        @apply
+            text-lg;
+    }
+}

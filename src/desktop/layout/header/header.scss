@@ -2,10 +2,9 @@
 	@apply fixed
         z-30
         top-0
-        -inset-x-0
-        bg-gray-100
+        inset-x-0
+        bg-gray-card
         border-b
-        border-gray-200
         h-20
 		flex
 		items-center;
@@ -15,41 +14,193 @@
 	}
 
 	&__logo {
-		@apply w-44
+		@apply
+		w-50
         mr-8;
 	}
 
 	&__catalogButton {
-		@apply text-lg
+		@apply
+		font-normal
+		text-lg
+		pr-4
         mr-8;
 	}
 
-	&__searchInput {
-		@apply pl-4
+	&__search {
+		@apply
+		relative
+		pl-4
         flex-1
-        mr-8;
+        mr-6;
+
+		&__result {
+			@apply
+				transition transition-top transition-opacity duration-300 ease-in-out
+				absolute
+				-top-screen
+				-left-2
+				opacity-0
+				w-full
+				max-h-search-result
+				rounded
+				border
+				bg-white
+				px-8
+				py-6
+				flex
+				flex-col
+				items-stretch
+				mt-4;
+
+			&__content {
+				@apply
+					flex-1
+					h-0
+					space-y-6
+					overflow-scrollVert;
+			}
+
+			&__categories {
+				@apply
+					space-y-2;
+
+				&__item {
+					@apply
+						block
+						underline
+						text-gray;
+
+					&:hover {
+						@apply
+							text-blue-dark;
+					}
+				}
+			}
+
+			&__products {
+				&__title {
+					@apply
+						text-gray
+						text-sm
+						mb-4;
+				}
+
+				&__list {
+					@apply
+					space-y-4;
+				}
+
+				&__item {
+					@apply
+					border
+					rounded
+					px-4
+					py-2
+					flex
+					items-center
+					space-x-2;
+
+					&__img {
+						@apply
+							w-14
+							h-14
+							object-contain;
+					}
+
+					&__info {
+						@apply
+							self-stretch
+							flex-1
+							flex
+							flex-col
+							justify-between;
+
+						&__name {
+							@apply
+							line-clamp-1;
+						}
+
+						&__prop {
+							@apply
+							text-sm
+							text-gray;
+						}
+					}
+
+					&__price {
+						@apply
+							text-blue-dark;
+					}
+				}
+			}
+
+			&__popular {
+				&__title {
+					@apply
+					text-gray
+					text-sm
+					mb-4;
+				}
+
+				&__list {
+					@apply
+					grid
+					grid-cols-2
+					gap-4;
+				}
+
+				&__item {
+					@apply
+					flex
+					items-center
+					text-black;
+
+					&__text {
+						@apply flex-1;
+					}
+				}
+			}
+		}
+
+		&_active & {
+			&__result {
+				@apply
+				opacity-100
+					top-full;
+			}
+		}
 	}
 
 	&__regionChoice {
-		@apply flex
-            items-center
-            lg:mr-6
-            xl:mr-8;
+		@apply
+		flex
+		items-center
+		mr-6;
 
 		&__label {
-			@apply text-inherit
+			@apply
+				mt-px
                 text-lg
-                border-b-2
-                border-dotted
-                border-inherit
+				border-b
+				border-dashed
+				border-blue-dark
                 ml-2;
+		}
+
+		&:hover & {
+			&__label {
+				@apply
+					border-blue;
+			}
 		}
 	}
 
 	&__phone {
-		@apply flex
+		@apply
+		flex
         items-center
-        mr-8;
+        mr-10;
 
 		&__label {
 			@apply text-lg
@@ -58,10 +209,233 @@
 	}
 
 	&__userIcon {
-		@apply mr-5;
+		@apply mr-1;
 	}
 
 	&__favoriteIcon {
-		@apply mr-5;
+		@apply mr-1;
+	}
+
+	//TODO:fix this, mb sticky
+	.js-modal & {
+		@apply
+		pr-scrollbar;
+	}
+}
+
+.mainMenu {
+	@apply
+	fixed
+	inset-x-0
+	h-mainMenu
+	-top-full
+	bg-white
+	z-20
+	border-b
+	transition transition-top duration-500 ease-in-out;
+
+	&_open {
+		@apply
+		top-20;
+	}
+
+	&__box {
+		@apply
+		h-full
+		max-w-full
+		flex
+		items-stretch;
+	}
+
+	&__categories {
+		@apply
+		flex-1
+		flex
+		items-stretch;
+
+		&__top {
+			@apply
+				w-2/5
+				bg-gray-border-light
+				relative
+				pt-8;
+
+			&:before {
+				@apply
+					content-empty
+					absolute
+					right-full
+					inset-y-0
+					bg-gray-border-light
+					w-screen;
+			}
+
+			&__item {
+				@apply
+					text-blue-dark
+					font-bold
+					p-4
+					cursor-pointer;
+
+				&:hover,
+				&_active {
+					@apply
+						bg-white
+						relative;
+
+					&:before {
+						@apply
+						content-empty
+						absolute
+						right-full
+						inset-y-0
+						bg-white
+						w-screen;
+					}
+				}
+			}
+		}
+
+		&__content {
+			@apply
+				w-3/5
+				py-8
+				pl-4
+				pr-8
+				h-full
+				hidden;
+
+			&_active {
+				@apply
+					block;
+			}
+
+			&__wrapper {
+				@apply
+				h-full
+				space-y-4
+				overflow-scrollVert;
+			}
+
+			&__items {
+				@apply
+					grid
+					grid-cols-3
+					gap-2;
+
+				&__item {
+					@apply
+					border
+					rounded
+					p-2
+					pt-4
+					flex
+					flex-col
+					space-y-2
+					items-center;
+
+					&__img {
+						@apply
+						w-16
+						h-16
+						object-contain;
+					}
+
+					&__name {
+						@apply
+						text-sm
+						text-center
+						flex-1
+						flex
+						items-center;
+					}
+				}
+			}
+
+			&__banner {
+				@apply
+					w-full;
+			}
+		}
+	}
+
+	&__sections {
+		@apply
+		border-l
+		flex-1
+		py-8
+		pl-8
+		pr-4;
+
+		&__wrapper {
+			@apply
+			flex
+			h-full
+			overflow-scrollVert;
+		}
+
+		&__col {
+			@apply
+				mr-16
+				flex-1
+				space-y-8
+				last:mr-12;
+		}
+
+		&__item {
+			&__title {
+				@apply
+					text-3xl
+					mb-4;
+			}
+
+			&__list {
+				@apply
+				space-y-4;
+
+				&__item {
+					@apply
+						text-gray
+						block;
+				}
+			}
+
+			&_client {
+				@apply
+					border
+					rounded-lg
+					py-6
+					px-8;
+			}
+
+			&_client & {
+				&__title {
+					@apply
+					text-base
+					uppercase;
+				}
+
+				&__list {
+					&__item {
+						@apply
+						flex
+						items-center
+						pl-8;
+
+						&__icon {
+							@apply
+								-ml-8
+								mr-2;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//TODO:fix this, mb sticky
+	.js-modal & {
+		@apply
+		pr-scrollbar;
 	}
 }

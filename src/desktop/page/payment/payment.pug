@@ -1,0 +1,53 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "Способы оплаты";
+	- var pageClass = "payment";
+
+block content
+	+pageHead('Способы оплаты на Naolimpe.ru', false).__head
+	.box
+		+e.text
+			| Оплатить свой заказ вы можете в разделе «Мои заказы» в личном кабинете. Для
+			br
+			| этого вы должны быть авторизированы на сайте.
+		+e.title Варианты оплаты
+		+b.__cards
+			+b.__item
+				+e.title Наличные
+				+e.desc Оплата производится наличными деньгами. Подтверждением оплаты является фискальный кассовый чек, вручаемый после оплаты.
+			+b.__item
+				+e.title Банковский перевод
+				+e.desc Вы можете оплатить заказ по счету в Банке. Комиссия банка может составить от 3%. Перечисление денег займет от 1 дня.
+			+b.__item
+				+e.title Картой в офисе
+				+e.desc Оплата производится банковской картой в нашем офисе.
+			+b.__item
+				+e.title Картой онлайн
+				+e.desc Оплата производится банковской картой по ссылке, которую высылает менеджер после согласования счета.
+		+e.title Варианты оплаты
+		+b.__groups
+			+b.__item
+				+e.title Электронные деньги
+				+b.__imgs
+					+e.item(src='images/yandexMoneyLogo.png')
+					+e.item(src='images/webmoneyLogo.png')
+			+b.__item
+				+e.title Мобильная связь
+				+b.__imgs
+					+e.item(src='images/beelineLogo.png')
+					+e.item(src='images/megafonLogo.png')
+					+e.item(src='images/mtsLogo.png')
+			+b.__item
+				+e.title Онлайн-банк
+				+b.__imgs
+					+e.item(src='images/sberOnlineLogo.png')
+					+e.item(src='images/alfabankLogo.png')
+					+e.item(src='images/psbBankLogo.png')
+			+b.__item
+				+e.title Банковские карты
+				+b.__imgs
+					+e.item(src='images/maestroLogo.png')
+					+e.item(src='images/mastercardLogo.png')
+					+e.item(src='images/visaLogo.png')

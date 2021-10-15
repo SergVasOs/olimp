@@ -1,32 +1,55 @@
 .clients {
     &__title {
         @apply
-        text-3xl
-        font-bold
+        h3
         mb-4;
     }
 
     &__swiper {
+        @apply
+            -m-2
+            mt-2
+            p-2;
+
         &__wrapper {
             &__item {
                 @apply
                 shadow
                 border
-                border-gray-300
-                rounded
-                overflow-hidden;
+                rounded;
 
-                &__img {
-                    @apply h-48 w-full object-cover;
+                &__picture {
+                    @apply
+                    block
+                    relative
+                    pb-full;
+
+                    &__img {
+                        @apply
+                        flexBlockCover
+                        rounded-t;
+                    }
                 }
 
                 &__logo {
                     @apply
-                    my-3
-                    px-3
-                    h-9 w-full object-contain;
+                    py-2
+                    px-4
+                    h-14
+                    w-full
+                    object-contain;
                 }
             }
+        }
+
+        &__prev {
+            @apply
+                left-2;
+        }
+
+        &__next {
+            @apply
+            right-2;
         }
     }
 }

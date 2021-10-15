@@ -22,10 +22,15 @@
 
         &__img {
             @apply
-            rounded-t
-            w-full
-            h-32
-            object-cover;
+            block
+            relative
+            pb-full;
+
+            &__picture {
+                @apply
+                rounded-t
+                flexBlockCover;
+            }
         }
 
         &__name {

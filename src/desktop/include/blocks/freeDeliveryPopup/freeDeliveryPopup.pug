@@ -1,0 +1,13 @@
+include /include/blocks/common/freeDeliveryContent/freeDeliveryContent
+include /desktop/include/blocks/catalogItem/grid/catalogGridItem
+
+mixin freeDeliveryPopup
+	+b#popup_free_delivery.popup
+		+e.overlay
+		+e.body._xl
+			+e.handler
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.__wrapper
+					+freeDeliveryContent

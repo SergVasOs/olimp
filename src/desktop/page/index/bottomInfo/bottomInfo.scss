@@ -3,12 +3,12 @@
         @apply
         flex
         justify-between
-        space-x-4;
+        space-x-8;
     }
 
     &__textBlock {
         @apply
-            w-1/2;
+            w-2/3;
     }
 
     &__consultForm {

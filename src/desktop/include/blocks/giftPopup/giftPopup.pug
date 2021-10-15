@@ -1,0 +1,15 @@
+include /include/blocks/common/giftContent/giftContent
+include /desktop/include/blocks/catalogItem/grid/catalogGridItem
+
+mixin giftPopup
+	+b#popup_gift.popup
+		+e.overlay
+		+e.body
+			+e.handler
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.__wrapper
+					+giftContent
+			+bottomButton._popup
+				+b.button._lg._white(href='#') Нет, спасибо

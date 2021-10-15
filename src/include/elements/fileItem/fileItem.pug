@@ -1,7 +1,7 @@
 mixin fileItem
 	+b.fileItem&attributes(attributes)
-		+b.icon._lg
+		+b.icon.__fileIcon
 			include /assets/images/lg/fileIcon.svg
 		+e.name Название файла
-		+b.icon
+		+b.icon.__crossIcon(href="#")
 			include /assets/images/md/crossIcon.svg

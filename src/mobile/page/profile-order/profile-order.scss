@@ -1,3 +1,6 @@
+@import "/src/include/blocks/profile/orderProductItem/orderProductItem";
+@import "/src/include/blocks/profile/orderCompositionItem/orderCompositionItem";
+
 .profileOrder {
     @apply
         pt-0;
@@ -50,14 +53,15 @@
         @apply
         border
         rounded-lg
-        p-4
+        py-8
+        px-4
         mb-8;
 
         &__row {
             @apply
                 space-x-4
-                mb-4
-                pb-4
+                mb-6
+                pb-8
                 border-b
                 flex
                 justify-between;
@@ -113,8 +117,7 @@
 
                         &__item {
                             @apply
-                                text-blue
-                                font-medium;
+                                text-blue;
 
                             &__add {
                                 @apply
@@ -131,7 +134,8 @@
 
     &__list {
         @apply
-        space-y-4;
+        space-y-4
+        mb-8;
 
         &__title {
             @apply h2;
@@ -161,5 +165,10 @@
                 space-y-4;
             }
         }
+    }
+
+    &__buttons {
+        @apply
+        space-y-4;
     }
 }

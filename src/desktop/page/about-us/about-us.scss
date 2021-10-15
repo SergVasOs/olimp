@@ -1,0 +1,298 @@
+.aboutUs {
+	@apply pt-0;
+
+	&__top {
+		@apply mb-6
+            bg-cover
+            py-10;
+
+		&__box {
+			@apply flex
+                justify-between
+                items-end
+                space-x-8;
+		}
+
+		&__title {
+			@apply text-white
+                font-bold
+                text-6xl;
+		}
+
+		&__video {
+			@apply w-1/3;
+		}
+	}
+
+	&__info {
+		@apply w-3/4
+            mb-12;
+
+		&__text {
+			@apply text-xl
+                mb-6;
+		}
+
+		&__button {
+			@apply w-2/5;
+		}
+	}
+
+	&__gallery {
+		@apply mb-12;
+
+		&__title {
+			@apply h3
+            mb-6;
+		}
+
+		&__list {
+			@apply grid
+            grid-cols-6
+            gap-4
+            my-4;
+
+			&__item {
+				@apply text-black
+                border rounded;
+
+				&__img {
+					@apply rounded-t
+                    w-full
+                    h-32
+                    object-cover;
+				}
+
+				&__name {
+					@apply px-4
+                    font-medium
+                    flex
+                    items-center
+                    h-14;
+				}
+			}
+		}
+
+		&__button {
+			@apply button_lg
+            button_gray
+            w-full;
+		}
+	}
+
+	&__quote {
+		@apply mb-12;
+
+		&__title {
+			@apply h3
+            mb-6;
+		}
+
+		&__text {
+			@apply flex
+            space-x-8
+            text-lg;
+		}
+
+		&__col {
+			@apply flex-1;
+		}
+
+		&__name {
+			@apply mt-8
+            font-bold;
+		}
+	}
+
+	&__technology {
+		@apply mb-12;
+
+		&__title {
+			@apply h3
+            mb-6;
+		}
+
+		&__text {
+			@apply text-lg
+            mb-12;
+		}
+
+		&__items {
+			@apply
+                grid
+                grid-cols-3
+                gap-4
+                mb-12;
+
+			&__item {
+				@apply
+                        border
+                        rounded
+                        p-8
+                        space-y-6;
+
+				&__img {
+					@apply h-52;
+				}
+
+				&__title {
+					@apply
+                        text-3xl
+                        font-bold;
+				}
+
+				&__list {
+					@apply space-y-4;
+
+					&__item {
+						@apply flex
+                                space-x-2
+                                items-center;
+
+						&__icon {
+							@apply text-green;
+						}
+
+						&__name {
+							@apply flex-1;
+						}
+
+						&_orange & {
+							&__icon {
+								@apply text-yellow;
+							}
+						}
+					}
+				}
+			}
+		}
+
+        &__info {
+            @apply
+            grid
+            grid-cols-3
+            gap-4
+            mb-12;
+
+            &__text {
+                @apply
+                    col-span-2;
+
+                &__title {
+                    @apply
+                        h3
+                        mb-6;
+                }
+
+                &__items {
+                    @apply
+                    text-lg
+                    space-y-4;
+                }
+            }
+
+            &__button {
+                @apply
+                self-end;
+            }
+        }
+	}
+
+	&__stages {
+		@apply mb-8;
+
+		&__title {
+			@apply h3
+            mb-6;
+		}
+
+		&__list {
+			@apply
+            grid
+            grid-cols-3
+            gap-4;
+
+			&__item {
+                @apply mb-4;
+
+				&__header {
+					@apply border
+                        rounded
+                        p-4
+                        flex
+                        items-center
+                        space-x-4;
+
+					&__number {
+						@apply h5
+                            w-10
+                            h-10
+                            rounded-full
+                            flex
+                            justify-center
+                            items-center
+                            bg-blue-dark
+                            text-white;
+					}
+
+					&__name {
+						@apply h5
+                            flex-1;
+					}
+
+					&__icon {
+						@apply
+                        transform rotate-90;
+					}
+				}
+
+				&__text {
+					@apply p-4
+                        pb-0
+                        hidden;
+				}
+
+				&_open & {
+					&__header {
+						&__icon {
+							@apply transform -rotate-90;
+						}
+					}
+
+					&__text {
+						@apply block;
+					}
+				}
+			}
+		}
+	}
+
+	&__principles {
+		&__title {
+			@apply h3
+            mb-6;
+		}
+
+		&__list {
+			@apply
+            grid
+            grid-cols-3
+            gap-4;
+
+			&__item {
+				@apply border
+                rounded
+                p-6;
+
+				&__header {
+					@apply
+                    h3
+                    flex
+                    items-center
+                    space-x-6
+                    mb-6;
+				}
+			}
+		}
+	}
+}

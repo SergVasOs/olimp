@@ -1,0 +1,30 @@
+.bookOrderContent {
+    @apply
+        md:px-40
+        md:pb-20;
+
+    &__applyIcon {
+        @apply
+            block
+            mx-auto
+            mb-4;
+    }
+
+    &__title {
+        @apply
+        h3
+        text-center
+        text-blue-dark
+        mb-4
+        md:h2;
+    }
+
+    &__text {
+        @apply
+        text-sm
+        text-center
+        text-blue-dark
+        mb-6;
+    }
+}
+

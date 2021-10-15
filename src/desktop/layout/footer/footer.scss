@@ -6,43 +6,39 @@
 
     &__box {
         @apply
-            grid;
+            flex
+        justify-between;
     }
 
     &__contacts {
         @apply
-            col-start-1
-            row-start-2
-            mt-12
-            lg:mt-0
-            lg:col-start-1
-            lg:row-start-1;
+            mt-0;
 
         &__logo {
             @apply
             text-white
             block
-            w-44
+            w-56
             mb-4;
         }
 
         &__text {
             @apply
-            font-bold
-            mb-6;
+            font-medium
+            mb-8;
         }
 
         &__phone {
             @apply
                 flex
                 items-center
-                space-x-3
-                mb-6;
+                space-x-2
+                mb-4;
 
             &__items {
                 @apply
                     flex
-                    space-x-5;
+                    space-x-2;
 
                 &__item {
                     @apply
@@ -56,19 +52,22 @@
         &__address {
             @apply
             flex
-            space-x-3
-            mb-6;
+            space-x-2
+            mb-4;
 
             &__items {
                 @apply
-                space-y-3;
+                text-xl
+                space-y-2;
             }
         }
 
         &__email {
             @apply
-            inline-flex
-            space-x-3
+            text-xl
+            flex
+            items-center
+            space-x-2
             text-white;
         }
     }
@@ -77,34 +76,15 @@
         @apply
             flex
             justify-between
-            col-start-1
-            row-start-1
-            col-end-3
-            lg:mt-2
-            lg:col-start-2
-            lg:row-start-1
-            lg:row-end-3;
+            space-x-10
+            mt-2
+        2xl:space-x-20;
 
         &__menu {
             @apply
             flex
             flex-col
-            space-y-6;
-
-            &_olimp {
-                @apply
-                    mr-24;
-            }
-
-            &_shop {
-                @apply
-                mr-10;
-            }
-
-            &_info {
-                @apply
-                mr-12;
-            }
+            space-y-4;
 
             &__item {
                 @apply
@@ -115,41 +95,22 @@
 
     &__social {
         @apply
-            mt-12
-            col-start-2
-            row-start-2
-            lg:mt-2
-            lg:col-start-1
-            xl:col-start-3
-            xl:row-start-1;
+        mt-2;
 
         &__links {
             @apply
                 flex
-                space-x-3
+                space-x-4
                 justify-end
                 mb-4
-                lg:justify-start
-                xl:justify-end;
-
-            &__item {
-                @apply
-                    w-10
-                    h-10
-                    p-2.5
-                    bg-white
-                    rounded-full;
-            }
+            justify-end;
         }
 
         &__text {
             @apply
-            text-sm
-            text-gray-600
+            text-gray-light
             mt-2
-            text-right
-            lg:text-left
-            xl:text-right;
+            text-right;
         }
     }
 }

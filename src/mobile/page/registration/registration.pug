@@ -22,4 +22,6 @@ block content
 			+e.footer
 				+b.button._lg._blue(href='#') Регистрация
 		+b.links.__links
-			+e.item(href='login.html') Есть аккаунт? Вход
+			+e.item
+				| Есть аккаунт?
+				+e(href='login.html') Вход

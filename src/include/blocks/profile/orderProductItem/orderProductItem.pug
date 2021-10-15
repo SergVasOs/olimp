@@ -1,0 +1,17 @@
+include /include/elements/quantity/quantity
+include /include/elements/buyButton/buyButton
+
+mixin orderProductItem
+	+b.orderProductItem&attributes(attributes)
+		+b.__body
+			+e.img(src='images/catalogItem.png')
+			+b.__info
+				+e.name Кубок B368-3 с длинным названием
+				+e.prop Размер: 20,5 см
+			+e.count 22 шт
+			+b.__prices
+				+e.price 27 354 ₽
+				+e.oldPrice 47 354 ₽
+		+b.__bottom
+			+quantity.__quantity
+			+buyButton('Повторить')._sm.__buyButton

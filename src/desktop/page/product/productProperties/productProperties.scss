@@ -1,28 +1,27 @@
 .productProperties {
     &__title {
         @apply
-        text-3xl
-        font-bold
-        mb-5;
+        h4
+        mb-4;
     }
 
     &__content {
-        @apply flex items-stretch space-x-7;
+        @apply flex items-stretch space-x-4;
     }
 
     &__items {
         @apply
-            flex-1
-        bg-gray-50
-        border
-        rounded-xl
-        px-9
-        py-5;
+        flex-1
+        bg-gray-card
+        rounded
+        space-y-8
+        p-8
+        md:last:flex-none
+        md:last:w-80;
     }
 
     &__item {
         @apply
-            py-3.5
             flex
             items-center;
 
@@ -33,9 +32,13 @@
 
         &__value {
             @apply
-            font-bold
-            text-blue-400
-            hover:underline;
+            font-medium;
+
+            &__link {
+                @apply
+                text-blue
+                hover:underline;
+            }
         }
     }
 }

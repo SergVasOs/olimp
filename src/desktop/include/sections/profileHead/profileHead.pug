@@ -1,0 +1,26 @@
+include /include/elements/avatar/avatar
+
+mixin profileHead
+	+b.profileHead&attributes(attributes)
+		+e.box.box
+			+b.__user
+				+avatar._sm
+				+b.__info
+					+e.name Лукьян Дмитрий Михайлович
+					+e.link(href="profile-edit.html") Личные данные
+			+b.__cards
+				+b.__item._discount
+					+e.content
+						+e.title Ваша скидка
+						+e.text 10% на весь каталог
+				+b.__item
+					+e.content
+						+e.title Баланс
+						+e.text 2 993 ₽
+				+b.__item
+					+b.icon._xl
+						include /assets/images/xl/deliveryIcon.svg
+					+e.content
+						+e.text До бесплатной доставки:
+						+e.title 12 500 ₽
+			+e.label Личный кабинет

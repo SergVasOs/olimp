@@ -1,18 +1,18 @@
-include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+include /desktop/include/blocks/catalogItem/grid/catalogGridItem
 
 mixin productList(title)
 	+b.productList&attributes(attributes)
-		+e.box.box
+		div.box
 			+e.title #{title}
-			+b.swiper-container.__swiper
+			+b.__swiper.swiper-container
 				+b.swiper-wrapper
-					+catalogGridItem.swiper-slide
-					+catalogGridItem.swiper-slide
-					+catalogGridItem.swiper-slide
-					+catalogGridItem.swiper-slide
-					+catalogGridItem.swiper-slide
-					+catalogGridItem.swiper-slide
-				+b.swiper-prev
-					include /assets/images/shevronBold.svg
-				+b.swiper-next
-					include /assets/images/shevronBold.svg
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+					+catalogGridItem(false, Math.random() > 0.5).swiper-slide
+				+b.swiper-prev(href="#")
+					include /assets/images/xl/shevronIcon.svg
+				+b.swiper-next(href="#")
+					include /assets/images/xl/shevronIcon.svg

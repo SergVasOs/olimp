@@ -1,0 +1,79 @@
+.gallery {
+    &__head {
+        @apply mb-4;
+    }
+
+    &__box {
+        @apply
+        flex
+        space-x-4;
+    }
+
+    &__menu {
+        @apply
+        mt-6
+        w-1/4
+        space-y-8;
+
+        &__item {
+            @apply
+            text-lg
+            text-blue-dark
+            font-medium
+            flex
+            justify-between
+            items-center
+            space-x-4;
+        }
+    }
+
+    &__list {
+        @apply
+            w-3/4
+            grid
+            grid-cols-3
+            gap-4;
+
+        &__item {
+            @apply
+            text-black
+            border
+            rounded;
+
+            &__picture {
+                @apply
+                    relative
+                    pb-full;
+
+                &__img {
+                    @apply
+                    rounded-t
+                    flexBlockCover;
+                }
+            }
+
+            &__name {
+                @apply
+                px-8
+                text-lg
+                font-medium
+                flex
+                items-center
+                h-20;
+            }
+
+            &_big {
+                @apply
+                col-span-3;
+            }
+
+            &_big & {
+                &__picture {
+                    @apply
+                    relative
+                    pb-3/10;
+                }
+            }
+        }
+    }
+}

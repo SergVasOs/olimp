@@ -1,52 +1,54 @@
+include /include/elements/logo/logo
+
 +b.footer
 	+e.box.box
 		+b.__contacts
-			include /include/elements/logo/logo
+			+logo.__logo
 			+e.text!= "Продажа наградной продукции опт и розница<br/>по России"
 			+b.__phone
-				+b.icon
-					include /assets/images/phoneIcon.svg
+				+b.icon._sm
+					include /assets/images/sm/phoneIcon.svg
 				+b.__items
 					+e.item(href='#') 8 (495) 775-5952
 					+e.item(href='#') 8 (495) 775-5952
 			+b.__address
-				+b.icon
-					include /assets/images/homeIcon.svg
+				+b.icon._sm
+					include /assets/images/sm/homeIcon.svg
 				+b.__items
 					+e Москва, Верейская ул., 29, стр. 106
 					+e Режим работы: пн-пт с 10:00 до 19:00
 			+b.__email(href='#')
-				+b.icon
-					include /assets/images/envelopeIcon.svg
+				+b.icon._sm
+					include /assets/images/sm/envelopeIcon.svg
 				+e info@na-olimpe.ru
 		+b.__menus
-			+b.__menu._olimp._active
-				+e.item(href='#') Наши работы
-				+e.item(href='#') О компании
-				+e.item(href='#') Новости
-				+e.item(href='#') Контакты
-			+b.__menu._shop
-				+e.item(href='#') Доставка
-				+e.item(href='#') Оплата
+			+b.__menu
+				+e.item(href='gallery.html') Наши работы
+				+e.item(href='about-us.html') О компании
+				+e.item(href='news.html') Новости
+				+e.item(href='contacts.html') Контакты
+			+b.__menu
+				+e.item(href='shipping.html') Доставка
+				+e.item(href='payment.html') Оплата
 				+e.item(href='#') Скидки
 				+e.item(href='#') Акции
-				+e.item(href='#') Статус заказа
-			+b.__menu._info
+				+e.item(href='order-status.html') Статус заказа
+			+b.__menu
 				+e.item(href='#') Как заказать?
 				+e.item(href='#') Каталог товаров
 				+e.item(href='#') Обмен и возврат
 				+e.item(href='#') Статьи
 				+e.item(href='#') Политика безопасности
-			+b.__menu._feedback
+			+b.__menu
 				+e.item(href='#') Отзывы
 				+e.item(href='#') Карта сайта
 		+b.__social
 			+b.__links
-				+e.item(href='#')
-					include /assets/images/vkIcon.svg
-				+e.item(href='#')
-					include /assets/images/instagramIcon.svg
-				+e.item(href='#')
-					include /assets/images/instagramIcon.svg
+				+b.icon._2lg(href='#')
+					include /assets/images/lg/vkIcon.svg
+				+b.icon._2lg(href='#')
+					include /assets/images/lg/igIcon.svg
+				+b.icon._2lg(href='#')
+					include /assets/images/lg/fbIcon.svg
 			+e.text Copyright © 2001-2021
 			+e.text ООО "НА ОЛИМПЕ"

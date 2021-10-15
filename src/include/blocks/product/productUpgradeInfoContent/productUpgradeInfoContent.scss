@@ -1,0 +1,40 @@
+.productUpgradeInfoContent {
+    &__title {
+        @apply
+        h2
+        mb-4;
+    }
+
+    &__text {
+        @apply
+            text-lg
+            space-y-4
+            mb-4;
+    }
+
+    &__media {
+        @apply
+        w-full
+        mb-8;
+    }
+
+    &__examples {
+        &__title {
+            @apply
+            h2
+            mb-4;
+        }
+
+        &__swiper {
+            @apply
+            overflow-visible
+            h-60;
+
+            &__wrapper {
+                &__item {
+                    @apply object-cover w-auto;
+                }
+            }
+        }
+    }
+}

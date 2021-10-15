@@ -1,6 +1,6 @@
 extends /desktop/layout/layout
 include /include/sections/index/banners/banners
-include /include/sections/index/mainMenu/mainMenu
+include /include/sections/index/catalogMenu/catalogMenu
 include /include/sections/index/importantInfo/importantInfo
 include /include/sections/index/gifts/gifts
 include /desktop/include/sections/productList/productList
@@ -15,10 +15,10 @@ block append pageVars
 block content
 	+banners.__banners
 	+productList('Наши эксклюзивы').__exclusive
-	+mainMenu.__mainMenu
+	+catalogMenu(false).__mainMenu
 	+saleList('Распродажа').__sale
 	+importantInfo.__importantInfo
-	+gifts('Подарки').__gifts
+	+gifts('Подарки', false).__gifts
 	+clients.__clients
-	+gifts('Сувениры').__souvenirs
+	+gifts('Сувениры', false).__souvenirs
 	+bottomInfo

@@ -1,0 +1,31 @@
+.catalogBottom {
+    &__box {
+        @apply
+        flex
+        items-stretch
+        space-x-4;
+    }
+
+    &__textBlock {
+        @apply
+        w-2/5;
+    }
+
+    &__right {
+        @apply
+            flex-1
+            flex
+            items-stretch
+            space-x-4;
+    }
+
+    &__consultForm {
+        @apply
+        flex-1;
+    }
+
+    &__banner {
+        @apply
+            w-80;
+    }
+}

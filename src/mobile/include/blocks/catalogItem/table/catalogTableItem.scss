@@ -7,14 +7,13 @@
 		@apply flex
         items-center
         space-x-4
-        bg-gradient-to-t
-        from-gray-gradient-from
-        to-gray-gradient-to
-        p-4
-        rounded;
+        bg-grayGradient
+        p-4;
 
         &__col {
-            @apply text-sm;
+            @apply
+            text-sm
+            font-medium;
 
 
             &_img {
@@ -46,7 +45,7 @@
                 @apply relative pb-4/3;
 
                 &__image {
-                    @apply rounded-l flexImageCover;
+                    @apply rounded-l flexBlockCover;
                 }
             }
         }

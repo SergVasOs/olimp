@@ -1,0 +1,258 @@
+extends /desktop/layout/layout
+include /include/blocks/common/pageHead/pageHead
+
+block append pageVars
+	- var pageTitle = "О компании";
+	- var pageClass = "aboutUs";
+	- var hideTopSubmenu = true;
+
+block content
+	+b.__top(style="background-image: url(images/aboutHeaderBg.png);")
+		+e.box.box
+			+e.title О компании
+			+b.video.__video(href="#")
+				+e.wrapper
+					+e.icon
+						include /assets/images/4xl/playIcon.svg
+					+e.img(src='images/about-us-img1.png')
+	.box
+		+b.__info
+			+e.text
+				| Наша компания «На олимпе» была основана в 2009 году.
+				br
+				| С первых дней работы качество стало основной ценностью для нашей команды.
+				br
+				br
+				| В штате компании есть специалисты всех профилей: опытные менеджеры, макетчики, мастера технического отдела, комплектовщики и специалисты отдела доставки - мы контролируем выпуск награды на каждом этапе.
+				br
+				br
+				| Наградная продукция - очень специфичная сфера, и многим покупателям сложно самим разобраться. Мы стараемся делать наш сайт понятным, а наши менеджеры всегда готовы разъяснить отличия и помочь с выбором наград для вашего меприятия.
+				br
+				br
+				| Для тех, кто любит перед покупкой подержать награды в руках - у нас открыта выставка. Также награды можно детально рассмотреть на 3D фото. Мы действительно любим наше дело, поэтому делаем множество фотографий готовых работ в нашей фото-студии.
+			+b.button._full._lightGray.__button(href='#')
+				+e.text О нашем производстве
+				+e.icon
+					include /assets/images/lg/arrowRight.svg
+		+b.__gallery
+			+e.title Галерея наших работ
+			+b.__list
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat1.png')
+					+e.name Кубки
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat2.png')
+					+e.name Медали
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat3.png')
+					+e.name Медали из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+				+b.__item(href='gallery-cat.html')
+					+e.img(src='images/galleryCat4.png')
+					+e.name Призы из акрила
+		+b.__quote
+			+e.title
+				| "Мы убеждены в том, что признание достижений — одна из важнейших
+				br
+				| составляющих мотивации, желания двигаться дальше, достигать большего.
+			+e.text
+				+e.col Поэтому мы производим награды. Символизирующие победу, они напоминают о преодолении препятствий и закрепляют достижения, напоминают обладателю о важности и нужности его работы, будь то спорт, профессиональная деятельность или хобби. Награда — якорь который возвращает обладателя к воспоминаниям о успехе, помогает двигаться вперед и совершенствовать себя.
+				+e.col
+					| Медали и кубки бережно передаются из поколения в поколения в семьях и союзах, сохраняя память о победах предшественников, являясь ориентиром, которому стоит соответствовать."
+					+e.name Илья Александрович П. - генеральный директор "На Олимпе".
+		+b.__technology
+			+e.title Технологии декорирования
+			+e.text Мы делаем события значимыми. Наши награды придают церемониям вручения тожественность, сохраняют воспоминания, помогают вспомнить о достигнутом и стремиться к новым победам.
+			+b.__items
+				+b.__item
+					+e.img(src='images/technology.png')
+					+e.title Сублимационное нанесение
+					+b.__list
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Сохраняет металлический блеск пластины
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Стойкое нанесение - невозможно стереть или отколоть
+						+b.__item._orange
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Изображение принимает оттенок металла или поверхности нанесения
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Красивые плавные переходы цвета
+						+b.__item._orange
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Нанесение на специальные поверхности
+				+b.__item
+					+e.img(src='images/technology.png')
+					+e.title Сублимационное нанесение
+					+b.__list
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Сохраняет металлический блеск пластины
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Стойкое нанесение - невозможно стереть или отколоть
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Изображение принимает оттенок металла или поверхности нанесения
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Красивые плавные переходы цвета
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Нанесение на специальные поверхности
+				+b.__item
+					+e.img(src='images/technology.png')
+					+e.title Сублимационное нанесение
+					+b.__list
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Сохраняет металлический блеск пластины
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Стойкое нанесение - невозможно стереть или отколоть
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Изображение принимает оттенок металла или поверхности нанесения
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Красивые плавные переходы цвета
+						+b.__item
+							+b.icon.__icon
+								include /assets/images/md/discIcon.svg
+							+e.name Нанесение на специальные поверхности
+			+b.__info
+				+b.__text
+					+e.title У нас собственная мастерская, благодаря которой мы:
+					+e.items
+						+e 1. Изготавливаем индивидуальные награды по эскизам клиентов.
+						+e 2. Создаем собственные, уникальные изделия.
+						+e 3. Постоянно расширяем ассортимент, насчитывающий более 14 000 позиций.
+				+b.button._full._lightGray.__button(href='#')
+					+e.text Подробно о нашем производстве
+					+e.icon
+						include /assets/images/lg/arrowRight.svg
+		+b.__stages
+			+e.title Этапы нашей работы
+			+b.__list
+				+b.__item._open
+					+b.__header(href="#")
+						+e.number 1
+						+e.name Оформление заказа
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 2
+						+e.name Согласование счета
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 3
+						+e.name Предоплата
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 4
+						+e.name Согласование макета
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 5
+						+e.name Производство
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 6
+						+e.name Сборка
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 7
+						+e.name Отгрузка
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+				+b.__item
+					+b.__header(href="#")
+						+e.number 8
+						+e.name Получение
+						+b.icon._lg.__icon
+							include /assets/images/lg/shevronIcon.svg
+					+e.text Через корзину, по телефону или e-mail - в любой удобной для вас форме
+		+b.__principles
+			+e.title 5 принципов компании
+			+b.__list
+				+b.__item
+					+b.__header
+						+b.icon._2xl
+							include /assets/images/2xl/principle1Icon.svg
+						+e.text Качество
+					+e.text Наша компания была основана в 2009 году. С первых дней работы Качество стало основной ценностью для всех наших работников. Менеджеры профессионально разбираются в наградах. Дизайнеры подробно изучают задание и разрабатывают уникальные макеты. А работники склада тщательно проверяют продукцию на наличие дефектов и надежно упаковывают заказ.
+				+b.__item
+					+b.__header
+						+b.icon._2xl
+							include /assets/images/2xl/principle2Icon.svg
+						+e.text Партнерство
+					+e.text Мы не отделяем себя от клиента. Мы действуем согласно его пожеланиям и в его интересах. Наша цель — не быстрые деньги, а долгие надежные партнерские отношения с клиентами.
+				+b.__item
+					+b.__header
+						+b.icon._2xl
+							include /assets/images/2xl/principle3Icon.svg
+						+e.text Ответственность
+					+e.text Награждение - это венец любого спортивного мероприятия, творческого конкурса или фестиваля.	Мы понимаем всю ответственность, которая лежит на нас, как на поставщиках наград, спортивных товаров и сувениров. Поэтому вы можете быть уверены: если заказ принят — он будет изготовлен и отгружен в срок.
+				+b.__item
+					+b.__header
+						+b.icon._2xl
+							include /assets/images/2xl/principle4Icon.svg
+						+e.text Сделай сам
+					+e.text Если хочешь сделать что-то хорошо, сделай это сам. Мы не используем услуги сторонних компаний. Собственный отдел дизайна, собственный отдел персонализации, оборудованный станками последнего поколения: цветное нанесение, гравировка, УФ печать, заливка, раскройка и др. Собственная служба доставки — небольшой автомобильный парк и штат курьеров.
+				+b.__item
+					+b.__header
+						+b.icon._2xl
+							include /assets/images/2xl/principle5Icon.svg
+						+e.text Удобство
+					+e.text Мы работаем по удобному для клиента сценарию. Принять заказ по телефону? — Конечно. Оплатить при получении? — Да, это возможно. Срочно добавить к заказу несколько именных наград? — Да, мы сделаем, не беспокойтесь!

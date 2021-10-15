@@ -1,6 +1,6 @@
 extends /mobile/layout/layout
 include /include/blocks/common/pageHead/pageHead
-include /include/blocks/common/compositionItem/compositionItem
+include /mobile/include/blocks/compositionItem/compositionItem
 include /include/elements/buyButton/buyButton
 
 block append pageVars
@@ -23,15 +23,15 @@ block content
 					+e.label Cтоимость товара:
 					+e.price 840 р.
 				+b.__item
-					+e.label Cтоимость товара:
+					+e.label Cтоимость аксессуаров:
 					+e.price 840 р.
 				+b.__item
-					+e.label Cтоимость товара:
+					+e.label Cтоимость нанесения:
 					+e.price 840 р.
-			+buyButton('Добавить в корзину')._lg.__buyButton
+			+buyButton('Заказать такой же')._lg.__buyButton
 		+b.__composition
 			+e.title Состав комплекта
 			+e.items
-				+compositionItem('set')._open
+				+compositionItem('set')
 				+compositionItem('set')
 				+compositionItem('set')

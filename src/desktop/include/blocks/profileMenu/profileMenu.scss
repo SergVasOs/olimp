@@ -1,0 +1,22 @@
+.profileMenu {
+	@apply
+	space-y-2;
+
+	&__item {
+		@apply
+		text-black
+		flex
+		items-center
+		space-x-4
+		py-2
+		px-4;
+
+		&__title {
+			@apply text-lg font-medium;
+		}
+
+		&_active {
+			@apply bg-gray-border-light;
+		}
+	}
+}

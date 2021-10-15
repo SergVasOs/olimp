@@ -1,0 +1,107 @@
+.catalogGridItem {
+    @apply
+        relative
+        flex
+        flex-col
+        rounded
+        border
+        border-transparent
+        pb-4;
+
+    &__favoriteIcon {
+        @apply
+            absolute
+            z-10
+            top-4
+            right-4;
+    }
+
+    &__labels {
+        @apply
+            absolute
+            z-10
+            top-4
+            left-4;
+    }
+
+    &__catalogItemGallery {
+        @apply
+        rounded-t
+        mb-2;
+    }
+
+    &__prop {
+        @apply
+            overflow-hidden
+            mb-4
+            px-4;
+    }
+
+    &__material {
+        @apply
+            text-gray-light
+            flex
+            flex-1
+            mb-2
+            px-4
+            text-sm
+            font-normal;
+    }
+
+    &__name {
+        @apply
+            text-black
+            line-clamp-2
+            mb-4
+            px-4;
+    }
+
+    &__bottom {
+        @apply
+            flex
+            justify-between
+            items-center
+            px-4;
+
+        &__prices {
+            &__price {
+                @apply
+                price
+                font-bold
+                text-2xl;
+            }
+
+            &__oldPrice {
+                @apply
+                oldPrice
+                mt-2
+                text-base;
+            }
+        }
+
+        &__buyButton {
+            @apply
+            invisible
+            flex;
+        }
+
+        &__bookButton {
+            @apply
+            w-full;
+        }
+    }
+
+    &:hover {
+        @apply
+            border-gray-border;
+    }
+
+    &:hover & {
+        &__bottom {
+            &__buyButton {
+                @apply
+                visible;
+            }
+        }
+    }
+}

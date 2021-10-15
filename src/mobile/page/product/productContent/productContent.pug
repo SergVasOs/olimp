@@ -1,0 +1,55 @@
+include /include/elements/favoriteIcon/favoriteIcon
+include /include/elements/size/size
+include /include/elements/color/color
+include /include/blocks/common/pageHead/pageHead
+include /mobile/page/product/productPopper/productPopper
+
+mixin productContent(shirt=false)
+    +b.productContent&attributes(attributes)
+        +pageHead('', '/catalog-grid.html').__head
+            +e.right
+                +b.icon(href='#')
+                    include /assets/images/md/shareIcon.svg
+                +favoriteIcon
+        +b.box._full.__top
+            +b.tabs._stretch
+                +b.__content
+                    +e.item._active(data-content-tab='images')
+                        +b.productContent__top__gallery
+                            +labels.__labels
+                            +b.icon._2lg.__3dIcon(href='#')
+                                include /assets/images/2lg/3dIcon.svg
+                            +b.__swiper.swiper-container
+                                +b.__wrapper.swiper-wrapper
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                +b.__dots.swiper-dots
+                    +e.item(data-content-tab='upgrade')
+                        +b.productContent__top__gallery
+                            +b.__upgrade
+                                +e.img(src=(shirt ? 'images/upgrade-shirt.png' : 'images/upgrade.png'))
+                    +e.item(data-content-tab='sets')
+                        +b.productContent__top__gallery
+                            +b.__swiper.swiper-container
+                                +b.__wrapper.swiper-wrapper
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                    +b.__slide.swiper-slide
+                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                +b.__dots.swiper-dots
+                +b.__buttons
+                    +e.item._active(data-tab='images') Фотографии
+                    +e.item(data-tab='upgrade') Нанесение и комплект
+                    +e.item(data-tab='sets') Готовые решения
+        .box
+            if (shirt)
+                +color._lg.__prop
+            else
+                +size._lg.__prop
+        +productPopper(shirt)

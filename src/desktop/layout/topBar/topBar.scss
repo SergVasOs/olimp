@@ -1,123 +1,107 @@
 .topBar {
-    &__top {
-        @apply bg-gray-200
+	&__top {
+		@apply bg-gray-border-light
         filter drop-shadow;
 
-        &__box {
-            @apply flex
+		&__box {
+			@apply flex
             justify-between
             items-center;
-        }
+		}
 
-        &__menu {
-            @apply flex
-            h-12;
+		&__menu {
+			@apply bg-transparent
+            w-auto
+            border-0
+            space-x-10;
 
-            &__item {
-                @apply flex
-                items-center
-                text-lg
-                text-gray-500
-                mr-9;
+			&__item {
+				@apply mx-0
+                px-0
+                text-gray-light
+                hover:text-black;
 
-                &_active {
-                    @apply text-blue-dark
-                    border-b-2
-                    border-blue-dark;
-                }
-            }
-        }
+				&_active {
+					@apply font-normal
+                        text-black;
+				}
+			}
+		}
 
-        &__breadcrumbs {
-            @apply hidden
+		&__breadcrumbs {
+			@apply hidden
             items-center
+            space-x-2
+            text-gray-light
             lg:flex;
 
-            &__shevron {
-                @apply text-gray-500
-                ml-4
-                w-2
-                h-4;
-            }
+			&__home {
+				@apply text-gray-light;
+			}
 
-            &__item {
-                @apply text-gray-500
+			&__item {
+				@apply text-gray-light
                 truncate
                 max-w-word
-                ml-4
-                last:text-gray-900;
-            }
-        }
-    }
+                last:text-black;
+			}
+		}
+	}
 
-    &__subMenu {
-        @apply text-sm
-        font-medium
-        mt-6
-        lg:mt-8;
+	&__subMenu {
+		@apply mt-8;
 
-        &__box {
-            @apply py-1
-            h-15
-            flex
-            items-stretch
-            space-x-2;
-        }
+		&__swiper {
+			@apply rounded
+                -my-1
+                -ml-1
+                p-1
+                pr-18;
 
-        &__items {
-            @apply flex-1
-            flex
-            space-x-2;
+			&__wrapper {
+				&__item {
+					@apply flex
+                    items-center
+                    p-2
+                    border
+                    border-light
+                    rounded;
 
-            &__item {
-                @apply flex
-                flex-1
-                items-center
-                px-1
-                border
-                border-gray-500
-                rounded;
+					&:hover {
+						@apply border-yellow;
+					}
 
-                &_cat5,
-                &_cat6 {
-                    @apply hidden
-                    lg:flex;
-                }
+                    &_active{
+                        @apply
+                        border-yellow
+                        ring-1
+                        ring-yellow;
+                    }
 
-                &_cat7,
-                &_cat8 {
-                    @apply hidden
-                    xl:flex;
-                }
+                    &__img {
+						@apply h-9
+                        w-10
+                        object-contain;
+					}
 
-                &_active {
-                    @apply border-transparent
-                    ring-2
-                    ring-orange-light
-                    hover:border-transparent;
-                }
+					&__name {
+						@apply
+						flex-1
+						text-sm
+                        font-medium
+                        word-break-words
+                        ml-2;
+					}
+				}
+			}
 
-                &__img {
-                    @apply max-h-12;
-                }
-
-                &__name {
-                    @apply text-sm
-                    font-medium
-                    ml-1;
-                }
-            }
-        }
-
-        &__more {
-            @apply flex
-            items-center
-            justify-center
-            w-32
-            px-1
-            border
-            border-gray-500
-            rounded;
-        }
-    }
+			&__next {
+				@apply
+                    inset-y-1
+                    h-auto
+                    transform-none
+                    w-topBarNext;
+			}
+		}
+	}
 }

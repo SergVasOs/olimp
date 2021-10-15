@@ -1,12 +1,16 @@
 extends /desktop/layout/layout
 include /desktop/page/catalog/catalogHead/catalogHead
 include /desktop/page/catalog/catalogContent/catalogContent
+include /desktop/include/sections/productList/productList
+include /desktop/include/sections/viewedList/viewedList
 
 block append pageVars
-	- var pageTitle = "Кубки пластиковые";
-	- var pageClass = "catalog";
+	- var pageTitle = "Каталог";
 	- var catalogView = "grid";
+	- var pageClass = "catalog";
 
 block content
-	+catalogHead
-	+catalogContent.__catalogContent
+	+catalogHead.__head
+	+catalogContent(true)
+	+productList('Наши эксклюзивы').__exclusive
+	+viewedList('Вы смотрели').__viewed

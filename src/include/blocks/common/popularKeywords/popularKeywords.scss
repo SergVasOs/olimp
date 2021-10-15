@@ -4,7 +4,8 @@
 
     &__title {
         @apply
-        h2;
+        h2
+        md:h4;
     }
 
     &__items {
@@ -20,7 +21,6 @@
             border
             rounded
             text-black
-            text-sm
             text-center
             px-2
             py-4

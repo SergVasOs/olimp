@@ -1,0 +1,70 @@
+include /include/elements/fileItem/fileItem
+include /desktop/page/product/productUpgradeInfoPopup/productUpgradeInfoPopup
+include /desktop/page/product/productUpgradePlacePopup/productUpgradePlacePopup
+include /desktop/page/product/productUpgradeSelectionPopup/productUpgradeSelectionPopup
+
+mixin productUpgrades
+	+b.productUpgrades&attributes(attributes)
+		+e.title Улучшить
+		+b.__list
+			+b.__item
+				+e.step 1
+				+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
+					+e.img(src='images/cap.png')
+					+e.name Крышка
+					+e.price 249 ₽ / шт
+					+e.actions
+						+b.button.__editButton(href='#popup_upgrade_selection')
+							+e.text Изменить
+						+b.icon._sm.__deleteIcon
+							include /assets/images/sm/crossIcon.svg
+			+b.__item
+				+e.step 2
+				+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
+					+e.img(src='images/cupLabel.png')
+					+e.name Эмблема
+					+e.actions
+						+b.button.__addButton(href='#popup_upgrade_selection')
+							+e.text Добавить
+			+b.__item
+				+e.step 3
+				+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
+					+e.img(src='images/cupFigure.png')
+					+e.name Фигурка
+					+e.actions
+						+b.button.__addButton(href='#popup_upgrade_selection')
+							+e.text Добавить
+			+b.__item._active
+				+e.step 4
+				+b.icon._sm.__infoIcon(href='#popup_upgrade_info')
+					include /assets/images/sm/infoIcon.svg
+				+b.__card
+					+e.img(src='images/cupShield.png')
+					+e.name Табличка
+					+e.price 249 ₽ / шт
+					+e.actions
+						+b.button.__editButton(href='#popup_upgrade_place')
+							+e.text Изменить
+						+b.icon._sm.__deleteIcon
+							include /assets/images/sm/crossIcon.svg
+				+b.__config
+					+e.text Лучшему начальнику
+					+b.__files
+						+fileItem
+						+fileItem
+			+b.__item
+				+e.step 5
+				+b.__card
+					+e.name Особые пожелания
+					+e.actions
+						+b.button.__addButton(href='#popup_upgrade_place')
+							+e.text Добавить
+	+productUpgradeInfoPopup
+	+productUpgradeSelectionPopup
+	+productUpgradePlacePopup

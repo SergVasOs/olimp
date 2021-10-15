@@ -1,24 +1,34 @@
 .productPopper {
+	@apply
+		pt-8
+		top-product-popper
+		z-10;
+
 	&__body {
-		@apply top-product-popper shadow-top p-0;
+		@apply top-8 shadow-top p-0;
+	}
+
+	&__content {
+		@apply p-0
+			mt-6;
 	}
 
 	&__short {
 		@apply
-		bg-gray-card
-		pt-6;
+		transition-height transition-opacity duration-500
+		bg-gray-card;
 
 		&__name {
 			@apply h4
-			mb-2
-			line-clamp-1;
+				mb-2
+				line-clamp-1;
 		}
 
 		&__info {
 			@apply flex
-			justify-between
-			items-baseline
-			mb-4;
+				justify-between
+				items-baseline
+				mb-4;
 
 			&__material {
 				@apply text-gray-light;
@@ -27,7 +37,7 @@
 
 		&__buttons {
 			@apply flex
-			space-x-4;
+				space-x-4;
 
 			& > * {
 				@apply flex-1;
@@ -36,38 +46,38 @@
 	}
 
 	&__full {
-		@apply
-		pt-24
-		pb-48
-		hidden
-		h-full
-		overflow-scrollVert;
+		@apply pt-20
+			pb-48
+			opacity-0
+			h-full
+		transition-opacity duration-500
+			overflow-scrollVert;
 
 		&__tabs {
-			@apply
-			bg-white
-			absolute
-			pt-6
-			top-0
-			inset-x-0
-			z-10;
+			@apply rounded-t
+				bg-white
+				absolute
+				pt-6
+				top-0
+				inset-x-0
+				z-10;
 		}
 
 		&__buy {
 			@apply absolute
-			bottom-0
-			inset-x-0
-			h-40
-			bg-white
-			shadow-top
-			py-4
-			z-10;
+				bottom-0
+				inset-x-0
+				h-40
+				bg-white
+				shadow-top
+				py-4
+				z-10;
 
 			&__box {
 				@apply flex
-				flex-col
-				justify-between
-				h-full;
+					flex-col
+					justify-between
+					h-full;
 			}
 
 			&__label {
@@ -80,8 +90,8 @@
 
 			&__button {
 				@apply button_lg
-				button_green
-				w-full;
+					button_green
+					w-full;
 			}
 		}
 
@@ -91,49 +101,49 @@
 
 		&__card {
 			@apply w-full
-			border
-			rounded
-			p-4
-			flex
-			items-stretch
-			space-x-4;
+				border
+				rounded
+				p-4
+				flex
+				items-stretch
+				space-x-4;
 
 			&__img {
 				@apply w-20
-				h-20
-				object-contain;
+					h-20
+					object-contain;
 			}
 
 			&__info {
 				@apply flex
-				flex-col;
+					flex-col;
 			}
 
 			&__sku {
 				@apply text-sm
-				text-gray-light
-				mb-2;
+					text-gray-light
+					mb-2;
 			}
 
 			&__name {
 				@apply font-bold
-				mb-2;
+					mb-2;
 			}
 
 			&__price {
 				@apply text-lg
-				mt-auto;
+					mt-auto;
 			}
 		}
 
 		&__icon {
 			@apply border-t
-			border-b
-			py-2
-			my-4
-			-mx-4
-			text-center
-			text-blue-dark;
+				border-b
+				py-2
+				my-4
+				-mx-4
+				text-center
+				text-blue-dark;
 		}
 
 		&__total {
@@ -141,18 +151,18 @@
 
 			&__info {
 				@apply border
-				rounded-t
-				space-y-2
-				py-6
-				px-4;
+					rounded-t
+					space-y-2
+					py-6
+					px-4;
 
 				&__header {
 					@apply flex
-					space-x-8;
+						space-x-8;
 
 					&__col {
 						@apply text-gray-dark
-						text-right;
+							text-right;
 
 						&_label {
 							@apply flex-1;
@@ -167,24 +177,24 @@
 
 				&__row {
 					@apply flex
-					space-x-8;
+						space-x-8;
 
 					&__col {
 						&_label {
 							@apply flex-1
-							text-gray-dark;
+								text-gray-dark;
 						}
 
 						&_sum {
 							@apply flex-1
-							font-medium;
+								font-medium;
 						}
 
 						&_thing,
 						&_total {
 							@apply w-20
-							font-bold
-							text-right;
+								font-bold
+								text-right;
 						}
 					}
 				}
@@ -210,19 +220,57 @@
 
 		&__helpButton {
 			@apply button_lg
-			button_gray
-			w-full;
+				button_gray
+				w-full;
 		}
 	}
 
 	//TODO: fix this class
+	&.popper_opening {
+		@apply
+		top-0;
+	}
+
+	&.popper_opening & {
+		&__body {
+			@apply
+			top-product-popper-opening;
+		}
+	}
+
+	&.popper_closing {
+		@apply
+		top-0;
+	}
+
+	&.popper_closing & {
+		&__body {
+			@apply
+			top-product-popper-opening;
+		}
+	}
+
+	&.popper_open {
+		@apply
+		top-0
+		z-50;
+	}
+
 	&.popper_open & {
+		&__body {
+			@apply
+			top-20;
+		}
+
 		&__short {
-			@apply hidden;
+			@apply
+			opacity-0
+			h-0;
 		}
 
 		&__full {
-			@apply block;
+			@apply opacity-100;
 		}
 	}
 }
+

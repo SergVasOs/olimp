@@ -2,58 +2,21 @@
 @import "/src/mobile/page/product/productCategories/productCategories";
 @import "/src/mobile/page/product/productProperties/productProperties";
 @import "/src/mobile/page/product/productPopper/productPopper";
+@import "/src/mobile/page/product/productUpgrades/productUpgrades";
+@import "/src/mobile/page/product/productContent/productContent";
 
 .product {
     @apply
-    pb-44;
+    py-0;
 
-    &__head {
-        @apply z-10;
-    }
-
-    &__top {
+    &__swiper {
         @apply
-            -mt-16
-            relative
-            mb-4;
+            h-screen
+            w-full;
 
-        &__gallery {
-            @apply relative h-product-gallery;
-
-            &__labels {
-                @apply absolute
-                z-10
-                top-20
-                left-4;
-            }
-
-            &__3dIcon {
-                @apply absolute
-                z-10
-                bottom-4
-                left-4;
-            }
-
-            &__upgrade {
-                @apply h-full;
-
-                &__img {
-                    @apply fullImageContain;
-                }
-            }
-
-            &__swiper {
-                &__dots {
-                    @apply
-                    flex-col
-                    space-x-0
-                    space-y-2
-                    absolute
-                    z-10
-                    top-1/2
-                    right-4
-                    transform -translate-x-1/2;
-                }
+        &__wrapper {
+            &__slide {
+                @apply h-screen;
             }
         }
     }

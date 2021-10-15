@@ -1,4 +1,4 @@
-mixin gifts(title)
+mixin gifts(title, showMore=true)
 	+b.gifts&attributes(attributes)
 		.box
 			+e.title #{title}
@@ -45,7 +45,8 @@ mixin gifts(title)
 					+b.__item(href='#')
 						+e.img(src='images/categoryIcon14.png')
 						+e.name Дипломы и грамоты
-				+b.button._lg._full.__button
-					+e.icon
-						include /assets/images/lg/blockIcon.svg
-					+e.text Показать больше категорий
+				if (showMore)
+					+b.button._lg._gray._full.__button
+						+e.icon
+							include /assets/images/lg/blockIcon.svg
+						+e.text Показать больше категорий

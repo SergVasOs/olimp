@@ -8,7 +8,7 @@ block append pageVars
 block content
 	+pageHead('Галерея наших работ').__head
 	+e.box.box
-		+b.menu.__menu
+		+b.menu._light.__menu
 			+b.__swiper.swiper-container
 				+b.__wrapper.swiper-wrapper
 					+b.__item._active.swiper-slide(href='#') Награды
@@ -17,32 +17,42 @@ block content
 					+b.__item.swiper-slide(href='#') Гостинцы
 		+e.list
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat1.png')
+				+b.__img
+					+e.picture(src='images/galleryCat1.png')
 				+e.name Кубки
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat2.png')
+				+b.__img
+					+e.picture(src='images/galleryCat2.png')
 				+e.name Медали
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat3.png')
+				+b.__img
+					+e.picture(src='images/galleryCat3.png')
 				+e.name Медали из акрила
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat4.png')
+				+b.__img
+					+e.picture(src='images/galleryCat4.png')
 				+e.name Призы из акрила
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat5.png')
+				+b.__img
+					+e.picture(src='images/galleryCat5.png')
 				+e.name Фигурки
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat6.png')
+				+b.__img
+					+e.picture(src='images/galleryCat6.png')
 				+e.name Плакетки
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat7.png')
+				+b.__img
+					+e.picture(src='images/galleryCat7.png')
 				+e.name Деревянные трофеи
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat8.png')
+				+b.__img
+					+e.picture(src='images/galleryCat8.png')
 				+e.name Стеклянные награды
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat9.png')
+				+b.__img
+					+e.picture(src='images/galleryCat9.png')
 				+e.name Тарелки
 			+b.__item(href='gallery-cat.html')
-				+e.img(src='images/galleryCat10.png')
+				+b.__img
+					+e.picture(src='images/galleryCat10.png')
 				+e.name Сувениры

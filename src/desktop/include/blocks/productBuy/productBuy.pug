@@ -1,0 +1,107 @@
+include /include/elements/label/label
+include /include/elements/color/color
+include /include/elements/size/size
+include /include/elements/quantity/quantity
+include /include/elements/upgradeButton/upgradeButton
+include /include/elements/buyButton/buyButton
+
+mixin productBuy(shirt=false,upgrades=false)
+	+b.productBuy.fixing&attributes(attributes)
+		+e.corner(src="images/corner.png")
+		+e.info
+			+b.__top
+				+label._new.__new Новый
+				+e.sku Артикул: 214007
+			+b.__prices
+				+b.__price 365 ₽
+					+e.piece /шт
+				+e.oldPrice 430 ₽
+				+label._lg._discount -15%
+			if (shirt)
+				+color._lg.__prop
+			else
+				+size._lg.__prop
+			+b.__stock
+				+e.label В наличии:
+				+e.value 264 шт.
+			if (upgrades)
+				+b.__upgrades
+					+e.title Улучшения
+					+b.__swiper.swiper-container
+						+b.__wrapper.swiper-wrapper
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+							+b.__item.swiper-slide
+								+e.img(src="images/cap.png")
+								+b.icon._sm.__delete(href="#")
+									include /assets/images/sm/crossIcon.svg
+				+b.__edition
+					+e.title Размер и тираж
+					+b.__list
+						+e.label Вы выбрали:
+						+b.__item
+							+e.text S — 3 939
+							+b.icon._xs.__delete(href="#")
+								include /assets/images/sm/crossIcon.svg
+						+b.__item
+							+e.text M — 3 939
+							+b.icon._xs.__delete(href="#")
+								include /assets/images/sm/crossIcon.svg
+						+b.__item
+							+e.text L — 3 939
+							+b.icon._xs.__delete(href="#")
+								include /assets/images/sm/crossIcon.svg
+						+b.__item
+							+e.text XL — 3 939
+							+b.icon._xs.__delete(href="#")
+								include /assets/images/sm/crossIcon.svg
+						+b.__item
+							+e.text XXL — 3 939
+							+b.icon._xs.__delete(href="#")
+								include /assets/images/sm/crossIcon.svg
+			+e.buttons
+				+upgradeButton._lg.__upgradeButton
+				+buyButton('Добавить в корзину')(href="#popup_free_delivery")._lg.__buyButton
+		+b.__count
+			if (upgrades)
+				+b.__editionInfo
+					+b.__header
+						+e.col._label
+						+e.col._thing за 1 шт
+						+e.col._total за 238 шт
+					+b.__row
+						+e.col._label Аксессуары:
+						+e.col._thing 840 ₽
+						+e.col._total 840 ₽
+					+b.__row
+						+e.col._label Нанесение:
+						+e.col._thing 1 683 ₽
+						+e.col._total 1 683 ₽
+					+b.__row
+						+e.col._label._sum Итого:
+						+e.col._thing 1 683 ₽
+						+e.col._total 336 422₽
+			else
+				+e.editionLink(href='#') Указать колличество

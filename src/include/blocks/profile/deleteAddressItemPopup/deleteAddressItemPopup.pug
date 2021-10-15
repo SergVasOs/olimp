@@ -1,0 +1,15 @@
+mixin deleteAddressItemPopup
+	+b#popup_delete_address_item.popup._screen
+		+e.overlay
+		+e.body
+			+b.icon.__close(href="#")
+				include /assets/images/md/crossIcon.svg
+			+b.__content
+				+b.deleteAddressItemPopup.__wrapper
+					+e.title Удалить адрес?
+					+b.__item
+						+e.city г. Москва
+						+e.address Ул. Зои и Александра Космедемьянских д 2 строение 2 этаж 3 кваритра 334
+					+e.buttons
+						+b.button._white Отменить
+						+b.button._blue Удалить

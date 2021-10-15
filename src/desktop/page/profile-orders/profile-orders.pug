@@ -1,0 +1,44 @@
+extends /desktop/layout/layout
+include /desktop/include/sections/profileHead/profileHead
+include /desktop/include/blocks/profileMenu/profileMenu
+include /desktop/include/blocks/ordersProductItem/ordersProductItem
+include /include/blocks/profile/orderItem/orderItem
+
+block append pageVars
+	- var pageTitle = "История заказов";
+	- var pageClass = "profileOrders";
+	- var hideTopSubmenu = true;
+
+block content
+	+profileHead.__head
+	+e.box.box
+		+e.left
+			+profileMenu
+		+e.right
+			+b.tabs._inline
+				+b.__buttons
+					+e.item._active(data-tab='orders') Заказы
+					+e.item(data-tab='products') Товары
+				+b.__content
+					+e.item._active(data-content-tab='orders')
+						+b.profileOrders__orders
+							+e.list
+								+orderItem
+								+orderItem._gray
+								+orderItem._red
+								+orderItem._blue
+								+orderItem
+								+orderItem._gray
+								+orderItem._red
+								+orderItem._blue
+							+b.__banner(href="#")
+								+e.img(src="images/saleBanner.png")
+					+e.item(data-content-tab='products')
+						+b.profileOrders__products
+							+ordersProductItem
+							+ordersProductItem
+							+ordersProductItem
+							+ordersProductItem
+							+ordersProductItem
+							+ordersProductItem
+							+ordersProductItem

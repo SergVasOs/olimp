@@ -1,0 +1,59 @@
+.productHeader {
+    @apply
+    fixed
+    z-30
+    -top-22
+    inset-x-0
+    bg-gray-card
+    border-b
+    h-22
+    flex
+    items-center
+    transition-top duration-500 ease-in-out;
+
+    &_active {
+        @apply
+            top-0;
+    }
+
+    &__box {
+        @apply
+        flex
+        items-center
+        h-full;
+    }
+
+    &__tabs {
+        @apply
+        self-end;
+    }
+
+    &__prices {
+        @apply
+        text-xl
+        ml-auto
+            mr-32;
+
+        &__price {
+            @apply
+                price;
+        }
+
+        &__oldPrice {
+            @apply
+                oldPrice;
+        }
+    }
+
+    &__buyButton {
+        @apply
+            px-6;
+    }
+
+    //TODO:fix this, mb sticky
+    .js-modal & {
+        @apply
+        pr-scrollbar;
+    }
+}
+

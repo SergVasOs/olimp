@@ -1,11 +1,11 @@
-include /include/blocks/catalog/catalogItem/grid/catalogGridItem
+include grid/catalogGridItem
 include list/catalogListItem
 include table/catalogTableItem
 
 mixin catalogItem
 	if (catalogView === 'grid')
-		+catalogGridItem
+		+catalogGridItem(false, Math.random() > 0.5)
 	else if (catalogView === 'list')
-		+catalogListItem
+		+catalogListItem(false, Math.random() > 0.5)
 	else
-		+catalogTableItem
+		+catalogTableItem(false, Math.random() > 0.5)

@@ -6,6 +6,11 @@
         mb-4;
     }
 
+    &__search {
+        @apply
+        mb-6;
+    }
+
     &__catalogMenu {
         @apply
         mb-12;

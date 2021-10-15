@@ -1,39 +1,34 @@
 include /include/blocks/common/bestDelivery/bestDelivery
-include /mobile/include/blocks/freeDeliveryPopper/freeDeliveryPopper
-include /mobile/include/blocks/giftPopper/giftPopper
-include /mobile/include/blocks/bookOrderPopper/bookOrderPopper
 
-mixin cartTotal
-	+b.cartTotal&attributes(attributes)
+mixin cartTotal(mobile=true)
+	+b.cartTotal.fixing&attributes(attributes)
 		+b.__freeDelivery
 			+b.icon._xl
 				include /assets/images/xl/deliveryIcon.svg
 			+b.__text
 				| Ещё
-				+e.price 12 450 руб
+				+e.price 12 450 ₽
 				| и мы доставим товары бесплатно.
-				+e.more(href='#popper_book_order') Узнать больше
+				+e.more(href=(mobile ? '#popper_book_order' : '#popup_book_order')) Узнать больше
 		+b.__info
 			+b.__row
 				+e.label Вес заказа:
 				+e.value 16 кг
 			+b.__row._subtotal
 				+e.label Итого, без доставки:
-				+e.value 17,780 руб
+				+e.value 17,780 ₽
 			+b.__row._discount
 				+e.label Скидка:
-				+e.value 149 руб
+				+e.value 149 ₽
 		+b.__sum
 			+e.label Итого к оплате:
-			+e.value 17,631 руб
+			+e.value 17,631 ₽
 		+e.buttons
 			+b.button._lg._green(href='order.html')
 				+e.text Продолжить оформление
-			+b.button._lg._white(href='#popper_free_delivery')
+			+b.button._lg._white(href='#popup_fast_order')
 				+e.text Быстрая покупка
-			+b.button._lg._blue(href='#popper_gift')
+			+b.button._lg._blue(href=(mobile ? '#popper_gift' : '#popup_gift'))
 				+e.text Скачать КП для клиента в PDF
 		+bestDelivery.__bestDelivery
-	+bookOrderPopper
-	+freeDeliveryPopper
-	+giftPopper
+

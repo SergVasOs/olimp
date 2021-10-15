@@ -1,27 +1,222 @@
+include /desktop/include/blocks/loginPopup/loginPopup
+include /desktop/include/blocks/registrationPopup/registrationPopup
+include /desktop/include/blocks/forgotPasswordPopup/forgotPasswordPopup
+include /include/elements/logo/logo
+include /desktop/include/blocks/chooseCityPopup/chooseCityPopup
+include /include/sections/index/catalogMenu/catalogMenu
+include /include/sections/index/importantInfo/importantInfo
+
 +b.header
-	+e.box.box
-		include /include/elements/logo/logo
-		+b.button.__catalogButton(href='catalog-grid.html')
-			+b.icon.__icon
-				include /assets/images/listIcon.svg
-			+e.text Каталог
-		+b.input.__searchInput
-			+b.icon.__icon
-				include /assets/images/xl/searchIcon.svg
-			+e.INPUT.field(type='text', placeholder='Поиск по сайту')
-			+b.button._sm.__button
-				+b.icon._sm
-					include /assets/images/sm/filterIcon.svg
-		+b.__regionChoice(href='#')
-			include /assets/images/regionChoiceIcon.svg
-			+e.label Москва
-		+b.__phone(href='#')
-			+b.icon
-				include /assets/images/phoneIcon.svg
-			+e.label 8 (495) 775-5952
-		+b.icon._lg.__userIcon(href='#modal_login')
-			include /assets/images/md/userIcon.svg
-		+b.icon._lg.__favoriteIcon(href='#')
-			include /assets/images/xl/favoriteIcon.svg
-		+b.icon._lg.__cartIcon(href='cart.html')
-			include /assets/images/xl/basketIcon.svg
+    +e.box.box
+        +logo.__logo
+        +b.button._yellow.__catalogButton(href='catalog.html')
+            +e.icon
+                include /assets/images/lg/catalogIcon.svg
+            +e.text Каталог
+        +b.input.__search
+            +e.icon
+                include /assets/images/lg/searchIcon.svg
+            +e.INPUT.field(type='text', placeholder='Поиск по сайту', required)
+            +b.button._xs._icon._yellow(href='catalog.html')
+                +e.icon
+                    include /assets/images/sm/filterIcon.svg
+            +b.header__search__result
+                +e.content
+                    +b.__categories
+                        +e.item(href="#") Кубок пластиковый
+                        +e.item(href="#") Кубок металлический
+                        +e.item(href="#") Престижный кубк (металлический)
+                        +e.item(href="#") Бюджетный кубк (платиковый)
+                        +e.item(href="#") Кубок спортивный
+                        +e.item(href="#") Кубк с необычной чашей
+                        +e.item(href="#") Кубк с глубокой чашей
+                        +e.item(href="#") Кубок классический
+                        +e.item(href="#") Кубок стеклянный
+                        +e.item(href="#") Кубок деревянный
+                    +b.__products
+                        +e.title ТОВАРЫ
+                        +e.list
+                            +b.__item(href="product.html")
+                                +e.img(src="images/catalogItem.png")
+                                +b.__info
+                                    +e.name Кубок B368-3
+                                    +e.prop Металл
+                                +e.price от 780 руб
+                                +b.icon._xl
+                                    include /assets/images/xl/shevronIcon.svg
+                            +b.__item(href="product.html")
+                                +e.img(src="images/catalogItem.png")
+                                +b.__info
+                                    +e.name Кубок B368-3
+                                    +e.prop Металл
+                                +e.price от 780 руб
+                                +b.icon._xl
+                                    include /assets/images/xl/shevronIcon.svg
+                    +b.__popular
+                        +e.title ПОПУЛЯРНОЕ
+                        +e.list
+                            +b.__item(href="#")
+                                +e.text Медали
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+                            +b.__item(href="#")
+                                +e.text Призы из акрила
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+                            +b.__item(href="#")
+                                +e.text Кубки
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+                            +b.__item(href="#")
+                                +e.text Медали
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+                            +b.__item(href="#")
+                                +e.text Призы из акрила
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+                            +b.__item(href="#")
+                                +e.text Кубки
+                                +b.icon._sm
+                                    include /assets/images/sm/shevronIcon.svg
+        +b.__regionChoice(href='#popup_choose_city')
+            +b.icon._sm
+                include /assets/images/sm/pointIcon.svg
+            +e.label Москва
+        +b.__phone(href='tel:84957755952')
+            +b.icon._sm
+                include /assets/images/sm/phoneIcon.svg
+            +e.label 8 (495) 775-5952
+        +b.icon._xl.__userIcon(href='#popup_login')
+            include /assets/images/xl/userIcon.svg
+        +b.icon._xl.__favoriteIcon(href='favorites.html')
+            include /assets/images/xl/favoriteIcon.svg
+        +b.icon._xl.__cartIcon(href='cart.html')
+            include /assets/images/xl/basketIcon.svg
++b.mainMenu
+    +e.box.box
+        +b.__categories
+            +b.__top
+                +e.item._active Награды
+                +e.item Награды
+                +e.item Награды
+                +e.item Награды
+                +e.item Награды
+            +b.__content._active
+                +e.wrapper
+                    +b.__items
+                        +b.__item._active(href='catalog.html')
+                            +e.img(src='images/categoryIcon3.png')
+                            +e.name Медали из акрила
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon4.png')
+                            +e.name Литые статуэтки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon5.png')
+                            +e.name Пластиковые фигурки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon6.png')
+                            +e.name Призы из акрила
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon7.png')
+                            +e.name Деревянные награды
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon8.png')
+                            +e.name Стеклянные награды
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon9.png')
+                            +e.name Плакетки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon10.png')
+                            +e.name Для выпускников
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon11.png')
+                            +e.name Спортовары
+                    +e.banner(src='images/banner.png')
+                    +b.__items
+                        +b.__item._active(href='catalog.html')
+                            +e.img(src='images/categoryIcon3.png')
+                            +e.name Медали из акрила
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon4.png')
+                            +e.name Литые статуэтки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon5.png')
+                            +e.name Пластиковые фигурки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon6.png')
+                            +e.name Призы из акрила
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon7.png')
+                            +e.name Деревянные награды
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon8.png')
+                            +e.name Стеклянные награды
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon9.png')
+                            +e.name Плакетки
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon10.png')
+                            +e.name Для выпускников
+                        +b.__item(href='catalog.html')
+                            +e.img(src='images/categoryIcon11.png')
+                            +e.name Спортовары
+        +b.__sections
+            +e.wrapper
+                +e.col
+                    +b.__item
+                        +e.title По назначению
+                        +b.__list
+                            +e.item(href='catalog.html') Кубки с Российской символикой
+                            +e.item(href='catalog.html') Престижные кубки (металлические)
+                            +e.item(href='catalog.html') Бюджетные кубки (платиковые)
+                            +e.item(href='catalog.html') Спортивные кубки
+                            +e.item(href='catalog.html') Кубки с необычной чашей
+                            +e.item(href='catalog.html') Кубки с чашей в виде конуса
+                            +e.item(href='catalog.html') Кубки с глубокой чашей
+                            +e.item(href='catalog.html') Классические кубки
+                            +e.item(href='catalog.html') Стеклянные кубки
+                            +e.item(href='catalog.html') Деревянные кубки
+                    +b.__item
+                        +e.title Для настроения
+                        +b.__list
+                            +e.item(href='catalog.html') Кубки с Российской символикой
+                            +e.item(href='catalog.html') Престижные кубки (металлические)
+                            +e.item(href='catalog.html') Бюджетные кубки (платиковые)
+                            +e.item(href='catalog.html') Спортивные кубки
+                            +e.item(href='catalog.html') Кубки с необычной чашей
+                            +e.item(href='catalog.html') Кубки с чашей в виде конуса
+                            +e.item(href='catalog.html') Кубки с глубокой чашей
+                            +e.item(href='catalog.html') Классические кубки
+                            +e.item(href='catalog.html') Стеклянные кубки
+                            +e.item(href='catalog.html') Деревянные кубки
+                +e.col
+                    +b.__item._client
+                        +e.title Для клиента
+                        +b.__list
+                            +b.__item(href='gallery.html')
+                                +b.icon.__icon
+                                    include /assets/images/md/starIcon.svg
+                                +e Наши работы
+                            +e.item(href='payment.html') Оплата
+                            +e.item(href='shipping.html') Доставка
+                            +e.item(href='#') Обмен / возврат
+                            +e.item(href='about-us.html') О компании
+                            +e.item(href='news.html') Новости
+                    +b.__item
+                        +e.title По событию
+                        +b.__list
+                            +e.item(href='catalog.html') Кубки с Российской символикой
+                            +e.item(href='catalog.html') Престижные кубки (металлические)
+                            +e.item(href='catalog.html') Бюджетные кубки (платиковые)
+                            +e.item(href='catalog.html') Спортивные кубки
+                            +e.item(href='catalog.html') Кубки с необычной чашей
+                            +e.item(href='catalog.html') Кубки с чашей в виде конуса
+                            +e.item(href='catalog.html') Кубки с глубокой чашей
+                            +e.item(href='catalog.html') Классические кубки
+                            +e.item(href='catalog.html') Стеклянные кубки
+                            +e.item(href='catalog.html') Деревянные кубки
++chooseCityPopup
++loginPopup
++registrationPopup
++forgotPasswordPopup

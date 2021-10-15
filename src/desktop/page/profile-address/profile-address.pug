@@ -1,0 +1,41 @@
+extends /desktop/layout/layout
+include /desktop/include/sections/profileHead/profileHead
+include /desktop/include/blocks/profileMenu/profileMenu
+include /desktop/include/blocks/mapPopup/mapPopup
+
+block append pageVars
+	- var pageTitle = "Добавить адрес";
+	- var pageClass = "profileAddress";
+	- var hideTopSubmenu = true;
+
+block content
+	+profileHead.__head
+	+e.box.box
+		+e.left
+			+profileMenu
+		+e.right
+			+b.__form
+				+b.FORM.form
+					+e.title Добавить адрес
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Адрес', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Квартира / Офис', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Подъезд', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Этаж', required)
+					+e.row
+						+b.input
+							+e.INPUT.field(type='text', placeholder='Домофон', required)
+					+e.footer
+						+b.button._lg._green.__button(href='profile-address.html') Добавить адрес
+				+b.links.__links
+					+e.item(href='#popup_map') Уточнить на карте
+			+b.__banner(href="#")
+				+e.img(src="images/profileBanner.png")
+	+mapPopup

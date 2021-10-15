@@ -1,23 +1,44 @@
 .popper {
     @apply
-    fixed
-    inset-x-0
-    bottom-0
-    z-10
-    bg-transparent
-    transition-background;
+    absolute
+    inset-0
+    z-50
+    flex
+    top-auto
+    justify-center
+    items-center
+    overflow-hidden;
+
+    &__overlay {
+        @apply
+        absolute
+        z-10
+        inset-0
+        bg-black
+        opacity-0
+        transition-opacity duration-500;
+    }
 
     &__body {
         @apply
-        transition-top
+        absolute
+        z-20
+        top-0
         inset-x-0
-        top-full
-        h-popper
-        fixed
-        pt-14
-        pb-6
         bg-white
-        overflow-hidden;
+        flex
+        flex-col
+        items-stretch
+        w-full
+        h-popper;
+    }
+
+    &__close {
+        @apply
+        absolute
+        top-4
+        right-4
+        text-blue-dark;
     }
 
     &__handler {
@@ -33,39 +54,65 @@
         rounded-full;
     }
 
-    &__close {
-        @apply
-        absolute
-        right-2
-        top-2;
-    }
-
     &__content {
         @apply
-            h-full
-        overflow-scrollVert;
+        flex-1
+        h-0
+        flex
+        flex-col
+        items-stretch
+        p-4
+        mt-10;
+
+        &__wrapper {
+            @apply
+            flex-1
+            h-0
+            overflow-scrollVert;
+        }
     }
 
-    &_withBottomButton & {
+    &_opening {
+        @apply
+        top-0;
+    }
+
+    &_opening & {
         &__body {
             @apply
-            pb-32;
+            top-full;
         }
+    }
 
-        &__bottomButton {
-            @apply absolute;
+    &_closing {
+        @apply
+        top-0;
+    }
+
+    &_closing & {
+        &__body {
+            @apply
+            top-full
+            transition-top duration-500;
         }
     }
 
     &_open {
         @apply
-        z-40
-        top-0
-        bg-black
-        bg-opacity-30;
+        top-0;
     }
 
     &_open & {
+        &__body {
+            @apply
+            transition-top duration-500;
+        }
+
+        &__overlay {
+            @apply
+            opacity-30;
+        }
+
         &__body {
             @apply
             rounded-t

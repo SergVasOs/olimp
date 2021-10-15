@@ -1,9 +1,9 @@
 include /include/elements/favoriteIcon/favoriteIcon
+include /include/blocks/common/pageHead/pageHead
 
 mixin productHead
-	+b.productHead&attributes(attributes)
-		+e.box.box
-			+e.title Стеклянная награда J42-115 с цветным нанесением, высота 11.5 см
-			+b.icon._lg.__shareIcon(href='#')
+	+pageHead('Стеклянная награда J42-115 с цветным нанесением, высота 11.5 см', false).productHead&attributes(attributes)
+		+e.right
+			+b.icon(href='#')
 				include /assets/images/md/shareIcon.svg
-			+favoriteIcon._active
+			+favoriteIcon

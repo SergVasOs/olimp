@@ -1,0 +1,64 @@
+.ordersProductItem {
+    @apply
+    p-4
+    border
+    rounded
+    flex
+    items-stretch
+    space-x-4;
+
+    &__img {
+        @apply
+        w-20
+        h-20
+        object-cover;
+    }
+
+    &__info {
+        @apply
+        flex
+        flex-col
+        flex-1;
+
+        &__name {
+            @apply
+            mb-2;
+        }
+
+        &__prop {
+            @apply
+            text-sm
+            text-gray-light
+            mb-2;
+        }
+
+        &__prices {
+            @apply
+            mt-auto
+            flex
+            items-baseline
+            space-x-2;
+
+            &__price {
+                @apply
+                price;
+            }
+
+            &__oldPrice {
+                @apply
+                oldPrice
+                text-sm;
+            }
+        }
+    }
+
+    &__quantity {
+        @apply
+        w-32;
+    }
+
+    &__buyButton {
+        @apply
+            self-center;
+    }
+}

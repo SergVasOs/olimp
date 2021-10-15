@@ -1,4 +1,6 @@
 .tabs {
+    @apply w-full;
+
     &__content {
         &__item {
             @apply hidden;
@@ -30,10 +32,13 @@
             flex
             items-center
             justify-center
-            cursor-pointer;
+            cursor-pointer
+            hover:text-gray-light
+            md:text-base;
 
             &_active {
-                @apply font-medium;
+                @apply
+                font-medium;
 
                 &:before {
                     @apply content-empty
@@ -90,6 +95,49 @@
 
         &__content {
             @apply mt-4;
+        }
+    }
+
+    &_inline & {
+        &__buttons {
+            @apply
+            justify-start
+            mb-4;
+
+            &__item {
+                @apply
+                text-lg
+                text-gray-light
+                mx-0
+                px-6
+                py-3
+                hover:text-black;
+
+                &_active {
+                    @apply
+                    font-normal;
+                }
+            }
+        }
+    }
+
+    &_productHead {
+        @apply
+        w-auto;
+    }
+
+    &_productHead & {
+        &__buttons {
+            @apply
+            bg-transparent
+            border-none
+            space-x-6;
+
+            &__item {
+                @apply
+                    mx-0
+                    px-8;
+            }
         }
     }
 }
