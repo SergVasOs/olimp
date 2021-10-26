@@ -126,37 +126,6 @@ const onClickTabHandler = (e) => {
 	updateSwipers(activeTabContent);
 };
 
-const onWindowScroll = (e) => {
-	const scrollTop = document.documentElement.scrollTop;
-
-	document.querySelectorAll('.fixing').forEach(el => {
-		const elHeight = el.offsetHeight;
-		const parentTop = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-		const parentBottom = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top + el.parentElement.offsetHeight;
-		const offset = 20;
-
-		if (parentTop < scrollTop + headerHeight + offset && parentBottom > scrollTop + headerHeight + offset + elHeight) {
-			if (el.style.position !== 'fixed') {
-				el.style.position = 'fixed';
-				el.style.top = headerHeight + offset + 'px';
-				el.style.bottom = 'auto';
-			}
-		} else if (parentBottom < scrollTop + headerHeight + offset + elHeight) {
-				if (el.style.position !== 'absolute') {
-					el.style.position = 'absolute';
-					el.style.top = 'auto';
-					el.style.bottom = '0px';
-				}
-		} else {
-			el.style.position = 'relative';
-			el.style.top = 'auto';
-			el.style.bottom = 'auto';
-		}
-	});
-};
-
-window.addEventListener('scroll', onWindowScroll);
-
 document.querySelectorAll('a[href^="#popup"]').forEach((el) => el.addEventListener('click', onClickPopupHandler));
 
 document.querySelectorAll('.popup__close, .popup__overlay').forEach((el) => el.addEventListener('click', onClickPopupClose));

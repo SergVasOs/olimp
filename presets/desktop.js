@@ -18,6 +18,7 @@ module.exports = {
 			},
 			maxHeight: {
 				'search-result': '50vh',
+				mainMenu:'calc(100vh - 5rem)',
 			},
 		},
 	},

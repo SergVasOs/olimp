@@ -1,69 +1,73 @@
-@import "base";
-@import "utilities";
-@import "icon";
-@import "button";
-@import "popup";
-@import "popper";
-@import "form";
-@import "slider";
-@import "swiper";
-@import "tabs";
-@import "menu";
-@import "textBlock";
+@tailwind base;
+@tailwind components;
 
-@import "/src/include/layout/content/content";
-@import "/src/include/blocks/cart/deleteCartItemPopup/deleteCartItemPopup";
+@layer components {
+    @import "base";
+    @import "utilities";
+    @import "icon";
+    @import "button";
+    @import "popup";
+    @import "popper";
+    @import "form";
+    @import "slider";
+    @import "swiper";
+    @import "tabs";
+    @import "menu";
+    @import "textBlock";
 
-@import "/src/include/elements/size/size";
-@import "/src/include/elements/color/color";
-@import "/src/include/elements/label/label";
-@import "/src/include/elements/labels/labels";
-@import "/src/include/elements/favoriteIcon/favoriteIcon";
-@import "/src/include/elements/quantity/quantity";
-@import "/src/include/elements/dropArea/dropArea";
-@import "/src/include/elements/captcha/captcha";
-@import "/src/include/elements/avatar/avatar";
-@import "/src/include/elements/bottomButton/bottomButton";
-@import "/src/include/elements/fileItem/fileItem";
+    @import "/src/include/layout/content/content";
+    @import "/src/include/blocks/cart/deleteCartItemPopup/deleteCartItemPopup";
 
-@import "/src/include/blocks/catalog/catalogItemGallery/catalogItemGallery";
-@import "/src/include/blocks/catalog/selectionItem/selectionItem";
-@import "/src/include/blocks/catalog/catalogFilters/catalogFilters";
-@import "/src/include/blocks/catalog/productListItem/productListItem";
+    @import "/src/include/elements/size/size";
+    @import "/src/include/elements/color/color";
+    @import "/src/include/elements/label/label";
+    @import "/src/include/elements/labels/labels";
+    @import "/src/include/elements/favoriteIcon/favoriteIcon";
+    @import "/src/include/elements/quantity/quantity";
+    @import "/src/include/elements/dropArea/dropArea";
+    @import "/src/include/elements/captcha/captcha";
+    @import "/src/include/elements/avatar/avatar";
+    @import "/src/include/elements/bottomButton/bottomButton";
+    @import "/src/include/elements/fileItem/fileItem";
 
-@import "/src/include/blocks/product/productFileList/productFileList";
-@import "/src/include/blocks/product/productDeliveryInfo/productDeliveryInfo";
-@import "/src/include/blocks/product/productDescription/productDescription";
-@import "/src/include/blocks/product/productUpgradeInfoContent/productUpgradeInfoContent";
-@import "/src/include/blocks/product/productUpgradeSelectionContent/productUpgradeSelectionContent";
-@import "/src/include/blocks/product/productUpgradePlaceContent/productUpgradePlaceContent";
-@import "/src/include/blocks/product/productEdition/productEdition";
+    @import "/src/include/blocks/catalog/catalogItemGallery/catalogItemGallery";
+    @import "/src/include/blocks/catalog/selectionItem/selectionItem";
+    @import "/src/include/blocks/catalog/catalogFilters/catalogFilters";
+    @import "/src/include/blocks/catalog/productListItem/productListItem";
 
-@import "/src/include/blocks/common/consultForm/consultForm";
-@import "/src/include/blocks/common/bestDelivery/bestDelivery";
-@import "/src/include/blocks/common/fileList/fileList";
-@import "/src/include/blocks/common/popularKeywords/popularKeywords";
-@import "/src/include/blocks/common/pageHead/pageHead";
-@import "/src/include/blocks/common/callback/callback";
-@import "/src/include/blocks/common/bookOrderContent/bookOrderContent";
-@import "/src/include/blocks/common/freeDeliveryContent/freeDeliveryContent";
-@import "/src/include/blocks/common/giftContent/giftContent";
+    @import "/src/include/blocks/product/productFileList/productFileList";
+    @import "/src/include/blocks/product/productDeliveryInfo/productDeliveryInfo";
+    @import "/src/include/blocks/product/productDescription/productDescription";
+    @import "/src/include/blocks/product/productUpgradeInfoContent/productUpgradeInfoContent";
+    @import "/src/include/blocks/product/productUpgradeSelectionContent/productUpgradeSelectionContent";
+    @import "/src/include/blocks/product/productUpgradePlaceContent/productUpgradePlaceContent";
+    @import "/src/include/blocks/product/productEdition/productEdition";
 
-@import "/src/include/blocks/profile/orderItem/orderItem";
-@import "/src/include/blocks/profile/addressItem/addressItem";
-@import "/src/include/blocks/profile/deleteAddressItemPopup/deleteAddressItemPopup";
-@import "/src/include/blocks/profile/orderCompositionItem/orderCompositionItem";
-@import "/src/include/blocks/profile/orderProductItem/orderProductItem";
+    @import "/src/include/blocks/common/consultForm/consultForm";
+    @import "/src/include/blocks/common/bestDelivery/bestDelivery";
+    @import "/src/include/blocks/common/fileList/fileList";
+    @import "/src/include/blocks/common/popularKeywords/popularKeywords";
+    @import "/src/include/blocks/common/pageHead/pageHead";
+    @import "/src/include/blocks/common/callback/callback";
+    @import "/src/include/blocks/common/bookOrderContent/bookOrderContent";
+    @import "/src/include/blocks/common/freeDeliveryContent/freeDeliveryContent";
+    @import "/src/include/blocks/common/giftContent/giftContent";
 
-@import "/src/include/blocks/cart/cartTotal/cartTotal";
-@import "/src/include/blocks/cart/cartDiscount/cartDiscount";
+    @import "/src/include/blocks/profile/orderItem/orderItem";
+    @import "/src/include/blocks/profile/addressItem/addressItem";
+    @import "/src/include/blocks/profile/deleteAddressItemPopup/deleteAddressItemPopup";
+    @import "/src/include/blocks/profile/orderCompositionItem/orderCompositionItem";
+    @import "/src/include/blocks/profile/orderProductItem/orderProductItem";
 
-@import "/src/include/sections/product/productTags/productTags";
+    @import "/src/include/blocks/cart/cartTotal/cartTotal";
+    @import "/src/include/blocks/cart/cartDiscount/cartDiscount";
 
-@import "/src/include/sections/index/banners/banners";
-@import "/src/include/sections/index/importantInfo/importantInfo";
-@import "/src/include/sections/index/gifts/gifts";
+    @import "/src/include/sections/product/productTags/productTags";
 
-@import "/src/include/sections/cart/cartHead/cartHead";
+    @import "/src/include/sections/index/banners/banners";
+    @import "/src/include/sections/index/importantInfo/importantInfo";
+    @import "/src/include/sections/index/gifts/gifts";
 
+    @import "/src/include/sections/cart/cartHead/cartHead";
+}
 

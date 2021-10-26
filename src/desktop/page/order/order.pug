@@ -10,6 +10,7 @@ include /include/blocks/common/fileList/fileList
 block append pageVars
 	- var pageTitle = "Оформление заказа";
 	- var pageClass = "order";
+	- var hideTopSubmenu = true;
 
 block content
 	+pageHead('Оформление заказа', false).__head

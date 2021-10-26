@@ -1,5 +1,8 @@
 extends /mobile/layout/layout
 include /mobile/page/product/productContent/productContent
+include /mobile/page/product/productUpgradeInfoPopup/productUpgradeInfoPopup
+include /mobile/page/product/productUpgradePlacePopup/productUpgradePlacePopup
+include /mobile/page/product/productUpgradeSelectionPopup/productUpgradeSelectionPopup
 
 block append pageVars
     - var pageTitle = "Продукт";
@@ -13,4 +16,6 @@ block content
             +productContent.__item.swiper-slide
             +productContent.__item.swiper-slide
             +productContent.__item.swiper-slide
-
+    +productUpgradeInfoPopup
+    +productUpgradeSelectionPopup
+    +productUpgradePlacePopup

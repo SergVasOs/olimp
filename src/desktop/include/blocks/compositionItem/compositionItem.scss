@@ -15,8 +15,8 @@
 
         &__img {
             @apply
-            w-20
-            h-20
+            w-22
+            h-22
             object-cover;
         }
 
@@ -83,6 +83,15 @@
             }
         }
 
+        &__quantity {
+            @apply
+            w-30;
+        }
+
+        &__buyButton {
+            @apply self-center;
+        }
+
         &__count {
             @apply
                 flex
@@ -111,6 +120,7 @@
                 w-16
                 h-16
                 p-2
+                mr-2
                 rounded-full
                 border
                 bg-white
@@ -147,8 +157,7 @@
                     absolute
                     right-4
                     bottom-2
-                    text-gray
-                    text-xs
+                    text-gray-light
                     flex
                     items-center
                     space-x-1;

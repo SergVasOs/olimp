@@ -12,15 +12,19 @@ mixin compositionItem(mode)
             +b.__prices
                 +e.price 27 354 ₽
                 +e.oldPrice 47 354 ₽
-            +b.__actions
-                +b.__buttons
-                    +b.icon._lg(href='#')
-                        include /assets/images/lg/editIcon.svg
-                    +b.icon._lg(href='#')
-                        include /assets/images/lg/copyIcon.svg
-                    +b.icon._lg(href='#popup_delete_cart_item')
-                        include /assets/images/lg/cross1Icon.svg
+            if (mode !== 'set')
+                +b.__actions
+                    +b.__buttons
+                        +b.icon._lg(href='#')
+                            include /assets/images/lg/editIcon.svg
+                        +b.icon._lg(href='#')
+                            include /assets/images/lg/copyIcon.svg
+                        +b.icon._lg(href='#popup_delete_cart_item')
+                            include /assets/images/lg/cross1Icon.svg
+                    +quantity.__quantity
+            else
                 +quantity.__quantity
+                +buyButton('В корзину').__buyButton
         +b.__parts
             +b.__item
                 +e.img(src='images/cap.png')
@@ -41,7 +45,7 @@ mixin compositionItem(mode)
                             include /assets/images/sm/fileIcon.svg
                         +e 3 файла
         +b.__buttons
-            if (mode !== 'cart')
+            if (mode !== 'cart' && mode !== 'set')
                 +buyButton('В корзину')
             +b.button._blue(href='#')
                 +e.icon

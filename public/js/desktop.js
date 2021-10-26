@@ -30,7 +30,36 @@ const onSearchBlur = (e) => {
 	search.classList.remove('header__search_active');
 };
 
-const onProductWindowScroll = (e) => {
+const onWindowScroll = (e) => {
+	const scrollTop = document.documentElement.scrollTop;
+
+	document.querySelectorAll('.fixing').forEach(el => {
+		const offset = 20;
+		const elHeight = el.offsetHeight;
+		const parentTop = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+		const bottom = el.nextElementSibling ? el.parentElement.offsetHeight - el.nextElementSibling.offsetTop + offset : 0;
+		const parentBottom = el.parentElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top + el.parentElement.offsetHeight - bottom;
+
+		if (parentTop < scrollTop + headerHeight + offset && parentBottom > scrollTop + headerHeight + offset + elHeight) {
+			if (el.style.position !== 'fixed') {
+				el.style.width = el.parentElement.offsetWidth + 'px';
+				el.style.position = 'fixed';
+				el.style.top = headerHeight + offset + 'px';
+				el.style.bottom = 'auto';
+			}
+		} else if (parentBottom < scrollTop + headerHeight + offset + elHeight) {
+			if (el.style.position !== 'absolute') {
+				el.style.position = 'absolute';
+				el.style.top = 'auto';
+				el.style.bottom = bottom + 'px';
+			}
+		} else {
+			el.style.position = 'relative';
+			el.style.top = 'auto';
+			el.style.bottom = 'auto';
+		}
+	});
+
 	const header = document.querySelector('.productHeader');
 
 	if (!header) {
@@ -46,7 +75,7 @@ const onProductWindowScroll = (e) => {
 	}
 };
 
-window.addEventListener('scroll', onProductWindowScroll);
+window.addEventListener('scroll', onWindowScroll);
 
 document.querySelectorAll('.header__catalogButton').forEach((el) => el.addEventListener('click', onClickCatalogButton));
 

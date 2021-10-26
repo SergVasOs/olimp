@@ -34,7 +34,7 @@ new Swiper('.viewedList__swiper', {
 new Swiper('.catalogItemGallery__swiper', {
 	slidesPerView: 1,
 	nested: true,
-	preloadImages: true,
+	preloadImages: false,
 	lazy: true,
 	pagination: {
 		bulletClass: 'swiper-dots-item',
@@ -100,6 +100,8 @@ new Swiper('.productContent__top__gallery__swiper', {
 		clickable: true,
 	},
 	direction: 'vertical',
+	preloadImages: false,
+	lazy: true,
 	nested: true,
 });
 

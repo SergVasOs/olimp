@@ -50,8 +50,7 @@
 				py-6
 				flex
 				flex-col
-				items-stretch
-				mt-4;
+				items-stretch;
 
 			&__content {
 				@apply
@@ -228,15 +227,19 @@
 	fixed
 	inset-x-0
 	h-mainMenu
-	-top-full
+	max-h-mainMenu
+	top-20
+	transform -translate-y-full
 	bg-white
 	z-20
 	border-b
-	transition transition-top duration-500 ease-in-out;
+	transition-transform duration-500 ease-in-out
+	opacity-0;
 
 	&_open {
 		@apply
-		top-20;
+		-translate-y-0
+		opacity-100;
 	}
 
 	&__box {

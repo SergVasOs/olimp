@@ -47,11 +47,11 @@
 			&__swiper {
 				&__wrapper {
 					&__slide {
-						&__img {
-							@apply
-							fullBlockContain
-							bg-black;
-						}
+						@apply
+						bg-contain
+						bg-center
+						bg-no-repeat
+						bg-black;
 					}
 				}
 				&__dots {

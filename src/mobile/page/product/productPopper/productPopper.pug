@@ -12,9 +12,6 @@ include /mobile/page/product/productCategories/productCategories
 include /mobile/page/product/productProperties/productProperties
 include /mobile/include/sections/productList/productList
 include /mobile/include/sections/viewedList/viewedList
-include /mobile/page/product/productUpgradeInfoPopup/productUpgradeInfoPopup
-include /mobile/page/product/productUpgradePlacePopup/productUpgradePlacePopup
-include /mobile/page/product/productUpgradeSelectionPopup/productUpgradeSelectionPopup
 
 mixin productPopper(shirt=false)
     +b#popper_product.popper.productPopper&attributes(attributes)
@@ -100,6 +97,3 @@ mixin productPopper(shirt=false)
                         .box
                             +b.button.__helpButton(href='#')
                                 +e.text Нужна помощь?
-    +productUpgradeInfoPopup
-    +productUpgradeSelectionPopup
-    +productUpgradePlacePopup

@@ -36,22 +36,25 @@ const colors = {
 	},
 };
 
+
 module.exports = {
-	purge: [
-		'./dist/*.html',
-		'./dist/*.css',
-	],
+	purge: {
+		mode: 'layers',
+		layers: [],
+		content: ['./src/*.pug', './src/**/*.pug'],
+	},
 	darkMode: false,
 	theme: {
 		extend: {
+			color: colors,
 			screens: {
+				'sm': '740px',
 				'xl': '1200px',
 				'2xl': '1440px',
 			},
 			container: {
 				padding: '1rem',
 			},
-			color: colors,
 			gradientColorStops: colors,
 			backgroundColor: colors,
 			placeholderColor: colors,

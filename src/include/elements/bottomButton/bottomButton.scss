@@ -23,6 +23,7 @@
     &_popup & {
         &__box {
             @apply
+            min-w-full
             md:px-12;
         }
     }

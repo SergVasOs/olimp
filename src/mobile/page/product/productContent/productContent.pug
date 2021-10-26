@@ -21,12 +21,12 @@ mixin productContent(shirt=false)
                                 include /assets/images/2lg/3dIcon.svg
                             +b.__swiper.swiper-container
                                 +b.__wrapper.swiper-wrapper
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                        +b.swiper-lazy-preloader
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                        +b.swiper-lazy-preloader
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/shirt.png' : 'images/product1.png'))
+                                        +b.swiper-lazy-preloader
                                 +b.__dots.swiper-dots
                     +e.item(data-content-tab='upgrade')
                         +b.productContent__top__gallery
@@ -36,12 +36,12 @@ mixin productContent(shirt=false)
                         +b.productContent__top__gallery
                             +b.__swiper.swiper-container
                                 +b.__wrapper.swiper-wrapper
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
-                                    +b.__slide.swiper-slide
-                                        +e.img(src=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                        +b.swiper-lazy-preloader
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                        +b.swiper-lazy-preloader
+                                    +b.__slide.swiper-slide.swiper-lazy(data-background=(shirt ? 'images/set-shirt.png' : 'images/set.png'))
+                                        +b.swiper-lazy-preloader
                                 +b.__dots.swiper-dots
                 +b.__buttons
                     +e.item._active(data-tab='images') Фотографии

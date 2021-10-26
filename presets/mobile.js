@@ -1,6 +1,9 @@
 module.exports = {
 	theme: {
 		extend: {
+			width: {
+				34: '8.5rem',
+			},
 			height: {
 				'product-gallery': 'calc(100vh - 18rem)',
 			},

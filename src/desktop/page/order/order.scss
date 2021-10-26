@@ -217,10 +217,11 @@
 
     &__right {
         @apply
+        relative
         w-2/5
         flex
         flex-col
-        items-stretch
-        space-y-4;
+        justify-end
+        items-stretch;
     }
 }
